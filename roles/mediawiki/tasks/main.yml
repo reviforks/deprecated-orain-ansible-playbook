@@ -1,0 +1,16 @@
+---
+- name: Check out latest stable WMF branch of MediaWiki
+  git: repo=https://gerrit.wikimedia.org/r/p/mediawiki/core.git
+       dest=/usr/share/nginx/.orain.org/w
+       version=origin/wmf/1.22wmf9
+
+- name: Copy MediaWiki settings
+  template: src={{item.src}} dest=/usr/share/nginx/.orain.org/w/{{item.dest}} backup=yes
+  with_items:
+    - { src: "LocalSettings.php.j2", dest: "LocalSettings.php" }
+  notify: Clear APC cache
+
+- include: download_extension.yml item={{item}} version=REL1_21
+  with_items:
+    - CentralAuth
+    - CheckUser

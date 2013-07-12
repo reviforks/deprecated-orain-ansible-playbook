@@ -1,0 +1,33 @@
+---
+- name: Install ansible dependencies
+  raw: apt-get install -y python-apt python-simplejson
+
+- name: Install packages
+  apt: pkg={{item}}
+  with_items:
+    - git
+    - htop
+    - lsof
+    - mysql-client
+    - netcat
+    - systemd
+    - vim
+    - zip
+    - zsh
+
+# Hacks to force systemd-sysv to install and stay installed
+- name: Force-install systemd-sysv
+  raw: yes 'Yes, do as I say!' | apt-get install --force-yes systemd-sysv
+
+- name: Hold systemd-sysv
+  shell: echo systemd-sysv hold | dpkg --set-selections
+
+# Don't edit without validating first
+- name: Allow users in the sudo group to run sudo without a password
+  lineinfile: dest=/etc/sudoers
+              regexp='^\%sudo'
+              line='%sudo ALL=(ALL) NOPASSWD:ALL'
+
+- include: create_user.yml user={{item.name}} group={{item.group}}
+  with_items:
+    - { name: 'kudu', group: 'sudo' }

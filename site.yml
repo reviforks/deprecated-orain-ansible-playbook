@@ -1,0 +1,15 @@
+---
+# python may need to be installed manually.
+- hosts: all
+  vars_files:
+    - ../orain_private/vars.yml
+  roles:
+    - common
+
+- hosts: webservers
+  vars_files:
+    - ../orain_private/vars.yml
+  roles:
+    - nginx
+    - php
+    - mediawiki

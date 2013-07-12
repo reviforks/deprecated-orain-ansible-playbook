@@ -1,0 +1,15 @@
+---
+- name: Install nginx
+  apt: pkg=nginx
+
+- name: Copy nginx enabled sites configuration
+  copy: src={{item}} dest=/etc/nginx/sites-enabled
+  with_fileglob:
+    - ./sites-enabled/*
+  notify: Reload nginx
+
+- name: Copy nginx custom configuration
+  copy: src={{item}} dest=/etc/nginx/conf.d
+  with_fileglob:
+    - ./conf.d/*.conf
+  notify: Reload nginx

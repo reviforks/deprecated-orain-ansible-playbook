@@ -1,0 +1,2 @@
+- name: Clear APC cache
+  command: wget -qO- {{apc_clear_script}}

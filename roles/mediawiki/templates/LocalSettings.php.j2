@@ -1,0 +1,238 @@
+<?php
+# Protect against web entry
+if ( !defined( 'MEDIAWIKI' ) ) {
+	exit;
+}
+
+$wgLocalDatabases = array( 'metawiki' );
+$wgConf = new SiteConfiguration;
+$wgConf->wikis = $wgLocalDatabases;
+$wgConf->suffixes = array( 'wiki' );
+$wgConf->localVHosts = array( '{{mysql_address}}' );
+$wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
+
+$wgConf->settings = array(
+	// Server
+	'wgArticlePath' => array(
+		'default' => '/wiki/$1',
+	),
+	'wgDiff3' => array(
+		'default' => '/usr/bin/diff3',
+	),
+	'wgDisableOutputCompression' => array(
+		'default' => true,
+	),
+	'wgResourceLoaderMaxQueryLength' => array(
+		'default' => -1,
+	),
+	'wgScriptExtension' => array(
+		'default' => '.php',
+	),
+	'wgScriptPath' => array(
+		'default' => '/w',
+	),
+	'wgServer' => array(
+		'default' => '//unconfigured.orain.org',
+		'metawiki' => "//meta.orain.org",
+	),
+	'wgUsePathInfo' => array(
+		'default' => true,
+	),
+	// /Server
+
+	// CentralAuth
+	'wgCentralAuthAutoMigrate' => array(
+		'default' => true,
+	),
+	'wgCentralAuthAutoNew' => array(
+		'default' => true,
+	),
+	'wgCentralAuthCookieDomain' => array(
+		'default' => '.orain.org',
+	),
+	'wgCentralAuthCookies' => array(
+		'default' => true,
+	),
+	'wgCentralAuthCreateOnView' => array(
+		'default' => true,
+	),
+	'wgDisableUnmergedEditing' => array(
+		'default' => true,
+	),
+	// /CentralAuth
+
+	// Database
+	'wgDBpassword' => array(
+		'default' => "{{mw_db_password}}",
+	),
+	'wgDBprefix' => array(
+		'default' => '',
+	),
+	'wgDBserver' => array(
+		'default' => "{{mysql_address}}",
+	),
+	'wgDBTableOptions' => array(
+		'default' => "ENGINE=InnoDB, DEFAULT CHARSET=binary",
+	),
+	'wgDBtype' => array(
+		'default' => 'mysql',
+	),
+	'wgDBuser' => array(
+		'default' => "{{mw_db_user}}",
+	),
+	// /Database
+
+	// Style
+	'wgDefaultSkin' => array(
+		'default' => 'vector',
+	),
+	'wgLogo' => array(
+		'default' => '/w/skins/common/images/wiki.png',
+	),
+	'wgStylePath' => array(
+		'default' => '/w/skins',
+	),
+	// /Style
+
+	// Email
+	'wgEmailAuthentication' => array(
+		'default' => true,
+	),
+	'wgEmergencyContact' => array(
+		'default' => 'kudu.py@gmail.com',
+	),
+	'wgEnableEmail' => array(
+		'default' => false,
+	),
+	'wgEnableUserEmail' => array(
+		'default' => false,
+	),
+	'wgEnotifUserTalk' => array(
+		'default' => false,
+	),
+	'wgEnotifWatchlist' => array(
+		'default' => false,
+	),
+	'wgPasswordSender' => array(
+		'default' => 'noreply@orain.org',
+	),
+	// /Email
+
+	// Files
+	'wgEnableUploads' => array(
+		'default' => true,
+	),
+	'wgGenerateThumbnailOnParse' => array(
+		'default' => false,
+	),
+	'wgUseInstantCommons' => array(
+		'default' => true,
+	),
+	// /Files
+
+	// Permissions
+	'+wgGroupPermissions' => array(
+		'default' => array(
+			'*' => array(
+				'edit' => false,
+			),
+		),
+	),
+	// /Permissions
+
+	// GraphicsMagick
+	'wgImageMagickConvertCommand' => array(
+		'default' => "/usr/bin/convert",
+	),
+	'wgShellLocale' => array(
+		'default' => "en_US.utf8",
+	),
+	'wgUseImageMagick' => array(
+		'default' => true,
+	),
+	// /GraphicsMagick
+
+	// Language
+	'wgLanguageCode' => array(
+		'default' => 'en',
+	),
+	// /Language
+
+	// Memcached
+	'wgMainCacheType' => array(
+		'default' => CACHE_MEMCACHED,
+	),
+	'wgMemCachedServers' => array(
+		'default' => array( '{{memcache_address}}:11211' ),
+	),
+	// /Memcached
+
+	// Names
+	'wgMetaNamespace' => array(
+		'default' => 'Unconfigured',
+		'metawiki' => 'Meta',
+	),
+	'wgSitename' => array(
+		'default' => 'Unconfigured',
+		'metawiki' => 'Orain Meta',
+	),
+	// /Names
+
+	// License
+	'wgRightsIcon' => array(
+		'default' => '/w/skins/common/images/cc-by-sa.png',
+	),
+	'wgRightsPage' => array(
+		'default' => '',
+	),
+	'wgRightsText' => array(
+		'default' => 'Creative Commons Attribution Share Alike',
+	),
+	'wgRightsUrl' => array(
+		'default' => 'http://creativecommons.org/licenses/by-sa/3.0/',
+	),
+	// /License
+
+	// Keys
+	'wgSecretKey' => array(
+		'default' => '{{wgSecretKey}}',
+	),
+	'wgUpgradeKey' => array(
+		'default' => '{{wgUpgradeKey}}',
+	),
+	// /Keys
+);
+
+// From https://www.mediawiki.org/wiki/Manual:$wgConf#for_1.14_and_newer
+function efGetSiteParams( $conf, $wiki ) {
+	$site = null;
+	$lang = null;
+	foreach( $conf->suffixes as $suffix ) {
+		if ( substr( $wiki, -strlen( $suffix ) ) == $suffix ) {
+			$site = $suffix;
+			$lang = substr( $wiki, 0, -strlen( $suffix ) );
+			break;
+		}
+	}
+	return array(
+		'suffix' => $site,
+		'lang' => $lang,
+		'params' => array(
+			'lang' => $lang,
+			'site' => $site,
+			'wiki' => $wiki,
+		),
+		'tags' => array(),
+	);
+}
+
+$wgConf->siteParamsCallback = 'efGetSiteParams';
+$wgDBname = array_search('//' . $_SERVER['HTTP_HOST'], $wgConf->settings['wgServer']);
+$wgConf->extractAllGlobals( $wgDBname );
+
+// CentralAuth
+require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
+
+// CheckUser
+require_once( "$IP/extensions/CheckUser/CheckUser.php" );
+?>

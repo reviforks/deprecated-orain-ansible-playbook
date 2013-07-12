@@ -1,0 +1,54 @@
+# Based on http://shorturls.redwerks.org and http://wiki.nginx.org
+
+server {
+	listen 80;
+
+	root /usr/share/nginx/.orain.org;
+	index index.html index.htm index.php;
+
+	server_name *.orain.org localhost;
+
+	location / {
+		try_files $uri $uri/ =404;
+		index /wiki/Main_Page;
+	}
+
+	location ~ \.php$ {
+		try_files $uri =404;
+		fastcgi_split_path_info ^(.+\.php)(/.+)$;
+		fastcgi_index index.php;
+		include fastcgi_params;
+		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+		fastcgi_pass unix:/var/run/php5-fpm.sock;
+	}
+
+	location /w/images {
+		location ~ ^/w/images/thumb/(archive/)?[0-9a-f]/[0-9a-f][0-9a-f]/([^/]+)/([0-9]+)px-.*$ {
+			try_files $uri $uri/ @thumb;
+		}
+	}
+
+	location /w/cache          { deny all; }
+	location /w/images/deleted { deny all; }
+	location /w/languages      { deny all; }
+	location /w/maintenance    { deny all; }
+	location /w/serialized     { deny all; }
+	location ~ /.git(/|$)      { deny all; }
+	location ~ /.ht            { deny all; }
+
+	location /wiki {
+		include fastcgi_params;
+		fastcgi_param SCRIPT_FILENAME $document_root/w/index.php;
+		fastcgi_pass unix:/var/run/php5-fpm.sock;
+	}
+
+	location @thumb {
+		# Rewrite for thumb.php to get the correct arguments
+		rewrite ^/w/images/thumb/[0-9a-f]/[0-9a-f][0-9a-f]/([^/]+)/([0-9]+)px-.*$ /w/thumb.php?f=$1&width=$2;
+		rewrite ^/w/images/thumb/archive/[0-9a-f]/[0-9a-f][0-9a-f]/([^/]+)/([0-9]+)px-.*$ /w/thumb.php?f=$1&width=$2&archived=1;
+
+		include fastcgi_params;
+		fastcgi_param SCRIPT_FILENAME $document_root/w/thumb.php;
+		fastcgi_pass unix:/var/run/php5-fpm.sock;
+	}
+}
