@@ -137,6 +137,23 @@ $wgConf->settings = array(
 			'*' => array(
 				'edit' => false,
 			),
+			'steward' => array(
+				'centralauth-lock' => false,
+				'centralauth-oversight' => false,
+				'centralauth-unmerge' => false,
+			),
+		),
+		'+metawiki' => array(
+			'steward' => array(
+				'centralauth-lock' => true,
+				'centralauth-oversight' => true,
+				'centralauth-unmerge' => true,
+				'globalblock' => true,
+				'globalunblock' => true,
+				'noratelimit' => true,
+				'userrights' => true,
+				'userrights-interwiki' => true,
+			),
 		),
 	),
 	// /Permissions
@@ -231,11 +248,17 @@ $wgConf->siteParamsCallback = 'efGetSiteParams';
 $wgDBname = array_search('//' . $_SERVER['HTTP_HOST'], $wgConf->settings['wgServer']);
 $wgConf->extractAllGlobals( $wgDBname );
 
+// AbuseFilter
+require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
+
 // CentralAuth
 require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
 
 // CheckUser
 require_once( "$IP/extensions/CheckUser/CheckUser.php" );
+
+// GlobalBlocking
+require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
 
 // WikimediaMessages
 require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );

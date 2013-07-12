@@ -12,6 +12,8 @@
 
 - include: download_extension.yml item={{item}} version=REL1_21
   with_items:
+    - AbuseFilter
     - CentralAuth
     - CheckUser
+    - GlobalBlocking
     - WikimediaMessages
