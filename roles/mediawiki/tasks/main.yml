@@ -16,7 +16,9 @@
     - ./*.php
   notify: Clear APC cache
 
-- include: download_extension.yml item={{item}} version=REL1_21
+- name: Download MediaWiki extensions
+  command: git submodule update --init extensions/{{item}}
+           chdir=/usr/share/nginx/.orain.org/w
   with_items:
     - AbuseFilter
     - CentralAuth
