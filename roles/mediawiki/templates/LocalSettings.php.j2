@@ -28,17 +28,9 @@ $wgConf->settings = array(
 				'abusefilter-log-detail' => true,
 				'abusefilter-view' => true,
 			),
-			'bureaucrat' => array(
-				'userrights' => false,
-			),
 			'checkuser' => array(
 				// Leaks IP addresses
 				'abusefilter-private' => true,
-			),
-			'steward' => array(
-				'centralauth-lock' => false,
-				'centralauth-oversight' => false,
-				'centralauth-unmerge' => false,
 			),
 			'sysop' => array(
 				'abusefilter-hidden-log' => true,
@@ -288,6 +280,10 @@ function efGetSiteParams( $conf, $wiki ) {
 		'tags' => array(),
 	);
 }
+
+// Defaults
+$wgGroupPermissions['bureaucrat']['userrights'] = false;
+unset($wgGroupPermissions['steward']);
 
 $wgConf->siteParamsCallback = 'efGetSiteParams';
 $wgDBname = array_search('//' . $_SERVER['HTTP_HOST'], $wgConf->settings['wgServer']);
