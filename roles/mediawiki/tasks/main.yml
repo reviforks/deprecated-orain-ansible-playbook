@@ -4,10 +4,16 @@
        dest=/usr/share/nginx/.orain.org/w
        version=origin/wmf/1.22wmf9
 
-- name: Copy MediaWiki settings
-  template: src={{item.src}} dest=/usr/share/nginx/.orain.org/w/{{item.dest}} backup=yes
-  with_items:
-    - { src: "LocalSettings.php.j2", dest: "LocalSettings.php" }
+- name: Copy MediaWiki settings from templates
+  template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item[:-3]}} backup=yes
+  with_fileglob:
+    - ./*.php.j2
+  notify: Clear APC cache
+
+- name: Copy MediaWiki settings from files
+  copy: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item}} backup=yes
+  with_fileglob:
+    - ./*.php
   notify: Clear APC cache
 
 - include: download_extension.yml item={{item}} version=REL1_21
