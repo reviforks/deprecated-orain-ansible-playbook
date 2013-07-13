@@ -17,11 +17,11 @@ $wgConf->settings = array(
 		'default' => array(
 			'bureaucrat' => array(
 				'bureaucrat',
-				'rollback',
+				'rollbacker',
 				'sysop',
 			),
 			'sysop' => array(
-				'rollback',
+				'rollbacker',
 			),
 		),
 	),
@@ -36,7 +36,7 @@ $wgConf->settings = array(
 				// Leaks IP addresses
 				'abusefilter-private' => true,
 			),
-			'rollback' => array(
+			'rollbacker' => array(
 				'autoconfirmed' => true,
 				'rollback' => true,
 			),
@@ -74,11 +74,11 @@ $wgConf->settings = array(
 	'wgRemoveGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
-				'rollback',
+				'rollbacker',
 				'sysop',
 			),
 			'sysop' => array(
-				'rollback',
+				'rollbacker',
 			),
 		),
 	),
