@@ -5,13 +5,13 @@
        version=origin/wmf/1.22wmf9
 
 - name: Copy MediaWiki settings from templates
-  template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item[:-3]}} backup=yes
+  template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}} backup=yes
   with_fileglob:
     - ./*.php.j2
   notify: Clear APC cache
 
 - name: Copy MediaWiki settings from files
-  copy: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item}} backup=yes
+  copy: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename}} backup=yes
   with_fileglob:
     - ./*.php
   notify: Clear APC cache
