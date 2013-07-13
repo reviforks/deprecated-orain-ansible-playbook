@@ -24,4 +24,5 @@
     - CentralAuth
     - CheckUser
     - GlobalBlocking
+    - InputBox
     - WikimediaMessages
