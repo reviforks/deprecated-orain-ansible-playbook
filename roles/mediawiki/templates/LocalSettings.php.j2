@@ -281,17 +281,6 @@ function efGetSiteParams( $conf, $wiki ) {
 	);
 }
 
-// Defaults
-$wgGroupPermissions['bureaucrat']['userrights'] = false;
-unset($wgGroupPermissions['steward']);
-
-$wgConf->siteParamsCallback = 'efGetSiteParams';
-$wgDBname = array_search('//' . $_SERVER['HTTP_HOST'], $wgConf->settings['wgServer']);
-$wgConf->extractAllGlobals( $wgDBname );
-
-$wgUploadDirectory = "/usr/share/nginx/upload.orain.org/$wgDBname";
-$wgUploadPath = "http://upload.orain.org/$wgDBname";
-
 // AbuseFilter
 require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
 
@@ -306,4 +295,15 @@ require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
 
 // WikimediaMessages
 require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
+
+// Defaults
+$wgGroupPermissions['bureaucrat']['userrights'] = false;
+unset($wgGroupPermissions['steward']);
+
+$wgConf->siteParamsCallback = 'efGetSiteParams';
+$wgDBname = array_search('//' . $_SERVER['HTTP_HOST'], $wgConf->settings['wgServer']);
+$wgConf->extractAllGlobals( $wgDBname );
+
+$wgUploadDirectory = "/usr/share/nginx/upload.orain.org/$wgDBname";
+$wgUploadPath = "http://upload.orain.org/$wgDBname";
 ?>
