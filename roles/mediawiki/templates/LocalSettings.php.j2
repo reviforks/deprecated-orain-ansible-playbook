@@ -12,6 +12,74 @@ $wgConf->localVHosts = array( '{{mysql_address}}' );
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
 $wgConf->settings = array(
+	// Permissions
+	'wgAddGroups' => array(
+		'default' => array(
+			'bureaucrat' => array(
+				'sysop' => true,
+				'bureaucrat' => true,
+			),
+		),
+	),
+	'+wgGroupPermissions' => array(
+		'default' => array(
+			'*' => array(
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
+				'abusefilter-view' => true,
+			),
+			'bureaucrat' => array(
+				'userrights' => false,
+			),
+			'checkuser' => array(
+				// Leaks IP addresses
+				'abusefilter-private' => true,
+			),
+			'steward' => array(
+				'centralauth-lock' => false,
+				'centralauth-oversight' => false,
+				'centralauth-unmerge' => false,
+			),
+			'sysop' => array(
+				'abusefilter-hidden-log' => true,
+				'abusefilter-hide-log' => true,
+				'abusefilter-modify' => true,
+				'abusefilter-modify-restricted' => true,
+				'abusefilter-revert' => true,
+				'deletelogentry' => true,
+				'deleterevision' => true,
+			),
+		),
+		'+metawiki' => array(
+			'*' => array(
+				'edit' => false,
+			),
+			'steward' => array(
+				'centralauth-lock' => true,
+				'centralauth-oversight' => true,
+				'centralauth-unmerge' => true,
+				'globalblock' => true,
+				'globalunblock' => true,
+				'noratelimit' => true,
+				'userrights' => true,
+				'userrights-interwiki' => true,
+			),
+		),
+	),
+	'wgGroupsRemoveFromSelf' => array(
+		'default' => array(
+			'*' => true,
+		)
+	),
+	'wgRemoveGroups' => array(
+		'default' => array(
+			'bureaucrat' => array(
+				'sysop' => true,
+			),
+		),
+	),
+	// /Permissions
+
 	// Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
@@ -89,7 +157,8 @@ $wgConf->settings = array(
 	),
 	'wgLogo' => array(
 		'default' => '/w/skins/common/images/wiki.png',
-		'metawiki' => '/w/images/thumb/1/1a/Coollogo_com-222242978.png/135px-Coollogo_com-222242978.png',
+		'metawiki' => '//upload.orain.org/metawiki/images/thumb/1/1a/Coollogo_com-222242978.png/135px-Coollogo_com-222242978.png',
+		'testwiki' => '//upload.orain.org/testwiki/images/8/8d/Twlogo.png',
 	),
 	'wgStylePath' => array(
 		'default' => '/w/skins',
@@ -102,6 +171,7 @@ $wgConf->settings = array(
 	),
 	'wgEmergencyContact' => array(
 		'default' => 'kudu.py@gmail.com',
+		'testwiki' => 'dahowe@bsugmail.net',
 	),
 	'wgEnableEmail' => array(
 		'default' => false,
@@ -131,51 +201,6 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	// /Files
-
-	// Permissions
-	'+wgGroupPermissions' => array(
-		'default' => array(
-			'*' => array(
-				'abusefilter-log' => true,
-				'abusefilter-log-detail' => true,
-				'abusefilter-view' => true,
-			),
-			'checkuser' => array(
-				// Leaks IP addresses
-				'abusefilter-private' => true,
-			),
-			'steward' => array(
-				'centralauth-lock' => false,
-				'centralauth-oversight' => false,
-				'centralauth-unmerge' => false,
-			),
-			'sysop' => array(
-				'abusefilter-hidden-log' => true,
-				'abusefilter-hide-log' => true,
-				'abusefilter-modify' => true,
-				'abusefilter-modify-restricted' => true,
-				'abusefilter-revert' => true,
-				'deletelogentry' => true,
-				'deleterevision' => true,
-			),
-		),
-		'+metawiki' => array(
-			'*' => array(
-				'edit' => false,
-			),
-			'steward' => array(
-				'centralauth-lock' => true,
-				'centralauth-oversight' => true,
-				'centralauth-unmerge' => true,
-				'globalblock' => true,
-				'globalunblock' => true,
-				'noratelimit' => true,
-				'userrights' => true,
-				'userrights-interwiki' => true,
-			),
-		),
-	),
-	// /Permissions
 
 	// GraphicsMagick
 	'wgImageMagickConvertCommand' => array(
@@ -212,6 +237,7 @@ $wgConf->settings = array(
 	'wgSitename' => array(
 		'default' => 'Unconfigured',
 		'metawiki' => 'Orain Meta',
+		'testwiki' => 'TestWiki',
 	),
 	// /Names
 
@@ -268,7 +294,7 @@ $wgDBname = array_search('//' . $_SERVER['HTTP_HOST'], $wgConf->settings['wgServ
 $wgConf->extractAllGlobals( $wgDBname );
 
 $wgUploadDirectory = "/usr/share/nginx/upload.orain.org/$wgDBname";
-$wgUploadPath = "//upload.orain.org/$wgDBname";
+$wgUploadPath = "http://upload.orain.org/$wgDBname";
 
 // AbuseFilter
 require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
