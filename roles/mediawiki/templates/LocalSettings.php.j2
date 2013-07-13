@@ -16,8 +16,8 @@ $wgConf->settings = array(
 	'wgAddGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
-				'sysop' => true,
-				'bureaucrat' => true,
+				'bureaucrat',
+				'sysop',
 			),
 		),
 	),
@@ -66,7 +66,7 @@ $wgConf->settings = array(
 	'wgRemoveGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
-				'sysop' => true,
+				'sysop',
 			),
 		),
 	),
@@ -223,7 +223,6 @@ $wgConf->settings = array(
 
 	// Names
 	'wgMetaNamespace' => array(
-		'default' => 'Unconfigured',
 		'metawiki' => 'Meta',
 	),
 	'wgSitename' => array(
