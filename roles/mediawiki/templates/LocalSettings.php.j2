@@ -12,6 +12,16 @@ $wgConf->localVHosts = array( '{{mysql_address}}' );
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
 $wgConf->settings = array(
+	// AbuseFilter
+	'wgAbuseFilterCentralDB' => array(
+		'default' => 'metawiki',
+	),
+	'wgAbuseFilterIsCentral' => array(
+		'default' => false,
+		'metawiki' => true,
+	),
+	// /AbuseFilter
+
 	// Permissions
 	'wgAddGroups' => array(
 		'default' => array(
@@ -55,6 +65,7 @@ $wgConf->settings = array(
 				'edit' => false,
 			),
 			'steward' => array(
+				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
 				'centralauth-oversight' => true,
 				'centralauth-unmerge' => true,
@@ -303,6 +314,9 @@ require_once( "$IP/extensions/CheckUser/CheckUser.php" );
 
 // GlobalBlocking
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
+
+// OrainMessages
+require_once( "$IP/extensions/OrainMessages/WikimediaMessages.php" );
 
 // WikimediaMessages
 require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
