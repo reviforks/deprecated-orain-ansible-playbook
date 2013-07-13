@@ -4,7 +4,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit;
 }
 
-$wgLocalDatabases = array( 'metawiki' );
+$wgLocalDatabases = array( 'metawiki', 'testwiki' );
 $wgConf = new SiteConfiguration;
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->suffixes = array( 'wiki' );
@@ -34,6 +34,7 @@ $wgConf->settings = array(
 	'wgServer' => array(
 		'default' => '//unconfigured.orain.org',
 		'metawiki' => "//meta.orain.org",
+		'testwiki' => '//test.orain.org',
 	),
 	'wgUsePathInfo' => array(
 		'default' => true,
