@@ -25,5 +25,7 @@
     - CheckUser
     - GlobalBlocking
     - InputBox
+    - ParserFunctions
     - Scribunto
+    - SiteMatrix
     - WikimediaMessages

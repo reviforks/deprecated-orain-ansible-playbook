@@ -61,9 +61,6 @@ $wgConf->settings = array(
 			),
 		),
 		'+metawiki' => array(
-			'*' => array(
-				'edit' => false,
-			),
 			'steward' => array(
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
@@ -323,7 +320,9 @@ require_once( "$IP/extensions/CheckUser/CheckUser.php" );
 require_once( "$IP/extensions/InputBox/InputBox.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
 require_once( "$IP/extensions/OrainMessages/OrainMessages.php" );
+require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 require_once( "$IP/extensions/Scribunto/Scribunto.php" );
+require_once( "$IP/extensions/SiteMatrix/SiteMatrix.php" );
 require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
 
 // Defaults
@@ -336,4 +335,6 @@ $wgConf->extractAllGlobals( $wgDBname );
 
 $wgUploadDirectory = "/usr/share/nginx/upload.orain.org/$wgDBname";
 $wgUploadPath = "http://upload.orain.org/$wgDBname";
+
+$wgSiteMatrixSites = array();
 ?>
