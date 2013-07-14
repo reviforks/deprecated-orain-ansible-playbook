@@ -29,3 +29,9 @@
     - Scribunto
     - SiteMatrix
     - WikimediaMessages
+
+- name: Patch CentralAuth group name
+  lineinfile: dest=/usr/share/nginx/.orain.org/w/extensions/CentralAuth/CentralAuth.i18n.php
+              regexp="\s*'centralauth-groupname'\s*=> 'the Wikimedia Foundation'",
+              state=absent
+              backup=yes
