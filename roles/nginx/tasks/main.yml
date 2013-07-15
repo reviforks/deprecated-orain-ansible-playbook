@@ -9,7 +9,7 @@
   notify: Reload nginx
 
 - name: Copy nginx custom configuration
-  copy: src={{item}} dest=/etc/nginx/conf.d
+  template: src={{item}} dest=/etc/nginx/conf.d
   with_fileglob:
     - ./conf.d/*.conf
   notify: Reload nginx
