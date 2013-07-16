@@ -16,6 +16,10 @@
     - ./*.php
   notify: Clear APC cache
 
+- name: Copy Bad Behavior settings
+  template: src=./settings.ini.j2 dest=/usr/share/nginx/.orain.org/w/extensions/bad-behavior/settings.ini backup=yes
+  notify: Clear APC cache
+
 - name: Download MediaWiki extensions
   command: git submodule update --init extensions/{{item}}
            chdir=/usr/share/nginx/.orain.org/w
