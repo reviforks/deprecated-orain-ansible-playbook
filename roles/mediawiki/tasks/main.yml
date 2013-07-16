@@ -23,6 +23,7 @@
     - AbuseFilter
     - CentralAuth
     - CheckUser
+    - ConfirmEdit
     - GlobalBlocking
     - InputBox
     - ParserFunctions

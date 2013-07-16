@@ -317,6 +317,7 @@ function efGetSiteParams( $conf, $wiki ) {
 require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
 require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
 require_once( "$IP/extensions/CheckUser/CheckUser.php" );
+require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 require_once( "$IP/extensions/InputBox/InputBox.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
 require_once( "$IP/extensions/OrainMessages/OrainMessages.php" );
@@ -335,6 +336,10 @@ $wgConf->extractAllGlobals( $wgDBname );
 
 $wgUploadDirectory = "/usr/share/nginx/upload.orain.org/$wgDBname";
 $wgUploadPath = "http://upload.orain.org/$wgDBname";
+
+$wgCaptchaClass = 'ReCaptcha';
+$wgReCaptchaPublicKey = '6Le-muQSAAAAAKMw_vBFwRd9wPxTxdraOJwOLHrM';
+$wgReCaptchaPrivateKey = {{wgReCaptchaPrivateKey}};
 
 $wgSiteMatrixSites = array();
 ?>
