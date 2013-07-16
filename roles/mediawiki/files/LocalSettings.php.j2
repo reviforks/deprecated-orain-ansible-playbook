@@ -69,13 +69,23 @@ $wgConf->settings = array(
 				// Leaks IP addresses
 				'abusefilter-private' => true,
 			),
+			'oversight' => array(
+				'abusefilter-hidden-log' => true,
+				'abusefilter-hide-log' => true,
+				'browsearchive' => true,
+				'deletedhistory' => true,
+				'deletedtext' => true,
+				'deletelogentry' => true,
+				'deleterevision' => true,
+				'hideuser' => true,
+				'suppressionlog' => true,
+				'suppressrevision' => true,
+			),
 			'rollbacker' => array(
 				'autoconfirmed' => true,
 				'rollback' => true,
 			),
 			'sysop' => array(
-				'abusefilter-hidden-log' => true,
-				'abusefilter-hide-log' => true,
 				'abusefilter-modify' => true,
 				'abusefilter-modify-restricted' => true,
 				'abusefilter-revert' => true,
