@@ -380,4 +380,12 @@ $wgConf->extractAllGlobals( $wgDBname );
 
 $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wgDBname/images";
 $wgUploadPath = "//static.orain.org/$wgDBname/images";
+
+// Orain is a proud participant in Project Honey Pot.
+$wgHooks['ParserAfterTidy'][] = 'fnInsertLinksToHoneyPot';
+
+function fnInsertLinksToHoneyPot( &$parser, &$text ) {
+    $text .= "<a href=\"http://defrettenark.be/it/it.php?yr=30699\"><!-- erratic-ovoid --></a>";
+    return true;
+}
 ?>
