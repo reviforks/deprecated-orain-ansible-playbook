@@ -4,6 +4,24 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit;
 }
 
+require_once( "$IP/extensions/AntiSpoof/AntiSpoof.php" );
+require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
+require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
+require_once( "$IP/extensions/CheckUser/CheckUser.php" );
+require_once( "$IP/extensions/ConfirmEdit/Asirra.php" );
+require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
+require_once( "$IP/extensions/InputBox/InputBox.php" );
+require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
+require_once( "$IP/extensions/Nuke/Nuke.php" );
+require_once( "$IP/extensions/OrainMessages/OrainMessages.php" );
+require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
+require_once( "$IP/extensions/Renameuser/Renameuser.php" );
+require_once( "$IP/extensions/Scribunto/Scribunto.php" );
+require_once( "$IP/extensions/SiteMatrix/SiteMatrix.php" );
+require_once( "$IP/extensions/SpamBlacklist/SpamBlacklist.php" );
+require_once( "$IP/extensions/TitleBlacklist/TitleBlacklist.php" );
+require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
+
 $wgLocalDatabases = array( 'metawiki', 'testwiki' );
 $wgConf = new SiteConfiguration;
 $wgConf->wikis = $wgLocalDatabases;
@@ -121,6 +139,37 @@ $wgConf->settings = array(
 	),
 	// /Server
 
+	// Anti-spam
+	'wgAccountCreationThrottle' => array(
+		'default' => 6,
+	),
+	'wgCaptchaClass' => array(
+		'default' => 'Asirra',
+	),
+	'wgSpamBlacklistFiles' => array(
+		'default' => array(
+			"DB: metawiki Spam_blacklist",
+			"//meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw",
+		),
+	),
+	'wgTitleBlacklistSources' => array(
+		'default' => array(
+			array(
+					 'type' => TBLSRC_LOCALPAGE,
+					 'src'  => 'MediaWiki:Titleblacklist',
+			),
+			array(
+					 'type' => TBLSRC_URL,
+					 'src'  => '//meta.orain.org/w/index.php?title=Title_blacklist&action=raw',
+			),
+			array(
+					 'type' => TBLSRC_URL,
+					 'src'  => '//meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw',
+			),
+		),
+	),
+	// /Anti-spam
+
 	// CentralAuth
 	'wgCentralAuthAutoMigrate' => array(
 		'default' => true,
@@ -139,6 +188,9 @@ $wgConf->settings = array(
 	),
 	'wgDisableUnmergedEditing' => array(
 		'default' => true,
+	),
+	'wgSiteMatrixSites' => array(
+		'default' => array(),
 	),
 	// /CentralAuth
 
@@ -314,22 +366,10 @@ function efGetSiteParams( $conf, $wiki ) {
 	);
 }
 
-require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
-require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
-require_once( "$IP/extensions/CheckUser/CheckUser.php" );
-require_once( "$IP/extensions/ConfirmEdit/Asirra.php" );
-require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
-require_once( "$IP/extensions/InputBox/InputBox.php" );
-require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
-require_once( "$IP/extensions/OrainMessages/OrainMessages.php" );
-require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
-require_once( "$IP/extensions/Scribunto/Scribunto.php" );
-require_once( "$IP/extensions/SiteMatrix/SiteMatrix.php" );
-require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
-
 // Defaults
+$wgGroupPermissions['bureaucrat']['renameuser'] = false;
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
-unset($wgGroupPermissions['steward']);
+unset( $wgGroupPermissions['steward'] );
 
 $wgConf->siteParamsCallback = 'efGetSiteParams';
 $wgDBname = array_search('//' . $_SERVER['HTTP_HOST'], $wgConf->settings['wgServer']);
@@ -337,8 +377,4 @@ $wgConf->extractAllGlobals( $wgDBname );
 
 $wgUploadDirectory = "/usr/share/nginx/upload.orain.org/$wgDBname";
 $wgUploadPath = "http://upload.orain.org/$wgDBname";
-
-$wgCaptchaClass = 'Asirra';
-
-$wgSiteMatrixSites = array();
 ?>

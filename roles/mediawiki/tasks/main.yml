@@ -2,7 +2,7 @@
 - name: Check out latest stable WMF branch of MediaWiki
   git: repo=https://gerrit.wikimedia.org/r/p/mediawiki/core.git
        dest=/usr/share/nginx/.orain.org/w
-       version=origin/wmf/1.22wmf9
+       version=origin/wmf/1.22wmf10
 
 - name: Copy MediaWiki settings from templates
   template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}} backup=yes
@@ -21,14 +21,19 @@
            chdir=/usr/share/nginx/.orain.org/w
   with_items:
     - AbuseFilter
+    - AntiSpoof
     - CentralAuth
     - CheckUser
     - ConfirmEdit
     - GlobalBlocking
     - InputBox
+    - Nuke
     - ParserFunctions
+    - Renameuser
     - Scribunto
     - SiteMatrix
+    - SpamBlacklist
+    - TitleBlacklist
     - WikimediaMessages
 
 - name: Patch CentralAuth group name
