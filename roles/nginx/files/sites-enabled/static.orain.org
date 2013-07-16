@@ -1,0 +1,9 @@
+server {
+	listen 80;
+	listen 443 ssl;
+
+	root /usr/share/nginx/static.orain.org;
+	index http://meta.orain.org/wiki/Main_Page;
+
+	server_name static.orain.org upload.orain.org;
+}

@@ -221,8 +221,8 @@ $wgConf->settings = array(
 	),
 	'wgLogo' => array(
 		'default' => '/w/skins/common/images/wiki.png',
-		'metawiki' => '//upload.orain.org/metawiki/thumb/1/1a/Coollogo_com-222242978.png/135px-Coollogo_com-222242978.png',
-		'testwiki' => '//upload.orain.org/testwiki/8/8d/Twlogo.png',
+		'metawiki' => '//static.orain.org/metawiki/images/thumb/1/1a/Coollogo_com-222242978.png/135px-Coollogo_com-222242978.png',
+		'testwiki' => '//static.orain.org/testwiki/images/8/8d/Twlogo.png',
 	),
 	'wgStylePath' => array(
 		'default' => '/w/skins',
@@ -375,6 +375,6 @@ $wgConf->siteParamsCallback = 'efGetSiteParams';
 $wgDBname = array_search('//' . $_SERVER['HTTP_HOST'], $wgConf->settings['wgServer']);
 $wgConf->extractAllGlobals( $wgDBname );
 
-$wgUploadDirectory = "/usr/share/nginx/upload.orain.org/$wgDBname";
-$wgUploadPath = "http://upload.orain.org/$wgDBname";
+$wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wgDBname/images";
+$wgUploadPath = "//static.orain.org/$wgDBname/images";
 ?>
