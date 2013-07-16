@@ -9,6 +9,8 @@ require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
 require_once( "$IP/extensions/bad-behavior/bad-behavior-mediawiki.php" );
 require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
 require_once( "$IP/extensions/CheckUser/CheckUser.php" );
+require_once( "$IP/extensions/Cite/Cite.php" );
+require_once( "$IP/extensions/Cite/SpecialCite.php" );
 require_once( "$IP/extensions/ConfirmEdit/Asirra.php" );
 require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 require_once( "$IP/extensions/InputBox/InputBox.php" );
@@ -22,6 +24,7 @@ require_once( "$IP/extensions/SiteMatrix/SiteMatrix.php" );
 require_once( "$IP/extensions/SpamBlacklist/SpamBlacklist.php" );
 require_once( "$IP/extensions/TitleBlacklist/TitleBlacklist.php" );
 require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
+require_once( "$IP/skins/foreground/foreground.php" );
 
 $wgLocalDatabases = array( 'metawiki', 'testwiki' );
 $wgConf = new SiteConfiguration;
@@ -225,9 +228,6 @@ $wgConf->settings = array(
 		'metawiki' => '//static.orain.org/metawiki/images/thumb/1/1a/Coollogo_com-222242978.png/135px-Coollogo_com-222242978.png',
 		'testwiki' => '//static.orain.org/testwiki/images/8/8d/Twlogo.png',
 	),
-	'wgStyleDirectory' => array(
-		'default' => '/usr/share/nginx/static.orain.org/common/skins'
-	),
 	'wgStylePath' => array(
 		'default' => '//static.orain.org/common/skins',
 	),
@@ -381,12 +381,4 @@ $wgConf->extractAllGlobals( $wgDBname );
 
 $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wgDBname/images";
 $wgUploadPath = "//static.orain.org/$wgDBname/images";
-
-// Orain is a proud participant in Project Honey Pot.
-$wgHooks['ParserAfterTidy'][] = 'fnInsertLinksToHoneyPot';
-
-function fnInsertLinksToHoneyPot( &$parser, &$text ) {
-    $text .= "<a href=\"http://defrettenark.be/it/it.php?yr=30699\"><!-- erratic-ovoid --></a>";
-    return true;
-}
 ?>

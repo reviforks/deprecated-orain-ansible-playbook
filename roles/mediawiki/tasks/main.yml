@@ -21,24 +21,26 @@
   notify: Clear APC cache
 
 - name: Download MediaWiki extensions
-  command: git submodule update --init extensions/{{item}}
-           chdir=/usr/share/nginx/.orain.org/w
-  with_items:
-    - AbuseFilter
-    - AntiSpoof
-    - CentralAuth
-    - CheckUser
-    - ConfirmEdit
-    - GlobalBlocking
-    - InputBox
-    - Nuke
-    - ParserFunctions
-    - Renameuser
-    - Scribunto
-    - SiteMatrix
-    - SpamBlacklist
-    - TitleBlacklist
-    - WikimediaMessages
+  command: >
+             git submodule update --init
+             extensions/AbuseFilter
+             extensions/AntiSpoof
+             extensions/CentralAuth
+             extensions/CheckUser
+             extensions/Cite
+             extensions/ConfirmEdit
+             extensions/GlobalBlocking
+             extensions/InputBox
+             extensions/Nuke
+             extensions/ParserFunctions
+             extensions/Renameuser
+             extensions/Scribunto
+             extensions/SiteMatrix
+             extensions/SpamBlacklist
+             extensions/TitleBlacklist
+             extensions/WikimediaMessages
+             skins/foreground
+             chdir=/usr/share/nginx/.orain.org/w
 
 - name: Patch CentralAuth group name
   lineinfile: dest=/usr/share/nginx/.orain.org/w/extensions/CentralAuth/CentralAuth.i18n.php
