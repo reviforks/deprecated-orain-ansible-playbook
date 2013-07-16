@@ -318,13 +318,14 @@ require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
 require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
 require_once( "$IP/extensions/CheckUser/CheckUser.php" );
 require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
-require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php");
 require_once( "$IP/extensions/InputBox/InputBox.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
 require_once( "$IP/extensions/OrainMessages/OrainMessages.php" );
 require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 require_once( "$IP/extensions/Scribunto/Scribunto.php" );
 require_once( "$IP/extensions/SiteMatrix/SiteMatrix.php" );
+require_once( "$IP/extensions/VisualMathCaptcha/VisualMathCaptcha.setup.php" );
+$wgAutoloadClasses['VisualMathConfirmCaptcha'] = "$IP/extensions/VisualMathCaptcha/VisualMathConfirmCaptcha.class.php";
 require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
 
 // Defaults
@@ -338,9 +339,9 @@ $wgConf->extractAllGlobals( $wgDBname );
 $wgUploadDirectory = "/usr/share/nginx/upload.orain.org/$wgDBname";
 $wgUploadPath = "http://upload.orain.org/$wgDBname";
 
-$wgCaptchaClass = 'ReCaptcha';
-$wgReCaptchaPublicKey = '6Le-muQSAAAAAKMw_vBFwRd9wPxTxdraOJwOLHrM';
-$wgReCaptchaPrivateKey = '{{recaptcha_private_key}}';
+$wgCaptchaClass = 'VisualMathConfirmCaptcha';
+$wgVisualMathCaptchaItemMax = 13;
+$wgVisualMathCaptchaItemNum = 3;
 
 $wgSiteMatrixSites = array();
 ?>
