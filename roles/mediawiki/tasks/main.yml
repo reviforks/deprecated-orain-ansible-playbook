@@ -40,6 +40,7 @@
              extensions/TitleBlacklist
              extensions/WikimediaMessages
              skins/foreground
+             skins/monaco
              chdir=/usr/share/nginx/.orain.org/w
 
 - name: Patch CentralAuth group name
