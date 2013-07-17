@@ -9,15 +9,12 @@ server {
 
 	server_name *.orain.org localhost;
 
-	location / {
-		try_files $uri $uri/ =404;
-		index /wiki/Main_Page;
+	location = / {
+		return 301 /wiki/Main_Page;
 	}
 
 	location ~ \.php$ {
 		try_files $uri =404;
-		fastcgi_split_path_info ^(.+\.php)(/.+)$;
-		fastcgi_index index.php;
 		include fastcgi_params;
 		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 		fastcgi_pass unix:/var/run/php5-fpm.sock;
@@ -29,7 +26,6 @@ server {
 	location /w/maintenance    { deny all; }
 	location /w/serialized     { deny all; }
 	location ~ /.git(/|$)      { deny all; }
-	location ~ /.ht            { deny all; }
 
 	location /wiki {
 		include fastcgi_params;

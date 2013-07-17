@@ -5,11 +5,14 @@
 - name: Install packages
   apt: pkg={{item}}
   with_items:
+    - denyhosts
+    - fail2ban
     - git
     - htop
     - lsof
     - mysql-client
     - netcat
+    - python-software-properties
     - systemd
     - vim
     - zip

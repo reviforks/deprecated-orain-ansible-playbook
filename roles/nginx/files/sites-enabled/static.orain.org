@@ -3,7 +3,6 @@ server {
 	listen 443 ssl;
 
 	root /usr/share/nginx/static.orain.org;
-	index http://meta.orain.org/wiki/Main_Page;
 
 	server_name static.orain.org upload.orain.org;
 	expires 2w;
@@ -16,7 +15,6 @@ server {
 
 	location /w/thumb.php {
 		root /usr/share/nginx/.orain.org;
-		fastcgi_split_path_info ^(.+\.php)(/?.+)$;
 		include fastcgi_params;
 		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 		fastcgi_pass unix:/var/run/php5-fpm.sock;
