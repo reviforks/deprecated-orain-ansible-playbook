@@ -1,0 +1,4 @@
+server_name _;
+
+root /usr/share/nginx/default;
+index index.html index.htm;

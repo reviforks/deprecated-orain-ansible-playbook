@@ -1,0 +1,28 @@
+server_name *.orain.org localhost;
+
+root /usr/share/nginx/.orain.org;
+index index.html index.htm index.php;
+
+location = / {
+	return 301 /wiki/Main_Page;
+}
+
+location ~ \.php$ {
+	try_files $uri =404;
+	include fastcgi_params;
+	fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+	fastcgi_pass unix:/var/run/php5-fpm.sock;
+}
+
+location /w/cache          { deny all; }
+location /w/images         { deny all; }
+location /w/languages      { deny all; }
+location /w/maintenance    { deny all; }
+location /w/serialized     { deny all; }
+location ~ /.git(/|$)      { deny all; }
+
+location /wiki {
+	include fastcgi_params;
+	fastcgi_param SCRIPT_FILENAME $document_root/w/index.php;
+	fastcgi_pass unix:/var/run/php5-fpm.sock;
+}

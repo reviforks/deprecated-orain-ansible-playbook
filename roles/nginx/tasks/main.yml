@@ -8,10 +8,16 @@
 - name: Install nginx
   apt: pkg=nginx
 
-- name: Copy nginx enabled sites configuration
-  copy: src={{item}} dest=/etc/nginx/sites-enabled
+- name: Copy the protocol-agnostic parts of the nginx enabled sites configuration
+  copy: src={{item}} dest=/etc/nginx/sites-enabled-agnostic
   with_fileglob:
-    - ./sites-enabled/*
+    - ./sites-enabled-agnostic/*
+  notify: Reload nginx
+
+- name: Copy nginx enabled sites configuration
+  template: src={{item}} dest=/etc/nginx/sites-enabled/{{item|basename|replace('.j2','')}}
+  with_fileglob:
+    - ./sites-enabled/*.j2
   notify: Reload nginx
 
 - name: Copy nginx custom configuration
