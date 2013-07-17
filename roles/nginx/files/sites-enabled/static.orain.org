@@ -6,4 +6,24 @@ server {
 	index http://meta.orain.org/wiki/Main_Page;
 
 	server_name static.orain.org upload.orain.org;
+
+	location ~ ^/.*?/images/thumb/(archive/)?[0-9a-f]/[0-9a-f][0-9a-f]/([^/]+)/([0-9]+)px-.*$ {
+		try_files $uri $uri/ @thumb;
+	}
+
+	location ~ /.*?/images/deleted { deny all; }
+
+	location /w/thumb.php {
+		root /usr/share/nginx/.orain.org;
+		fastcgi_split_path_info ^(.+\.php)(/?.+)$;
+		include fastcgi_params;
+		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+		fastcgi_pass unix:/var/run/php5-fpm.sock;
+	}
+
+	location @thumb {
+		# Rewrite for thumb.php to get the correct arguments
+		rewrite ^/(.*?)/images/thumb/[0-9a-f]/[0-9a-f][0-9a-f]/([^/]+)/([0-9]+)px-.*$ /w/thumb.php?sitex=$1&f=$2&width=$3;
+		rewrite ^/(.*?)/images/thumb/archive/[0-9a-f]/[0-9a-f][0-9a-f]/([^/]+)/([0-9]+)px-.*$ /w/thumb.php?sitex=$1&f=$2&width=$3&archived=1;
+	}
 }

@@ -236,8 +236,8 @@ $wgConf->settings = array(
 	),
 	'wgLogo' => array(
 		'default' => '//static.orain.org/common/skins/common/images/wiki.png',
-		'metawiki' => '//static.orain.org/metawiki/images/thumb/1/1a/Coollogo_com-222242978.png/135px-Coollogo_com-222242978.png',
-		'testwiki' => '//static.orain.org/testwiki/images/8/8d/Twlogo.png',
+		'metawiki' => '//static.orain.org/meta.orain.org/images/thumb/1/1a/Coollogo_com-222242978.png/135px-Coollogo_com-222242978.png',
+		'testwiki' => '//static.orain.org/test.orain.org/images/8/8d/Twlogo.png',
 	),
 	'wgStylePath' => array(
 		'default' => '//static.orain.org/common/skins',
@@ -386,10 +386,16 @@ $wgGroupPermissions['bureaucrat']['renameuser'] = false;
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
 unset( $wgGroupPermissions['steward'] );
 
+if ( ( basename( $_SERVER["SCRIPT_FILENAME"] ) == "thumb.php" ) && isset( $_REQUEST['sitex'] ) ) {
+	$wmgHostname = $_REQUEST['sitex'];
+} else {
+	$wmgHostname = $_SERVER['HTTP_HOST'];
+}
+
 $wgConf->siteParamsCallback = 'efGetSiteParams';
-$wgDBname = array_search('//' . $_SERVER['HTTP_HOST'], $wgConf->settings['wgServer']);
+$wgDBname = array_search('//' . $wmgHostname, $wgConf->settings['wgServer']);
 $wgConf->extractAllGlobals( $wgDBname );
 
-$wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wgDBname/images";
-$wgUploadPath = "//static.orain.org/$wgDBname/images";
+$wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
+$wgUploadPath = "//static.orain.org/$wmgHostname/images";
 ?>
