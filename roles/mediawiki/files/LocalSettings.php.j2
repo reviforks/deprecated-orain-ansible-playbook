@@ -32,7 +32,6 @@ $wgConf = new SiteConfiguration;
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->suffixes = array( 'wiki' );
 $wgConf->localVHosts = array( '{{mysql_address}}' );
-$wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
 $wgConf->settings = array(
 	// AbuseFilter
@@ -171,7 +170,7 @@ $wgConf->settings = array(
 	'wgSpamBlacklistFiles' => array(
 		'default' => array(
 			"DB: metawiki Spam_blacklist",
-			"//meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw",
+			"https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw",
 		),
 	),
 	'wgTitleBlacklistSources' => array(
@@ -351,7 +350,7 @@ $wgConf->settings = array(
 		'default' => 'Creative Commons Attribution Share Alike',
 	),
 	'wgRightsUrl' => array(
-		'default' => 'http://creativecommons.org/licenses/by-sa/3.0/',
+		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
 	),
 	// /License
 
