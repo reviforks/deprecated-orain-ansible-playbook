@@ -6,12 +6,13 @@ server {
 	index http://meta.orain.org/wiki/Main_Page;
 
 	server_name static.orain.org upload.orain.org;
+	expires 2w;
 
-	location ~ ^/.*?/images/thumb/(archive/)?[0-9a-f]/[0-9a-f][0-9a-f]/([^/]+)/([0-9]+)px-.*$ {
+	location ~ ^/.*?/images/thumb {
 		try_files $uri $uri/ @thumb;
 	}
 
-	location ~ /.*?/images/deleted { deny all; }
+	location ~ ^/.*?/images/deleted { deny all; }
 
 	location /w/thumb.php {
 		root /usr/share/nginx/.orain.org;
