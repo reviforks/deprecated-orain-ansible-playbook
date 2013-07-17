@@ -58,6 +58,12 @@ $wgConf->settings = array(
 			),
 		),
 	),
+	'wgAutoConfirmAge' => array(
+		'default' => 111600, // 31 h * 60 min/h * 60 s/min
+	),
+	'wgAutoConfirmCount' => array(
+		'default' => 5,
+	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
 			'*' => array(
