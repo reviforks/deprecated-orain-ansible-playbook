@@ -28,7 +28,7 @@ require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
 require_once( "$IP/skins/foreground/foreground.php" );
 require_once( "$IP/skins/monaco/monaco.php" );
 
-$wgLocalDatabases = array( 'cricketwiki', 'metawiki', 'nflwiki', 'testwiki' );
+$wgLocalDatabases = array( 'cricketwiki', 'levelswiki', 'metawiki', 'nflwiki', 'testwiki' );
 $wgConf = new SiteConfiguration;
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->suffixes = array( 'wiki' );
@@ -156,6 +156,7 @@ $wgConf->settings = array(
 	'wgServer' => array(
 		'default' => '//unconfigured.orain.org',
 		'cricketwiki' => '//cricket.orain.org',
+		'levelswiki' => '//levels.orain.org',
 		'metawiki' => '//meta.orain.org',
 		'nflwiki' => '//nfl.orain.org',
 		'testwiki' => '//test.orain.org',
@@ -346,6 +347,7 @@ $wgConf->settings = array(
 	'wgSitename' => array(
 		'default' => 'Unconfigured',
 		'cricketwiki' => 'Cricket Wiki',
+		'levelswiki' => 'Wikilevels',
 		'metawiki' => 'Orain Meta',
 		'nflwiki' => 'NFL Wiki',
 		'testwiki' => 'TestWiki',
