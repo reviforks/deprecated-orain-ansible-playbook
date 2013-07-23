@@ -28,7 +28,7 @@ require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
 require_once( "$IP/skins/foreground/foreground.php" );
 require_once( "$IP/skins/monaco/monaco.php" );
 
-$wgLocalDatabases = array( 'cricketwiki', 'levelswiki', 'metawiki', 'nflwiki', 'testwiki' );
+$wgLocalDatabases = array( 'cricketwiki', 'levelswiki', 'metawiki', 'nflwiki', 'polymetawiki', 'testwiki' );
 $wgConf = new SiteConfiguration;
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->suffixes = array( 'wiki' );
@@ -49,6 +49,7 @@ $wgConf->settings = array(
 	'wgAddGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
+				'bot',
 				'bureaucrat',
 				'rollbacker',
 				'sysop',
@@ -124,6 +125,7 @@ $wgConf->settings = array(
 	'wgRemoveGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
+				'bot',
 				'rollbacker',
 				'sysop',
 			),
@@ -154,12 +156,7 @@ $wgConf->settings = array(
 		'default' => '/w',
 	),
 	'wgServer' => array(
-		'default' => '//unconfigured.orain.org',
-		'cricketwiki' => '//cricket.orain.org',
-		'levelswiki' => '//levels.orain.org',
-		'metawiki' => '//meta.orain.org',
-		'nflwiki' => '//nfl.orain.org',
-		'testwiki' => '//test.orain.org',
+		'default' => '//\$lang.orain.org',
 	),
 	'wgUsePathInfo' => array(
 		'default' => true,
@@ -351,6 +348,7 @@ $wgConf->settings = array(
 		'cricketwiki' => 'Cricket Wiki',
 		'levelswiki' => 'Wikilevels',
 		'metawiki' => 'Orain Meta',
+		'polymetawiki' => 'PolyWiki Meta',
 		'nflwiki' => 'NFL Wiki',
 		'testwiki' => 'TestWiki',
 	),
@@ -417,8 +415,7 @@ $wgGroupPermissions['bureaucrat']['renameuser'] = false;
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
 unset( $wgGroupPermissions['steward'] );
 
-foreach ( $wgLocalDatabases as $db ) {
-	$server =& $wgConf->settings['wgServer'][$db];
+foreach ( $wgConf->settings['wgServer'] as $db => $server ) {
 	$canonical =& $wgConf->settings['wgCanonicalServer'][$db];
 	$canonical = $canonical ?: ( 'https:' . $server );
 }
@@ -430,11 +427,41 @@ if ( ( basename( $_SERVER["SCRIPT_FILENAME"] ) == "thumb.php" ) && isset( $_REQU
 }
 
 $wgConf->siteParamsCallback = 'efGetSiteParams';
-$wgDBname = array_search('//' . $wmgHostname, $wgConf->settings['wgServer']);
+
+if ( $search = array_search( '//' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
+	$wgDBname = $search;
+} elseif ( preg_match( '/^(.+?)\.(.+?)\.orain\.org$/', $wmgHostname, $matches ) ) {
+	$wgDBname = $matches[1] . $matches[2];
+} elseif ( preg_match( '/^(.*)\.orain\.org$/', $wmgHostname, $matches ) ) {
+	$wgDBname = $matches[1] . 'wiki';
+} else {
+	$wgDBname = false;
+}
+
+if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
+	header("HTTP/1.1 404 Not Found");
+	echo(<<<RESP
+<html>
+<head><title>404 Not Found</title></head>
+<body bgcolor="white">
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+RESP
+	);
+	exit();
+}
+
 $wgConf->extractAllGlobals( $wgDBname );
+
+if ( $wgDBname == "polymetawiki" ) {
+	$wgReadOnly = "Archived wiki";
+}
 
 $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
 $wgUploadPath = "//static.orain.org/$wmgHostname/images";
+$wgDebugLogFile = "/var/log/mediawiki/$wmgHostname.log";
 
 // Piwik
 $wgHooks['SkinAfterBottomScripts'][] = 'lfPiwikScript';
