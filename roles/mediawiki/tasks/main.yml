@@ -29,6 +29,7 @@
              extensions/CheckUser
              extensions/Cite
              extensions/ConfirmEdit
+             extensions/Gadgets
              extensions/GlobalBlocking
              extensions/InputBox
              extensions/InterwikiMagic
