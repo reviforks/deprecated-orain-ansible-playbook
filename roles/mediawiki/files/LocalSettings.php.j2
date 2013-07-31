@@ -159,9 +159,6 @@ $wgConf->settings = array(
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
 	),
-	'wgDiff3' => array(
-		'default' => '/usr/bin/diff3',
-	),
 	'wgDisableOutputCompression' => array(
 		'default' => true,
 	),
@@ -303,6 +300,21 @@ $wgConf->settings = array(
 	),
 	// /Email
 
+	// Cache
+	'wgEnableSidebarCache' => array(
+		'default' => true,
+	),
+	'wgHitcounterUpdateFreq' => array(
+		'default' => 5,
+	),
+	'wgMainCacheType' => array(
+		'default' => CACHE_MEMCACHED,
+	),
+	'wgMemCachedServers' => array(
+		'default' => array( '{{memcache_address}}:11211' ),
+	),
+	// /Cache
+
 	// Profiling
 	'wgEnableProfileInfo' => array(
 		'default' => true,
@@ -343,15 +355,6 @@ $wgConf->settings = array(
 		'default' => 'en',
 	),
 	// /Language
-
-	// Memcached
-	'wgMainCacheType' => array(
-		'default' => CACHE_MEMCACHED,
-	),
-	'wgMemCachedServers' => array(
-		'default' => array( '{{memcache_address}}:11211' ),
-	),
-	// /Memcached
 
 	// Names
 	'wgMetaNamespace' => array(
@@ -453,7 +456,9 @@ if ( ( basename( $_SERVER["SCRIPT_FILENAME"] ) == "thumb.php" ) && isset( $_REQU
 
 $wgConf->siteParamsCallback = 'efGetSiteParams';
 
-if ( $search = array_search( '//' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
+if ( isset( MW_DB ) ) {
+	$wgDBname = MW_DB;
+} elseif ( $search = array_search( '//' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
 	$wgDBname = $search;
 } elseif ( preg_match( '/^(.+?)\.(.+?)\.orain\.org$/', $wmgHostname, $matches ) ) {
 	$wgDBname = $matches[1] . $matches[2];

@@ -1,3 +1,0 @@
-server_name orain.org www.orain.org;
-
-return 301 http://meta.orain.org$request_uri;
