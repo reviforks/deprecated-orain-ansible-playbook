@@ -1,7 +1,7 @@
 <?php
 if ( !mt_rand( 0, 20 ) ) {
-        $wgProfiler['class'] = 'Profiler';
+	$wgProfiler['class'] = 'Profiler';
 } else {
-        $wgProfiler['class'] = 'ProfilerStub';
+	$wgProfiler['class'] = 'ProfilerStub';
 }
 ?>
