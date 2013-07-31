@@ -235,6 +235,9 @@ $wgConf->settings = array(
 	// /CentralAuth
 
 	// Database
+	'wgCompressRevisions' => array(
+		'default' => true,
+	),
 	'wgDBpassword' => array(
 		'default' => "{{mw_db_password}}",
 	),
@@ -312,6 +315,15 @@ $wgConf->settings = array(
 	),
 	'wgMemCachedServers' => array(
 		'default' => array( '{{memcache_address}}:11211' ),
+	),
+	'wgParserCacheExpireTime' => array(
+		'default' => 604800, // 7 days
+	),
+	'wgRevisionCacheExpiry' => array(
+		'default' => 259200, // 3 days
+	),
+	'wgUseFileCache' => array(
+		'default' => true,
 	),
 	// /Cache
 
@@ -456,7 +468,7 @@ if ( ( basename( $_SERVER["SCRIPT_FILENAME"] ) == "thumb.php" ) && isset( $_REQU
 
 $wgConf->siteParamsCallback = 'efGetSiteParams';
 
-if ( isset( MW_DB ) ) {
+if ( defined( "MW_DB" ) ) {
 	$wgDBname = MW_DB;
 } elseif ( $search = array_search( '//' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
 	$wgDBname = $search;
@@ -489,6 +501,7 @@ if ( $wgDBname == "polymetawiki" ) {
 	$wgReadOnly = "Archived wiki";
 }
 
+$wgFileCacheDirectory = "/var/tmp/mediawiki/cache/$wmgHostname";
 $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
 $wgUploadPath = "//static.orain.org/$wmgHostname/images";
 $wgDebugLogFile = "/var/log/mediawiki/$wmgHostname.log";
