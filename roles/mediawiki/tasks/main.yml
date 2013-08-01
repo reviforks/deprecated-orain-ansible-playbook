@@ -2,7 +2,7 @@
 - name: Check out latest stable WMF branch of MediaWiki
   git: repo=https://git.wikimedia.org/git/mediawiki/core.git
        dest=/usr/share/nginx/.orain.org/w
-       version=wmf/1.22wmf10
+       version=wmf/1.22wmf12
 
 - name: Copy MediaWiki settings from templates
   template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}} backup=yes
@@ -18,31 +18,26 @@
 
 - name: Download MediaWiki extensions
   command: >
-             git submodule update --init
-             extensions/AbuseFilter
-             extensions/AntiSpoof
-             extensions/CentralAuth
-             extensions/CheckUser
-             extensions/Cite
-             extensions/ConfirmEdit
-             extensions/Gadgets
-             extensions/GlobalBlocking
-             extensions/InputBox
-             extensions/InterwikiMagic
-             extensions/Nuke
-             extensions/ParserFunctions
-             extensions/Renameuser
-             extensions/Scribunto
-             extensions/SiteMatrix
-             extensions/SpamBlacklist
-             extensions/TitleBlacklist
-             extensions/WikimediaMessages
-             skins/foreground
-             skins/monaco
-             chdir=/usr/share/nginx/.orain.org/w
+            git submodule update --init
+            extensions/AbuseFilter
+            extensions/AntiSpoof
+            extensions/CentralAuth
+            extensions/CheckUser
+            extensions/Cite
+            extensions/ConfirmEdit
+            extensions/Gadgets
+            extensions/GlobalBlocking
+            extensions/InputBox
+            extensions/InterwikiMagic
+            extensions/Nuke
+            extensions/ParserFunctions
+            extensions/Renameuser
+            extensions/Scribunto
+            extensions/SiteMatrix
+            extensions/SpamBlacklist
+            extensions/TitleBlacklist
+            extensions/WikimediaMessages
+            skins/foreground
+            skins/monaco
+            chdir=/usr/share/nginx/.orain.org/w
 
-- name: Patch CentralAuth group name
-  lineinfile: dest=/usr/share/nginx/.orain.org/w/extensions/CentralAuth/CentralAuth.i18n.php
-              regexp="\s*'centralauth-groupname'\s*=> 'the Wikimedia Foundation'",
-              state=absent
-              backup=yes
