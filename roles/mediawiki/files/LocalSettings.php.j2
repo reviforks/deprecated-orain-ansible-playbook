@@ -47,7 +47,7 @@ require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
 require_once( "$IP/skins/foreground/foreground.php" );
 require_once( "$IP/skins/monaco/monaco.php" );
 
-$wgLocalDatabases = array( 'cricketwiki', 'levelswiki', 'metawiki', 'nflwiki', 'polymetawiki', 'testwiki' );
+$wgLocalDatabases = array( 'computerclanwiki', 'cricketwiki', 'levelswiki', 'metawiki', 'nflwiki', 'polymetawiki', 'testwiki' );
 $wgConf = new SiteConfiguration;
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->suffixes = array( 'wiki' );
@@ -381,6 +381,7 @@ $wgConf->settings = array(
 	),
 	'wgSitename' => array(
 		'default' => 'Unconfigured',
+		'computerclanwiki' => 'Computer Clan Wiki',
 		'cricketwiki' => 'Cricket Wiki',
 		'levelswiki' => 'Wikilevels',
 		'metawiki' => 'Orain Meta',
