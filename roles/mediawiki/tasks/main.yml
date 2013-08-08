@@ -24,6 +24,7 @@
             extensions/CentralAuth
             extensions/CheckUser
             extensions/Cite
+            extensions/CreateWiki
             extensions/ConfirmEdit
             extensions/Gadgets
             extensions/GlobalBlocking

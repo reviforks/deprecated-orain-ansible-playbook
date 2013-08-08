@@ -128,6 +128,7 @@ $wgConf->settings = array(
 				'centralauth-lock' => true,
 				'centralauth-oversight' => true,
 				'centralauth-unmerge' => true,
+				'createwiki' => true,
 				'globalblock' => true,
 				'globalunblock' => true,
 				'noratelimit' => true,
@@ -263,6 +264,18 @@ $wgConf->settings = array(
 		'default' => array(),
 	),
 	// /Database
+
+	// CreateWiki
+	'+wgCreateWikiSQLfiles' => array(
+		'default' => array(
+			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
+			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
+			"$IP/extensions/CheckUser/cu_changes.sql",
+			"$IP/extensions/CheckUser/cu_log.sql",
+			"$IP/extensions/CreateWiki/global_block_whitelist.sql",
+		),
+	),
+	// /CreateWiki
 
 	// Style
 	'wgDefaultSkin' => array(
@@ -498,6 +511,10 @@ RESP
 	exit();
 }
 
+if ( $wgDBname === "metawiki" ) {
+	require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
+}
+
 $wgConf->extractAllGlobals( $wgDBname );
 
 if ( $wgDBname == "polymetawiki" ) {
@@ -551,4 +568,3 @@ SCRIPT;
 	return true;
 }
 // /Piwik
-?>
