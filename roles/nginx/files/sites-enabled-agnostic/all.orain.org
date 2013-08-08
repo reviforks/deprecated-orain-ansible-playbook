@@ -14,14 +14,12 @@ location ~ \.php$ {
 	fastcgi_pass unix:/var/run/php5-fpm.sock;
 }
 
-location /w/cache          { deny all; }
-location /w/images         { deny all; }
-location /w/languages      { deny all; }
-location /w/maintenance    { deny all; }
-location /w/serialized     { deny all; }
+location ^~ /w/languages      { deny all; }
+location ^~ /w/maintenance    { deny all; }
+location ^~ /w/serialized     { deny all; }
 location ~ /.git(/|$)      { deny all; }
 
-location /wiki {
+location ^~ /wiki {
 	include fastcgi_params;
 	fastcgi_param SCRIPT_FILENAME $document_root/w/index.php;
 	fastcgi_pass unix:/var/run/php5-fpm.sock;
