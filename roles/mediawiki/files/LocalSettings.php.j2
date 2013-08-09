@@ -48,9 +48,9 @@ require_once( "$IP/extensions/YouTube/YouTube.php" );
 require_once( "$IP/skins/foreground/foreground.php" );
 require_once( "$IP/skins/monaco/monaco.php" );
 
-$wgLocalDatabases = array( 'computerclanwiki', 'cricketwiki', 'levelswiki', 'metawiki', 'nflwiki', 'polymetawiki', 'testwiki' );
+$wgLocalDatabases = array_map( 'trim', file( "$IP/all.dblist" ) );
 $wgConf = new SiteConfiguration;
-$wgConf->wikis = $wgLocalDatabases;
+$wgConf->wikis =& $wgLocalDatabases;
 $wgConf->suffixes = array( 'wiki' );
 $wgConf->localVHosts = array( '{{mysql_address}}' );
 

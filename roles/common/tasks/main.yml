@@ -12,6 +12,7 @@
     - lsof
     - mysql-client
     - netcat
+    - python-requests
     - python-software-properties
     - systemd
     - vim
@@ -34,3 +35,6 @@
 - include: create_user.yml user={{item.name}} group={{item.group}}
   with_items:
     - { name: 'kudu', group: 'sudo' }
+
+- name: Create user "www-scripts"
+  user: name=www-scripts group=www-data shell=/bin/zsh

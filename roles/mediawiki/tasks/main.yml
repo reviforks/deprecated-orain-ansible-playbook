@@ -16,6 +16,12 @@
     - ./*.php
   notify: Clear APC cache
 
+- name: Copy get_db_list.py
+  copy: src=get_db_list.py dest=/home/www-scripts/get_db_list.py owner=www-scripts group=www-data mode=770 backup=yes
+
+- name: Create a crontab for get_db_list.py
+  cron: name="Get DB list" user="www-scripts" job="python ~/get_db_list.py"
+
 - name: Download MediaWiki extensions
   command: >
             git submodule update --init
