@@ -1,2 +1,4 @@
 [webservers]
 ec2-54-227-250-92.compute-1.amazonaws.com
+ip-10-243-33-50.ec2.internal
+
