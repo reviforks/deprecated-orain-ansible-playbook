@@ -1,6 +1,6 @@
 ---
 - name: Check out latest stable WMF branch of MediaWiki
-  git: repo=https://git.wikimedia.org/git/mediawiki/core.git
+  git: repo=https://github.com/Orain/mediawiki-core.git
        dest=/usr/share/nginx/.orain.org/w
        version=wmf/1.22wmf12
 
@@ -49,6 +49,7 @@
             extensions/Poem
             extensions/Quiz
             extensions/Renameuser
+            extensions/ReplaceText
             extensions/Scribunto
             extensions/SimpleAntiSpam
             extensions/SiteMatrix
