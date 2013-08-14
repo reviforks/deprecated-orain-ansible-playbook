@@ -43,6 +43,7 @@
             extensions/GlobalBlocking
             extensions/ImageMap
             extensions/InputBox
+            extensions/intersection
             extensions/InterwikiMagic
             extensions/Nuke
             extensions/ParserFunctions
