@@ -27,22 +27,33 @@
             git submodule update --init
             extensions/AbuseFilter
             extensions/AntiSpoof
+            extensions/ApiSandbox
+            extensions/CategoryTree
             extensions/CentralAuth
+            extensions/CharInsert
             extensions/CheckUser
             extensions/Cite
+            extensions/CodeEditor
             extensions/CreateWiki
             extensions/ConfirmEdit
+            extensions/Disambiguator
+            extensions/DPLforum
             extensions/Gadgets
             extensions/GlobalBlocking
             extensions/InputBox
             extensions/InterwikiMagic
             extensions/Nuke
             extensions/ParserFunctions
+            extensions/Poem
+            extensions/Quiz
             extensions/Renameuser
             extensions/Scribunto
             extensions/SiteMatrix
+            extensions/SkinPerPage
             extensions/SpamBlacklist
             extensions/TitleBlacklist
+            extensions/Vector
+            extensions/WikiEditor
             extensions/WikimediaMessages
             skins/foreground
             skins/monaco

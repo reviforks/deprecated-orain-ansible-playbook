@@ -25,6 +25,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 require_once( "$IP/extensions/AntiSpoof/AntiSpoof.php" );
 require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
+require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
 require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
 require_once( "$IP/extensions/CheckUser/CheckUser.php" );
 require_once( "$IP/extensions/Cite/Cite.php" );
@@ -43,6 +44,7 @@ require_once( "$IP/extensions/Scribunto/Scribunto.php" );
 require_once( "$IP/extensions/SiteMatrix/SiteMatrix.php" );
 require_once( "$IP/extensions/SpamBlacklist/SpamBlacklist.php" );
 require_once( "$IP/extensions/TitleBlacklist/TitleBlacklist.php" );
+require_once( "$IP/extensions/Vector/Vector.php" );
 require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
 require_once( "$IP/extensions/YouTube/YouTube.php" );
 require_once( "$IP/skins/foreground/foreground.php" );
@@ -266,7 +268,7 @@ $wgConf->settings = array(
 	),
 	// /Database
 
-	// CreateWiki
+	// Misc. extensions
 	'+wgCreateWikiSQLfiles' => array(
 		'default' => array(
 			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
@@ -276,7 +278,12 @@ $wgConf->settings = array(
 			"$IP/extensions/CreateWiki/global_block_whitelist.sql",
 		),
 	),
-	// /CreateWiki
+	'wmgUseDPLforum' => array(
+		'default' => false,
+		'mediawikitesterswiki' => true,
+		'metawiki' => true,
+	),
+	// /Misc. extensions
 
 	// Style
 	'wgDefaultSkin' => array(
@@ -290,6 +297,9 @@ $wgConf->settings = array(
 	),
 	'wgStylePath' => array(
 		'default' => '//static.orain.org/common/skins',
+	),
+	'wgUseAjax' => array(
+		'default' => true,
 	),
 	// /Style
 
@@ -520,7 +530,23 @@ if ( $wgDBname === "metawiki" ) {
 	require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
 }
 
+if ( $wgDBname == "mediawikitesterswiki" ) {
+	require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
+	$wgCategoryTreeMaxChildren = 2000;
+	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
+	require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
+	require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
+	require_once( "$IP/extensions/Poem/Poem.php" );
+	require_once( "$IP/extensions/Quiz/Quiz.php" );
+	require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
+	require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
+}
+
 $wgConf->extractAllGlobals( $wgDBname );
+
+if ( $wmgUseDPLforum ) {
+	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
+}
 
 if ( $wgDBname == "polymetawiki" ) {
 	$wgReadOnly = "Archived wiki";
