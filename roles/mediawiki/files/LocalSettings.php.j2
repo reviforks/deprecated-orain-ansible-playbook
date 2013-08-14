@@ -167,6 +167,9 @@ $wgConf->settings = array(
 	'wgDisableOutputCompression' => array(
 		'default' => true,
 	),
+	'wgJobRunRate' => array(
+		'default' => 0.1,
+	),
 	'wgResourceLoaderMaxQueryLength' => array(
 		'default' => -1,
 	),
@@ -336,7 +339,7 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	'wgHitcounterUpdateFreq' => array(
-		'default' => 5,
+		'default' => 20,
 	),
 	'wgMainCacheType' => array(
 		'default' => CACHE_MEMCACHED,
@@ -351,6 +354,9 @@ $wgConf->settings = array(
 		'default' => 259200, // 3 days
 	),
 	'wgUseFileCache' => array(
+		'default' => true,
+	),
+	'wgUseLocalMessageCache' => array(
 		'default' => true,
 	),
 	// /Cache
@@ -556,6 +562,7 @@ if ( $wgDBname == "polymetawiki" ) {
 	$wgReadOnly = "Archived wiki";
 }
 
+$wgCacheDirectory = '/tmp/mw-cache';
 $wgFileCacheDirectory = "/var/tmp/mediawiki/cache/$wmgHostname";
 $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
 $wgUploadPath = "//static.orain.org/$wmgHostname/images";
