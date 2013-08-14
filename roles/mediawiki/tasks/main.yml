@@ -26,6 +26,7 @@
   command: >
             git submodule update --init
             extensions/AbuseFilter
+            extensions/AdminLinks
             extensions/AntiSpoof
             extensions/ApiSandbox
             extensions/CategoryTree
@@ -48,6 +49,7 @@
             extensions/Quiz
             extensions/Renameuser
             extensions/Scribunto
+            extensions/SimpleAntiSpam
             extensions/SiteMatrix
             extensions/SkinPerPage
             extensions/SpamBlacklist

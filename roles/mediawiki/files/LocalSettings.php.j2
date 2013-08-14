@@ -41,6 +41,7 @@ require_once( "$IP/extensions/OrainMessages/OrainMessages.php" );
 require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 require_once( "$IP/extensions/Renameuser/Renameuser.php" );
 require_once( "$IP/extensions/Scribunto/Scribunto.php" );
+require_once( "$IP/extensions/SimpleAntiSpam/SimpleAntiSpam.php" );
 require_once( "$IP/extensions/SiteMatrix/SiteMatrix.php" );
 require_once( "$IP/extensions/SpamBlacklist/SpamBlacklist.php" );
 require_once( "$IP/extensions/TitleBlacklist/TitleBlacklist.php" );
@@ -531,6 +532,7 @@ if ( $wgDBname === "metawiki" ) {
 }
 
 if ( $wgDBname == "mediawikitesterswiki" ) {
+	require_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
 	require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
 	$wgCategoryTreeMaxChildren = 2000;
 	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
