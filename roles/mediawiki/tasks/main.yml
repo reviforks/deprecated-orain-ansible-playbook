@@ -56,6 +56,7 @@
             extensions/SiteMatrix
             extensions/SkinPerPage
             extensions/SpamBlacklist
+            extensions/TemplateSandbox
             extensions/TitleBlacklist
             extensions/Vector
             extensions/WikiEditor
