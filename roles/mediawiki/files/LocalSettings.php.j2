@@ -359,7 +359,7 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	'wgUseLocalMessageCache' => array(
-		'default' => true,
+		'default' => false,
 	),
 	// /Cache
 
@@ -564,7 +564,7 @@ if ( $wgDBname == "polymetawiki" ) {
 	$wgReadOnly = "Archived wiki";
 }
 
-$wgCacheDirectory = '/tmp/mw-cache';
+//$wgCacheDirectory = '/tmp/mw-cache';
 $wgFileCacheDirectory = "/var/tmp/mediawiki/cache/$wmgHostname";
 $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
 $wgUploadPath = "//static.orain.org/$wmgHostname/images";
