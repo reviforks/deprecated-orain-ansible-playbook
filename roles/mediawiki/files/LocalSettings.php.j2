@@ -23,6 +23,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit;
 }
 
+require_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
 require_once( "$IP/extensions/AntiSpoof/AntiSpoof.php" );
 require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
 require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
@@ -540,7 +541,6 @@ if ( $wgDBname === "metawiki" ) {
 }
 
 if ( $wgDBname == "mediawikitesterswiki" ) {
-	require_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
 	require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
 	$wgCategoryTreeMaxChildren = 2000;
 	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
