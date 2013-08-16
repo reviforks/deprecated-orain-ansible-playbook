@@ -3,6 +3,10 @@ server_name bits.orain.org;
 root /usr/share/nginx/bits.orain.org;
 index index.html index.htm index.php;
 
+location ~ \.js$ {
+	expires 2w;
+}
+
 location ~ \.php$ {
 	try_files $uri =404;
 	include fastcgi_params;
