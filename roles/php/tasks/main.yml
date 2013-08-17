@@ -25,8 +25,12 @@
   lineinfile: dest=/etc/php5/fpm/conf.d/20-apc.ini regexp='^;?apc.stat' line='apc.stat = 0;'
   notify: Reload php-fpm
 
-- name: Increase APC memory segments to 8 (* 32 MB = 256 MB)
-  lineinfile: dest=/etc/php5/fpm/conf.d/20-apc.ini regexp='^;?apc.shm_segments' line='apc.shm_segments = 8;'
+- name: Increase APC shared memory (32 MB -> 64 MB)
+  lineinfile: dest=/etc/php5/fpm/conf.d/20-apc.ini regexp='^;?apc.shm_size' line='apc.shm_segments = 64M;'
+  notify: Reload php-fpm
+
+- name: Increase APC memory segments to 4 (* 64 MB = 256 MB)
+  lineinfile: dest=/etc/php5/fpm/conf.d/20-apc.ini regexp='^;?apc.shm_segments' line='apc.shm_segments = 4;'
   notify: Reload php-fpm
 
 - name: Copy php-fpm pool configuration
