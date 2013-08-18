@@ -472,6 +472,17 @@ $wgConf->settings = array(
 		'default' => '{{wgUpgradeKey}}',
 	),
 	// /Keys
+
+	// Users
+	'wgAllowUserJs' => array(
+		'default' => false,
+		'wikiteamwiki' => true,
+	),
+	'wgAllowUserCss' => array(
+		'default' => false,
+		'wikiteamwiki' => true,
+	),
+	// /Users
 );
 
 // From https://www.mediawiki.org/wiki/Manual:$wgConf#for_1.14_and_newer
@@ -557,6 +568,10 @@ if ( $wgDBname == "mediawikitesterswiki" ) {
 	require_once( "$IP/extensions/Quiz/Quiz.php" );
 	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
 	require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
+	require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
+}
+
+if ( $wgDBname == "wikiteamwiki" ) {
 	require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
 }
 
