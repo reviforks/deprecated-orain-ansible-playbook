@@ -71,6 +71,12 @@ $wgConf->settings = array(
 	),
 	// /AbuseFilter
 
+	// Block
+	'wgBlockAllowsUTEdit' => array(
+		'default' => true,
+	),
+	// /Block
+
 	// Permissions
 	'wgAddGroups' => array(
 		'default' => array(
@@ -144,6 +150,11 @@ $wgConf->settings = array(
 				'noratelimit' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
+			),
+		),
+		'+encyclopedianationalwiki' => array(
+			'*' => array(
+				'edit' => false,
 			),
 		),
 	),
@@ -383,6 +394,7 @@ $wgConf->settings = array(
 		'metawiki' => true,
 		'nflwiki' => true,
 		'wikiteamwiki' => true,
+		'encyclopedianationalwiki' => true,
 	),
 	'wgGenerateThumbnailOnParse' => array(
 		'default' => false,
@@ -435,6 +447,8 @@ $wgConf->settings = array(
 		'testwiki' => 'TestWiki',
 		'yuewikivoyagewiki' => 'Cantonese Wikivoyage',
 		'wikiteamwiki' => 'WikiTeam',
+		'encyclopedianationalwiki' => 'Encyclopedia National',
+		'sohwikiwiki ' => 'Shadow of Honor',
 	),
 	// /Names
 
