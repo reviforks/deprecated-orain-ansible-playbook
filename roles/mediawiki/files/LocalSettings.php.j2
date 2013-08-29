@@ -74,6 +74,15 @@ $wgConf->settings = array(
 	),
 	// /AbuseFilter
 
+	// Users
+	'wgAllowUserJs' => array(
+		'default' => true,
+	),
+	'wgAllowUserCss' => array(
+		'default' => true,
+	),
+	// /Users
+
 	// Block
 	'wgBlockAllowsUTEdit' => array(
 		'default' => true,
@@ -141,6 +150,11 @@ $wgConf->settings = array(
 				'deleterevision' => true,
 			),
 		),
+		'+encyclopedianationalwiki' => array(
+			'*' => array(
+				'edit' => false,
+			),
+		),
 		'+metawiki' => array(
 			'steward' => array(
 				'abusefilter-modify-global' => true,
@@ -153,11 +167,6 @@ $wgConf->settings = array(
 				'noratelimit' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
-			),
-		),
-		'+encyclopedianationalwiki' => array(
-			'*' => array(
-				'edit' => false,
 			),
 		),
 	),
@@ -302,10 +311,18 @@ $wgConf->settings = array(
 			"$IP/extensions/CreateWiki/global_block_whitelist.sql",
 		),
 	),
+	'wgInterwikiViewOnly' => array(
+		'default' => true,
+	),
 	'wmgUseDPLforum' => array(
 		'default' => false,
 		'mediawikitesterswiki' => true,
 		'metawiki' => true,
+	),
+	'wmgUseWikiEditor' => array(
+		'default' => false,
+		'mediawikitesterswiki' => true,
+		'wikiteamwiki' => true,
 	),
 	// /Misc. extensions
 
@@ -316,10 +333,10 @@ $wgConf->settings = array(
 	'wgLogo' => array(
 		'default' => '//static.orain.org/meta.orain.org/images/c/c6/Orain.png',
 		'computerclanwiki' => '//upload.wikimedia.org/wikipedia/commons/f/f7/CC_Wiki_Graphic_Mark_Small.png',
+		'encyclopedianationalwiki' => '//static.orain.org/encyclopedianational.orain.org/images/2/24/Logo_of_the_Encyclopedia_National.png',
 		'levelswiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wikilevels_logo_text.png/135px-Wikilevels_logo_text.png',
 		'mediawikitesterswiki' => '//upload.wikimedia.org/wikipedia/commons/9/9a/MediaWikiTestersWiki.png',
 		'testwiki' => '//static.orain.org/test.orain.org/images/8/8d/Twlogo.png',
-		'encyclopedianationalwiki' => '//static.orain.org/encyclopedianational.orain.org/images/2/24/Logo_of_the_Encyclopedia_National.png',
 	),
 	'wgStylePath' => array(
 		'default' => '//static.orain.org/common/skins',
@@ -395,10 +412,10 @@ $wgConf->settings = array(
 	// Files
 	'wgEnableUploads' => array(
 		'default' => false,
+		'encyclopedianationalwiki' => true,
 		'metawiki' => true,
 		'nflwiki' => true,
 		'wikiteamwiki' => true,
-		'encyclopedianationalwiki' => true,
 	),
 	'wgGenerateThumbnailOnParse' => array(
 		'default' => false,
@@ -423,16 +440,10 @@ $wgConf->settings = array(
 	// Language
 	'wgLanguageCode' => array(
 		'default' => 'en',
-		'yuewikivoyagewiki' => 'zh-yue',
 		'ukrwiki1wiki' => 'uk',
+		'yuewikivoyagewiki' => 'zh-yue',
 	),
 	// /Language
-
-	// Interwiki
-	'wgInterwikiViewOnly' => array(
-		'default' => true,
-	),
-	// /Interwiki
 
 	// Names
 	'wgMetaNamespace' => array(
@@ -445,8 +456,10 @@ $wgConf->settings = array(
 	),
 	'wgSitename' => array(
 		'default' => 'Unconfigured',
+		'botwiki' => 'Bot Wiki',
 		'computerclanwiki' => 'Computer Clan Wiki',
 		'cricketwiki' => 'Cricket Wiki',
+		'encyclopedianationalwiki' => 'Encyclopedia National',
 		'foodopediawiki' => 'Foodopedia',
 		'levelswiki' => 'Wikilevels',
 		'mediawikitesterswiki' => 'MediaWiki Testers Wiki',
@@ -454,12 +467,10 @@ $wgConf->settings = array(
 		'mlbwiki' => 'MLB Wiki',
 		'polymetawiki' => 'PolyWiki Meta',
 		'nflwiki' => 'NFL Wiki',
-		'testwiki' => 'TestWiki',
-		'yuewikivoyagewiki' => 'Cantonese Wikivoyage',
-		'wikiteamwiki' => 'WikiTeam',
-		'encyclopedianationalwiki' => 'Encyclopedia National',
 		'sohwikiwiki' => 'Shadow of Honor',
-		'botwiki' => 'Bot Wiki',
+		'testwiki' => 'TestWiki',
+		'wikiteamwiki' => 'WikiTeam',
+		'yuewikivoyagewiki' => 'Cantonese Wikivoyage',
 	),
 	// /Names
 
@@ -500,17 +511,6 @@ $wgConf->settings = array(
 		'default' => '{{wgUpgradeKey}}',
 	),
 	// /Keys
-
-	// Users
-	'wgAllowUserJs' => array(
-		'default' => false,
-		'wikiteamwiki' => true,
-	),
-	'wgAllowUserCss' => array(
-		'default' => false,
-		'wikiteamwiki' => true,
-	),
-	// /Users
 );
 
 // From https://www.mediawiki.org/wiki/Manual:$wgConf#for_1.14_and_newer
@@ -596,11 +596,6 @@ if ( $wgDBname == "mediawikitesterswiki" ) {
 	require_once( "$IP/extensions/Quiz/Quiz.php" );
 	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
 	require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
-	require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
-}
-
-if ( $wgDBname == "wikiteamwiki" ) {
-	require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
 }
 
 if ( $wgDBname == "botwiki" ) {
@@ -612,6 +607,10 @@ $wgConf->extractAllGlobals( $wgDBname );
 
 if ( $wmgUseDPLforum ) {
 	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
+}
+
+if ( $wmgUseWikiEditor ) {
+	require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
 }
 
 if ( $wgDBname == "polymetawiki" ) {
