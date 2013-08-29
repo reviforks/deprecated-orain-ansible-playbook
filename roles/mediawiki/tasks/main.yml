@@ -45,6 +45,7 @@
             extensions/InputBox
             extensions/intersection
             extensions/InterwikiMagic
+            extensions/LabeledSectionTransclusion
             extensions/Nuke
             extensions/ParserFunctions
             extensions/Poem

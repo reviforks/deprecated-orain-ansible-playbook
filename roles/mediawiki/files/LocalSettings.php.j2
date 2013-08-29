@@ -596,6 +596,11 @@ if ( $wgDBname == "wikiteamwiki" ) {
 	require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
 }
 
+if ( $wgDBname == "botwiki" ) {
+	require_once ( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
+	require_once ( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
+}
+
 $wgConf->extractAllGlobals( $wgDBname );
 
 if ( $wmgUseDPLforum ) {
