@@ -4,4 +4,3 @@ if ( !mt_rand( 0, 15 ) ) {
 } else {
 	$wgProfiler['class'] = 'ProfilerStub';
 }
-?>
