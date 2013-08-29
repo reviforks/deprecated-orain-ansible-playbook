@@ -48,6 +48,7 @@
             extensions/Interwiki
             extensions/InterwikiMagic
             extensions/LabeledSectionTransclusion
+            extensions/MyVariables
             extensions/Nuke
             extensions/ParserFunctions
             extensions/Poem
