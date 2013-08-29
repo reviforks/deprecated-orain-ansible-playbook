@@ -287,6 +287,9 @@ $wgConf->settings = array(
 	// /License
 
 	// Misc. extensions
+	'ceAllowConfirmedEmail' => array(
+		'default' => true,
+	),
 	'+wgCreateWikiSQLfiles' => array(
 		'default' => array(
 			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
@@ -404,6 +407,9 @@ $wgConf->settings = array(
 			'checkuser' => array(
 				// Leaks IP addresses
 				'abusefilter-private' => true,
+			),
+			'emailconfirmed' => array(
+				'skipcaptcha' => true,
 			),
 			'oversight' => array(
 				'abusefilter-hidden-log' => true,
