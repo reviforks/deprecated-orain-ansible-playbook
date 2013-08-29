@@ -68,6 +68,10 @@ define( "NS_FRAMEWORK", 500 );
 define( "NS_FRAMEWORK_TALK", 501 );
 define( "NS_SCRIPT", 502 );
 define( "NS_SCRIPT_TALK", 503 );
+define( "NS_BOT", 504 );
+define( "NS_BOT_TALK", 505 );
+define( "NS_RUN", 506 );
+define( "NS_RUN_TALK", 507 );
 // /Bot Wiki
 
 $wgConf->settings = array(
@@ -316,12 +320,16 @@ $wgConf->settings = array(
 
 	// Names
 	'wgContentNamespaces' => array(
-		'botwiki' => array( NS_FRAMEWORK, NS_SCRIPT ),
+		'botwiki' => array( NS_BOT, NS_FRAMEWORK, NS_SCRIPT ),
 	),
 	'wgExtraNamespaces' => array(
 		'botwiki' => array(
+			NS_BOT => 'Bot',
+			NS_BOT_TALK => 'Bot_talk',
 			NS_FRAMEWORK => 'Framework',
 			NS_FRAMEWORK_TALK => 'Framework_talk',
+			NS_RUN => 'Run',
+			NS_RUN_TALK => 'Run_talk',
 			NS_SCRIPT => 'Script',
 			NS_SCRIPT_TALK => 'Script_talk',
 		),
@@ -334,9 +342,13 @@ $wgConf->settings = array(
 			NS_TEMPLATE => true,
 		),
 		'botwiki' => array(
+			NS_BOT => true,
+			NS_BOT_TALK => true,
 			NS_CATEGORY => true,
 			NS_FRAMEWORK => true,
 			NS_FRAMEWORK_TALK => true,
+			NS_RUN => true,
+			NS_RUN_TALK => true,
 			NS_SCRIPT => true,
 			NS_SCRIPT_TALK => true,
 		),
