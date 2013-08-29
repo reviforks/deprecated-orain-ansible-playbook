@@ -59,6 +59,7 @@
             extensions/SyntaxHighlight_GeSHi
             extensions/TemplateSandbox
             extensions/TitleBlacklist
+            extensions/Variables
             extensions/Vector
             extensions/WikiEditor
             extensions/WikimediaMessages
