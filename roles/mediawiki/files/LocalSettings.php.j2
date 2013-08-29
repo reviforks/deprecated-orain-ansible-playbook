@@ -74,20 +74,270 @@ $wgConf->settings = array(
 	),
 	// /AbuseFilter
 
-	// Users
-	'wgAllowUserJs' => array(
-		'default' => true,
+	// Anti-spam
+	'wgAccountCreationThrottle' => array(
+		'default' => 6,
 	),
-	'wgAllowUserCss' => array(
-		'default' => true,
+	'wgCaptchaClass' => array(
+		'default' => 'Asirra',
 	),
-	// /Users
+	'wgSpamBlacklistFiles' => array(
+		'default' => array(
+			"DB: metawiki Spam_blacklist",
+			"https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw",
+		),
+	),
+	'wgTitleBlacklistSources' => array(
+		'default' => array(
+			array(
+					 'type' => TBLSRC_LOCALPAGE,
+					 'src'  => 'MediaWiki:Titleblacklist',
+			),
+			array(
+					 'type' => TBLSRC_URL,
+					 'src'  => '//meta.orain.org/w/index.php?title=Title_blacklist&action=raw',
+			),
+			array(
+					 'type' => TBLSRC_URL,
+					 'src'  => '//meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw',
+			),
+		),
+	),
+	// /Anti-spam
 
 	// Block
 	'wgBlockAllowsUTEdit' => array(
 		'default' => true,
 	),
 	// /Block
+
+	// Cache
+	'wgEnableSidebarCache' => array(
+		'default' => true,
+	),
+	'wgHitcounterUpdateFreq' => array(
+		'default' => 20,
+	),
+	'wgMainCacheType' => array(
+		'default' => CACHE_MEMCACHED,
+	),
+	'wgMemCachedServers' => array(
+		'default' => array( '{{memcache_address}}:11211' ),
+	),
+	'wgParserCacheExpireTime' => array(
+		'default' => 604800, // 7 days
+	),
+	'wgRevisionCacheExpiry' => array(
+		'default' => 259200, // 3 days
+	),
+	'wgUseFileCache' => array(
+		'default' => true,
+	),
+	'wgUseLocalMessageCache' => array(
+		'default' => false,
+	),
+	// /Cache
+
+	// CentralAuth
+	'wgCentralAuthAutoMigrate' => array(
+		'default' => true,
+	),
+	'wgCentralAuthAutoNew' => array(
+		'default' => true,
+	),
+	'wgCentralAuthCookieDomain' => array(
+		'default' => '.orain.org',
+	),
+	'wgCentralAuthCookies' => array(
+		'default' => true,
+	),
+	'wgCentralAuthCreateOnView' => array(
+		'default' => true,
+	),
+	'wgDisableUnmergedEditing' => array(
+		'default' => true,
+	),
+	'wgSiteMatrixSites' => array(
+		'default' => array(),
+	),
+	// /CentralAuth
+
+	// Database
+	'wgCompressRevisions' => array(
+		'default' => true,
+	),
+	'wgDBpassword' => array(
+		'default' => "{{mw_db_password}}",
+	),
+	'wgDBprefix' => array(
+		'default' => '',
+	),
+	'wgDBserver' => array(
+		'default' => "{{mysql_address}}",
+	),
+	'wgDBTableOptions' => array(
+		'default' => "ENGINE=InnoDB, DEFAULT CHARSET=binary",
+	),
+	'wgDBtype' => array(
+		'default' => 'mysql',
+	),
+	'wgDBuser' => array(
+		'default' => "{{mw_db_user}}",
+	),
+	'wgSharedDB' => array(
+		'default' => 'centralauth',
+	),
+	'wgSharedTables' => array(
+		'default' => array(),
+	),
+	// /Database
+
+	// Email
+	'wgEmailAuthentication' => array(
+		'default' => true,
+	),
+	'wgEmergencyContact' => array(
+		'default' => 'help@orain.org',
+	),
+	'wgEnableEmail' => array(
+		'default' => true,
+	),
+	'wgEnableUserEmail' => array(
+		'default' => true,
+	),
+	'wgEnotifMinorEdits' => array(
+		'default' => true,
+	),
+	'wgEnotifUserTalk' => array(
+		'default' => true,
+	),
+	'wgEnotifWatchlist' => array(
+		'default' => true,
+	),
+	'wgPasswordSender' => array(
+		'default' => 'help@orain.org',
+	),
+	// /Email
+
+	// Files
+	'wgEnableUploads' => array(
+		'default' => false,
+		'encyclopedianationalwiki' => true,
+		'metawiki' => true,
+		'nflwiki' => true,
+		'wikiteamwiki' => true,
+	),
+	'wgGenerateThumbnailOnParse' => array(
+		'default' => false,
+	),
+	'wgUseInstantCommons' => array(
+		'default' => true,
+	),
+	// /Files
+
+	// GraphicsMagick
+	'wgImageMagickConvertCommand' => array(
+		'default' => "/usr/bin/convert",
+	),
+	'wgShellLocale' => array(
+		'default' => "en_US.utf8",
+	),
+	'wgUseImageMagick' => array(
+		'default' => true,
+	),
+	// /GraphicsMagick
+
+	// Keys
+	'wgSecretKey' => array(
+		'default' => '{{wgSecretKey}}',
+	),
+	'wgUpgradeKey' => array(
+		'default' => '{{wgUpgradeKey}}',
+	),
+	// /Keys
+
+	// Language
+	'wgLanguageCode' => array(
+		'default' => 'en',
+		'ukrwiki1wiki' => 'uk',
+		'yuewikivoyagewiki' => 'zh-yue',
+	),
+	// /Language
+
+	// License
+	'wgRightsIcon' => array(
+		'default' => '//static.orain.org/common/skins/common/images/cc-by-sa.png',
+	),
+	'wgRightsPage' => array(
+		'default' => '',
+	),
+	'wgRightsText' => array(
+		'default' => 'Creative Commons Attribution Share Alike',
+	),
+	'wgRightsUrl' => array(
+		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+	),
+	// /License
+
+	// Misc. extensions
+	'+wgCreateWikiSQLfiles' => array(
+		'default' => array(
+			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
+			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
+			"$IP/extensions/CheckUser/cu_changes.sql",
+			"$IP/extensions/CheckUser/cu_log.sql",
+			"$IP/extensions/CreateWiki/global_block_whitelist.sql",
+		),
+	),
+	'wgInterwikiViewOnly' => array(
+		'default' => true,
+	),
+	'wmgUseDPLforum' => array(
+		'default' => false,
+		'mediawikitesterswiki' => true,
+		'metawiki' => true,
+	),
+	'wmgUseWikiEditor' => array(
+		'default' => false,
+		'mediawikitesterswiki' => true,
+		'wikiteamwiki' => true,
+	),
+	// /Misc. extensions
+
+	// Names
+	'wgMetaNamespace' => array(
+		'metawiki' => 'Meta',
+	),
+	'+wgNamespacesWithSubpages' => array(
+		'default' => array(
+			NS_MAIN => true,
+		),
+	),
+	'wgSitename' => array(
+		'default' => 'Unconfigured',
+		'botwiki' => 'Bot Wiki',
+		'computerclanwiki' => 'Computer Clan Wiki',
+		'cricketwiki' => 'Cricket Wiki',
+		'encyclopedianationalwiki' => 'Encyclopedia National',
+		'foodopediawiki' => 'Foodopedia',
+		'levelswiki' => 'Wikilevels',
+		'mediawikitesterswiki' => 'MediaWiki Testers Wiki',
+		'metawiki' => 'Orain Meta',
+		'mlbwiki' => 'MLB Wiki',
+		'polymetawiki' => 'PolyWiki Meta',
+		'nflwiki' => 'NFL Wiki',
+		'sohwikiwiki' => 'Shadow of Honor',
+		'testwiki' => 'TestWiki',
+		'wikiteamwiki' => 'WikiTeam',
+		'yuewikivoyagewiki' => 'Cantonese Wikivoyage',
+	),
+	// /Names
+
+	// ParserFunctions
+	'wgPFEnableStringFunctions' => array(
+		'default' => true,
+	),
+	// /ParserFunctions
 
 	// Permissions
 	'wgAddGroups' => array(
@@ -189,6 +439,23 @@ $wgConf->settings = array(
 	),
 	// /Permissions
 
+	// Piwik
+	'wmgPiwikSiteID' => array(
+		'default' => false,
+		'metawiki' => 1,
+		'testwiki' => 2,
+	),
+	// /Piwik
+
+	// Profiling
+	'wgEnableProfileInfo' => array(
+		'default' => true,
+	),
+	'wgProfileToDatabase' => array(
+		'default' => true,
+	),
+	// /Profiling
+
 	// Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
@@ -216,116 +483,6 @@ $wgConf->settings = array(
 	),
 	// /Server
 
-	// Anti-spam
-	'wgAccountCreationThrottle' => array(
-		'default' => 6,
-	),
-	'wgCaptchaClass' => array(
-		'default' => 'Asirra',
-	),
-	'wgSpamBlacklistFiles' => array(
-		'default' => array(
-			"DB: metawiki Spam_blacklist",
-			"https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw",
-		),
-	),
-	'wgTitleBlacklistSources' => array(
-		'default' => array(
-			array(
-					 'type' => TBLSRC_LOCALPAGE,
-					 'src'  => 'MediaWiki:Titleblacklist',
-			),
-			array(
-					 'type' => TBLSRC_URL,
-					 'src'  => '//meta.orain.org/w/index.php?title=Title_blacklist&action=raw',
-			),
-			array(
-					 'type' => TBLSRC_URL,
-					 'src'  => '//meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw',
-			),
-		),
-	),
-	// /Anti-spam
-
-	// CentralAuth
-	'wgCentralAuthAutoMigrate' => array(
-		'default' => true,
-	),
-	'wgCentralAuthAutoNew' => array(
-		'default' => true,
-	),
-	'wgCentralAuthCookieDomain' => array(
-		'default' => '.orain.org',
-	),
-	'wgCentralAuthCookies' => array(
-		'default' => true,
-	),
-	'wgCentralAuthCreateOnView' => array(
-		'default' => true,
-	),
-	'wgDisableUnmergedEditing' => array(
-		'default' => true,
-	),
-	'wgSiteMatrixSites' => array(
-		'default' => array(),
-	),
-	// /CentralAuth
-
-	// Database
-	'wgCompressRevisions' => array(
-		'default' => true,
-	),
-	'wgDBpassword' => array(
-		'default' => "{{mw_db_password}}",
-	),
-	'wgDBprefix' => array(
-		'default' => '',
-	),
-	'wgDBserver' => array(
-		'default' => "{{mysql_address}}",
-	),
-	'wgDBTableOptions' => array(
-		'default' => "ENGINE=InnoDB, DEFAULT CHARSET=binary",
-	),
-	'wgDBtype' => array(
-		'default' => 'mysql',
-	),
-	'wgDBuser' => array(
-		'default' => "{{mw_db_user}}",
-	),
-	'wgSharedDB' => array(
-		'default' => 'centralauth',
-	),
-	'wgSharedTables' => array(
-		'default' => array(),
-	),
-	// /Database
-
-	// Misc. extensions
-	'+wgCreateWikiSQLfiles' => array(
-		'default' => array(
-			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
-			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
-			"$IP/extensions/CheckUser/cu_changes.sql",
-			"$IP/extensions/CheckUser/cu_log.sql",
-			"$IP/extensions/CreateWiki/global_block_whitelist.sql",
-		),
-	),
-	'wgInterwikiViewOnly' => array(
-		'default' => true,
-	),
-	'wmgUseDPLforum' => array(
-		'default' => false,
-		'mediawikitesterswiki' => true,
-		'metawiki' => true,
-	),
-	'wmgUseWikiEditor' => array(
-		'default' => false,
-		'mediawikitesterswiki' => true,
-		'wikiteamwiki' => true,
-	),
-	// /Misc. extensions
-
 	// Style
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
@@ -346,171 +503,14 @@ $wgConf->settings = array(
 	),
 	// /Style
 
-	// Email
-	'wgEmailAuthentication' => array(
+	// Users
+	'wgAllowUserJs' => array(
 		'default' => true,
 	),
-	'wgEmergencyContact' => array(
-		'default' => 'help@orain.org',
-	),
-	'wgEnableEmail' => array(
+	'wgAllowUserCss' => array(
 		'default' => true,
 	),
-	'wgEnableUserEmail' => array(
-		'default' => true,
-	),
-	'wgEnotifMinorEdits' => array(
-		'default' => true,
-	),
-	'wgEnotifUserTalk' => array(
-		'default' => true,
-	),
-	'wgEnotifWatchlist' => array(
-		'default' => true,
-	),
-	'wgPasswordSender' => array(
-		'default' => 'help@orain.org',
-	),
-	// /Email
-
-	// Cache
-	'wgEnableSidebarCache' => array(
-		'default' => true,
-	),
-	'wgHitcounterUpdateFreq' => array(
-		'default' => 20,
-	),
-	'wgMainCacheType' => array(
-		'default' => CACHE_MEMCACHED,
-	),
-	'wgMemCachedServers' => array(
-		'default' => array( '{{memcache_address}}:11211' ),
-	),
-	'wgParserCacheExpireTime' => array(
-		'default' => 604800, // 7 days
-	),
-	'wgRevisionCacheExpiry' => array(
-		'default' => 259200, // 3 days
-	),
-	'wgUseFileCache' => array(
-		'default' => true,
-	),
-	'wgUseLocalMessageCache' => array(
-		'default' => false,
-	),
-	// /Cache
-
-	// Profiling
-	'wgEnableProfileInfo' => array(
-		'default' => true,
-	),
-	'wgProfileToDatabase' => array(
-		'default' => true,
-	),
-	// /Profiling
-
-	// Files
-	'wgEnableUploads' => array(
-		'default' => false,
-		'encyclopedianationalwiki' => true,
-		'metawiki' => true,
-		'nflwiki' => true,
-		'wikiteamwiki' => true,
-	),
-	'wgGenerateThumbnailOnParse' => array(
-		'default' => false,
-	),
-	'wgUseInstantCommons' => array(
-		'default' => true,
-	),
-	// /Files
-
-	// GraphicsMagick
-	'wgImageMagickConvertCommand' => array(
-		'default' => "/usr/bin/convert",
-	),
-	'wgShellLocale' => array(
-		'default' => "en_US.utf8",
-	),
-	'wgUseImageMagick' => array(
-		'default' => true,
-	),
-	// /GraphicsMagick
-
-	// Language
-	'wgLanguageCode' => array(
-		'default' => 'en',
-		'ukrwiki1wiki' => 'uk',
-		'yuewikivoyagewiki' => 'zh-yue',
-	),
-	// /Language
-
-	// Names
-	'wgMetaNamespace' => array(
-		'metawiki' => 'Meta',
-	),
-	'+wgNamespacesWithSubpages' => array(
-		'default' => array(
-			NS_MAIN => true,
-		),
-	),
-	'wgSitename' => array(
-		'default' => 'Unconfigured',
-		'botwiki' => 'Bot Wiki',
-		'computerclanwiki' => 'Computer Clan Wiki',
-		'cricketwiki' => 'Cricket Wiki',
-		'encyclopedianationalwiki' => 'Encyclopedia National',
-		'foodopediawiki' => 'Foodopedia',
-		'levelswiki' => 'Wikilevels',
-		'mediawikitesterswiki' => 'MediaWiki Testers Wiki',
-		'metawiki' => 'Orain Meta',
-		'mlbwiki' => 'MLB Wiki',
-		'polymetawiki' => 'PolyWiki Meta',
-		'nflwiki' => 'NFL Wiki',
-		'sohwikiwiki' => 'Shadow of Honor',
-		'testwiki' => 'TestWiki',
-		'wikiteamwiki' => 'WikiTeam',
-		'yuewikivoyagewiki' => 'Cantonese Wikivoyage',
-	),
-	// /Names
-
-	// ParserFunctions
-	'wgPFEnableStringFunctions' => array(
-		'default' => true,
-	),
-	// /ParserFunctions
-
-	// Piwik
-	'wmgPiwikSiteID' => array(
-		'default' => false,
-		'metawiki' => 1,
-		'testwiki' => 2,
-	),
-	// /Piwik
-
-	// License
-	'wgRightsIcon' => array(
-		'default' => '//static.orain.org/common/skins/common/images/cc-by-sa.png',
-	),
-	'wgRightsPage' => array(
-		'default' => '',
-	),
-	'wgRightsText' => array(
-		'default' => 'Creative Commons Attribution Share Alike',
-	),
-	'wgRightsUrl' => array(
-		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
-	),
-	// /License
-
-	// Keys
-	'wgSecretKey' => array(
-		'default' => '{{wgSecretKey}}',
-	),
-	'wgUpgradeKey' => array(
-		'default' => '{{wgUpgradeKey}}',
-	),
-	// /Keys
+	// /Users
 );
 
 // From https://www.mediawiki.org/wiki/Manual:$wgConf#for_1.14_and_newer
