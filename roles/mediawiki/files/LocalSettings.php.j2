@@ -63,6 +63,13 @@ $wgConf->wikis =& $wgLocalDatabases;
 $wgConf->suffixes = array( 'wiki' );
 $wgConf->localVHosts = array( '{{mysql_address}}' );
 
+// Bot Wiki
+define( "NS_FRAMEWORK", 502 );
+define( "NS_FRAMEWORK_TALK", 503 );
+define( "NS_SCRIPT", 504 );
+define( "NS_SCRIPT_TALK", 505 );
+// /Bot Wiki
+
 $wgConf->settings = array(
 	// AbuseFilter
 	'wgAbuseFilterCentralDB' => array(
@@ -305,11 +312,32 @@ $wgConf->settings = array(
 	// /Misc. extensions
 
 	// Names
+	'wgContentNamespaces' => array(
+		'botwiki' => array( NS_FRAMEWORK, NS_SCRIPT ),
+	),
+	'wgExtraNamespaces' => array(
+		'botwiki' => array(
+			NS_FRAMEWORK => 'Framework',
+			NS_FRAMEWORK_TALK => 'Framework_talk',
+			NS_SCRIPT => 'Script',
+			NS_SCRIPT_TALK => 'Script_talk',
+		),
+	),
 	'wgMetaNamespace' => array(
 		'metawiki' => 'Meta',
 	),
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(
+			NS_TEMPLATE => true,
+		),
+		'botwiki' => array(
+			NS_CATEGORY => true,
+			NS_FRAMEWORK => true,
+			NS_FRAMEWORK_TALK => true,
+			NS_SCRIPT => true,
+			NS_SCRIPT_TALK => true,
+		),
+		'metawiki' => array(
 			NS_MAIN => true,
 		),
 	),
