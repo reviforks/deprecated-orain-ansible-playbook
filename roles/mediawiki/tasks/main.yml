@@ -56,6 +56,7 @@
             extensions/SiteMatrix
             extensions/SkinPerPage
             extensions/SpamBlacklist
+            extensions/SyntaxHighlight_GeSHi
             extensions/TemplateSandbox
             extensions/TitleBlacklist
             extensions/Vector
