@@ -530,14 +530,6 @@ $wgConf->settings = array(
 	'wgUseAjax' => array(
 		'default' => true,
 	),
-	'+wgVectorFeatures' => array(
-		'encyclopedianationalwiki' => array(
-			'collapsiblenav' => array(
-				'global' => false,
-				'user' => true,
-			),
-		),
-	),
 	// /Style
 
 	// Users
@@ -616,6 +608,13 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
 RESP
 	);
 	exit();
+}
+
+if ( $wgDBname == "encyclopedianationalwiki" ) {
+	$wgVectorFeatures['collapsiblenav'] = array(
+		'global' => false,
+		'user' => true,
+	);
 }
 
 if ( $wgDBname === "metawiki" ) {
