@@ -635,6 +635,15 @@ if ( $wgDBname == "encyclopedianationalwiki" ) {
 	);
 }
 
+if ( $wgDBname == "botwiki" ) {
+	require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
+	require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
+}
+
+if ( $wgDBname == "foodopediawiki" ) {
+	require_once( "$IP/extensions/Comments/Comment.php" );
+}
+
 if ( $wgDBname === "metawiki" ) {
 	require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
 }
@@ -652,11 +661,6 @@ if ( $wgDBname == "mediawikitesterswiki" ) {
 	require_once( "$IP/extensions/Quiz/Quiz.php" );
 	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
 	require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
-}
-
-if ( $wgDBname == "botwiki" ) {
-	require_once ( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
-	require_once ( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
 }
 
 $wgConf->extractAllGlobals( $wgDBname );

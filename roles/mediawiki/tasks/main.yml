@@ -35,6 +35,7 @@
             extensions/CheckUser
             extensions/Cite
             extensions/CodeEditor
+            extensions/Comments
             extensions/CreateWiki
             extensions/ConfirmEdit
             extensions/Disambiguator
