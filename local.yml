@@ -12,4 +12,5 @@
   roles:
     - nginx
     - php
+    - mariadb
     - mediawiki
