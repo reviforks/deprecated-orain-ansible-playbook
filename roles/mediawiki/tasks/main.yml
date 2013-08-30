@@ -50,6 +50,7 @@
             extensions/Interwiki
             extensions/InterwikiMagic
             extensions/LabeledSectionTransclusion
+            extensions/LiquidThreads
             extensions/MyVariables
             extensions/Nuke
             extensions/ParserFunctions
