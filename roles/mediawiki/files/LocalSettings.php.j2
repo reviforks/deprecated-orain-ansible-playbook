@@ -390,12 +390,16 @@ $wgConf->settings = array(
 	'wgAddGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
+				'autopatrolled',
 				'bot',
 				'bureaucrat',
+				'confirmed',
 				'rollbacker',
 				'sysop',
 			),
 			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
 				'rollbacker',
 			),
 		),
@@ -416,6 +420,10 @@ $wgConf->settings = array(
 				'abusefilter-view' => true,
 			),
 			'autoconfirmed' => array(
+				'patrol' => true,
+			),
+			'autopatrolled' => array(
+				'autopatrol' => true,
 				'patrol' => true,
 			),
 			'bot' => array(
@@ -547,6 +555,7 @@ $wgConf->settings = array(
 		'levelswiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wikilevels_logo_text.png/135px-Wikilevels_logo_text.png',
 		'mediawikitesterswiki' => '//upload.wikimedia.org/wikipedia/commons/9/9a/MediaWikiTestersWiki.png',
 		'testwiki' => '//static.orain.org/test.orain.org/images/8/8d/Twlogo.png',
+		'trainwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Train.svg/135px-Train.svg.png', 
 	),
 	'wgStylePath' => array(
 		'default' => '//static.orain.org/common/skins',
@@ -680,6 +689,8 @@ if ( $wgDBname == "mediawikitesterswiki" ) {
 }
 
 $wgConf->extractAllGlobals( $wgDBname );
+
+$wgGroupPermissions['confirmed'] = &$wgGroupPermissions['autoconfirmed'];
 
 if ( $wmgUseDPLforum ) {
 	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
