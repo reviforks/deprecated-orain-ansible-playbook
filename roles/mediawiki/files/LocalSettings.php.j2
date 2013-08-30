@@ -480,6 +480,12 @@ $wgConf->settings = array(
 				'userrights-interwiki' => true,
 			),
 		),
+		'+trainwiki' => array(
+			// Continued below, awaiting the creation of a proper override system
+			'autoconfirmed' => array(
+				'createpage' => true,
+			),
+		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(
@@ -686,6 +692,11 @@ if ( $wgDBname == "mediawikitesterswiki" ) {
 	$wgSectionHideShowtop = 1;
 	require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 	require_once( "$IP/extensions/Tabber/Tabber.php" );
+}
+
+if ( $wgDBname == "mediawikitesterswiki" ) {
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['user']['createpage'] = false;
 }
 
 $wgConf->extractAllGlobals( $wgDBname );
