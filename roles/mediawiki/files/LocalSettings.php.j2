@@ -37,7 +37,6 @@ require_once( "$IP/extensions/intersection/DynamicPageList.php" );
 require_once( "$IP/extensions/Gadgets/Gadgets.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
 require_once( "$IP/extensions/InputBox/InputBox.php" );
-require_once( "$IP/extensions/InterwikiMagic/InterwikiMagic.php" );
 require_once( "$IP/extensions/Interwiki/Interwiki.php" );
 require_once( "$IP/extensions/Nuke/Nuke.php" );
 require_once( "$IP/extensions/OrainMessages/OrainMessages.php" );
@@ -196,7 +195,7 @@ $wgConf->settings = array(
 		'default' => "{{mw_db_user}}",
 	),
 	'wgSharedDB' => array(
-		'default' => 'centralauth',
+		'default' => 'metawiki',
 	),
 	'wgSharedTables' => array(
 		'default' => array(),
@@ -306,6 +305,7 @@ $wgConf->settings = array(
 	),
 	'wgInterwikiViewOnly' => array(
 		'default' => true,
+		'metawiki' => false,
 	),
 	'wmgUseDPLforum' => array(
 		'default' => false,
@@ -462,6 +462,7 @@ $wgConf->settings = array(
 				'createwiki' => true,
 				'globalblock' => true,
 				'globalunblock' => true,
+				'interwiki' => true,
 				'noratelimit' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
@@ -645,8 +646,12 @@ if ( $wgDBname == "foodopediawiki" ) {
 	require_once( "$IP/extensions/Comments/Comment.php" );
 }
 
-if ( $wgDBname === "metawiki" ) {
+if ( $wgDBname == "metawiki" ) {
 	require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
+}
+
+if ( $wgDBname != "metawiki" ) {
+	require_once( "$IP/extensions/InterwikiMagic/InterwikiMagic.php" );
 }
 
 if ( $wgDBname == "mediawikitesterswiki" ) {
