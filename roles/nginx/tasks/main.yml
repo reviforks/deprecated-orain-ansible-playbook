@@ -8,6 +8,9 @@
 - name: Install nginx
   apt: pkg=nginx
 
+- name: Create directory for the protocol-agnostic parts of the nginx enabled sites configuration
+  file: path=/etc/nginx/sites-enabled-agnostic state=directory owner=www-data group=www-data mode=0770
+
 - name: Copy the protocol-agnostic parts of the nginx enabled sites configuration
   copy: src={{item}} dest=/etc/nginx/sites-enabled-agnostic
   with_fileglob:
