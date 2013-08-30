@@ -12,6 +12,9 @@
 - name: Install MariaDB
   apt: pkg=mariadb-server
 
+- name: Install the Python mysqldb module for ansible
+  pip: name=mysqldb
+
 - name: Create a MariaDB user for MediaWiki
   mysql_user: login_user=root login_password={{mysql_root_password}}
               name={{mw_db_user}} password={{mw_db_password}}
