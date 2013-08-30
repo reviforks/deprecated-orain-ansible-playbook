@@ -62,6 +62,7 @@
             extensions/SkinPerPage
             extensions/SpamBlacklist
             extensions/SyntaxHighlight_GeSHi
+            extensions/Tabber
             extensions/TemplateSandbox
             extensions/TitleBlacklist
             extensions/Variables
