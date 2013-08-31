@@ -397,11 +397,8 @@ $wgConf->settings = array(
 	'wgAddGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
-				'autopatrolled',
 				'bot',
 				'bureaucrat',
-				'confirmed',
-				'rollbacker',
 				'sysop',
 			),
 			'sysop' => array(
@@ -503,10 +500,11 @@ $wgConf->settings = array(
 		'default' => array(
 			'bureaucrat' => array(
 				'bot',
-				'rollbacker',
 				'sysop',
 			),
 			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
 				'rollbacker',
 			),
 		),
