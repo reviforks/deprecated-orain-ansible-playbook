@@ -26,6 +26,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 require_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
 require_once( "$IP/extensions/AntiSpoof/AntiSpoof.php" );
 require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
+require_once( "$IP/extensions/Babel/Babel.php" );
 require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
 require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
 require_once( "$IP/extensions/CheckUser/CheckUser.php" );
@@ -49,6 +50,8 @@ require_once( "$IP/extensions/SpamBlacklist/SpamBlacklist.php" );
 require_once( "$IP/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php" );
 require_once( "$IP/extensions/TemplateSandbox/TemplateSandbox.php" );
 require_once( "$IP/extensions/TitleBlacklist/TitleBlacklist.php" );
+require_once( "$IP/extensions/Translate/Translate.php" );
+require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
 require_once( "$IP/extensions/Variables/Variables.php" );
 require_once( "$IP/extensions/Vector/Vector.php" );
 require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
@@ -473,6 +476,9 @@ $wgConf->settings = array(
 			),
 		),
 		'+metawiki' => array(
+			'users' => array(
+				'translate' => true,
+				'translate=messagereview' => true,
 			'steward' => array(
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
@@ -485,6 +491,11 @@ $wgConf->settings = array(
 				'noratelimit' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
+			),
+			'+sysop' => array(
+				'translate-manage' => true,
+				'translate-import' => true,
+				'pagetranslation' => true,
 			),
 		),
 		'+trainwiki' => array(
@@ -577,6 +588,19 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	// /Style
+	
+	// Translate
+	'wgTranslateDocumentationLanguageCode' => array(
+		'default' => false,
+	),
+	'wgTranslateFuzzyBotName' => array(
+		'default => 'FuzzyBot',
+	),
+	'wgEnablePageTranslation' => array(
+		'default' => false,
+		'metawiki' => true,
+	),
+	// /Translate
 
 	// Users
 	'wgAllowUserJs' => array(
