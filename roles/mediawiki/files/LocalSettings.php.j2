@@ -503,11 +503,15 @@ $wgConf->settings = array(
 	'wgRemoveGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
+				'autopatrolled',
 				'bot',
+				'confirmed',
 				'rollbacker',
 				'sysop',
 			),
 			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
 				'rollbacker',
 			),
 		),
