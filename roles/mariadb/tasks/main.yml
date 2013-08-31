@@ -3,7 +3,7 @@
   command: /usr/bin/apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
 
 - name: Add MariaDB apt repository
-  apt_repository: repo='deb http://ftp.osuosl.org/pub/mariadb/repo/10.0/debian wheezy main'
+  apt_repository: repo='deb http://ftp.osuosl.org/pub/mariadb/repo/5.5/debian wheezy main'
 
 - name: Set MariaDB root password
   shell: "echo mariadb-server-10.0 mysql-server/root_password {{mysql_root_password}} | debconf-set-selections"
