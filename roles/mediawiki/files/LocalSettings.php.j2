@@ -476,9 +476,10 @@ $wgConf->settings = array(
 			),
 		),
 		'+metawiki' => array(
-			'users' => array(
+			'+users' => array(
 				'translate' => true,
 				'translate=messagereview' => true,
+			),
 			'steward' => array(
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
@@ -502,6 +503,15 @@ $wgConf->settings = array(
 			// Continued below, awaiting the creation of a proper override system
 			'autoconfirmed' => array(
 				'createpage' => true,
+			),
+			'+users' => array(
+				'translate' => true,
+				'translate=messagereview' => true,
+			),
+			'+sysop' => array(
+				'translate-manage' => true,
+				'translate-import' => true,
+				'pagetranslation' => true,
 			),
 		),
 	),
@@ -599,6 +609,7 @@ $wgConf->settings = array(
 	'wgEnablePageTranslation' => array(
 		'default' => false,
 		'metawiki' => true,
+		'trainwiki' => true,
 	),
 	// /Translate
 
