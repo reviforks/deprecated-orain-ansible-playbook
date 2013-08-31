@@ -50,8 +50,6 @@ require_once( "$IP/extensions/SpamBlacklist/SpamBlacklist.php" );
 require_once( "$IP/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php" );
 require_once( "$IP/extensions/TemplateSandbox/TemplateSandbox.php" );
 require_once( "$IP/extensions/TitleBlacklist/TitleBlacklist.php" );
-require_once( "$IP/extensions/Translate/Translate.php" );
-require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
 require_once( "$IP/extensions/Variables/Variables.php" );
 require_once( "$IP/extensions/Vector/Vector.php" );
 require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
@@ -476,10 +474,6 @@ $wgConf->settings = array(
 			),
 		),
 		'+metawiki' => array(
-			'+users' => array(
-				'translate' => true,
-				'translate=messagereview' => true,
-			),
 			'steward' => array(
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
@@ -493,25 +487,11 @@ $wgConf->settings = array(
 				'userrights' => true,
 				'userrights-interwiki' => true,
 			),
-			'+sysop' => array(
-				'translate-manage' => true,
-				'translate-import' => true,
-				'pagetranslation' => true,
-			),
 		),
 		'+trainwiki' => array(
 			// Continued below, awaiting the creation of a proper override system
 			'autoconfirmed' => array(
 				'createpage' => true,
-			),
-			'+users' => array(
-				'translate' => true,
-				'translate=messagereview' => true,
-			),
-			'+sysop' => array(
-				'translate-manage' => true,
-				'translate-import' => true,
-				'pagetranslation' => true,
 			),
 		),
 	),
@@ -600,15 +580,18 @@ $wgConf->settings = array(
 	// /Style
 	
 	// Translate
+	'wgEnablePageTranslation' => array(
+		'default' => true,
+	),
 	'wgTranslateDocumentationLanguageCode' => array(
 		'default' => false,
 	),
 	'wgTranslateFuzzyBotName' => array(
 		'default => 'FuzzyBot',
 	),
-	'wgEnablePageTranslation' => array(
+	'wmgUseTranslate' => array(
 		'default' => false,
-		'metawiki' => true,
+		//'metawiki' => true,
 		'trainwiki' => true,
 	),
 	// /Translate
@@ -747,6 +730,17 @@ $wgGroupPermissions['confirmed'] = &$wgGroupPermissions['autoconfirmed'];
 
 if ( $wmgUseDPLforum ) {
 	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
+}
+
+if ( $wmgUseTranslate ) {
+	require_once( "$IP/extensions/Translate/Translate.php" );
+	// May be moved to global after testing
+	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
+	$wgGroupPermissions['sysop']['pagetranslation'] = true;
+	$wgGroupPermissions['sysop']['translate-import'] = true;
+	$wgGroupPermissions['sysop']['translate-manage'] = true;
+	$wgGroupPermissions['user']['translate'] = true;
+	$wgGroupPermissions['user']['translate-messagereview'] = true;
 }
 
 if ( $wmgUseWikiEditor ) {
