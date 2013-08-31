@@ -703,6 +703,7 @@ if ( $wgDBname == "mediawikitesterswiki" ) {
 
 if ( $wgDBname == "trainwiki" ) {
 	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['autoconfirmed']['patrol'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
 }
 
