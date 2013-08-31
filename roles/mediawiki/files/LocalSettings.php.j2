@@ -397,8 +397,11 @@ $wgConf->settings = array(
 	'wgAddGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
+				'autopatrolled',
 				'bot',
 				'bureaucrat',
+				'confirmed',
+				'rollbacker',
 				'sysop',
 			),
 			'sysop' => array(
@@ -499,7 +502,10 @@ $wgConf->settings = array(
 	'wgRemoveGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
+				'autopatrolled',
 				'bot',
+				'confirmed',
+				'rollbacker',
 				'sysop',
 			),
 			'sysop' => array(
