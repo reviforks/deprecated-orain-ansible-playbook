@@ -29,6 +29,7 @@
             extensions/AdminLinks
             extensions/AntiSpoof
             extensions/ApiSandbox
+            extensions/Babel
             extensions/CategoryTree
             extensions/CentralAuth
             extensions/CharInsert
@@ -69,6 +70,8 @@
             extensions/Tabber
             extensions/TemplateSandbox
             extensions/TitleBlacklist
+            extensions/Translate
+            extensions/UniversalLanguageSelector
             extensions/Variables
             extensions/Vector
             extensions/WikiEditor
@@ -76,4 +79,3 @@
             skins/foreground
             skins/monaco
             chdir=/usr/share/nginx/.orain.org/w
-
