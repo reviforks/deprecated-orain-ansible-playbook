@@ -400,12 +400,14 @@ $wgConf->settings = array(
 				'bot',
 				'bureaucrat',
 				'confirmed',
+				'member',
 				'rollbacker',
 				'sysop',
 			),
 			'sysop' => array(
 				'autopatrolled',
 				'confirmed',
+				'member',
 				'rollbacker',
 			),
 		),
@@ -486,6 +488,12 @@ $wgConf->settings = array(
 				'userrights-interwiki' => true,
 			),
 		),
+		'+sacwiki' => array(
+			// Continued below, awaiting the creation of a proper override system
+			'member' => array(
+				'read' => true,
+			),
+		),
 		'+trainwiki' => array(
 			// Continued below, awaiting the creation of a proper override system
 			'autoconfirmed' => array(
@@ -504,12 +512,14 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'bot',
 				'confirmed',
+				'member',
 				'rollbacker',
 				'sysop',
 			),
 			'sysop' => array(
 				'autopatrolled',
 				'confirmed',
+				'member',
 				'rollbacker',
 			),
 		),
@@ -719,6 +729,11 @@ if ( $wgDBname == "mediawikitesterswiki" ) {
 	$wgSectionHideShowtop = 1;
 	require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 	require_once( "$IP/extensions/Tabber/Tabber.php" );
+}
+
+if ( $wgDBname == "sacwiki" ) {
+	$wgGroupPermissions['*']['read'] = false;
+	$wgGroupPermissions['user']['read'] = false;
 }
 
 if ( $wgDBname == "trainwiki" ) {
