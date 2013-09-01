@@ -492,7 +492,11 @@ $wgConf->settings = array(
 				'createpage' => true,
 			),
 		),
-	),
+		'+sacwiki' =>array(
+		     $wgGroupPermissions['*']['read']    = false;
+		     $wgGroupPermissions['read']['read'] = true;
+		     ),
+		),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(
 			'*' => true,
