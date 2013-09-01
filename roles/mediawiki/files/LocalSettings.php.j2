@@ -137,10 +137,7 @@ $wgConf->settings = array(
 		'default' => 20,
 	),
 	'wgMainCacheType' => array(
-		'default' => CACHE_MEMCACHED,
-	),
-	'wgMemCachedServers' => array(
-		'default' => array( '{{memcache_address}}:11211' ),
+		'default' => CACHE_ACCEL,
 	),
 	'wgParserCacheExpireTime' => array(
 		'default' => 604800, // 7 days

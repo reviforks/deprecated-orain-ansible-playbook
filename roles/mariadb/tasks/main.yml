@@ -1,0 +1,18 @@
+---
+- name: Add MariaDB apt key
+  command: /usr/bin/apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
+
+- name: Add MariaDB apt repository
+  apt_repository: repo='deb http://ftp.osuosl.org/pub/mariadb/repo/5.5/debian wheezy main'
+
+- name: Set MariaDB root password
+  shell: "echo mariadb-server-10.0 mysql-server/root_password {{mysql_root_password}} | debconf-set-selections"
+  shell: "echo mariadb-server-10.0 mysql-server/root_password_again {{mysql_root_password}} | debconf-set-selections"
+
+- name: Install MariaDB
+  apt: pkg=mariadb-server
+
+# - name: Create a MariaDB user for MediaWiki
+#   mysql_user: login_user=root login_password={{mysql_root_password}}
+#               name={{mw_db_user}} password={{mw_db_password}}
+#               priv=*.*:ALL
