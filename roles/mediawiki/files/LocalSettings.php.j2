@@ -232,6 +232,16 @@ $wgConf->settings = array(
 	'wgPasswordSender' => array(
 		'default' => 'help@orain.org',
 	),
+	'wgSMTP' => array(
+		'default' => array(
+			'host'     => 'mail.orain.org',
+			'port'     => 25,
+			'IDHost'   => 'orain.org',
+			'auth'     => true,
+			'username' => 'help'
+			'password' => '{{email_password}},
+		),
+	),
 	// /Email
 
 	// Files
