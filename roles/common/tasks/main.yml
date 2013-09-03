@@ -7,14 +7,19 @@
   with_items:
     - denyhosts
     - fail2ban
+    - ferm
     - git
     - htop
     - lsof
+    - lynis
+    - mosh
     - mysql-client
     - netcat
     - python-requests
     - python-software-properties
+    - rkhunter
     - systemd
+    - tmux
     - vim
     - zip
     - zsh
