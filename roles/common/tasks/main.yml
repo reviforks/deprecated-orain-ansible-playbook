@@ -44,3 +44,9 @@
 
 - name: Create user "www-scripts"
   user: name=www-scripts group=www-data shell=/bin/zsh
+
+- name: Copy ferm firewall rules
+  copy: src=ferm.conf dest=/etc/ferm/ferm.conf
+  notify:
+    - Reload ferm
+
