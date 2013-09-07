@@ -314,7 +314,7 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	'+wgCreateWikiSQLfiles' => array(
-		'default' => array(
+		'metawiki' => array(
 			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
 			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
 			"$IP/extensions/CheckUser/cu_changes.sql",
@@ -724,30 +724,6 @@ if ( $wgDBname == "metawiki" ) {
 	require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
 }
 
-if ( $wgDBname != "metawiki" ) {
-	require_once( "$IP/extensions/InterwikiMagic/InterwikiMagic.php" );
-	$wgForeignFileRepos[] = array(
-		'class' => 'ForeignDBRepo',
-		'name' => 'metawiki-foreign',
-		'url' => '//static.orain.org/meta.orain.org/images',
-		'hashLevels' => 2,
-		'transformVia404' => true,
-		'initialCapital' => true,
-		'descBaseUrl' => "//meta.orain.org/wiki/File:",
-		'scriptDirUrl' => "//meta.orain.org/w",
-		'fetchDescription' => false,
-		'dbType' => $wgDBtype,
-		'dbServer' => $wgDBserver,
-		'dbUser' => $wgDBuser,
-		'dbPassword' => $wgDBpassword,
-		'dbName' => 'metawiki',
-		'dbFlags' => DBO_DEFAULT,
-		'tablePrefix' => '',
-		'hasSharedCache' => true,
-		'directory' => '/usr/share/nginx/static.orain.org/meta.orain.org/images',
-	);
-}
-
 if ( $wgDBname == "mediawikitesterswiki" ) {
 	require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
 	$wgCategoryTreeMaxChildren = 2000;
@@ -783,6 +759,30 @@ if ( $wgDBname == "trainwiki" ) {
 $wgConf->extractAllGlobals( $wgDBname );
 
 $wgGroupPermissions['confirmed'] = &$wgGroupPermissions['autoconfirmed'];
+
+if ( $wgDBname != "metawiki" ) {
+	require_once( "$IP/extensions/InterwikiMagic/InterwikiMagic.php" );
+	$wgForeignFileRepos[] = array(
+		'class' => 'ForeignDBRepo',
+		'name' => 'metawiki-foreign',
+		'url' => '//static.orain.org/meta.orain.org/images',
+		'hashLevels' => 2,
+		'transformVia404' => true,
+		'initialCapital' => true,
+		'descBaseUrl' => "//meta.orain.org/wiki/File:",
+		'scriptDirUrl' => "//meta.orain.org/w",
+		'fetchDescription' => false,
+		'dbType' => $wgDBtype,
+		'dbServer' => $wgDBserver,
+		'dbUser' => $wgDBuser,
+		'dbPassword' => $wgDBpassword,
+		'dbName' => 'metawiki',
+		'dbFlags' => DBO_DEFAULT,
+		'tablePrefix' => '',
+		'hasSharedCache' => true,
+		'directory' => '/usr/share/nginx/static.orain.org/meta.orain.org/images',
+	);
+}
 
 if ( $wmgUseDPLforum ) {
 	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
