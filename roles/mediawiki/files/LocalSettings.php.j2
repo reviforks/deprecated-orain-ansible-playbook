@@ -326,6 +326,11 @@ $wgConf->settings = array(
 		'mediawikitesterswiki' => true,
 		'metawiki' => true,
 	),
+	'wmgUseQuiz' => array(
+		'default' => false,
+		'mediawikitesterswiki' => true,
+		'patereswiki' => true,
+	),
 	'wmgUseWikiEditor' => array(
 		'default' => false,
 		'mediawikitesterswiki' => true,
@@ -726,7 +731,6 @@ if ( $wgDBname == "mediawikitesterswiki" ) {
 	require_once( "$IP/extensions/MyVariables/MyVariables.php" );
 	require_once( "$IP/extensions/Poem/Poem.php" );
 	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-	require_once( "$IP/extensions/Quiz/Quiz.php" );
 	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
 	// require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 	// $wgSectionHideShowtop = 1;
@@ -775,6 +779,10 @@ if ( $wgDBname != "metawiki" ) {
 
 if ( $wmgUseDPLforum ) {
 	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
+}
+
+if ( $wmgUseQuiz ) {
+	require_once( "$IP/extensions/Quiz/Quiz.php" );
 }
 
 if ( $wmgUseTranslate ) {
