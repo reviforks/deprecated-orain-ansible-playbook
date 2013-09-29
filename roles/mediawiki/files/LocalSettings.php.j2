@@ -684,12 +684,12 @@ $DBlist = array_map( 'trim', file( "$IP/all.dblist" ) );
 $wgLocalDatabases = array();
 
 foreach ( $DBlist as $wiki ) {
-	$wiki = explode( $wiki, '|', 3 );
+	$wiki = explode( '|', $wiki, 3 );
 	list( $DBname, $siteName, $wikiTagList ) = $wiki;
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
 	if ( $DBname == $wgDBname ) {
-		$wikiTags = explode( $wikiTagList, '|' );	
+		$wikiTags = array_filter( explode( '|', $wikiTagList ) );	
 	}
 }
 
