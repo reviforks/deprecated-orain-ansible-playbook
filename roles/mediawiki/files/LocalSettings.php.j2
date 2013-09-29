@@ -629,7 +629,7 @@ function efGetSiteParams( $conf, $wiki ) {
 			'site' => $site,
 			'wiki' => $wiki,
 		),
-		'tags' => $wikiTags || array(),
+		'tags' => isset( $wikiTags ) ? $wikiTags : array(),
 	);
 }
 
