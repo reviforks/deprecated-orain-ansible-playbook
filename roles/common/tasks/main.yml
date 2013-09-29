@@ -15,7 +15,8 @@
     - mosh
     - mysql-client
     - netcat
-    - python-requests
+    - python3
+    - python3-requests
     - python-software-properties
     - rkhunter
     - systemd
