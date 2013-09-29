@@ -57,9 +57,7 @@ require_once( "$IP/extensions/YouTube/YouTube.php" );
 require_once( "$IP/skins/foreground/foreground.php" );
 require_once( "$IP/skins/monaco/monaco.php" );
 
-$wgLocalDatabases = array_map( 'trim', file( "$IP/all.dblist" ) );
 $wgConf = new SiteConfiguration;
-$wgConf->wikis =& $wgLocalDatabases;
 $wgConf->suffixes = array( 'wiki' );
 $wgConf->localVHosts = array( '{{mysql_address}}' );
 
@@ -647,6 +645,7 @@ $wgConf->settings = array(
 
 // From https://www.mediawiki.org/wiki/Manual:$wgConf#for_1.14_and_newer
 function efGetSiteParams( $conf, $wiki ) {
+	global $wikiTags;
 	$site = null;
 	$lang = null;
 	foreach( $conf->suffixes as $suffix ) {
@@ -664,7 +663,7 @@ function efGetSiteParams( $conf, $wiki ) {
 			'site' => $site,
 			'wiki' => $wiki,
 		),
-		'tags' => array(),
+		'tags' => $wikiTags || array(),
 	);
 }
 
@@ -697,6 +696,21 @@ if ( defined( "MW_DB" ) ) {
 } else {
 	$wgDBname = false;
 }
+
+$DBlist = array_map( 'trim', file( "$IP/all.dblist" ) );
+$wgLocalDatabases = array();
+
+foreach ( $DBlist as $wiki ) {
+	$wiki = explode( '|', $wiki, 3 );
+	list( $DBname, $siteName, $wikiTagList ) = $wiki;
+	$wgLocalDatabases[] = $DBname;
+	$wgConf->settings['wgSitename'][$DBname] = $siteName;
+	if ( $DBname == $wgDBname ) {
+		$wikiTags = array_filter( explode( '|', $wikiTagList ) );	
+	}
+}
+
+$wgConf->wikis = &$wgLocalDatabases;
 
 if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
 	header("HTTP/1.1 404 Not Found");
