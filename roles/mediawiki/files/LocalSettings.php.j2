@@ -783,6 +783,24 @@ if ( $wgDBname != "metawiki" ) {
 	);
 }
 
+if ( $wmgClosedWiki ) {
+	// Allows easy locking of wikis and allows Stewards to do maintenance tasks
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['createaccount'] = false;
+	$wgGroupPermissions['user']['edit'] = false;
+	$wgGroupPermissions['user]['move'] = false;
+	$wgGroupPermissions['user']['move-rootuserpages'] = false;
+	$wgGroupPermissions['user']['subpages'] = false;
+	$wgGroupPermissions['user']['upload'] = false; // For wikis which have uploads enabled
+	$wgGroupPermissions['autoconfirmed']['upload'] = false;
+	$wgGroupPermissions['autoconfirmed']['move'] = false;
+	$wgGroupPermissions['sysop'][''] = false;
+	$wgGroupPermissions['sysop'][''] = false;
+	$wgGroupPermissions['sysop'][''] = false;
+	$wgGroupPermissions['sysop'][''] = false;
+	$wgGroupPermissions['sysop'][''] = false;
+}
+
 if ( $wmgUseDPLforum ) {
 	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
 }
