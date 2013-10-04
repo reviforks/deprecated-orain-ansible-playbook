@@ -327,6 +327,11 @@ $wgConf->settings = array(
 		'mlbwiki' => true,
 		'yuewikivoyage' => true,
 	),
+	'wmgPrivateWiki' => array(
+		'default' => false,
+		'grayhawkwiki' => true,
+		'sacwiki' => true,
+	),
 	'wmgUseDPLforum' => array(
 		'default' => false,
 		'mediawikitesterswiki' => true,
@@ -751,11 +756,6 @@ if ( $wgDBname == "mediawikitesterswiki" ) {
 	require_once( "$IP/extensions/Tabber/Tabber.php" );
 }
 
-if ( $wgDBname == "sacwiki" ) {
-	$wgGroupPermissions['*']['read'] = false;
-	$wgGroupPermissions['user']['read'] = false;
-}
-
 if ( $wgDBname == "trainwiki" ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['autoconfirmed']['patrol'] = false;
@@ -836,6 +836,12 @@ if ( $wmgClosedWiki ) {
 	$wgGroupPermissions['confirmed']['editsemiprotected'] = false;
 	$wgGroupPermissions['confirmed']['patrol'] = false;
 	$wgGroupPermissions['rollbacker']['rollback'] = false;
+}
+
+if ( $wmgPrviateWiki ) {
+	// Make it easier to privatise wikis and expand on the options variably
+	$wgGroupPermissions['*']['read'] = false;
+	$wgGroupPermissions['user']['read'] = false;
 }
 
 if ( $wmgUseDPLforum ) {
