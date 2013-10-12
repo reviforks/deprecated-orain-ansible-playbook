@@ -843,6 +843,8 @@ if ( $wmgPrivateWiki ) {
 	$wgGroupPermissions['*']['read'] = false;
 	$wgGroupPermissions['user']['read'] = false;
 	$wgGroupPermissions['member']['read'] = true;
+	$wgGroupPermissions['sysop']['read'] = true; // Make sure Sysops/bureaucrats always have read
+	$wgGroupPermissions['bureaucrat']['read'] = true;
 }
 
 if ( $wmgUseDPLforum ) {
