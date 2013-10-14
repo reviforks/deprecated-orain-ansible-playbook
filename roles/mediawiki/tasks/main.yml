@@ -36,7 +36,6 @@
             extensions/CheckUser
             extensions/Cite
             extensions/cldr
-            extensions/CleanChanges
             extensions/CodeEditor
             extensions/Comments
             extensions/CreateBox
