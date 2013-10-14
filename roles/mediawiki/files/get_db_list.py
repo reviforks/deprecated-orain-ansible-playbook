@@ -11,7 +11,7 @@ def main():
     if text[-1:] == "\n":
         text = text[:-1]
 
-    with open("/usr/share/nginx/.orain.org/w/all.dblist", "w") as db_list:
+    with open("/usr/share/nginx/.orain.org/w/all.dblist", "w", encoding="utf8") as db_list:
         db_list.write(text)
 
 if __name__ == "__main__":
