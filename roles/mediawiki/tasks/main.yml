@@ -35,6 +35,8 @@
             extensions/CharInsert
             extensions/CheckUser
             extensions/Cite
+            extensions/cldr
+            extensions/CleanChanges
             extensions/CodeEditor
             extensions/Comments
             extensions/CreateBox
@@ -52,6 +54,7 @@
             extensions/InterwikiMagic
             extensions/LabeledSectionTransclusion
             extensions/LiquidThreads
+            extensions/MobileFrontend
             extensions/MyVariables
             extensions/Nuke
             extensions/ParserFunctions

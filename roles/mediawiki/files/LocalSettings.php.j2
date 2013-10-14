@@ -623,6 +623,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'mediawikitesterswiki' => true,
 		//'metawiki' => true,
+		'spiralwiki' => true,
 		'trainwiki' => true,
 	),
 	// /Translate
@@ -758,6 +759,13 @@ if ( $wgDBname == "mediawikitesterswiki" ) {
 	// $wgSectionHideShowtop = 1;
 	require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 	require_once( "$IP/extensions/Tabber/Tabber.php" );
+}
+
+if ( $wgDBname == "spiralwiki" ) {
+	require_once( "$IP/extensions/cldr/cldr.php" );
+	require_once( "$IP/extensions/CleanChanges/CleanChanges.php" );
+	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );	
 }
 
 if ( $wgDBname == "trainwiki" ) {
