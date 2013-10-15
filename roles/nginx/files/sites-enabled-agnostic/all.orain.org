@@ -14,10 +14,14 @@ location ~ \.php$ {
 	fastcgi_pass unix:/var/run/php5-fpm.sock;
 }
 
-location ^~ /w/languages      { deny all; }
-location ^~ /w/maintenance    { deny all; }
-location ^~ /w/serialized     { deny all; }
+location ^~ /w/languages   { deny all; }
+location ^~ /w/maintenance { deny all; }
+location ^~ /w/serialized  { deny all; }
 location ~ /.git(/|$)      { deny all; }
+
+location ~ ^/wk/(.*) {
+	return 301 /wiki/$1;
+}
 
 location ^~ /wiki {
 	include fastcgi_params;
