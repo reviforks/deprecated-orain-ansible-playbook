@@ -784,6 +784,10 @@ if ( $wgDBname == "trainwiki" ) {
 	$wgGroupPermissions['user']['createpage'] = false;
 }
 
+if ( $wgDBname == "wikinambaswiki" ) {
+	require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
+}
+
 $wgConf->extractAllGlobals( $wgDBname );
 
 $wgGroupPermissions['confirmed'] = &$wgGroupPermissions['autoconfirmed'];
