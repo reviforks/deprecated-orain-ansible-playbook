@@ -739,6 +739,7 @@ if ( $wgDBname == "encyclopedianationalwiki" ) {
 if ( $wgDBname == "botwiki" ) {
 	require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 	require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
+	require_once( "$IP/extensions/Tabber/Tabber.php" );
 }
 
 if ( $wgDBname == "foodopediawiki" ) {
@@ -770,6 +771,10 @@ if ( $wgDBname == "mediawikitesterswiki" ) {
 	// require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 	// $wgSectionHideShowtop = 1;
 	require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
+	require_once( "$IP/extensions/Tabber/Tabber.php" );
+}
+
+if ( $wgDBname == "patereswiki" ) {
 	require_once( "$IP/extensions/Tabber/Tabber.php" );
 }
 
