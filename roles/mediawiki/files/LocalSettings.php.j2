@@ -745,6 +745,10 @@ if ( $wgDBname == "foodopediawiki" ) {
 	require_once( "$IP/extensions/Comments/Comment.php" );
 }
 
+if ( $wgDBname == "grayhawkwiki" ) {
+	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+}
+
 if ( $wgDBname == "metawiki" ) {
 	require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
 }
