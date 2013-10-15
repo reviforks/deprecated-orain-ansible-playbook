@@ -324,6 +324,12 @@ $wgConf->settings = array(
 	'ceAllowConfirmedEmail' => array(
 		'default' => true,
 	),
+	'wmgClosedWiki' => array(
+		'default' => false,
+		'cricketwiki' => true,
+		'mlbwiki' => true,
+		'yuewikivoyage' => true,
+	),
 	'+wgCreateWikiSQLfiles' => array(
 		'metawiki' => array(
 			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
@@ -333,16 +339,19 @@ $wgConf->settings = array(
 			"$IP/extensions/CreateWiki/global_block_whitelist.sql",
 		),
 	),
+	'wgMFAutodetectMobileView' => array(
+		'default' => true,
+	),
 	'wgInterwikiViewOnly' => array(
 		'default' => true,
 		'metawiki' => false,
 	),
 	'wmgClosedWiki' => array(
 		'default' => false,
+		'computerclanwiki' => true, //Requested 'Deletion' on irc by User:Inandoutland
 		'cricketwiki' => true,
 		'mlbwiki' => true,
 		'yuewikivoyage' => true,
-		'computerclanwiki' => true, //Requested 'Deletion' on irc by User:Inandoutland
 	),
 	'wmgPrivateWiki' => array(
 		'default' => false,
@@ -913,14 +922,24 @@ if ( $wmgUseQuiz ) {
 }
 
 if ( $wmgUseTranslate ) {
-	require_once( "$IP/extensions/Translate/Translate.php" );
 	// May be moved to global after testing
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
+	
+	require_once( "$IP/extensions/Translate/Translate.php" );
 	$wgGroupPermissions['sysop']['pagetranslation'] = true;
 	$wgGroupPermissions['sysop']['translate-import'] = true;
 	$wgGroupPermissions['sysop']['translate-manage'] = true;
-	$wgGroupPermissions['user']['translate'] = true;
+	$wgGroupPermissions['*']['translate'] = true;
 	$wgGroupPermissions['user']['translate-messagereview'] = true;
+
+	// Allows the translation of the sidebar - Thanks QuimGil!
+	$wgTranslateCC['wiki-sidebar'] = 'addSidebarMessageGroup';
+	function addSidebarMessageGroup( $id ) {
+		$mg = new WikiMessageGroup( $id, 'sidebar-messages' );
+		$mg->setLabel( 'Sidebar' );
+		$mg->setDescription( 'Messages used in the sidebar of this wiki' );
+		return $mg;
+	}
 }
 
 if ( $wmgUseWikiEditor ) {
