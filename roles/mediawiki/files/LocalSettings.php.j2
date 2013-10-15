@@ -18,11 +18,14 @@
  * with Orain's playbook.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-# Protect against web entry
+// Protect against web entry
 if ( !defined( 'MEDIAWIKI' ) ) {
 	exit;
 }
 
+/**
+ * Load the below extensions for all wikis
+ */
 require_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
 require_once( "$IP/extensions/AntiSpoof/AntiSpoof.php" );
 require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
@@ -61,6 +64,10 @@ $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
 $wgConf->localVHosts = array( '{{mysql_address}}' );
 
+
+/**
+ * Define namespaces for all wikis
+ */
 // Bot Wiki
 define( "NS_FRAMEWORK", 500 );
 define( "NS_FRAMEWORK_TALK", 501 );
@@ -72,6 +79,9 @@ define( "NS_RUN", 506 );
 define( "NS_RUN_TALK", 507 );
 // /Bot Wiki
 
+/**
+ * Define settings per wiki
+ */
 $wgConf->settings = array(
 	// AbuseFilter
 	'wgAbuseFilterCentralDB' => array(
@@ -288,7 +298,7 @@ $wgConf->settings = array(
 		'ukrwiki1wiki' => 'uk',
 		'wikiconstituciowiki' => 'ca',
 		'yuewikivoyagewiki' => 'zh-yue',
-		'wikinambaswiki' => 'pt-br',	
+		'wikinambaswiki' => 'pt-br',
 	),
 	// /Language
 
@@ -736,6 +746,9 @@ if ( $wgDBname == "encyclopedianationalwiki" ) {
 	);
 }
 
+/**
+ * Load extensions for specific wikis
+ */
 if ( $wgDBname == "botwiki" ) {
 	require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 	require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
@@ -823,6 +836,9 @@ if ( $wgDBname != "metawiki" ) {
 	);
 }
 
+/**
+ * Define access rights for specific wiki groups
+ */
 if ( $wmgClosedWiki ) {
 	// Allows easy locking of wikis and allows Stewards to do maintenance tasks
 	$wgGroupPermissions['*']['edit'] = false;
