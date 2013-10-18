@@ -792,75 +792,67 @@ RESP
 /**
  * Do specific things for specific wikis
  */
-
-if ( $wgDBname == "botwiki" ) {
-	require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
-	require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
-	require_once( "$IP/extensions/Tabber/Tabber.php" );
-}
-
-if ( $wgDBname == "encyclopedianationalwiki" ) {
-	$wgVectorFeatures['collapsiblenav'] = array(
-		'global' => false,
-		'user' => true,
-	);
-}
-
-if ( $wgDBname == "foodopediawiki" ) {
-	require_once( "$IP/extensions/Comments/Comment.php" );
-}
-
-if ( $wgDBname == "grayhawkwiki" ) {
-	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
-}
-
-if ( $wgDBname == "metawiki" ) {
-	require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
-	require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
-	$wgRestrictionLevels[] = 'user'; // Allow users only to edit
-	$wgGroupPermissions['user']['user'] = true;
-}
-
-if ( $wgDBname == "mediawikitesterswiki" ) {
-	require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
-	$wgCategoryTreeMaxChildren = 2000;
-	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
-	require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
-	require_once( "$IP/extensions/CreateBox/CreateBox.php" );
-	require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
-	require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
-	require_once( "$IP/extensions/ImageMap/ImageMap.php" );
-	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
-	require_once( "$IP/extensions/MyVariables/MyVariables.php" );
-	require_once( "$IP/extensions/Poem/Poem.php" );
-	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-	// require_once( "$IP/extensions/SectionHide/SectionHide.php" ); // Disabled by Kudu, Requested by Arcane
-	// $wgSectionHideShowtop = 1; // Disabled per the above
-	require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
-	require_once( "$IP/extensions/Tabber/Tabber.php" );
-}
-
-if ( $wgDBname == "patereswiki" ) {
-	require_once( "$IP/extensions/Tabber/Tabber.php" );
-}
-
-if ( $wgDBname == "spiralwiki" ) {
-	require_once( "$IP/extensions/cldr/cldr.php" );
-	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
-	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );	
-}
-
-if ( $wgDBname == "trainwiki" ) {
-	$wgGroupPermissions['*']['createpage'] = false;
-	$wgGroupPermissions['autoconfirmed']['patrol'] = false;
-	$wgGroupPermissions['user']['createpage'] = false;
-}
-
-if ( $wgDBname == "wikinambaswiki" ) {
-	require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
-	require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
-	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
-	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
+switch ( $wgDBname ) {
+	case "botwiki":
+		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
+		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
+		require_once( "$IP/extensions/Tabber/Tabber.php" );
+		break;
+	case "encyclopedianationalwiki":
+		$wgVectorFeatures['collapsiblenav'] = array(
+			'global' => false,
+			'user' => true,
+		);
+		break;
+	case "foodopediawiki":
+		require_once( "$IP/extensions/Comments/Comment.php" );
+		break;
+	case "grayhawkwiki":
+		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+		break;
+	case "metawiki":
+		require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
+		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
+		$wgRestrictionLevels[] = 'user'; // Allow users only to edit
+		$wgGroupPermissions['user']['user'] = true;
+		break;
+	case "mediawikitesterswiki":
+		require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
+		$wgCategoryTreeMaxChildren = 2000;
+		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
+		require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
+		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
+		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
+		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
+		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
+		require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
+		require_once( "$IP/extensions/MyVariables/MyVariables.php" );
+		require_once( "$IP/extensions/Poem/Poem.php" );
+		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
+		// require_once( "$IP/extensions/SectionHide/SectionHide.php" ); // Disabled by Kudu, Requested by Arcane
+		// $wgSectionHideShowtop = 1; // Disabled per the above
+		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
+		require_once( "$IP/extensions/Tabber/Tabber.php" );
+		break;
+	case "patereswiki":
+		require_once( "$IP/extensions/Tabber/Tabber.php" );
+		break;
+	case "spiralwiki":
+		require_once( "$IP/extensions/cldr/cldr.php" );
+		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+		require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
+		break;
+	case "trainwiki":
+		$wgGroupPermissions['*']['createpage'] = false;
+		$wgGroupPermissions['autoconfirmed']['patrol'] = false;
+		$wgGroupPermissions['user']['createpage'] = false;
+		break;
+	case "wikinambaswiki":
+		require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
+		require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
+		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+		require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
+		break;
 }
 
 /**
