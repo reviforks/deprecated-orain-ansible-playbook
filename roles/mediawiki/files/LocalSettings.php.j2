@@ -521,6 +521,10 @@ $wgConf->settings = array(
 			'emailconfirmed' => array(
 				'skipcaptcha' => true,
 			),
+			'importer' => array(
+				'import' => true,
+				'importupload' => true,
+			),
 			'oversight' => array(
 				'abusefilter-hidden-log' => true,
 				'abusefilter-hide-log' => true,
@@ -730,6 +734,7 @@ function efGetSiteParams( $conf, $wiki ) {
 // Defaults
 $wgGroupPermissions['bureaucrat']['renameuser'] = false;
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
+$wgGroupPermissions['sysop']['importupload'] = false;
 unset( $wgGroupPermissions['steward'] );
 
 foreach ( $wgConf->settings['wgServer'] as $db => $server ) {
