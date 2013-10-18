@@ -717,6 +717,10 @@ if ( defined( "MW_DB" ) ) {
 	$wgDBname = false;
 }
 
+/**
+ * Fill the database list
+ */
+
 $DBlist = array_map( 'trim', file( "$IP/all.dblist" ) );
 $wgLocalDatabases = array();
 
@@ -747,20 +751,21 @@ RESP
 	exit();
 }
 
+/**
+ * Do specific things for specific wikis
+ */
+
+if ( $wgDBname == "botwiki" ) {
+	require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
+	require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
+	require_once( "$IP/extensions/Tabber/Tabber.php" );
+}
+
 if ( $wgDBname == "encyclopedianationalwiki" ) {
 	$wgVectorFeatures['collapsiblenav'] = array(
 		'global' => false,
 		'user' => true,
 	);
-}
-
-/**
- * Load extensions for specific wikis
- */
-if ( $wgDBname == "botwiki" ) {
-	require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
-	require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
-	require_once( "$IP/extensions/Tabber/Tabber.php" );
 }
 
 if ( $wgDBname == "foodopediawiki" ) {
@@ -819,6 +824,10 @@ if ( $wgDBname == "wikinambaswiki" ) {
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
 }
+
+/**
+ * Generally setup the given wiki
+ */
 
 $wgConf->extractAllGlobals( $wgDBname );
 
