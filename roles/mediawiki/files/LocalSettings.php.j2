@@ -78,6 +78,17 @@ define( "NS_RUN", 506 );
 define( "NS_RUN_TALK", 507 );
 // /Bot Wiki
 
+// Wikinambás
+define( "NS_OFICINA", 508 );
+define( "NS_OFICINA_TALK", 509 );
+define( "NS_PROJETO", 510 );
+define( "NS_PROJETO_TALK", 511 );
+define( "NS_ATIVIDADE", 512 );
+define( "NS_ATIVIDADE_TALK", 513 );
+define( "NS_ESTUDIO", 513 );
+define( "NS_ESTUDIO_TALK", 515 );
+// /Wikinambás
+
 /**
  * Define settings per wiki
  */
@@ -393,6 +404,16 @@ $wgConf->settings = array(
 			NS_SCRIPT => 'Script',
 			NS_SCRIPT_TALK => 'Script_talk',
 		),
+		'wikinambaswiki' => array(
+			NS_OFICINA => 'Oficina',
+			NS_OFICINA_TALK => 'Oficina_hablar',
+			NS_PROJETO => 'Projeto',
+			NS_PROJETO_TALK => 'Projeto_hablar',
+			NS_ATIVIDADE => 'Atividade',
+			NS_ATIVIDADE_TALK => 'Atividade_hablar',
+			NS_ESTUDIO => 'Estúdio',
+			NS_ESTUDIO_TALK => 'Estúdio_hablar',
+		),
 	),
 	'wgMetaNamespace' => array(
 		'metawiki' => 'Meta',
@@ -414,6 +435,16 @@ $wgConf->settings = array(
 		),
 		'metawiki' => array(
 			NS_MAIN => true,
+		),
+		'wikinambaswiki' => array(
+			NS_OFICINA => true,
+			NS_OFICINA_TALK => true,
+			NS_PROJETO => true,
+			NS_PROJETO_TALK => true,
+			NS_ATIVIDADE => true,
+			NS_ATIVIDADE_TALK => true,
+			NS_ESTUDIO => true,
+			NS_ESTUDIO_TALK => true,
 		),
 	),
 	'wgSitename' => array(
