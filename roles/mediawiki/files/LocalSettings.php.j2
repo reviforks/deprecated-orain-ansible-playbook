@@ -25,6 +25,11 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 /**
  * Load the below extensions for all wikis
+ *
+ * @note If you are including a new extension you should ensure it is included in
+ *  the mediawiki-core repo in the extensions directory
+ * @note To make sure it updates according to that repo it should also be included
+ *  in the main.yml task file for mediawiki
  */
 require_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
 require_once( "$IP/extensions/AntiSpoof/AntiSpoof.php" );
@@ -63,9 +68,11 @@ $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
 $wgConf->localVHosts = array( '{{mysql_address}}' );
 
-
 /**
  * Define namespaces for all wikis
+ *
+ * @note These namespaces technically are defined across all wikis, they are simply not enabled everywhere.
+ * @note These namespaces should NEVER be removed unless all wikis that have ever used them have been deleted
  */
 // Bot Wiki
 define( "NS_FRAMEWORK", 500 );
@@ -91,6 +98,7 @@ define( "NS_ESTUDIO_TALK", 515 );
 
 /**
  * Define settings per wiki
+ * @see https://www.mediawiki.org/wiki/Manual:$wgConf
  */
 $wgConf->settings = array(
 	// AbuseFilter
@@ -751,7 +759,6 @@ if ( defined( "MW_DB" ) ) {
 /**
  * Fill the database list
  */
-
 $DBlist = array_map( 'trim', file( "$IP/all.dblist" ) );
 $wgLocalDatabases = array();
 
