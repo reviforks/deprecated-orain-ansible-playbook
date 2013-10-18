@@ -55,7 +55,6 @@ require_once( "$IP/extensions/TemplateSandbox/TemplateSandbox.php" );
 require_once( "$IP/extensions/TitleBlacklist/TitleBlacklist.php" );
 require_once( "$IP/extensions/Variables/Variables.php" );
 require_once( "$IP/extensions/Vector/Vector.php" );
-// require_once( "$IP/extensions/WikimediaMessages/WikimediaMessages.php" );
 require_once( "$IP/extensions/YouTube/YouTube.php" );
 require_once( "$IP/skins/foreground/foreground.php" );
 require_once( "$IP/skins/monaco/monaco.php" );
@@ -792,8 +791,8 @@ if ( $wgDBname == "mediawikitesterswiki" ) {
 	require_once( "$IP/extensions/MyVariables/MyVariables.php" );
 	require_once( "$IP/extensions/Poem/Poem.php" );
 	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-	// require_once( "$IP/extensions/SectionHide/SectionHide.php" );
-	// $wgSectionHideShowtop = 1;
+	// require_once( "$IP/extensions/SectionHide/SectionHide.php" ); // Disabled by Kudu, Requested by Arcane
+	// $wgSectionHideShowtop = 1; // Disabled per the above
 	require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 	require_once( "$IP/extensions/Tabber/Tabber.php" );
 }
@@ -954,7 +953,7 @@ if ( $wgDBname == "polymetawiki" ) {
 	$wgReadOnly = "Archived wiki";
 }
 
-//$wgCacheDirectory = '/tmp/mw-cache';
+//$wgCacheDirectory = '/tmp/mw-cache'; // Kudu Test disabling localisation cache directory 16/08/13
 $wgFileCacheDirectory = "/var/tmp/mediawiki/cache/$wmgHostname";
 $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
 $wgUploadPath = "//static.orain.org/$wmgHostname/images";
