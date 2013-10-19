@@ -96,6 +96,13 @@ define( "NS_ESTUDIO", 514 );
 define( "NS_ESTUDIO_TALK", 515 );
 // /Wikinambás
 
+// frmodamob
+define( "NS_PORTAIL", 516 );
+define( "NS_PORTAIL_TALK", 517 );
+define( "NS_PROJET", 518 );
+define( "NS_PROJET_TALK", 519 );
+// /frmodamob
+
 /**
  * Define settings per wiki
  * @see https://www.mediawiki.org/wiki/Manual:$wgConf
@@ -412,6 +419,12 @@ $wgConf->settings = array(
 			NS_SCRIPT => 'Script',
 			NS_SCRIPT_TALK => 'Script_talk',
 		),
+		'frmodamobwiki' => array(
+			NS_PORTAIL => 'Protail',
+			NS_PORTAIL_TALK => 'Discussion_Portail',
+			NS_PROJET => 'Projet',
+			NS_PROJET_TALK => 'Discussion_Projet',
+		),
 		'wikinambaswiki' => array(
 			NS_OFICINA => 'Oficina',
 			NS_OFICINA_TALK => 'Oficina_Discussão',
@@ -440,6 +453,12 @@ $wgConf->settings = array(
 			NS_RUN_TALK => true,
 			NS_SCRIPT => true,
 			NS_SCRIPT_TALK => true,
+		),
+		'frmodamobwiki' => array(
+			NS_PORTAIL => true,
+			NS_PORTAIL_TALK => true,
+			NS_PROJET => true,
+			NS_PROJET_TALK => true,
 		),
 		'mediawikitesterswiki' => array(
 			NS_MAIN => true,
