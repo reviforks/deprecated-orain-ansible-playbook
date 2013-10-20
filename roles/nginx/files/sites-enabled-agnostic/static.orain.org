@@ -4,6 +4,13 @@ root /usr/share/nginx/static.orain.org;
 
 expires 2w;
 
+location ~ ^/.*?/load.php$ {
+	root /usr/share/nginx/.orain.org/w;
+	include fastcgi_params;
+	fastcgi_param SCRIPT_FILENAME $document_root/load.php;
+	fastcgi_pass unix:/var/run/php5-fpm.sock;
+}
+
 location ~ ^/.*?/images/thumb {
 	try_files $uri $uri/ @thumb;
 }

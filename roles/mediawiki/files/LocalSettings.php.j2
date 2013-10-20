@@ -767,6 +767,8 @@ foreach ( $wgConf->settings['wgServer'] as $db => $server ) {
 
 if ( ( basename( $_SERVER["SCRIPT_FILENAME"] ) == "thumb.php" ) && isset( $_REQUEST['sitex'] ) ) {
 	$wmgHostname = $_REQUEST['sitex'];
+} elseif ( preg_match( '/^\/(.*?)\/load.php$/', $_SERVER['DOCUMENT_URI'], $matches ) ) {
+	$wmgHostname = $matches[1];
 } elseif ( preg_match( '/^www\.(.*?\..*?)$/', $_SERVER['HTTP_HOST'], $matches ) ) {
 	$wmgHostname = $matches[1];
 } else {
@@ -817,8 +819,9 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
 <html>
 <head><title>404 Not Found</title></head>
 <body bgcolor="white">
-<center><h1>404 Not Found</h1></center>
-<hr><center>nginx</center>
+<center><h1>404 Not Found</h1>
+<h2>Unknown database</h2></center>
+<hr><center>MediaWiki</center>
 </body>
 </html>
 RESP
@@ -1029,6 +1032,7 @@ if ( $wgDBname == "polymetawiki" ) {
 
 //$wgCacheDirectory = '/tmp/mw-cache'; // Kudu Test disabling localisation cache directory 16/08/13
 $wgFileCacheDirectory = "/var/tmp/mediawiki/cache/$wmgHostname";
+$wgLoadScript = "//$wmgUploadHostname/$wmgHostname/load.php";
 $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
 $wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
 $wgDebugLogFile = "/var/log/mediawiki/$wmgHostname.log";
