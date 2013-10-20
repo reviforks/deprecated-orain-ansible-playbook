@@ -103,6 +103,8 @@ define( "NS_PROJET", 518 );
 define( "NS_PROJET_TALK", 519 );
 // /frmodamob
 
+$wmgUploadHostname = "staticoraincdn.r.worldssl.net";
+
 /**
  * Define settings per wiki
  * @see https://www.mediawiki.org/wiki/Manual:$wgConf
@@ -333,8 +335,8 @@ $wgConf->settings = array(
 
 	// License
 	'wgRightsIcon' => array(
-		'default' => '//static.orain.org/common/skins/common/images/cc-by-sa.png',
-		'spiralwiki' => '//static.orain.org/common/skins/common/images/cc-0.png',
+		'default' => "//$wmgUploadHostname/common/skins/common/images/cc-by-sa.png",
+		'spiralwiki' => "//$wmgUploadHostname/common/skins/common/images/cc-0.png",
 	),
 	'wgRightsPage' => array(
 		'default' => '',
@@ -674,25 +676,25 @@ $wgConf->settings = array(
 		'elderlordswiki' => 'monobook',
 	),
 	'wgLogo' => array(
-		'default' => '//static.orain.org/meta.orain.org/images/c/c6/Orain.png',
-		'botwiki' => '//static.orain.org/meta.orain.org/images/6/65/BotWiki_logo.png',
-		'buswiki' => 'upload.wikimedia.org/wikipedia/commons/e/e8/Kd-logo.png',
+		'default' => "//$wmgUploadHostname/meta.orain.org/images/c/c6/Orain.png",
+		'botwiki' => "//$wmgUploadHostname/meta.orain.org/images/6/65/BotWiki_logo.png",
+		'buswiki' => '//upload.wikimedia.org/wikipedia/commons/e/e8/Kd-logo.png',
 		'computerclanwiki' => '//upload.wikimedia.org/wikipedia/commons/f/f7/CC_Wiki_Graphic_Mark_Small.png',
-		'encyclopedianationalwiki' => '//static.orain.org/encyclopedianational.orain.org/images/2/24/Logo_of_the_Encyclopedia_National.png',
-		'enmodamobwiki' => '//static.orain.org/meta.orain.org/images/d/d6/Modamob-logo.png',
-		'frmodamobwiki' => '//static.orain.org/meta.orain.org/images/d/d6/Modamob-logo.png',
+		'encyclopedianationalwiki' => "//$wmgUploadHostname/encyclopedianational.orain.org/images/2/24/Logo_of_the_Encyclopedia_National.png",
+		'enmodamobwiki' => "//$wmgUploadHostname/meta.orain.org/images/d/d6/Modamob-logo.png",
+		'frmodamobwiki' => "//$wmgUploadHostname/meta.orain.org/images/d/d6/Modamob-logo.png",
 		'grayhawkwiki' => '//upload.wikimedia.org/wikipedia/commons/4/49/GrayhawkPaladinsLogo_%28small%29.png',
 		'keionrailwiki' => '//upload.wikimedia.org/wikipedia/commons/e/e4/Subway_TokyoTozai.png',
 		'levelswiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wikilevels_logo_text.png/135px-Wikilevels_logo_text.png',
 		'mediawikitesterswiki' => '//upload.wikimedia.org/wikipedia/commons/9/9a/MediaWikiTestersWiki.png',
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
-		'testwiki' => '//static.orain.org/test.orain.org/images/8/8d/Twlogo.png',
+		'testwiki' => "//$wmgUploadHostname/test.orain.org/images/8/8d/Twlogo.png",
 		'trainwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Train.svg/135px-Train.svg.png', 
 		'wikiconstituciowiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Catalonia.svg/135px-Flag_of_Catalonia.svg.png',
 		'wikinambaswiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/53/Wikinambá.png/135px-Wikinambá.png',
 	),
 	'wgStylePath' => array(
-		'default' => '//static.orain.org/common/skins',
+		'default' => "//$wmgUploadHostname/common/skins",
 	),
 	'wgUseAjax' => array(
 		'default' => true,
@@ -903,7 +905,7 @@ if ( $wgDBname != "metawiki" ) {
 	$wgForeignFileRepos[] = array(
 		'class' => 'ForeignDBRepo',
 		'name' => 'metawiki-foreign',
-		'url' => '//static.orain.org/meta.orain.org/images',
+		'url' => "//$wmgUploadHostname/meta.orain.org/images",
 		'hashLevels' => 2,
 		'transformVia404' => true,
 		'initialCapital' => true,
@@ -918,7 +920,7 @@ if ( $wgDBname != "metawiki" ) {
 		'dbFlags' => DBO_DEFAULT,
 		'tablePrefix' => '',
 		'hasSharedCache' => true,
-		'directory' => '/usr/share/nginx/static.orain.org/meta.orain.org/images',
+		'directory' => "/usr/share/nginx/$wmgUploadHostname/meta.orain.org/images",
 	);
 }
 
@@ -1028,7 +1030,7 @@ if ( $wgDBname == "polymetawiki" ) {
 //$wgCacheDirectory = '/tmp/mw-cache'; // Kudu Test disabling localisation cache directory 16/08/13
 $wgFileCacheDirectory = "/var/tmp/mediawiki/cache/$wmgHostname";
 $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
-$wgUploadPath = "//static.orain.org/$wmgHostname/images";
+$wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
 $wgDebugLogFile = "/var/log/mediawiki/$wmgHostname.log";
 
 // Piwik
