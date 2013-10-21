@@ -855,6 +855,21 @@ switch ( $wgDBname ) {
 	case "grayhawkwiki":
 		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 		break;
+	case "loginwiki":
+		$wgGroupPermissions['*']['edit'] = false;
+		$wgGroupPermissions['*']['centralauth-autoaccount'] = true;
+		$wgGroupPermissions['*']['read'] = true; // Make sure read rights are present
+		$wgGroupPermissions['user']['read'] = true; // Make sure read rights are present
+		$wgGroupPermissions['autoconfirmed']['read'] = true; // Make sure read rights are present
+		unset( $wgGroupPermissions['autopatrolled'] ); // Unset all other permissions except CheckUser and Oversighter
+		unset( $wgGroupPermissions['bots'] );
+		unset( $wgGroupPermissions['bureaucrat'] );
+		unset( $wgGroupPermissions['confirmed'] );
+		unset( $wgGroupPermissions['emaiconfirmed'] );
+		unset( $wgGroupPermissions['importer'] );
+		unset( $wgGroupPermissions['rollbacker'] );
+		unset( $wgGroupPermissions['sysop'] );
+		break;
 	case "metawiki":
 		require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
