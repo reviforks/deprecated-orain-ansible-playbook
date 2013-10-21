@@ -195,6 +195,10 @@ $wgConf->settings = array(
 	// /Cache
 
 	// CentralAuth
+	'wgCentralAuthAutoLoginWikis' => array(
+		'espiral.org' => 'spiralwiki',
+		'wikiconstituciocatalana.cat' => 'wikiconstituciowiki',
+	),
 	'wgCentralAuthAutoMigrate' => array(
 		'default' => true,
 	),
@@ -208,6 +212,12 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	'wgCentralAuthCreateOnView' => array(
+		'default' => true,
+	),
+	'wgCentralAuthLoginWiki' => array(
+		'default' => 'loginwiki',
+	),
+	'wgCentralAuthSilentLogin' => array(
 		'default' => true,
 	),
 	'wgDisableUnmergedEditing' => array(
