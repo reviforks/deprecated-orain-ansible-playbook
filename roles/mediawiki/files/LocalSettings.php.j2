@@ -196,8 +196,10 @@ $wgConf->settings = array(
 
 	// CentralAuth
 	'wgCentralAuthAutoLoginWikis' => array(
-		'espiral.org' => 'spiralwiki',
-		'wikiconstituciocatalana.cat' => 'wikiconstituciowiki',
+		'default' => array(
+			'espiral.org' => 'spiralwiki',
+			'wikiconstituciocatalana.cat' => 'wikiconstituciowiki',
+		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
 		'default' => true,
