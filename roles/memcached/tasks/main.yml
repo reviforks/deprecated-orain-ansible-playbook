@@ -1,0 +1,7 @@
+---
+- name: Install Memcached
+  apt: pkg=memcached
+
+- name: Copy memcached.conf
+  copy: src=memcached.conf dest=/etc/memcached.conf
+

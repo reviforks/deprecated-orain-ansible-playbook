@@ -172,7 +172,10 @@ $wgConf->settings = array(
 		'default' => 20,
 	),
 	'wgMainCacheType' => array(
-		'default' => CACHE_ACCEL,
+		'default' => CACHE_MEMCACHED,
+	),
+	'wgMemCachedServers' => array(
+		'default' => array( '127.0.0.1:11211' ),
 	),
 	'wgParserCacheExpireTime' => array(
 		'default' => 604800, // 7 days
@@ -181,7 +184,7 @@ $wgConf->settings = array(
 		'default' => 259200, // 3 days
 	),
 	'wgSessionsInObjectCache' => array(
-		'default' => false,
+		'default' => true,
 	),
 	'wgUseFileCache' => array(
 		'default' => true,
@@ -1032,12 +1035,12 @@ if ( $wgDBname == "polymetawiki" ) {
 	$wgReadOnly = "Archived wiki";
 }
 
-//$wgCacheDirectory = '/tmp/mw-cache'; // Kudu Test disabling localisation cache directory 16/08/13
+$wgCacheDirectory = '/tmp/mw-cache';
+$wgDebugLogFile = "/var/log/mediawiki/$wmgHostname.log";
 $wgFileCacheDirectory = "/var/tmp/mediawiki/cache/$wmgHostname";
 $wgLoadScript = "//$wmgUploadHostname/$wmgHostname/load.php";
 $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
 $wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
-$wgDebugLogFile = "/var/log/mediawiki/$wmgHostname.log";
 
 // Piwik
 $wgHooks['SkinAfterBottomScripts'][] = 'lfPiwikScript';
