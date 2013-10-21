@@ -2,7 +2,7 @@
 - name: Check out latest stable WMF branch of MediaWiki
   git: repo=https://github.com/Orain/mediawiki-core.git
        dest=/usr/share/nginx/.orain.org/w
-       version=wmf/1.22wmf16
+       version=wmf/1.22wmf22
 
 - name: Copy MediaWiki settings from templates
   template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}} backup=yes
