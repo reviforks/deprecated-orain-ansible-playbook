@@ -1,10 +1,10 @@
 server {
-	listen 80;
+	listen [::]:80 ipv6only=off;
 	include /etc/nginx/sites-enabled-agnostic/{{template_path | basename | replace('.j2','')}};
 }
 
 server {
-	listen 443 ssl;
+	listen [::]:443 ssl ipv6only=off;
 	include /etc/nginx/sites-enabled-agnostic/{{template_path | basename | replace('.j2','')}};
 
 	# HSTS for 2 months
