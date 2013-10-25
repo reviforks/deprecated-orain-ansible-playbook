@@ -458,6 +458,12 @@ $wgConf->settings = array(
 	'wgMetaNamespace' => array(
 		'metawiki' => 'Meta',
 	),
+	'wgNamespaceAliases' => array(
+		'trainwiki' => array(
+	        	'사' => NS_USER,
+	        	'사토' => NS_USER_TALK,
+    		),
+    	),
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(
 			NS_TEMPLATE => true,
