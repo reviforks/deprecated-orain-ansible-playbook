@@ -325,6 +325,18 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	// /GraphicsMagick
+	
+	// Imports
+	'wgImportSources' => array(
+		'default' => array(
+			'meta',
+			'testwiki'
+		),
+		'testwiki' => array(
+			'train'
+		),
+	),
+	// /Imports
 
 	// Keys
 	'wgSecretKey' => array(
@@ -820,12 +832,6 @@ if ( defined( "MW_DB" ) ) {
 } else {
 	$wgDBname = false;
 }
-
-// Imports
-$wgImportSources = array(
-	'meta',
-	'train'
-);
 
 /**
  * Fill the database list
