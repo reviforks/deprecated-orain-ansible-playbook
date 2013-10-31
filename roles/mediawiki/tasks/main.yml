@@ -43,6 +43,7 @@
             extensions/ConfirmEdit
             extensions/Disambiguator
             extensions/DPLforum
+            extensions/Echo
             extensions/Gadgets
             extensions/GlobalBlocking
             extensions/HeaderTabs
