@@ -44,7 +44,6 @@
             extensions/Disambiguator
             extensions/DPLforum
             extensions/Echo
-            extensions/EventLogging
             extensions/Gadgets
             extensions/GlobalBlocking
             extensions/HeaderTabs
