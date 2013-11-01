@@ -814,8 +814,8 @@ foreach ( $wgConf->settings['wgServer'] as $db => $server ) {
 
 if ( ( basename( $_SERVER["SCRIPT_FILENAME"] ) == "thumb.php" ) && isset( $_REQUEST['sitex'] ) ) {
 	$wmgHostname = $_REQUEST['sitex'];
-} elseif ( preg_match( '/^\/(.*?)\/load.php$/', $_SERVER['DOCUMENT_URI'], $matches ) ) {
-	$wmgHostname = $matches[1];
+/*} elseif ( preg_match( '/^\/(.*?)\/load.php$/', $_SERVER['DOCUMENT_URI'], $matches ) ) {
+	$wmgHostname = $matches[1];*/
 } elseif ( preg_match( '/^www\.(.*?\..*?)$/', $_SERVER['HTTP_HOST'], $matches ) ) {
 	$wmgHostname = $matches[1];
 } else {
