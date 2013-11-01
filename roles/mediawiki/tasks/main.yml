@@ -77,7 +77,6 @@
             extensions/Translate
             extensions/UniversalLanguageSelector
             extensions/Variables
-            extensions/Vector
             extensions/WikiEditor
             extensions/WikimediaMessages
             skins/foreground

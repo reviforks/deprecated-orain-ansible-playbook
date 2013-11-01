@@ -59,7 +59,6 @@ require_once( "$IP/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php" )
 require_once( "$IP/extensions/TemplateSandbox/TemplateSandbox.php" );
 require_once( "$IP/extensions/TitleBlacklist/TitleBlacklist.php" );
 require_once( "$IP/extensions/Variables/Variables.php" );
-require_once( "$IP/extensions/Vector/Vector.php" );
 require_once( "$IP/extensions/YouTube/YouTube.php" );
 require_once( "$IP/skins/foreground/foreground.php" );
 require_once( "$IP/skins/monaco/monaco.php" );
@@ -895,13 +894,13 @@ switch ( $wgDBname ) {
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
 		require_once( "$IP/extensions/Tabber/Tabber.php" );
 		break;
-	case "encyclopedianationalwiki":
+	/* case "encyclopedianationalwiki":
 	case "micronationswiki":
 		$wgVectorFeatures['collapsiblenav'] = array(
 			'global' => false,
 			'user' => true,
 		);
-		break;
+		break; */
 	case "foodopediawiki":
 		require_once( "$IP/extensions/Comments/Comment.php" );
 		break;
