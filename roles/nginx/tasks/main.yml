@@ -18,9 +18,7 @@
   notify: Reload nginx
 
 - name: Copy nginx enabled sites configuration
-  template: src={{item}} dest=/etc/nginx/sites-enabled/{{item|basename|replace('.j2','')}}
-  with_fileglob:
-    - ./sites-enabled/*.j2
+  template: src="./sites-enabled/all.j2" dest=/etc/nginx/sites-enabled/all
   notify: Reload nginx
 
 - name: Copy nginx custom configuration
