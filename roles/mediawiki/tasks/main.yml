@@ -87,7 +87,6 @@
             extensions/UniversalLanguageSelector
             extensions/Variables
             extensions/WikiEditor
-            extensions/WikimediaMessages
             skins/foreground
             skins/monaco
             chdir=/usr/share/nginx/.orain.org/w
