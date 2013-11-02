@@ -4,7 +4,7 @@
   {% if loop.first %} ipv6only=off{% endif %}
 {% endmacro %}
 
-{%+ macro favicon_config() %}
+{% macro favicon_config() %}
 	location = /favicon.ico {
 		root /usr/share/nginx/default;
 	}	
