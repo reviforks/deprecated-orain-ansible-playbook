@@ -426,6 +426,14 @@ $wgConf->settings = array(
 		'mediawikitesterswiki' => true,
 		'patereswiki' => true,
 	),
+	'wmgUseMobileFrontend' => array(
+		'default' => false,
+		'keionrailwiki' => true,
+		'grayhawkwiki' => true,
+		'spiralwiki' => true,
+		'wikiconstituciowiki' => true,
+		'wikinambaswiki' => true,
+	),
 	'wmgUseQuiz' => array(
 		'default' => false,
 		'mediawikitesterswiki' => true,
@@ -902,12 +910,6 @@ switch ( $wgDBname ) {
 	case "foodopediawiki":
 		require_once( "$IP/extensions/Comments/Comment.php" );
 		break;
-	case "keionrailwiki":
-		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
-		break;
-	case "grayhawkwiki":
-		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
-		break;
 	case "loginwiki":
 		$wgGroupPermissions['*']['edit'] = false;
 		$wgGroupPermissions['*']['centralauth-autoaccount'] = true;
@@ -953,7 +955,6 @@ switch ( $wgDBname ) {
 	case "spiralwiki":
 		require_once( "$IP/extensions/cldr/cldr.php" );
 		require_once( "$IP/extensions/Echo/Echo.php" );
-		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 		require_once( "$IP/extensions/Thanks/Thanks.php" );
 		require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
 		break;
@@ -966,13 +967,9 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['patrol'] = false;
 		$wgGroupPermissions['user']['createpage'] = false;
 		break;
-	case "wikiconstituciowiki":
-		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
-		break;
 	case "wikinambaswiki":
 		require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
 		require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
-		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 		require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
 		break;
 }
@@ -1075,6 +1072,10 @@ if ( $wmgUseDPLforum ) {
 
 if ( $wmgUseReplaceText ) {
 	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
+}
+
+if ( $wmgUseMobileFrontend ) {
+	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 }
 
 if ( $wmgUseQuiz ) {
