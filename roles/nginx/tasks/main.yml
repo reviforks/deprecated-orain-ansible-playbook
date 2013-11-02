@@ -34,5 +34,8 @@
         state=absent
   notify: Reload nginx
 
-- name: Copy robots.txt
-  copy: src=robots.txt dest=/usr/share/nginx/.orain.org/robots.txt
+- name: Copy {{item}}
+  copy: src={{item}} dest=/usr/share/nginx/.orain.org
+  with_items:
+    - robots.txt
+    - favicon.ico
