@@ -1,24 +1,24 @@
 {% for site in sites %}
-{% capture as listen_parameters %}
+{% macro listen_parameters() %}
 	{% if site == "default" %} default_server{% endif %}
   {% if loop.first %} ipv6only=off{% endif %}
-{% endcapture %}
+{% endmacro %}
 
-{%+ capture as favicon_config +%}
+{%+ macro favicon_config() %}
 	location = /favicon.ico {
 		root /usr/share/nginx/default;
 	}	
-{% endcapture %}
+{% endmacro %}
 
 server {
-  listen [::]:80 {{listen_parameters}};
-{{favicon_config}}
+  listen [::]:80 {{ listen_parameters() }};
+{{ favicon_config() }}
   include /etc/nginx/sites-enabled-agnostic/{{site}};
 }
 
 server {
-  listen [::]:443 ssl {{listen_parameters}};
-{{favicon_config}}
+  listen [::]:443 ssl {{ listen_parameters() }};
+{{ favicon_config() }}
   include /etc/nginx/sites-enabled-agnostic/{{site}};
 
   # HSTS for 2 months
