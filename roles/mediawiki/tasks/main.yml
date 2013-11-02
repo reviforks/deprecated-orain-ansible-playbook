@@ -36,7 +36,7 @@
         user="www-scripts"
         minute=0
         hour="/6"
-        job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki loginwiki > /var/log/rebuildLocalisationCache.php 2>&1"
+        job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki > /var/log/rebuildLocalisationCache.php 2>&1"
 
 - name: Download MediaWiki extensions
   command: >
