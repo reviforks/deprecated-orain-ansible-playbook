@@ -827,14 +827,16 @@ foreach ( $wgConf->settings['wgServer'] as $db => $server ) {
 	$canonical = $canonical ?: ( 'https:' . $server );
 }
 
+$wmgHTTPhost = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : null;
+
 if ( ( basename( $_SERVER["SCRIPT_FILENAME"] ) == "thumb.php" ) && isset( $_REQUEST['sitex'] ) ) {
 	$wmgHostname = $_REQUEST['sitex'];
 /*} elseif ( preg_match( '/^\/(.*?)\/load.php$/', $_SERVER['DOCUMENT_URI'], $matches ) ) {
 	$wmgHostname = $matches[1];*/
-} elseif ( preg_match( '/^www\.(.*?\..*?)$/', $_SERVER['HTTP_HOST'], $matches ) ) {
+} elseif ( preg_match( '/^www\.(.*?\..*?)$/', $wmgHTTPhost, $matches ) ) {
 	$wmgHostname = $matches[1];
 } else {
-	$wmgHostname = $_SERVER['HTTP_HOST'];
+	$wmgHostname = $wmgHTTPhost;
 }
 
 $wgConf->siteParamsCallback = 'efGetSiteParams';
@@ -842,7 +844,8 @@ $wgConf->siteParamsCallback = 'efGetSiteParams';
 if ( defined( "MW_DB" ) ) {
 	$wgDBname = MW_DB;
 	$subdomain = substr( $wgDBname, 0, -4 );
-	$wmgHostname = $wgConf->settings['wgServer'][$wgDBname] ?: "$subdomain.orain.org";
+	$server = &$wgConf->settings['wgServer'][$wgDBname];
+	$wmgHostname = isset( $server ) ? $server : "$subdomain.orain.org";
 } elseif ( $search = array_search( '//' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
 	$wgDBname = $search;
 } elseif ( preg_match( '/^(.+?)\.(.+?)\.orain\.org$/', $wmgHostname, $matches ) ) {
