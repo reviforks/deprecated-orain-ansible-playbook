@@ -22,8 +22,14 @@
     - get_db_list.py
     - db_loop.sh
 
-- name: Create a crontab for get_db_list.py
+- name: Create a cronjob for get_db_list.py
   cron: name="Get DB list" user="www-scripts" job="python3 ~/get_db_list.py"
+
+- name: Create a cronjob for the MediaWiki job queue
+  cron: name="MediaWiki job queue"
+        user="www-scripts"
+        minute=0
+        job="~/db_loop.sh /usr/share/nginx/.orain.org/w/maintenance/runJobs.php > /var/log/runJobs.log 2>&1"
 
 - name: Download MediaWiki extensions
   command: >
