@@ -381,16 +381,9 @@ $wgConf->settings = array(
 	'ceAllowConfirmedEmail' => array(
 		'default' => true,
 	),
-	'wgThanksConfirmationRequired' => array(
-		'default' => true,
-		'spiralwiki' => false, // required for testing --addshore qgil
-		'testwiki' => false,
-	),
 	'wmgClosedWiki' => array(
 		'default' => false,
-		'computerclanwiki' => true, //Requested 'Deletion' on irc by User:Inandoutland
-		'mlbwiki' => true,
-		'yuewikivoyage' => true,
+		'closed' => true,
 	),
 	'+wgCreateWikiSQLfiles' => array(
 		'metawiki' => array(
@@ -401,20 +394,21 @@ $wgConf->settings = array(
 			"$IP/extensions/CreateWiki/global_block_whitelist.sql",
 		),
 	),
-	'wgMFAutodetectMobileView' => array(
-		'default' => true,
-	),
 	'wgInterwikiViewOnly' => array(
 		'default' => true,
 		'metawiki' => false,
 	),
+	'wgMFAutodetectMobileView' => array(
+		'default' => true,
+	),
 	'wmgPrivateWiki' => array(
 		'default' => false,
-		'fmdswiki' => true,
-		'gammawiki' => true,
-		'grayhawkwiki' => true,
-		'sacwiki' => true,
-		'chemdaqwiki' => true,
+		'private' => true,
+	),
+	'wgThanksConfirmationRequired' => array(
+		'default' => true,
+		'spiralwiki' => false, // required for testing --addshore qgil
+		'testwiki' => false,
 	),
 	'wmgUseDPLforum' => array(
 		'default' => false,
