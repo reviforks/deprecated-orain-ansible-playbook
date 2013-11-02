@@ -417,6 +417,12 @@ $wgConf->settings = array(
 	'wgScribuntoUseGeSHi' => array(
 		'default' => true,
 	),
+	'wmgUseCodeEditor' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'mediawikitesterswiki' => true,
+		'wikinambaswiki' => true,
+	),
 	'wmgUseDPLforum' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -887,14 +893,12 @@ RESP
 switch ( $wgDBname ) {
 	case "allthetropeswiki":
 		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
-		require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/intersection/DynamicPageList.php" );
 		require_once( "$IP/extensions/MyVariables/MyVariables.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		// Configurations
-		$wgScribuntoUseCodeEditor = true;
 		$wgSectionHideShowtop = 1;
 		break;
 	case "botwiki":
@@ -937,7 +941,6 @@ switch ( $wgDBname ) {
 		require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
 		$wgCategoryTreeMaxChildren = 2000;
 		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
-		require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
 		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
@@ -971,7 +974,6 @@ switch ( $wgDBname ) {
 		break;
 	case "wikinambaswiki":
 		require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
-		require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 		require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
 		break;
 }
@@ -1066,6 +1068,11 @@ if ( $wmgPrivateWiki ) {
 	$wgGroupPermissions['member']['read'] = true;
 	$wgGroupPermissions['sysop']['read'] = true; // Make sure Sysops/bureaucrats always have read
 	$wgGroupPermissions['bureaucrat']['read'] = true;
+}
+
+if ( $wmgUseCodeEditor ) {
+	require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
+	$wgScribuntoUseCodeEditor = true;
 }
 
 if ( $wmgUseDPLforum ) {
