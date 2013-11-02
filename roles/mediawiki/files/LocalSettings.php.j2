@@ -419,14 +419,14 @@ $wgConf->settings = array(
 	),
 	'wmgUseCodeEditor' => array(
 		'default' => false,
-		'extloadwiki' => true, // all extensions are loaded on this wiki
+//		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'allthetropeswiki' => true,
 		'mediawikitesterswiki' => true,
 		'wikinambaswiki' => true,
 	),
 	'wmgUseDPLforum' => array(
 		'default' => false,
-		'extloadwiki' => true, // all extensions are loaded on this wiki
+//		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'allthetropeswiki' => true,
 		'frmodamobwiki' => true,
 		'mediawikitesterswiki' => true,
@@ -434,7 +434,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => false,
-		'extloadwiki' => true, // all extensions are loaded on this wiki
+//		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'keionrailwiki' => true,
 		'grayhawkwiki' => true,
 		'spiralwiki' => true,
@@ -443,19 +443,19 @@ $wgConf->settings = array(
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
-		'extloadwiki' => true, // all extensions are loaded on this wiki
+//		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
 		'patereswiki' => true,
 	),
 	'wmgUseReplaceText' => array(
 		'default' => false,
-		'extloadwiki' => true, // all extensions are loaded on this wiki
+//		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
 		'patereswiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
-		'extloadwiki' => true, // all extensions are loaded on this wiki
+//		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'elderlordswiki' => false,
 		'encyclopedianationalwiki' => false,
 		'wikinambaswiki' => true,
@@ -987,32 +987,32 @@ switch ( $wgDBname ) {
 		require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
 		break;
 	case "extloadwiki":
-		require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
-		require_once( "$IP/extensions/cldr/cldr.php" );
+//		require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
+//		require_once( "$IP/extensions/cldr/cldr.php" );
 		require_once( "$IP/extensions/Echo/Echo.php" );
-		require_once( "$IP/extensions/Tabber/Tabber.php" );
-		require_once( "$IP/extensions/Thanks/Thanks.php" );
-		require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
-		require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
-		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
-		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
-		require_once( "$IP/extensions/intersection/DynamicPageList.php" );
-		require_once( "$IP/extensions/MyVariables/MyVariables.php" );
-		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
-		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
-		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
-		require_once( "$IP/extensions/Comments/Comment.php" );
-		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
-		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
-		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
-		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
-		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
-		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
-		require_once( "$IP/extensions/MyVariables/MyVariables.php" );
-		require_once( "$IP/extensions/Poem/Poem.php" );
-		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
+//		require_once( "$IP/extensions/Tabber/Tabber.php" );
+//		require_once( "$IP/extensions/Thanks/Thanks.php" );
+//		require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
+//		require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
+//		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
+//		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
+//		require_once( "$IP/extensions/intersection/DynamicPageList.php" );
+//		require_once( "$IP/extensions/MyVariables/MyVariables.php" );
+//		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
+//		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
+//		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
+//		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
+//		require_once( "$IP/extensions/Comments/Comment.php" );
+//		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
+//		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
+//		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
+//		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
+//		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
+//		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
+//		require_once( "$IP/extensions/MyVariables/MyVariables.php" );
+//		require_once( "$IP/extensions/Poem/Poem.php" );
+//		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
+//		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 		break;
 }
 
