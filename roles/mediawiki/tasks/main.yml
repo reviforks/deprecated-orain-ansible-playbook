@@ -22,6 +22,9 @@
     - get_db_list.py
     - db_loop.sh
 
+- name: Copy logrotate configuration
+  copy: src="./logrotate.d/mediawiki" dest=/etc/logrotate.d
+
 - name: Create a cronjob for get_db_list.py
   cron: name="Get DB list" user="www-scripts" job="python3 ~/get_db_list.py"
 
@@ -29,14 +32,14 @@
   cron: name="MediaWiki job queue"
         user="www-scripts"
         minute=0
-        job="~/db_loop.sh /usr/share/nginx/.orain.org/w/maintenance/runJobs.php > /var/log/runJobs.log 2>&1"
+        job="~/db_loop.sh /usr/share/nginx/.orain.org/w/maintenance/runJobs.php > /var/log/mediawiki/runJobs.log 2>&1"
 
 - name: Create a cronjob for MediaWiki localisation cache updating
   cron: name="MediaWiki localisation cache updating"
         user="www-scripts"
         minute=0
         hour="/6"
-        job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki > /var/log/rebuildLocalisationCache.php 2>&1"
+        job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki > /var/log/mediawiki/rebuildLocalisationCache.log 2>&1"
 
 - name: Download MediaWiki extensions
   command: >
