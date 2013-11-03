@@ -7,6 +7,13 @@ location = / {
 	return 301 /wiki/;
 }
 
+location = /w/load.php {
+	expires 3d;
+	include fastcgi_params;
+	fastcgi_param SCRIPT_FILENAME $document_root/w/load.php;
+	fastcgi_pass unix:/var/run/php5-fpm.sock;
+}
+
 location ~ \.php$ {
 	try_files $uri =404;
 	include fastcgi_params;
@@ -23,8 +30,13 @@ location ~ ^/wk/(.*) {
 	return 301 /wiki/$1;
 }
 
+location ~* \.(bmp|gif|jpeg|jpg|png)$ {
+	expires 2w;
+}
+
 location ^~ /wiki {
 	include fastcgi_params;
 	fastcgi_param SCRIPT_FILENAME $document_root/w/index.php;
 	fastcgi_pass unix:/var/run/php5-fpm.sock;
 }
+

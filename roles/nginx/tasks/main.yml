@@ -18,9 +18,7 @@
   notify: Reload nginx
 
 - name: Copy nginx enabled sites configuration
-  template: src={{item}} dest=/etc/nginx/sites-enabled/{{item|basename|replace('.j2','')}}
-  with_fileglob:
-    - ./sites-enabled/*.j2
+  template: src="./sites-enabled/all.j2" dest=/etc/nginx/sites-enabled/all
   notify: Reload nginx
 
 - name: Copy nginx custom configuration
@@ -34,8 +32,9 @@
         state=absent
   notify: Reload nginx
 
-- name: Copy {{item}}
-  copy: src={{item}} dest=/usr/share/nginx/.orain.org
-  with_items:
-    - robots.txt
-    - favicon.ico
+- name: Copy robots.txt
+  copy: src=robots.txt dest=/usr/share/nginx/.orain.org
+
+- name: Copy favicon.ico
+  copy: src=favicon.ico dest=/usr/share/nginx/default
+

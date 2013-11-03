@@ -38,7 +38,7 @@
   cron: name="MediaWiki localisation cache updating"
         user="www-scripts"
         minute=0
-        hour="/6"
+        hour="*/6"
         job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki > /var/log/mediawiki/rebuildLocalisationCache.log 2>&1"
 
 - name: Download MediaWiki extensions
