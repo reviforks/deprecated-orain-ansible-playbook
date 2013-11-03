@@ -498,8 +498,12 @@ $wgConf->settings = array(
 		'metawiki' => 'Meta',
 	),
 	'wgNamespaceAliases' => array(
+		'keionrailwiki' => array(
+			'사'   => NS_USER,
+			'사토' => NS_USER_TALK,
+		),
 		'trainwiki' => array(
-			'사' => NS_USER,
+			'사'   => NS_USER,
 			'사토' => NS_USER_TALK,
 		),
 	),
@@ -834,12 +838,13 @@ foreach ( $wgConf->settings['wgServer'] as $db => $server ) {
 	$canonical = $canonical ?: ( 'https:' . $server );
 }
 
+$wmgDocumentURI = isset( $_SERVER['DOCUMENT_URI'] ) ? $_SERVER['DOCUMENT_URI'] : null;
 $wmgHTTPhost = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : null;
 
 if ( ( basename( $_SERVER["SCRIPT_FILENAME"] ) == "thumb.php" ) && isset( $_REQUEST['sitex'] ) ) {
 	$wmgHostname = $_REQUEST['sitex'];
-/*} elseif ( preg_match( '/^\/(.*?)\/load.php$/', $_SERVER['DOCUMENT_URI'], $matches ) ) {
-	$wmgHostname = $matches[1];*/
+} elseif ( preg_match( '/^\/(.*?)\/load.php$/', $wmgDocumentURI, $matches ) ) {
+	$wmgHostname = $matches[1];
 } elseif ( preg_match( '/^www\.(.*?\..*?)$/', $wmgHTTPhost, $matches ) ) {
 	$wmgHostname = $matches[1];
 } else {
@@ -1169,7 +1174,7 @@ if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
 $wgCacheDirectory = '/tmp/mw-cache';
 $wgDebugLogFile = "/var/log/mediawiki/$wmgHostname.log";
 $wgFileCacheDirectory = "/var/tmp/mediawiki/cache/$wmgHostname";
-// $wgLoadScript = "//$wmgUploadHostname/$wmgHostname/load.php";
+$wgLoadScript = "//$wmgUploadHostname/$wmgHostname/load.php";
 $wgLocalisationCacheConf['manualRecache'] = true;
 $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
 $wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
