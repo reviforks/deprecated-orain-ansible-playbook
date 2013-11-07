@@ -79,6 +79,7 @@
             extensions/MobileFrontend
             extensions/MyVariables
             extensions/Nuke
+            extensions/OpenSearchXML
             extensions/ParserFunctions
             extensions/Poem
             extensions/Quiz
