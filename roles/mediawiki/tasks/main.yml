@@ -59,6 +59,7 @@
             extensions/Comments
             extensions/CreateBox
             extensions/CreateWiki
+            extensions/CSS
             extensions/ConfirmEdit
             extensions/Disambiguator
             extensions/DPLforum
@@ -85,6 +86,7 @@
             extensions/Scribunto
             extensions/SectionHide
             extensions/SimpleAntiSpam
+            extensions/SideBarMenu
             extensions/SiteMatrix
             extensions/SkinPerPage
             extensions/SpamBlacklist
