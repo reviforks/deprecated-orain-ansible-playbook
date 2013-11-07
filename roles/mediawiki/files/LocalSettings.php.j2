@@ -456,6 +456,10 @@ $wgConf->settings = array(
 		'mediawikitesterswiki' => true,
 		'patereswiki' => true,
 	),
+	'wmgUseSideBarMenu' => array(
+		'default' => false,
+		'extloadwiki' => true, // all extensions are loaded on this wiki
+	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
@@ -1022,6 +1026,7 @@ switch ( $wgDBname ) {
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
+		require_once( "$IP/extensions/CSS/CSS.php" );
 		break;
 }
 
