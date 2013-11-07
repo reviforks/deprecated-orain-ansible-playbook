@@ -97,6 +97,7 @@
             extensions/TitleBlacklist
             extensions/Translate
             extensions/UniversalLanguageSelector
+            extensions/Validator
             extensions/Variables
             extensions/WikiEditor
             skins/foreground
