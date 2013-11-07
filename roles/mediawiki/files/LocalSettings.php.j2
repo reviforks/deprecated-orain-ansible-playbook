@@ -459,6 +459,7 @@ $wgConf->settings = array(
 	'wmgUseSideBarMenu' => array(
 		'default' => false,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
+		'allthetropeswiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
@@ -921,6 +922,7 @@ switch ( $wgDBname ) {
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/Tabber/Tabber.php" );
+		require_once( "$IP/extensions/CSS/CSS.php" );
 		// Configurations
 		$wgSectionHideShowtop = 1;
 		break;
