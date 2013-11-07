@@ -1138,6 +1138,12 @@ if ( $wmgUseReplaceText ) {
 	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
 }
 
+if ( $wmgUseSideBarMenu ) {
+	require_once( "$IP/extensions/DataValues/DataValues.php" );
+	require_once( "$IP/extensions/Validator/Validator.php" );
+	require_once( "$IP/extensions/SideBarMenu/SideBarMenu.php" );
+}
+
 if ( $wmgUseTranslate ) {
 	// May be moved to global after testing
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
