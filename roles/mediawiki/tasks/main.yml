@@ -63,6 +63,7 @@
             extensions/ConfirmEdit
             extensions/DataValues
             extensions/Disambiguator
+            extensions/DismissableSiteNotice
             extensions/DPLforum
             extensions/Echo
             extensions/Gadgets
