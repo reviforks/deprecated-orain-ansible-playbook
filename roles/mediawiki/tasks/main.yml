@@ -61,6 +61,7 @@
             extensions/CreateWiki
             extensions/CSS
             extensions/ConfirmEdit
+            extensions/DataValues
             extensions/Disambiguator
             extensions/DPLforum
             extensions/Echo
