@@ -98,6 +98,7 @@
             extensions/TemplateSandbox
             extensions/Thanks
             extensions/TitleBlacklist
+            extensions/TitleKey
             extensions/Translate
             extensions/UniversalLanguageSelector
             extensions/Validator
