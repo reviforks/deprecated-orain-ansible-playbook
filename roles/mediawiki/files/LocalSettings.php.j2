@@ -1208,10 +1208,10 @@ function lfPiwikScript( $skin, &$text='' ) {
 		$text .= "<!-- Piwik not enabled -->\n";
 		return true;
 	}
-	if ( $wgUser->isAllowed('noanalytics') ) {
+	/* if ( $wgUser->isAllowed('noanalytics') ) {
 		$text .= "<!-- Piwik code omitted -->\n";
 		return true;
-	}
+	} */
 	$id = strval( $wmgPiwikSiteID );
 	$title = $skin->getRelevantTitle();
 	$jstitle = Xml::encodeJsVar( $title->getPrefixedText() );
