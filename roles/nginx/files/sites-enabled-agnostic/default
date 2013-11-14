@@ -4,5 +4,6 @@ root /usr/share/nginx/default;
 index index.html index.htm;
 
 location = / {
-	return 301 $scheme://meta.orain.org;
+	return 301 $scheme://meta.orain.org/wiki/;
 }
+
