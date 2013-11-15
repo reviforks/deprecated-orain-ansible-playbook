@@ -722,6 +722,15 @@ $wgConf->settings = array(
 	),
 	// /Profiling
 
+	// Restrictions
+	'+wgRestrictionLevels' => array(
+		'metawiki' => array(
+			'user',
+			'steward'
+		),
+	),
+	// /Restrictions
+
 	// Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
@@ -961,8 +970,8 @@ switch ( $wgDBname ) {
 	case "metawiki":
 		require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
-		$wgRestrictionLevels[] = 'user'; // Allow users only to edit
 		$wgGroupPermissions['user']['user'] = true;
+		$wgGroupPermissions['steward']['steward'] = true;
 		break;
 	case "mediawikitesterswiki":
 		require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
