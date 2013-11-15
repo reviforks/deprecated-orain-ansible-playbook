@@ -105,6 +105,7 @@
             extensions/Validator
             extensions/Variables
             extensions/WikiEditor
+            extensions/WikiLove
             skins/foreground
             skins/monaco
             chdir=/usr/share/nginx/.orain.org/w
