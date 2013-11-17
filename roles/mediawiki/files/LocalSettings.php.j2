@@ -37,6 +37,7 @@ require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
 require_once( "$IP/extensions/Babel/Babel.php" );
 require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
 require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
+require_once( "$IP/extensions/CentralNotice/CentralNotice.php" );
 require_once( "$IP/extensions/CheckUser/CheckUser.php" );
 require_once( "$IP/extensions/Cite/Cite.php" );
 require_once( "$IP/extensions/Cite/SpecialCite.php" );
@@ -234,6 +235,31 @@ $wgConf->settings = array(
 		'default' => array(),
 	),
 	// /CentralAuth
+
+	// CentralNotice
+	'wgNoticeInfrastructure' => array(
+		'default' => false,
+		'metawiki' => true,
+	),
+	'wgNoticeProjects' => array(
+		'default' => array(),
+		// NOTE: 'orain' group means official wikis
+		'metawiki' => array( 'orain', 'closed', 'private', 'public' ),
+	),
+	'wgCentralHost' => array(
+		'default' => '//meta.orain.org',
+	),
+	'wgCentralPagePath' => array(
+		'default' => '//meta.orain.org/w/index.php',
+	),
+	'wgNoticeProject' => array(
+		'default' => 'public',
+		'metawiki' => 'orain',
+		'extloadwiki' => 'orain',
+		'loginwiki' => 'orain',
+		// private and closed groups are set further down
+	),
+	// /CentralNotice
 
 	// Database
 	'wgCompressRevisions' => array(
@@ -1043,7 +1069,6 @@ switch ( $wgDBname ) {
 		require_once( "$IP/extensions/CSS/CSS.php" );
 		require_once( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
 		//require_once( "$IP/extensions/OpenSearchXML/OpenSearchXML.php" ); // addshore after adding this or DismissableSiteNotice extload broke (commented out 7.11.13)
-		require_once( "$IP/extensions/CentralNotice/CentralNotice.php" );
 		break;
 }
 
@@ -1128,6 +1153,10 @@ if ( $wmgClosedWiki ) {
 	$wgGroupPermissions['confirmed']['editsemiprotected'] = false;
 	$wgGroupPermissions['confirmed']['patrol'] = false;
 	$wgGroupPermissions['rollbacker']['rollback'] = false;
+	//Assign its own CentralNotice 'project' as long as its not already orain
+	if( $wgNoticeProject !== 'orain' ) {
+		$wgNoticeProject = 'closed';
+	}
 }
 
 if ( $wmgPrivateWiki ) {
@@ -1137,6 +1166,10 @@ if ( $wmgPrivateWiki ) {
 	$wgGroupPermissions['member']['read'] = true;
 	$wgGroupPermissions['sysop']['read'] = true; // Make sure Sysops/bureaucrats always have read
 	$wgGroupPermissions['bureaucrat']['read'] = true;
+	//Assign its own CentralNotice 'project' as long as its not already orain
+	if( $wgNoticeProject !== 'orain' ) {
+		$wgNoticeProject = 'private';
+	}
 }
 
 if ( $wmgUseCodeEditor ) {
