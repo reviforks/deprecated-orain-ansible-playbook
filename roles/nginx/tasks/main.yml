@@ -21,10 +21,8 @@
   template: src="./sites-enabled/all.j2" dest=/etc/nginx/sites-enabled/all
   notify: Reload nginx
 
-- name: Copy nginx custom configuration
-  template: src={{item}} dest=/etc/nginx/conf.d
-  with_fileglob:
-    - ./conf.d/*.conf
+- name: Copy nginx.conf
+  template: src=nginx.conf.j2 dest=/etc/nginx/nginx.conf
   notify: Reload nginx
 
 - name: Delete /etc/nginx/conf.d/default.conf
