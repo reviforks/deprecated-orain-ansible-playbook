@@ -51,6 +51,7 @@
             extensions/Babel
             extensions/CategoryTree
             extensions/CentralAuth
+            extensions/CentralNotice
             extensions/CharInsert
             extensions/CheckUser
             extensions/Cite
