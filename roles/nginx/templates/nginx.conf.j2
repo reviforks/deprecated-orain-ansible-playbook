@@ -48,7 +48,7 @@ http {
 	ssl_session_timeout 5m;
 	ssl_certificate {{ssl_cert_path}};
 	ssl_certificate_key {{ssl_cert_key_path}};
-	ssl_ciphers "EECDH+AESGCM:EECDH+SHA384:EECDH+SHA256:EECDH+RC4:EDH:EECDH:ECDH-RSA-RC4-SHA:RC4-SHA !aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!SRP:!ECDSA:!DSS";
+	ssl_ciphers "EECDH+AESGCM:EECDH:EDH+AESGCM:EDH:HIGH+AESGCM:HIGH:+SHA:+RC4:RC4 !aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS:!kECDH:!ECDSA";
 	ssl_prefer_server_ciphers on;
 	ssl_session_cache shared:SSL:20m;
 	ssl_stapling on;
