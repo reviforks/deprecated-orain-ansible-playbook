@@ -409,23 +409,6 @@ $wgConf->settings = array(
 	),
 	// /License
 	
-	// MassMessage
-	'wgNamespacesToPostIn' => array(
-	    'default' => array( NS_PROJECT, NS_USER_TALK ),
-	    '+metawiki' => array( NS_MAIN ), // May need to post to content namespace on Meta
-	),
-	'wgNamespacesToConvert' => array(
-	    'default' => array( NS_USER => NS_USERTALK ),
-	),
-	'wgMassMessageAccountUsername' => array(
-	    'default' => 'OrainMessenger', // Make it 'Orain'ish. Default should be the only thing value here
-	),
-	'wgAllowGlobalMessaging' => array(
-	    'default' => false,
-	    'metawiki' => true, // make it so Stewards can use Meta to send global messages
-	),
-	// /MassMessage
-	
 	// Misc. extensions
 	'ceAllowConfirmedEmail' => array(
 		'default' => true,
@@ -691,7 +674,6 @@ $wgConf->settings = array(
 				'bigdelete' => false, // Prevent disruption by accidentally deleting large pages
 				'deletelogentry' => true,
 				'deleterevision' => true,
-				'massmessage' => false, // For now, disable use of massmessage for sysops
 				'rollback' => true,
 			),
 		),
@@ -710,7 +692,6 @@ $wgConf->settings = array(
 				'globalblock' => true,
 				'globalunblock' => true,
 				'interwiki' => true,
-				'massmessage' => true, // Allow stewards to use massmessage
 				'noratelimit' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
