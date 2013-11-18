@@ -51,3 +51,13 @@
   notify:
     - Reload ferm
 
+- name: Copy backup.sh
+  template: src=backup.sh dest=/root/backup.sh
+
+- name: Create a cronjob for backup.sh
+  cron: name="backup.sh"
+        user="root"
+        minute=0
+        hour=0
+        job="/root/backup.sh"
+
