@@ -48,6 +48,7 @@ require_once( "$IP/extensions/Gadgets/Gadgets.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
 require_once( "$IP/extensions/InputBox/InputBox.php" );
 require_once( "$IP/extensions/Interwiki/Interwiki.php" );
+require_once( "$IP/extensions/MassMessage/MassMessage.php" );
 require_once( "$IP/extensions/Nuke/Nuke.php" );
 require_once( "$IP/extensions/OrainMessages/OrainMessages.php" );
 require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
@@ -415,6 +416,23 @@ $wgConf->settings = array(
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 	),
 	// /License
+	
+	// MassMessage
+	'wgNameSpacesToPostIn' => array(
+	    'default' => array( NS_PROJECT, NS_USER_TALK ),
+	    '+metawiki' => array( NS_MAIN ),
+	),
+	'wgNamespacesToConvert' => array(
+	    'default' => array( NS_USER => NS_USER_TALK ),
+	),
+	'wgMassMessageAccountUsername' => array(
+	    'default' => 'OrainMessenger',
+	),
+	'wgAllowGlobalMessaging' => array(
+	    'default' => false,
+	    'metawiki' => true,
+	),
+	// /MassMessage
 	
 	// Misc. extensions
 	'ceAllowConfirmedEmail' => array(
@@ -1081,7 +1099,6 @@ switch ( $wgDBname ) {
 		require_once( "$IP/extensions/CSS/CSS.php" );
 		require_once( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
 		//require_once( "$IP/extensions/OpenSearchXML/OpenSearchXML.php" ); // addshore after adding this or DismissableSiteNotice extload broke (commented out 7.11.13)
-		require_once( "$IP/extensions/MassMessage/MassMessage.php" );
 		break;
 }
 
