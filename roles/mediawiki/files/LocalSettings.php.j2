@@ -1298,6 +1298,7 @@ function lfPiwikScript( $skin, &$text='' ) {
 	$title = $skin->getRelevantTitle();
 	$jstitle = Xml::encodeJsVar( $title->getPrefixedText() );
 	$urltitle = $title->getPrefixedURL();
+	$userType = $wgUser->isLoggedIn() ? "User" : "Anonymous";
 	$text .= <<<SCRIPT
 <!-- Piwik -->
 <script type="text/javascript">
@@ -1310,6 +1311,7 @@ function lfPiwikScript( $skin, &$text='' ) {
 		_paq.push(["setTrackerUrl", u+"piwik.php"]);
 		_paq.push(['setDocumentTitle', {$jstitle}]);
 		_paq.push(["setSiteId", "{$id}"]);
+		_paq.push(["setCustomVariable", 1, "userType", "{$userType}", "visit"]);
 		var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
 		g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
 	})();
