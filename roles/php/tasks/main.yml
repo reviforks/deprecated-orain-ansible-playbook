@@ -38,3 +38,8 @@
   lineinfile: dest=/etc/php5/fpm/conf.d/20-mysqli.ini regexp='^;?extension\=mysqli\.so' line=';extension=mysqli.so'
   notify: Reload php-fpm
 
+- name: Auto-archive Piwik reports
+  cron: user="www-scripts"
+        minute=0
+        job="php /usr/share/nginx/bits.orain.org/piwik/misc/cron/archive.php --url=http://bits.orain.org/piwik/ >> /var/log/piwik-archive.log"
+
