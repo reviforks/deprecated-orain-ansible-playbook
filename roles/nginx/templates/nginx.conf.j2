@@ -16,6 +16,10 @@ events {
 
 
 http {
+	# Security
+	add_header Content-Security-Policy "default-src 'self' d326vv62q24mzw.cloudfront.net; script-src 'self' d326vv62q24mzw.cloudfront.net bits.orain.org login.orain.org 'unsafe-inline' 'unsafe-eval' bits.wikimedia.org; style-src 'self' d326vv62q24mzw.cloudfront.net 'unsafe-inline' fonts.googleapis.com; font-src 'self' themes.googleusercontent.com; frame-src *.youtube.com; object-src *.youtube.com";
+	add_header X-Content-Type-Options nosniff;
+	add_header X-Frame-Options DENY;	
 	server_tokens off;
 
 	include /etc/nginx/mime.types;
@@ -29,7 +33,8 @@ http {
 	access_log /var/log/nginx/access.log main;
 
 	sendfile on;
-	# tcp_nopush on;
+	# tcp_nodelay off;
+	tcp_nopush on;
 
 	client_body_timeout 10;
 	client_header_timeout 10;
@@ -38,19 +43,21 @@ http {
 	send_timeout 20;
 
 	gzip on;
-	gzip_comp_level 4;
-	gzip_min_length 500;
+	gzip_comp_level 5;
+	gzip_http_version 1.0; # CloudFront sends HTTP/1.0 requests
+	gzip_min_length 256;
 	gzip_proxied any;
 	gzip_types application/atom+xml application/json application/x-javascript application/xml application/xml+rss text/css text/javascript text/plain text/xml;
+	gzip_vary on;
 
 	resolver 8.8.4.4 8.8.8.8;
 
-	ssl_session_timeout 5m;
 	ssl_certificate {{ssl_cert_path}};
 	ssl_certificate_key {{ssl_cert_key_path}};
 	ssl_ciphers "EECDH+AESGCM:EECDH:EDH+AESGCM:EDH:HIGH+AESGCM:HIGH:+SHA:+RC4:RC4 !aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS:!kECDH:!ECDSA";
 	ssl_prefer_server_ciphers on;
-	ssl_session_cache shared:SSL:20m;
+	ssl_session_cache shared:SSL:5m; # Can hold about 20,000 sessions
+	ssl_session_timeout 15m;
 	ssl_stapling on;
 	ssl_stapling_verify on;
 	ssl_trusted_certificate issuer.crt;
