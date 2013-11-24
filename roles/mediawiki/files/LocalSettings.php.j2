@@ -190,6 +190,9 @@ $wgConf->settings = array(
 	'wgMemCachedServers' => array(
 		'default' => array( '127.0.0.1:11211' ),
 	),
+	'wgMiserMode' => array(
+		'allthetropeswiki' => true,
+	),
 	'wgParserCacheExpireTime' => array(
 		'default' => 604800, // 7 days
 	),
@@ -526,9 +529,6 @@ $wgConf->settings = array(
 		'elderlordswiki' => false,
 		'encyclopedianationalwiki' => false,
 		'wikinambaswiki' => true,
-	),
-	'wgWantedPagesThreshold' => array(
-		'allthetropeswiki' => 5,
 	),
 	// /Misc. extensions
 
