@@ -17,8 +17,6 @@ events {
 
 http {
 	# Security
-	add_header Content-Security-Policy "default-src 'self' d326vv62q24mzw.cloudfront.net; script-src 'self' d326vv62q24mzw.cloudfront.net bits.orain.org login.orain.org 'unsafe-inline' 'unsafe-eval' bits.wikimedia.org; style-src 'self' d326vv62q24mzw.cloudfront.net 'unsafe-inline' fonts.googleapis.com; font-src 'self' themes.googleusercontent.com; frame-src *.youtube.com; object-src *.youtube.com";
-	add_header X-Content-Type-Options nosniff;
 	add_header X-Frame-Options DENY;	
 	server_tokens off;
 

@@ -14,12 +14,16 @@ server {
 	listen [::]:80 {{ listen_parameters() }};
 {{ favicon_config() }}
 	include /etc/nginx/sites-enabled-agnostic/{{site}};
+
+	add_header Content-Security-Policy "default-src 'self' http://d326vv62q24mzw.cloudfront.net; script-src 'self' http://d326vv62q24mzw.cloudfront.net http://bits.orain.org http://login.orain.org 'unsafe-inline' 'unsafe-eval' http://bits.wikimedia.org; style-src 'self' http://d326vv62q24mzw.cloudfront.net 'unsafe-inline' http://fonts.googleapis.com; font-src https://themes.googleusercontent.com; frame-src http://*.youtube.com; object-src http://*.youtube.com; image-src 'self' http://d326vv62q24mzw.cloudfront.net http://upload.wikimedia.org";
 }
 
 server {
 	listen [::]:443 ssl {{ listen_parameters() }};
 {{ favicon_config() }}
 	include /etc/nginx/sites-enabled-agnostic/{{site}};
+
+	add_header Content-Security-Policy "default-src 'self' https://d326vv62q24mzw.cloudfront.net; script-src 'self' https://d326vv62q24mzw.cloudfront.net https://bits.orain.org https://login.orain.org 'unsafe-inline' 'unsafe-eval' https://bits.wikimedia.org; style-src 'self' https://d326vv62q24mzw.cloudfront.net 'unsafe-inline' https://fonts.googleapis.com; font-src https://themes.googleusercontent.com; frame-src https://*.youtube.com; object-src https://*.youtube.com; image-src 'self' https://d326vv62q24mzw.cloudfront.net https://upload.wikimedia.org";
 
 	# HSTS for 2 months
 	add_header Strict-Transport-Security "max-age=5256000; includeSubDomains";
