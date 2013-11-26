@@ -6,6 +6,6 @@
 	delaycompress
 	notifempty
 	su www-data www-data
-	create 640 www-data www-data
+	create 660 www-data www-data
 }
 
