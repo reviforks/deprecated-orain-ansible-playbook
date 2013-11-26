@@ -363,6 +363,14 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	// /Files
+	
+	// Global Group Settings
+	'+wgAvailableRights' => array( // + to avoid any possible conflicts
+	    'default' => array(
+	        'steward' // Allow this restriction level be added to the global usergroup
+	    ),
+	),
+	// /Global Group Settings
 
 	// GraphicsMagick
 	'wgImageMagickConvertCommand' => array(
