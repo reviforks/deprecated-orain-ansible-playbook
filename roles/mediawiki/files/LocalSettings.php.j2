@@ -43,6 +43,7 @@ require_once( "$IP/extensions/Cite/Cite.php" );
 require_once( "$IP/extensions/Cite/SpecialCite.php" );
 require_once( "$IP/extensions/ConfirmEdit/Asirra.php" );
 require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
+require_once( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
 require_once( "$IP/extensions/intersection/DynamicPageList.php" );
 require_once( "$IP/extensions/Gadgets/Gadgets.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
@@ -1120,7 +1121,6 @@ switch ( $wgDBname ) {
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 		require_once( "$IP/extensions/CSS/CSS.php" );
-		require_once( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
 		//require_once( "$IP/extensions/OpenSearchXML/OpenSearchXML.php" ); // addshore after adding this or DismissableSiteNotice extload broke (commented out 7.11.13)
 		break;
 }
