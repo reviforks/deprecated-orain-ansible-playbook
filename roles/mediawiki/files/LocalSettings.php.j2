@@ -509,6 +509,10 @@ $wgConf->settings = array(
 		'mediawikitesterswiki' => true,
 		'metawiki' => true,
 	),
+	'wmgUseOrainFooter' => array(
+	    'default' => false,
+	    'testwiki' => true, // Test for now. May be disabled soon -John
+	),
 	'wmgUseMobileFrontend' => array(
 		'default' => false,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
@@ -1234,6 +1238,14 @@ if ( $wmgUseCodeEditor ) {
 
 if ( $wmgUseDPLforum ) {
 	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
+}
+
+if ( $wmgUseOrainFooter ) {
+    $wgFooterIcons['poweredby']['orain'] = array(
+        "src" => "//$wmgUploadHostname/meta.orain.org/images/archive/9/96/20131129195014!Powered_By_Orain.png",
+        "url" => "//meta.orain.org/",
+        "alt" => "Hosted by Orain",
+    ),
 }
 
 if ( $wmgUseMobileFrontend ) {
