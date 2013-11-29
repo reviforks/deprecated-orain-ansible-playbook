@@ -1042,10 +1042,10 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['user']['read'] = true; // Make sure read rights are present
 		$wgGroupPermissions['autoconfirmed']['read'] = true; // Make sure read rights are present
 		unset( $wgGroupPermissions['autopatrolled'] ); // Unset all other permissions except CheckUser and Oversighter
-		unset( $wgGroupPermissions['bots'] );
+		unset( $wgGroupPermissions['bot'] );
 		unset( $wgGroupPermissions['bureaucrat'] );
 		unset( $wgGroupPermissions['confirmed'] );
-		unset( $wgGroupPermissions['emaiconfirmed'] );
+		unset( $wgGroupPermissions['emailconfirmed'] );
 		unset( $wgGroupPermissions['importer'] );
 		unset( $wgGroupPermissions['rollbacker'] );
 		unset( $wgGroupPermissions['sysop'] );
