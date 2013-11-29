@@ -1223,6 +1223,8 @@ if ( $wmgPrivateWiki ) {
 	if( $wgNoticeProject !== 'orain' ) {
 		$wgNoticeProject = 'private';
 	}
+	// Whitelist! Default carried over for tracking.
+	$wgWhitelistRead = array( "Main Page", "Special:UserLogin", "Special:UserLogout", "Special:ResetPassword", "MediaWiki:Commons.css", "Special:CentralLogin" );
 }
 
 if ( $wmgUseCodeEditor ) {
