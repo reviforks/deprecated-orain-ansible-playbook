@@ -2,7 +2,7 @@
 - name: Check out latest stable WMF branch of MediaWiki
   git: repo=https://github.com/Orain/mediawiki-core.git
        dest=/usr/share/nginx/.orain.org/w
-       version=wmf/1.22wmf22
+       version=REL1_22
 
 - name: Copy MediaWiki settings from templates
   template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}} backup=yes
@@ -48,70 +48,6 @@
 
 - name: Download MediaWiki extensions
   command: >
-            git submodule update --init
-            extensions/AbuseFilter
-            extensions/AdminLinks
-            extensions/AntiSpoof
-            extensions/ApiSandbox
-            extensions/Babel
-            extensions/CategoryTree
-            extensions/CentralAuth
-            extensions/CentralNotice
-            extensions/CharInsert
-            extensions/CheckUser
-            extensions/Cite
-            extensions/cldr
-            extensions/CodeEditor
-            extensions/Comments
-            extensions/CreateBox
-            extensions/CreateWiki
-            extensions/CSS
-            extensions/ConfirmEdit
-            extensions/DataValues
-            extensions/Disambiguator
-            extensions/DismissableSiteNotice
-            extensions/DPLforum
-            extensions/Echo
-            extensions/Gadgets
-            extensions/GlobalBlocking
-            extensions/HeaderTabs
-            extensions/ImageMap
-            extensions/InputBox
-            extensions/intersection
-            extensions/Interwiki
-            extensions/InterwikiMagic
-            extensions/LabeledSectionTransclusion
-            extensions/LiquidThreads
-            extensions/MassMessage
-            extensions/MobileFrontend
-            extensions/MyVariables
-            extensions/Nuke
-            extensions/OrainMessages
-            extensions/ParserFunctions
-            extensions/Poem
-            extensions/Quiz
-            extensions/RandomSelection
-            extensions/Renameuser
-            extensions/ReplaceText
-            extensions/Scribunto
-            extensions/SectionHide
-            extensions/SimpleAntiSpam
-            extensions/SideBarMenu
-            extensions/SiteMatrix
-            extensions/SkinPerPage
-            extensions/SpamBlacklist
-            extensions/SyntaxHighlight_GeSHi
-            extensions/Tabber
-            extensions/TemplateSandbox
-            extensions/Thanks
-            extensions/TitleBlacklist
-            extensions/TitleKey
-            extensions/Translate
-            extensions/UniversalLanguageSelector
-            extensions/Validator
-            extensions/Variables
-            extensions/WikiEditor
-            extensions/WikiLove
-            skins/foreground
-            skins/monaco
+            git submodule update --init --remote
             chdir=/usr/share/nginx/.orain.org/w
+
