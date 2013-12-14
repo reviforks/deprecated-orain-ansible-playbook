@@ -508,6 +508,7 @@ $wgConf->settings = array(
 		'frmodamobwiki' => true,
 		'mediawikitesterswiki' => true,
 		'metawiki' => true,
+		'opensourcelearningwiki' => true,
 	),
 	'wmgUseOrainFooter' => array(
 	    'default' => false,
@@ -1080,6 +1081,9 @@ switch ( $wgDBname ) {
 		// $wgSectionHideShowtop = 1; // Disabled per the above
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 		require_once( "$IP/extensions/Tabber/Tabber.php" );
+		break;
+	case "opensourcelearningwiki":
+		$wgGroupPermissions['*']['edit'] = false;
 		break;
 	case "patereswiki":
 		require_once( "$IP/extensions/Tabber/Tabber.php" );
