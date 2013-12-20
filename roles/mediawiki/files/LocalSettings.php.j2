@@ -78,6 +78,12 @@ $wgConf->localVHosts = array( '{{mysql_address}}' );
  * @note These namespaces technically are defined across all wikis, they are simply not enabled everywhere.
  * @note These namespaces should NEVER be removed unless all wikis that have ever used them have been deleted
  */
+ 
+// allthetropeswiki
+define( "NS_TROPEWORKSHOP", 520 );
+define( "NS_TROPEWORKSHOP_TALK", 521 );
+// / allthetropeswiki
+
 // botwiki
 define( "NS_FRAMEWORK", 500 );
 define( "NS_FRAMEWORK_TALK", 501 );
@@ -556,6 +562,10 @@ $wgConf->settings = array(
 		'botwiki' => array( NS_BOT, NS_FRAMEWORK, NS_SCRIPT ),
 	),
 	'wgExtraNamespaces' => array(
+	    'allthetropeswiki' => array(
+	        NS_TROPEWORKSHOP => 'Trope_Workshop',
+	        NS_TROPEWORKSHOP_TALK => 'Trope_Workshop_talk',
+        ),
 		'botwiki' => array(
 			NS_BOT => 'Bot',
 			NS_BOT_TALK => 'Bot_talk',
@@ -587,6 +597,12 @@ $wgConf->settings = array(
 		'metawiki' => 'Meta',
 	),
 	'wgNamespaceAliases' => array(
+	    'allthetropeswiki' => array(
+	        'YKTTW' => NS_TROPEWORKSHOP,
+	        'YKTTW_talk' => NS_TROPEWORKSHOP_TALK,
+	        'ATT' => NS_PROJECT,
+	        'ATT_talk' => NS_PROJECT_TALK,
+	    ),
 		'keionrailwiki' => array(
 			'사'   => NS_USER,
 			'사토' => NS_USER_TALK,
