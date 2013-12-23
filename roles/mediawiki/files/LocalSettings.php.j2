@@ -144,7 +144,6 @@ $wgConf->settings = array(
 	'wgSpamBlacklistFiles' => array(
 		'default' => array(
 			"DB: metawiki Spam_blacklist",
-			"https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw",
 		),
 	),
 	'wgTitleBlacklistSources' => array(
@@ -156,10 +155,6 @@ $wgConf->settings = array(
 			array(
 					 'type' => TBLSRC_URL,
 					 'src'  => '//meta.orain.org/w/index.php?title=Title_blacklist&action=raw',
-			),
-			array(
-					 'type' => TBLSRC_URL,
-					 'src'  => '//meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw',
 			),
 		),
 	),
