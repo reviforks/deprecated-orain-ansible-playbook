@@ -832,6 +832,11 @@ $wgConf->settings = array(
 			),
 		),
 	),
+	'wmgDisableAnonEditting' => array(
+	    'default' => false,
+	    'loginwiki' => true,
+	    'opensourcelearningwiki' => true,
+	),
 	// /Permissions
 
 	// Piwik
@@ -1074,8 +1079,6 @@ switch ( $wgDBname ) {
 		require_once( "$IP/extensions/CSS/CSS.php" );
 		// Configurations
 		$wgSectionHideShowtop = 1;
-		// Rights
-		$wgGroupPermissions['*']['edit'] = false;
 		break;
 	case "botwiki":
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
@@ -1092,19 +1095,10 @@ switch ( $wgDBname ) {
 		require_once( "$IP/extensions/Comments/Comment.php" );
 		break;
 	case "loginwiki":
-		$wgGroupPermissions['*']['edit'] = false;
+		$wgGroupPermissions['*']['createtalk'] = false;
 		$wgGroupPermissions['*']['centralauth-autoaccount'] = true;
 		$wgGroupPermissions['*']['read'] = true; // Make sure read rights are present
 		$wgGroupPermissions['user']['read'] = true; // Make sure read rights are present
-		$wgGroupPermissions['autoconfirmed']['read'] = true; // Make sure read rights are present
-		unset( $wgGroupPermissions['autopatrolled'] ); // Unset all other permissions except CheckUser and Oversighter
-		unset( $wgGroupPermissions['bot'] );
-		unset( $wgGroupPermissions['bureaucrat'] );
-		unset( $wgGroupPermissions['confirmed'] );
-		unset( $wgGroupPermissions['emailconfirmed'] );
-		unset( $wgGroupPermissions['importer'] );
-		unset( $wgGroupPermissions['rollbacker'] );
-		unset( $wgGroupPermissions['sysop'] );
 		break;
 	case "metawiki":
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
@@ -1121,9 +1115,6 @@ switch ( $wgDBname ) {
 		// require_once( "$IP/extensions/SectionHide/SectionHide.php" ); // Disabled by Kudu, Requested by Arcane
 		// $wgSectionHideShowtop = 1; // Disabled per the above
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
-		break;
-	case "opensourcelearningwiki":
-		$wgGroupPermissions['*']['edit'] = false;
 		break;
 	case "patereswiki":
 		break;
@@ -1256,6 +1247,11 @@ if ( $wmgPrivateWiki ) {
 	}
 	// Whitelist! Default carried over for tracking.
 	$wgWhitelistRead = array( "Main Page", "Special:UserLogin", "Special:UserLogout", "Special:ResetPassword", "MediaWiki:Commons.css", "Special:CentralLogin" );
+}
+
+if ( $wmgDisableAnonEditing ) {
+    $wgGroupPermissions['*']['edit'] = false;
+    $wgGroupPermissions['*']['createpage'] = false;
 }
 
 if ( $wmgUseAPISandbox ) {
