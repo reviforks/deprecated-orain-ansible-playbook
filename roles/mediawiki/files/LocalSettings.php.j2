@@ -1098,6 +1098,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['*']['centralauth-autoaccount'] = true;
 		$wgGroupPermissions['*']['read'] = true; // Make sure read rights are present
 		$wgGroupPermissions['user']['read'] = true; // Make sure read rights are present
+		$wgGroupPermissions['user']['edit'] = false;
 		break;
 	case "metawiki":
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
