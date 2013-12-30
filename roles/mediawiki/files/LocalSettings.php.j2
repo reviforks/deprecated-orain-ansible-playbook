@@ -629,10 +629,8 @@ $wgConf->settings = array(
 	),
 	'wgNamespaceAliases' => array(
 	    'allthetropeswiki' => array(
-	        'YKTTW' => NS_TROPEWORKSHOP,
-	        'YKTTW_talk' => NS_TROPEWORKSHOP_TALK,
+	        'YKTTW' => 520,
 	        'ATT' => NS_PROJECT,
-	        'ATT_talk' => NS_PROJECT_TALK,
 	    ),
 		'keionrailwiki' => array(
 			'사'   => NS_USER,
@@ -1249,7 +1247,7 @@ if ( $wmgPrivateWiki ) {
 	$wgWhitelistRead = array( "Main Page", "Special:UserLogin", "Special:UserLogout", "Special:ResetPassword", "MediaWiki:Commons.css", "Special:CentralLogin" );
 }
 
-if ( $wmgDisableAnonEditing ) {
+if ( $wmgDisableAnonEditting ) {
     $wgGroupPermissions['*']['edit'] = false;
     $wgGroupPermissions['*']['createpage'] = false;
 }
