@@ -830,7 +830,7 @@ $wgConf->settings = array(
 			),
 		),
 	),
-	'wmgDisableAnonEditting' => array(
+	'wmgDisableAnonEditing' => array(
 	    'default' => false,
 	    'allthetropeswiki' => true,
 	    'loginwiki' => true,
@@ -1248,7 +1248,7 @@ if ( $wmgPrivateWiki ) {
 	$wgWhitelistRead = array( "Main Page", "Special:UserLogin", "Special:UserLogout", "Special:ResetPassword", "MediaWiki:Commons.css", "Special:CentralLogin" );
 }
 
-if ( $wmgDisableAnonEditting ) {
+if ( $wmgDisableAnonEditing ) {
     $wgGroupPermissions['*']['edit'] = false;
     $wgGroupPermissions['*']['createpage'] = false;
 }
