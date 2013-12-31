@@ -42,6 +42,7 @@
   with_items:
     - { name: 'kudu', group: 'sudo' }
     - { name: 'addshore', group: 'sudo' }
+    - { name: 'johnflewis', group: 'sudo' }
 
 - name: Create user "www-scripts"
   user: name=www-scripts group=www-data shell=/bin/zsh
