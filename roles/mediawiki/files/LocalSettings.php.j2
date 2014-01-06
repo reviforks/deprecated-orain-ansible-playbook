@@ -78,7 +78,7 @@ $wgConf->localVHosts = array( '{{mysql_address}}' );
  * @note These namespaces technically are defined across all wikis, they are simply not enabled everywhere.
  * @note These namespaces should NEVER be removed unless all wikis that have ever used them have been deleted
  */
- 
+
 // allthetropeswiki
 define( "NS_TROPEWORKSHOP", 520 );
 define( "NS_TROPEWORKSHOP_TALK", 521 );
@@ -149,12 +149,12 @@ $wgConf->settings = array(
 	'wgTitleBlacklistSources' => array(
 		'default' => array(
 			array(
-					 'type' => TBLSRC_LOCALPAGE,
-					 'src'  => 'MediaWiki:Titleblacklist',
+				'type' => TBLSRC_LOCALPAGE,
+				'src' => 'MediaWiki:Titleblacklist',
 			),
 			array(
-					 'type' => TBLSRC_URL,
-					 'src'  => '//meta.orain.org/w/index.php?title=Title_blacklist&action=raw',
+				'type' => TBLSRC_URL,
+				'src' => '//meta.orain.org/w/index.php?title=Title_blacklist&action=raw',
 			),
 		),
 	),
@@ -165,13 +165,13 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	// /Block
-	
+
 	// Bigdelete
 	'wgDeleteRevisionsLimit' => array(
-	    'default' => 1000, // Default bigdelete limit
+		'default' => 1000, // Default bigdelete limit
 	),
 	// /Bigdelete
-	
+
 	// Global block
 	'wgApplyGlobalBlocks' => array(
 		'default' => true,
@@ -272,13 +272,13 @@ $wgConf->settings = array(
 		// private and closed groups are set further down
 	),
 	// /CentralNotice
-	
+
 	// CheckUser
 	'wgCheckUserForceSummary' => array(
-	    'default' => true,
+		'default' => true,
 	),
 	// /CheckUser
-	
+
 	// Database
 	'wgCompressRevisions' => array(
 		'default' => true,
@@ -336,10 +336,10 @@ $wgConf->settings = array(
 	),
 	'wgSMTP' => array(
 		'default' => array(
-			'host'     => 'mail.orain.org',
-			'port'     => 25,
-			'IDHost'   => 'orain.org',
-			'auth'     => true,
+			'host' => 'mail.orain.org',
+			'port' => 25,
+			'IDHost' => 'orain.org',
+			'auth' => true,
 			'username' => 'help',
 			'password' => '{{email_password}}',
 		),
@@ -365,12 +365,12 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	// /Files
-	
+
 	// Global Group Settings
 	'+wgAvailableRights' => array( // + to avoid any possible conflicts
-	    'default' => array(
-	        'steward' // Allow this restriction level be added to the global usergroup
-	    ),
+		'default' => array(
+			'steward' // Allow this restriction level be added to the global usergroup
+		),
 	),
 	// /Global Group Settings
 
@@ -385,7 +385,7 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	// /GraphicsMagick
-	
+
 	// Imports
 	'wgImportSources' => array(
 		'default' => array(
@@ -438,24 +438,24 @@ $wgConf->settings = array(
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 	),
 	// /License
-	
+
 	// MassMessage
 	'wgNamespacesToPostIn' => array(
-	    'default' => array( NS_PROJECT, NS_USER_TALK ),
-	    '+metawiki' => array( NS_MAIN ),
+		'default' => array( NS_PROJECT, NS_USER_TALK ),
+		'+metawiki' => array( NS_MAIN ),
 	),
 	'wgNamespacesToConvert' => array(
-	    'default' => array( NS_USER => NS_USER_TALK ),
+		'default' => array( NS_USER => NS_USER_TALK ),
 	),
 	'wgMassMessageAccountUsername' => array(
-	    'default' => 'OrainMessenger',
+		'default' => 'OrainMessenger',
 	),
 	'wgAllowGlobalMessaging' => array(
-	    'default' => false,
-	    'metawiki' => true,
+		'default' => false,
+		'metawiki' => true,
 	),
 	// /MassMessage
-	
+
 	// Misc. extensions
 	'ceAllowConfirmedEmail' => array(
 		'default' => true,
@@ -496,18 +496,18 @@ $wgConf->settings = array(
 		'default' => 'luastandalone',
 	),
 	'wmgUseAPISandbox' => array(
-	    'default' => false,
-	    'extloadwiki' => true,
-	    'mediawikitesterswiki' => true,
-	    'metawiki' => true,
-	    'wikinambaswiki' => true,
+		'default' => false,
+		'extloadwiki' => true,
+		'mediawikitesterswiki' => true,
+		'metawiki' => true,
+		'wikinambaswiki' => true,
 	),
 	'wmgUseCharInsert' => array(
-	    'default' => false,
-	    'allthetropeswiki' => true,
-	    'extloadwiki' => true,
-	    'keionrailwiki' => true,
-	    'mediawikitesterswiki' => true,
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+		'keionrailwiki' => true,
+		'mediawikitesterswiki' => true,
 	),
 	'wmgUseCodeEditor' => array(
 		'default' => false,
@@ -526,24 +526,24 @@ $wgConf->settings = array(
 		'opensourcelearningwiki' => true,
 	),
 	'wmgUseEchoPack' => array(
-	    'default' => false,
-	    'extloadwiki' => true,
-	    'mediawikitesterswiki' => true,
-	    'metawiki' => true, // Might be nice -- John
-	    'spiralwiki' => true,
+		'default' => false,
+		'extloadwiki' => true,
+		'mediawikitesterswiki' => true,
+		'metawiki' => true, // Might be nice -- John
+		'spiralwiki' => true,
 	),
 	'wmgUseLiquidThreads' => array(
-	    'default' => false,
-	    'allthetropeswiki' => true,
-	    'extloadwiki' => true,
-	    'mediawikitesterswiki' => true,
-	    'wikinambaswiki' => true,
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+		'mediawikitesterswiki' => true,
+		'wikinambaswiki' => true,
 	),
 	'wmgUseOrainFooter' => array(
-	    'default' => false,
-	    'allthetropeswiki' => true,
-	    'mediawikitesterswiki' => true,
-	    'testwiki' => true,
+		'default' => false,
+		'allthetropeswiki' => true,
+		'mediawikitesterswiki' => true,
+		'testwiki' => true,
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => false,
@@ -572,12 +572,12 @@ $wgConf->settings = array(
 		//'allthetropeswiki' => true, // causes white screens needs debugging before deploying, https://botbot.me/freenode/orain/msg/7625854/ - addshore 7.nov.13
 	),
 	'wmgUseTabber' => array(
-	    'default' => false,
-	    'allthetropes' => true,
-	    'botwiki' => true,
-	    'extloadwiki' => true,
-	    'mediawikitesterswiki' => true,
-	    'patereswiki' => true,
+		'default' => false,
+		'allthetropes' => true,
+		'botwiki' => true,
+		'extloadwiki' => true,
+		'mediawikitesterswiki' => true,
+		'patereswiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
@@ -593,10 +593,10 @@ $wgConf->settings = array(
 		'botwiki' => array( NS_BOT, NS_FRAMEWORK, NS_SCRIPT ),
 	),
 	'wgExtraNamespaces' => array(
-	    'allthetropeswiki' => array(
-	        NS_TROPEWORKSHOP => 'Trope_Workshop',
-	        NS_TROPEWORKSHOP_TALK => 'Trope_Workshop_talk',
-        ),
+		'allthetropeswiki' => array(
+			NS_TROPEWORKSHOP => 'Trope_Workshop',
+			NS_TROPEWORKSHOP_TALK => 'Trope_Workshop_talk',
+		),
 		'botwiki' => array(
 			NS_BOT => 'Bot',
 			NS_BOT_TALK => 'Bot_talk',
@@ -628,16 +628,16 @@ $wgConf->settings = array(
 		'metawiki' => 'Meta',
 	),
 	'wgNamespaceAliases' => array(
-	    'allthetropeswiki' => array(
-	        'YKTTW' => 520,
-	        'ATT' => NS_PROJECT,
-	    ),
+		'allthetropeswiki' => array(
+			'YKTTW' => 520,
+			'ATT' => NS_PROJECT,
+		),
 		'keionrailwiki' => array(
-			'사'   => NS_USER,
+			'사' => NS_USER,
 			'사토' => NS_USER_TALK,
 		),
 		'trainwiki' => array(
-			'사'   => NS_USER,
+			'사' => NS_USER,
 			'사토' => NS_USER_TALK,
 		),
 	),
@@ -776,7 +776,7 @@ $wgConf->settings = array(
 				'rollback' => true,
 			),
 			'user' => array(
-			    'user' => true, // Enable a new restriction level globally
+				'user' => true, // Enable a new restriction level globally
 			),
 		),
 		'+encyclopedianationalwiki' => array(
@@ -831,10 +831,10 @@ $wgConf->settings = array(
 		),
 	),
 	'wmgDisableAnonEditing' => array(
-	    'default' => false,
-	    'allthetropeswiki' => true,
-	    'loginwiki' => true,
-	    'opensourcelearningwiki' => true,
+		'default' => false,
+		'allthetropeswiki' => true,
+		'loginwiki' => true,
+		'opensourcelearningwiki' => true,
 	),
 	// /Permissions
 
@@ -861,14 +861,14 @@ $wgConf->settings = array(
 	// Restrictions
 	'+wgRestrictionLevels' => array(
 		'default' => array(
-		    'user',
+			'user',
 			'steward'
 		),
 	),
 	'+wgRestrictionTypes' => array(
-	    'default' => array(
-	        'delete'
-	    ),
+		'default' => array(
+			'delete'
+		),
 	),
 	// /Restrictions
 
@@ -925,7 +925,7 @@ $wgConf->settings = array(
 		'mediawikitesterswiki' => '//upload.wikimedia.org/wikipedia/commons/9/9a/MediaWikiTestersWiki.png',
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'testwiki' => "//$wmgUploadHostname/test.orain.org/images/8/8d/Twlogo.png",
-		'trainwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Train.svg/135px-Train.svg.png', 
+		'trainwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Train.svg/135px-Train.svg.png',
 		'wikiconstituciowiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Catalonia.svg/135px-Flag_of_Catalonia.svg.png',
 		'wikinambaswiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/53/Wikinambá.png/135px-Wikinambá.png',
 	),
@@ -936,7 +936,7 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	// /Style
-	
+
 	// Translate
 	'wgEnablePageTranslation' => array(
 		'default' => true,
@@ -972,7 +972,7 @@ function efGetSiteParams( $conf, $wiki ) {
 	global $wikiTags;
 	$site = null;
 	$lang = null;
-	foreach( $conf->suffixes as $suffix ) {
+	foreach ( $conf->suffixes as $suffix ) {
 		if ( substr( $wiki, -strlen( $suffix ) ) == $suffix ) {
 			$site = $suffix;
 			$lang = substr( $wiki, 0, -strlen( $suffix ) );
@@ -999,7 +999,7 @@ unset( $wgGroupPermissions['steward'] );
 
 foreach ( $wgConf->settings['wgServer'] as $db => $server ) {
 	$canonical =& $wgConf->settings['wgCanonicalServer'][$db];
-	$canonical = $canonical ?: ( 'https:' . $server );
+	$canonical = $canonical ? : ( 'https:' . $server );
 }
 
 $wmgDocumentURI = isset( $_SERVER['DOCUMENT_URI'] ) ? $_SERVER['DOCUMENT_URI'] : null;
@@ -1020,7 +1020,7 @@ $wgConf->siteParamsCallback = 'efGetSiteParams';
 if ( defined( "MW_DB" ) ) {
 	$wgDBname = MW_DB;
 	$subdomain = substr( $wgDBname, 0, -4 );
-	$server = &$wgConf->settings['wgServer'][$wgDBname];
+	$server = & $wgConf->settings['wgServer'][$wgDBname];
 	$wmgHostname = isset( $server ) ? $server : "$subdomain.orain.org";
 } elseif ( $search = array_search( '//' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
 	$wgDBname = $search;
@@ -1044,15 +1044,15 @@ foreach ( $DBlist as $wiki ) {
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
 	if ( $DBname == $wgDBname ) {
-		$wikiTags = array_filter( explode( '|', $wikiTagList ) );	
+		$wikiTags = array_filter( explode( '|', $wikiTagList ) );
 	}
 }
 
-$wgConf->wikis = &$wgLocalDatabases;
+$wgConf->wikis = & $wgLocalDatabases;
 
 if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
-	header("HTTP/1.1 404 Not Found");
-	echo(<<<RESP
+	header( "HTTP/1.1 404 Not Found" );
+	echo( <<<RESP
 <html>
 <head><title>404 Not Found</title></head>
 <body bgcolor="white">
@@ -1069,7 +1069,7 @@ RESP
 /**
  * Do specific things for specific wikis
  */
-switch ( $wgDBname ) {
+switch( $wgDBname ) {
 	case "allthetropeswiki":
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		// require_once( "$IP/extensions/MyVariables/MyVariables.php" );
@@ -1153,7 +1153,7 @@ switch ( $wgDBname ) {
 
 $wgConf->extractAllGlobals( $wgDBname );
 
-$wgGroupPermissions['confirmed'] = &$wgGroupPermissions['autoconfirmed'];
+$wgGroupPermissions['confirmed'] = & $wgGroupPermissions['autoconfirmed'];
 
 if ( $wgDBname != "metawiki" ) {
 	require_once( "$IP/extensions/InterwikiMagic/InterwikiMagic.php" );
@@ -1229,7 +1229,7 @@ if ( $wmgClosedWiki ) {
 	$wgGroupPermissions['confirmed']['patrol'] = false;
 	$wgGroupPermissions['rollbacker']['rollback'] = false;
 	//Assign its own CentralNotice 'project' as long as its not already orain
-	if( $wgNoticeProject !== 'orain' ) {
+	if ( $wgNoticeProject !== 'orain' ) {
 		$wgNoticeProject = 'closed';
 	}
 }
@@ -1242,20 +1242,28 @@ if ( $wmgPrivateWiki ) {
 	$wgGroupPermissions['sysop']['read'] = true; // Make sure Sysops/bureaucrats always have read
 	$wgGroupPermissions['bureaucrat']['read'] = true;
 	//Assign its own CentralNotice 'project' as long as its not already orain
-	if( $wgNoticeProject !== 'orain' ) {
+	if ( $wgNoticeProject !== 'orain' ) {
 		$wgNoticeProject = 'private';
 	}
 	// Whitelist! Default carried over for tracking.
-	$wgWhitelistRead = array( "Main Page", "Special:UserLogin", "Special:UserLogout", "Special:ResetPassword", "MediaWiki:Commons.css", "Special:CentralLogin" );
+	$wgWhitelistRead =
+		array(
+			"Main Page",
+			"Special:UserLogin",
+			"Special:UserLogout",
+			"Special:ResetPassword",
+			"MediaWiki:Commons.css",
+			"Special:CentralLogin"
+		);
 }
 
 if ( $wmgDisableAnonEditing ) {
-    $wgGroupPermissions['*']['edit'] = false;
-    $wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
 }
 
 if ( $wmgUseAPISandbox ) {
-    require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
+	require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
 }
 
 if ( $wmgUseCodeEditor ) {
@@ -1264,7 +1272,7 @@ if ( $wmgUseCodeEditor ) {
 }
 
 if ( $wmgUseCharInsert ) {
-    require_once( "$IP/extensions/CharInsert/CharInsert.php" );
+	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 }
 
 if ( $wmgUseDPLforum ) {
@@ -1272,20 +1280,20 @@ if ( $wmgUseDPLforum ) {
 }
 
 if ( $wmgUseEchoPack ) {
-    require_once( "$IP/extensions/Echo/Echo.php" );
-    require_once( "$IP/extensions/Thanks/Thanks.php" );
+	require_once( "$IP/extensions/Echo/Echo.php" );
+	require_once( "$IP/extensions/Thanks/Thanks.php" );
 }
 
 if ( $wmgUseLiquidThreads ) {
-    require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
+	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
 }
 
 if ( $wmgUseOrainFooter ) {
-    $wgFooterIcons['poweredby']['orain'] = array(
-        "src" => "//$wmgUploadHostname/meta.orain.org/images/archive/9/96/20131129195014!Powered_By_Orain.png",
-        "url" => "//meta.orain.org/",
-        "alt" => "Hosted by Orain",
-    );
+	$wgFooterIcons['poweredby']['orain'] = array(
+		"src" => "//$wmgUploadHostname/meta.orain.org/images/archive/9/96/20131129195014!Powered_By_Orain.png",
+		"url" => "//meta.orain.org/",
+		"alt" => "Hosted by Orain",
+	);
 }
 
 if ( $wmgUseMobileFrontend ) {
@@ -1307,13 +1315,13 @@ if ( $wmgUseSideBarMenu ) {
 }
 
 if ( $wmgUseTabber ) {
-    require_once( "$IP/extensions/Tabber/Tabber.php" );
+	require_once( "$IP/extensions/Tabber/Tabber.php" );
 }
 
 if ( $wmgUseTranslate ) {
 	// May be moved to global after testing
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
-	
+
 	require_once( "$IP/extensions/Translate/Translate.php" );
 	$wgGroupPermissions['sysop']['pagetranslation'] = true;
 	$wgGroupPermissions['sysop']['translate-import'] = true;
@@ -1357,7 +1365,7 @@ $wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
 
 // Piwik
 $wgHooks['SkinAfterBottomScripts'][] = 'lfPiwikScript';
-function lfPiwikScript( $skin, &$text='' ) {
+function lfPiwikScript( $skin, &$text = '' ) {
 	global $wmgPiwikSiteID, $wgUser;
 	if ( !$wmgPiwikSiteID ) {
 		$text .= "<!-- Piwik not enabled -->\n";
