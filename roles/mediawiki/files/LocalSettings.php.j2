@@ -525,7 +525,7 @@ $wgConf->settings = array(
 		'metawiki' => true,
 		'opensourcelearningwiki' => true,
 	),
-	'wmgEchoPack' => array(
+	'wmgUseEchoPack' => array(
 	    'default' => false,
 	    'extloadwiki' => true,
 	    'mediawikitesterswiki' => true,
@@ -1263,7 +1263,7 @@ if ( $wmgUseCodeEditor ) {
 	$wgScribuntoUseCodeEditor = true;
 }
 
-if ( $wmgUserCharInsert ) {
+if ( $wmgUseCharInsert ) {
     require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 }
 
