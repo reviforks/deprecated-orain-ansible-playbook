@@ -32,20 +32,20 @@
   cron: name="MediaWiki job queue"
         user="www-scripts"
         minute=0
-        job="/home/www-scripts/db_loop.sh /usr/share/nginx/.orain.org/w/maintenance/runJobs.php >> /var/log/mediawiki/runJobs.log 2>>&1"
+        job="/home/www-scripts/db_loop.sh /usr/share/nginx/.orain.org/w/maintenance/runJobs.php > /var/log/mediawiki/runJobs.log 2>&1"
 
 - name: Create a cronjob for MediaWiki localisation cache updating
   cron: name="MediaWiki localisation cache updating"
         user="www-scripts"
         minute="*/30"
-        job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki >> /var/log/mediawiki/rebuildLocalisationCache.log 2>>&1"
+        job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki > /var/log/mediawiki/rebuildLocalisationCache.log 2>&1"
 
 - name: Create a cronjob for MediaWiki special page updating on All The Tropes
   cron: name="MediaWiki special page updating"
         user="www-scripts"
         minute="0"
         hour="*/3"
-        job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/updateSpecialPages.php --wiki allthetropeswiki >> /var/log/mediawiki/updateSpecialPages.log 2>>&1"
+        job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/updateSpecialPages.php --wiki allthetropeswiki > /var/log/mediawiki/updateSpecialPages.log 2>&1"
 
 - name: Download MediaWiki extensions
   command: >

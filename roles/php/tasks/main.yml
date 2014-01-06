@@ -42,5 +42,5 @@
   cron: name="Archive Piwik reports"
         user="www-scripts"
         minute=0
-        job="php /usr/share/nginx/bits.orain.org/piwik/misc/cron/archive.php --url=http://bits.orain.org/piwik/ >> /var/log/piwik-archive.log"
+        job="php /usr/share/nginx/bits.orain.org/piwik/misc/cron/archive.php --url=http://bits.orain.org/piwik/ > /var/log/piwik-archive.log"
 
