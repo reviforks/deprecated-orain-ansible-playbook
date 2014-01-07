@@ -95,6 +95,13 @@ define( "NS_RUN", 506 );
 define( "NS_RUN_TALK", 507 );
 // /botwiki
 
+// concilwiki
+define( "NS_RESOLUTION", 522 );
+define( "NS_RESOLUTION_TALK", 523 );
+define( "NS_WORKSPACE", 524 );
+define( "NS_WORKSPACE_TALK, 525 );
+//councilwiki
+
 // wikinambaswiki
 define( "NS_OFICINA", 508 );
 define( "NS_OFICINA_TALK", 509 );
@@ -607,6 +614,12 @@ $wgConf->settings = array(
 			NS_SCRIPT => 'Script',
 			NS_SCRIPT_TALK => 'Script_talk',
 		),
+		'councilwiki' => array(
+			NS_RESOLUTION => 'Resolution',
+			NS_RESOLUTION_TALK => 'Resolution_talk',
+			NS_WORKSPACE => 'Workspace',
+			NS_WORKSPACE_TALK => 'Workspace_talk',
+		),
 		'frmodamobwiki' => array(
 			NS_PORTAIL => 'Portail',
 			NS_PORTAIL_TALK => 'Discussion_Portail',
@@ -658,6 +671,10 @@ $wgConf->settings = array(
 			NS_RUN_TALK => true,
 			NS_SCRIPT => true,
 			NS_SCRIPT_TALK => true,
+		),
+		'+councilwiki' => array(
+			NS_RESOLUTION => true,
+			NS_WORKSPACE => true,
 		),
 		'+frmodamobwiki' => array(
 			NS_PORTAIL => true,
