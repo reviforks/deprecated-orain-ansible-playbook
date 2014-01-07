@@ -497,7 +497,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseAPISandbox' => array(
 		'default' => false,
-		'extloadwiki' => true,
+		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
 		'metawiki' => true,
 		'wikinambaswiki' => true,
@@ -505,7 +505,7 @@ $wgConf->settings = array(
 	'wmgUseCharInsert' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'extloadwiki' => true,
+		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'keionrailwiki' => true,
 		'mediawikitesterswiki' => true,
 	),
@@ -527,7 +527,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseEchoPack' => array(
 		'default' => false,
-		'extloadwiki' => true,
+		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
 		'metawiki' => true, // Might be nice -- John
 		'spiralwiki' => true,
@@ -535,7 +535,7 @@ $wgConf->settings = array(
 	'wmgUseLiquidThreads' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'extloadwiki' => true,
+		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
 		'wikinambaswiki' => true,
 	),
@@ -575,7 +575,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'botwiki' => true,
-		'extloadwiki' => true,
+		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
 		'patereswiki' => true,
 	),
@@ -1129,9 +1129,9 @@ switch( $wgDBname ) {
 	case "wikinambaswiki":
 		break;
 	case "extloadwiki":
+		// all extensions are loaded on this wiki
 		require_once( "$IP/extensions/cldr/cldr.php" );
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
-		// require_once( "$IP/extensions/MyVariables/MyVariables.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
@@ -1143,7 +1143,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 		require_once( "$IP/extensions/CSS/CSS.php" );
-		//require_once( "$IP/extensions/OpenSearchXML/OpenSearchXML.php" ); // addshore after adding this or DismissableSiteNotice extload broke (commented out 7.11.13)
 		break;
 }
 
