@@ -1,0 +1,14 @@
+language: php
+php:
+  - 5.4
+
+script:
+  - php -l roles/mediawiki/files/LocalSettings.php.j2
+  - php -l roles/mediawiki/files/StartProfiler.php
+
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#orain"
+    on_success: change
+    on_failure: always
