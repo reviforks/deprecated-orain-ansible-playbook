@@ -2,7 +2,17 @@ language: php
 php:
   - 5.4
 
+before_install:
+  - sudo add-apt-repository ppa:rquillo/ansible
+  - sudo apt-get update
+
+install:
+  - sudo apt-get install ansible
+
 script:
+  # Check playbook syntax
+  - ansible-playbook -i production local.yml --syntax-check
+  # Check php script syntax
   - php -l roles/mediawiki/files/LocalSettings.php.j2
   - php -l roles/mediawiki/files/StartProfiler.php
 
