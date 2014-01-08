@@ -12,3 +12,8 @@ notifications:
       - "chat.freenode.net#orain"
     on_success: change
     on_failure: always
+  email:
+    recipients:
+      - addshorewiki@gmail.com
+    on_success: change
+    on_failure: always
