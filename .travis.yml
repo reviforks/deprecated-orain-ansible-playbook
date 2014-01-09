@@ -2,7 +2,22 @@ language: php
 php:
   - 5.4
 
+before_install:
+  - sudo FORCE_ADD_APT_REPOSITORY=1 add-apt-repository ppa:rquillo/ansible
+  - sudo apt-get update
+
+install:
+  - sudo apt-get install ansible
+
+before_script:
+  # For the syntax check to work we need some fake vars
+  - mkdir /home/travis/build/Orain/orain_private
+  - wget -O /home/travis/build/Orain/orain_private/vars.yml https://gist.github.com/addshore/9101a51b785be5828a34/raw/e62f41e805553ad873867f13a28a64d028eaaa88/vars.yml
+
 script:
+  # Check playbook syntax
+  - ansible-playbook -i production local.yml --syntax-check
+  # Check php script syntax
   - php -l roles/mediawiki/files/LocalSettings.php.j2
   - php -l roles/mediawiki/files/StartProfiler.php
 
