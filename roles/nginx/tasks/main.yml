@@ -31,8 +31,8 @@
   notify: Reload nginx
 
 - name: Copy robots.txt
-  copy: src=robots.txt dest=/usr/share/nginx/.orain.org
+  copy: src=robots.txt dest=/usr/share/nginx/.orain.org owner=www-data group=www-data mode=0770
 
 - name: Copy favicon.ico
-  copy: src=favicon.ico dest=/usr/share/nginx/default
+  copy: src=favicon.ico dest=/usr/share/nginx/default owner=www-data group=www-data mode=0770
 
