@@ -1091,7 +1091,6 @@ RESP
 switch( $wgDBname ) {
 	case "allthetropeswiki":
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
-		// require_once( "$IP/extensions/MyVariables/MyVariables.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/CSS/CSS.php" );
@@ -1102,13 +1101,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
 		break;
-	/* case "encyclopedianationalwiki":
-	case "micronationswiki":
-		$wgVectorFeatures['collapsiblenav'] = array(
-			'global' => false,
-			'user' => true,
-		);
-		break; */
 	case "foodopediawiki":
 		require_once( "$IP/extensions/Comments/Comment.php" );
 		break;
@@ -1128,14 +1120,11 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
 		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
-		// require_once( "$IP/extensions/MyVariables/MyVariables.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		// require_once( "$IP/extensions/SectionHide/SectionHide.php" ); // Disabled by Kudu, Requested by Arcane
 		// $wgSectionHideShowtop = 1; // Disabled per the above
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
-		break;
-	case "patereswiki":
 		break;
 	case "spiralwiki":
 		require_once( "$IP/extensions/cldr/cldr.php" );
@@ -1144,8 +1133,6 @@ switch( $wgDBname ) {
 		$wgGroupPermissions['*']['createpage'] = false;
 		$wgGroupPermissions['autoconfirmed']['patrol'] = false;
 		$wgGroupPermissions['user']['createpage'] = false;
-		break;
-	case "wikinambaswiki":
 		break;
 	case "extloadwiki":
 		// all extensions are loaded on this wiki
@@ -1389,6 +1376,7 @@ function lfPiwikScript( $skin, &$text = '' ) {
 		$text .= "<!-- Piwik not enabled -->\n";
 		return true;
 	}
+	// Disabled Piwik admin blacklisting below Kudu 12/11/13
 	/* if ( $wgUser->isAllowed('noanalytics') ) {
 		$text .= "<!-- Piwik code omitted -->\n";
 		return true;
