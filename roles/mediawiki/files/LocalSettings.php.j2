@@ -524,6 +524,10 @@ $wgConf->settings = array(
 		'mediawikitesterswiki' => true,
 		'wikinambaswiki' => true,
 	),
+	'wmgUseCollectionPDF' => array(
+	    'default' => false,
+	    'extloadwiki' => true,
+	),
 	'wmgUseDPLforum' => array(
 		'default' => false,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
@@ -1278,6 +1282,14 @@ if ( $wmgUseAPISandbox ) {
 if ( $wmgUseCodeEditor ) {
 	require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 	$wgScribuntoUseCodeEditor = true;
+}
+
+if ( $wmgUseCollectionPDF ) {
+    require_once( "$IP/extensions/Collection/Collection.php" );
+    require_once( "$IP/extensions/PdfBook/PdfBook.php" );
+    // Rights
+    $wgGroupPermissions['user']['collectionsavecommunitypage'] = true;
+    $wgGroupPermissions['user']['collectionsaveuserpage'] = true;
 }
 
 if ( $wmgUseCharInsert ) {
