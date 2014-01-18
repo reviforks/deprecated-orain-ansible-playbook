@@ -3,6 +3,7 @@
   git: repo=https://github.com/Orain/mediawiki-core.git
        dest=/usr/share/nginx/.orain.org/w
        version=REL1_22
+  notify: Rebuild Localisation Cache
 
 - name: Install composer
   shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/
@@ -16,7 +17,9 @@
   template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}} backup=yes
   with_fileglob:
     - ./*.php.j2
-  notify: Clear APC cache
+  notify:
+    - Clear APC cache
+    - Rebuild Localisation Cache
   when: mw_localsettings_valid.rc == 0
 
 - name: Copy MediaWiki settings from files
@@ -43,12 +46,6 @@
         minute=0
         job="/home/www-scripts/db_loop.sh /usr/share/nginx/.orain.org/w/maintenance/runJobs.php > /var/log/mediawiki/runJobs.log 2>&1"
 
-- name: Create a cronjob for MediaWiki localisation cache updating
-  cron: name="MediaWiki localisation cache updating"
-        user="www-scripts"
-        minute="*/5"
-        job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki > /var/log/mediawiki/rebuildLocalisationCache.log 2>&1"
-
 - name: Create a cronjob for MediaWiki special page updating on All The Tropes
   cron: name="MediaWiki special page updating"
         user="www-scripts"
@@ -60,5 +57,7 @@
   command: >
             git submodule update --init --remote
             chdir=/usr/share/nginx/.orain.org/w
-  notify: Composer Install For Validator Extension
+  notify:
+    - Composer Install For Validator Extension
+    - Rebuild Localisation Cache
 

@@ -1,5 +1,8 @@
 - name: Clear APC cache
   command: wget -qO- {{apc_clear_script}}
 
+- name: Rebuild Localisation Cache
+  command: /usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki
+
 - name: Composer Install For Validator Extension
   shell: "cd /usr/share/nginx/.orain.org/w/extensions/Validator && /usr/bin/composer.phar install"
