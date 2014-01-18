@@ -79,6 +79,11 @@ $wgConf->localVHosts = array( '{{mysql_address}}' );
  * @note These namespaces should NEVER be removed unless all wikis that have ever used them have been deleted
  */
 
+// extension/Wikilog
+//@note extension/log uses 100 and 101
+define( "NS_WIKILOG_EXTENSION", 100 );
+// / extension/Wikilog
+
 // allthetropeswiki
 define( "NS_TROPEWORKSHOP", 520 );
 define( "NS_TROPEWORKSHOP_TALK", 521 );
@@ -599,6 +604,10 @@ $wgConf->settings = array(
 		'elderlordswiki' => false,
 		'encyclopedianationalwiki' => false,
 		'wikinambaswiki' => true,
+	),
+	'wmgUseWikilog' => array(
+		'default' => false,
+		'extloadwiki' => true, // all extensions are loaded on this wiki
 	),
 	// /Misc. extensions
 
@@ -1367,6 +1376,11 @@ if ( $wmgUseWikiEditor ) {
 	require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
 	$wgDefaultUserOptions['usebetatoolbar'] = 1;
 	$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
+}
+
+if ( $wmgUseWikilog ) {
+	require_once( "$IP/extensions/Wikilog/Wikilog.php" );
+	Wikilog::setupNamespace( NS_WIKILOG_EXTENSION, 'Blog', 'Blog_talk' );
 }
 
 if ( $wgDBname == "polymetawiki" ) {
