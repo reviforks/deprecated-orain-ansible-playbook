@@ -1,2 +1,2 @@
 - name: Clear APC cache
-  command: php -r "apc_clear_cache();"
+  command: wget -qO- {{apc_clear_script}}
