@@ -46,7 +46,7 @@
 - name: Create a cronjob for MediaWiki localisation cache updating
   cron: name="MediaWiki localisation cache updating"
         user="www-scripts"
-        minute="*/30"
+        minute="*/5"
         job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki > /var/log/mediawiki/rebuildLocalisationCache.log 2>&1"
 
 - name: Create a cronjob for MediaWiki special page updating on All The Tropes
