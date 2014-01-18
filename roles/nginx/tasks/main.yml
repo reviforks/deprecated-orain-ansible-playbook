@@ -36,3 +36,5 @@
 - name: Copy favicon.ico
   copy: src=favicon.ico dest=/usr/share/nginx/default owner=www-data group=www-data mode=0770
 
+- name: Copy default index.html
+  copy: src=default.index.html dest=/usr/share/nginx/default/index.html owner=www-data group=www-data mode=0770
