@@ -608,6 +608,7 @@ $wgConf->settings = array(
 	'wmgUseWikilog' => array(
 		'default' => false,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
+		'allthetropeswiki' => true,
 	),
 	// /Misc. extensions
 
@@ -1110,6 +1111,8 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/CSS/CSS.php" );
+		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
+		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		// Configurations
 		$wgSectionHideShowtop = 1;
 		break;
