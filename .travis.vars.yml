@@ -1,0 +1,23 @@
+# This is a sample vars file for use in validating the ansible playbook
+# Any vars used within the playbook should be stored in here
+# This files is referenced in .travis.yml
+
+email_password: foo
+
+mysql_address: foo
+mysql_root_password: foo
+mw_db_user: foo
+mw_db_password: foo
+
+recaptcha_private_key: foo
+
+ssl_cert_key_path: foo
+ssl_cert_path: foo
+
+wgSecretKey: foo
+wgUpgradeKey: foo
+
+AWS_ACCESS_KEY_ID: foo
+AWS_SECRET_ACCESS_KEY: foo
+duplicity_key_id: foo
+duplicity_path: foo
