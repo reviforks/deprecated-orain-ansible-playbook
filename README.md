@@ -39,7 +39,7 @@ Before making any changes to mediawiki stuff make sure the user requesting the c
 ### Deploying new Mediawiki LocalSettings.php
 
 After any change in LocalSettings.php please make sure the syntax is correct!
-If LocalSettings syntax is incorrect you will break the whole wikifarm!
+If LocalSettings syntax is incorrect the ansible-pull will fail
 
 To check the syntax simply run the following command:
  > php -l roles/mediawiki/files/LocalSettings.php.j2
