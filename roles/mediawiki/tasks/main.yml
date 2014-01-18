@@ -7,7 +7,8 @@
 - name: Install composer
   shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/
 
-- shell: php -l /root/ansible-playbook/roles/mediawiki/files/LocalSettings.php.j2
+- name: Validate LocalSettings
+  shell: php -l /root/ansible-playbook/roles/mediawiki/files/LocalSettings.php.j2
   register: mw_localsettings_valid
   failed_when: mw_localsettings_valid.rc != 0
 
