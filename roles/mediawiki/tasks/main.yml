@@ -4,11 +4,16 @@
        dest=/usr/share/nginx/.orain.org/w
        version=REL1_22
 
+- shell: php -l /root/ansible-playbook/roles/mediawiki/files/LocalSettings.php.j2
+  register: mw_localsettings_valid
+  failed_when: mw_localsettings_valid.rc != 0
+
 - name: Copy MediaWiki settings from templates
   template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}} backup=yes
   with_fileglob:
     - ./*.php.j2
   notify: Clear APC cache
+  when: mw_localsettings_valid.rc == 0
 
 - name: Copy MediaWiki settings from files
   copy: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename}} backup=yes
