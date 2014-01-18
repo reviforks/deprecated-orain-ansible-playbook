@@ -1,2 +1,5 @@
 - name: Clear APC cache
   command: wget -qO- {{apc_clear_script}}
+
+- name: Composer Install For Validator Extension
+  command: cd /usr/share/nginx/.orain.org/w/extensions/Validator && /usr/bin/composer.phar install

@@ -59,4 +59,5 @@
   command: >
             git submodule update --init --remote
             chdir=/usr/share/nginx/.orain.org/w
+  notify: Composer Install For Validator Extension
 
