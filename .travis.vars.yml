@@ -2,8 +2,6 @@
 # Any vars used within the playbook should be stored in here
 # This files is referenced in .travis.yml
 
-apc_clear_script: foo
-
 email_password: foo
 
 mysql_address: foo
