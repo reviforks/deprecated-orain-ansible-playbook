@@ -1,5 +1,3 @@
-server_name *.orain.org espiral.org wikiconstitucio.org localhost;
-
 root /usr/share/nginx/.orain.org;
 index index.html index.htm index.php;
 
