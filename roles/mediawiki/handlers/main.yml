@@ -4,7 +4,7 @@
 - name: Rebuild localisation cache
   command: /usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki
 
-- name: Install Validator using Composer
+- name: Install Validator dependencies using Composer
   shell: "cd /usr/share/nginx/.orain.org/w/extensions/Validator && /usr/bin/composer.phar install"
 
 - name: Notify IRC of LocalSettings update

@@ -62,6 +62,6 @@
             git submodule update --init --remote
             chdir=/usr/share/nginx/.orain.org/w
   notify:
-    - Install Validator using Composer
+    - Install Validator dependencies using Composer
     - Rebuild localisation cache
 
