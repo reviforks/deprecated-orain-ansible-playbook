@@ -68,14 +68,6 @@
         hour="*/3"
         job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/updateSpecialPages.php --wiki allthetropeswiki > /var/log/mediawiki/updateSpecialPages.log 2>&1"
 
-- name: Download MediaWiki extensions
-  command: >
-            git submodule update --init --remote
-            chdir=/usr/share/nginx/.orain.org/w
-  notify:
-    - Install Validator dependencies using Composer
-    - Rebuild localisation cache
-
 - name: Copy quickscripts
   copy: src={{item}} dest=/root/{{item|basename}} owner=root group=root mode=770
   with_fileglob:
