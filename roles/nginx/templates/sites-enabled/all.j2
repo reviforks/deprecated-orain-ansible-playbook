@@ -11,7 +11,7 @@
 {% endmacro %}
 
 server {
-{% if site is 'all.orain.org' %}
+{% if site == 'all.orain.org' %}
 	server_name *.orain.org espiral.org wikiconstitucio.org localhost;
 {% endif %}
 	listen [::]:80 {{ listen_parameters() }};
@@ -22,7 +22,7 @@ server {
 }
 
 server {
-{% if site is 'all.orain.org' %}
+{% if site == 'all.orain.org' %}
 	server_name *.orain.org localhost;
 {% endif %}
 	listen [::]:443 ssl {{ listen_parameters() }};
