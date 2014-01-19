@@ -1038,8 +1038,10 @@ $wgGroupPermissions['sysop']['importupload'] = false;
 unset( $wgGroupPermissions['steward'] );
 
 foreach ( $wgConf->settings['wgServer'] as $db => $server ) {
-	$canonical =& $wgConf->settings['wgCanonicalServer'][$db];
-	$canonical = $canonical ? : ( 'https:' . $server );
+	if ( substr( $server, 0, 2 ) == '//' ) {
+		$canonical =& $wgConf->settings['wgCanonicalServer'][$db];
+		$canonical = $canonical ? : ( 'https:' . $server );
+	}
 }
 
 $wmgDocumentURI = isset( $_SERVER['DOCUMENT_URI'] ) ? $_SERVER['DOCUMENT_URI'] : null;
