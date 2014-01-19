@@ -6,7 +6,7 @@
   notify: Rebuild localisation cache
 
 - name: Install Composer
-  shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/
+  action: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ creates=/usr/bin/composer.phar
 
 - name: Validate LocalSettings
   shell: php -l /root/ansible-playbook/roles/mediawiki/files/LocalSettings.php.j2
