@@ -1,0 +1,2 @@
+#!/bin/sh
+wget -qO- {{apc_clear_script}}

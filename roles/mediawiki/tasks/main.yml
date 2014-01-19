@@ -76,3 +76,8 @@
     - Install Validator dependencies using Composer
     - Rebuild localisation cache
 
+- name: Copy quickscripts
+  copy: src={{item}} dest=/root/{{item|basename}} owner=root group=root mode=770
+  with_fileglob:
+    - ./quickscripts/*
+
