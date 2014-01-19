@@ -1,6 +1,6 @@
 ---
 - name: Add MariaDB apt key
-  command: /usr/bin/apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
+  apt_key: url=http://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0xcbcb082a1bb943db
 
 - name: Add MariaDB apt repository
   apt_repository: repo='deb http://ftp.osuosl.org/pub/mariadb/repo/5.5/debian wheezy main'
