@@ -63,3 +63,5 @@
         hour=0
         job="/root/backup.sh > /var/log/backup.log 2>&1"
 
+- name: Copy ansible logrotate configuration
+  copy: src="./logrotate.d/ansible" dest=/etc/logrotate.d

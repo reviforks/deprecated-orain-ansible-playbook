@@ -1,0 +1,11 @@
+/var/log/ansible.log {
+	daily
+	missingok
+	rotate 7
+	compress
+	delaycompress
+	notifempty
+	su root root
+	create 660 root root
+}
+
