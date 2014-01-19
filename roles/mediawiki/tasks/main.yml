@@ -17,6 +17,7 @@
   shell: php -l /root/ansible-playbook/roles/mediawiki/files/LocalSettings.php.j2
   register: mw_localsettings_valid
   failed_when: mw_localsettings_valid.rc != 0
+  changed_when: False
 
 - name: Copy MediaWiki settings from templates
   template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}} backup=yes
