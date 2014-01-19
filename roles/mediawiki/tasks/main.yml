@@ -8,6 +8,11 @@
 - name: Install Composer
   action: shell curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ creates=/usr/bin/composer.phar
 
+- name: Update Composer
+  action: shell /usr/bin/composer.phar self-update
+  register: composer_update_output
+  changed_when: composer_update_output.stdout.find('You are already using composer version') == -1
+
 - name: Validate LocalSettings
   shell: php -l /root/ansible-playbook/roles/mediawiki/files/LocalSettings.php.j2
   register: mw_localsettings_valid
