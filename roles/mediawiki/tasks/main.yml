@@ -7,8 +7,6 @@
     - Clear APC cache
     - Rebuild localisation cache
     - Notify IRC of LocalSettings update
-  register: git_mediawiki_output
-  changed_when: git_mediawiki_output.before != git_mediawiki_output.after
 
 - name: Install Composer
   action: shell curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ creates=/usr/bin/composer.phar
