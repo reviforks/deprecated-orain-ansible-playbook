@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/local/bin/ansible-pull -d /root/ansible-playbook -i /root/ansible-playbook/production -U https://github.com/Orain/ansible-playbook.git -C master
