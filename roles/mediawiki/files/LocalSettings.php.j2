@@ -80,8 +80,9 @@ $wgConf->localVHosts = array( '{{mysql_address}}' );
  */
 
 // extension/Wikilog
-//@note extension/log uses 100 and 101
-define( "NS_WIKILOG_EXTENSION", 100 );
+//@note these are still used by defined by Wikilog::setupBlogNamespace
+//define( 'NS_BLOG', 100 );
+//define( 'NS_BLOG_TALK', 101 );
 // / extension/Wikilog
 
 // allthetropeswiki
@@ -1404,7 +1405,7 @@ if ( $wmgUseWikiEditor ) {
 
 if ( $wmgUseWikilog ) {
 	require_once( "$IP/extensions/Wikilog/Wikilog.php" );
-	Wikilog::setupNamespace( NS_WIKILOG_EXTENSION, 'Blog', 'Blog_talk' );
+	Wikilog::setupBlogNamespace( 100 );
 }
 
 if ( $wgDBname == "polymetawiki" ) {
