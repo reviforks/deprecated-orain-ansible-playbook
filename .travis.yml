@@ -28,6 +28,8 @@ notifications:
     on_success: change
     on_failure: always
     skip_join: true
+    template:
+      - "%{repository}/%{branch}/%{commit} - %{author} %{message} %{build_url}"
   email:
     recipients:
       - addshorewiki@gmail.com
