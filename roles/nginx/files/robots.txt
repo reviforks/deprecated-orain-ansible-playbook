@@ -4,4 +4,5 @@ Disallow: /wiki/Special:Search
 Disallow: /wiki/Special%3ASearch
 Disallow: /wiki/Special:Random
 Disallow: /wiki/Special%3ARandom
-
+Disallow: /wiki/Special:DeletedContributions
+Disallow: /wiki/Special%3ADeletedContributions
