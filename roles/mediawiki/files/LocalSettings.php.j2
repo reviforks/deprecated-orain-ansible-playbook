@@ -1064,7 +1064,12 @@ if ( defined( "MW_DB" ) ) {
 	$subdomain = substr( $wgDBname, 0, -4 );
 	$server = & $wgConf->settings['wgServer'][$wgDBname];
 	$wmgHostname = isset( $server ) ? $server : "$subdomain.orain.org";
+// TODO: Fix this routing hack
 } elseif ( $search = array_search( '//' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
+	$wgDBname = $search;
+} elseif ( $search = array_search( 'http://' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
+	$wgDBname = $search;
+} elseif ( $search = array_search( 'https://' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
 	$wgDBname = $search;
 } elseif ( preg_match( '/^(.+?)\.(.+?)\.orain\.org$/', $wmgHostname, $matches ) ) {
 	$wgDBname = $matches[1] . $matches[2];
