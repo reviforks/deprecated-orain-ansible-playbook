@@ -55,6 +55,8 @@ Only deploy security-checked extensions. If you have any doubts, open an issue o
 
  1. Make sure the extension and all dependencies are included in our MediaWiki branch.
  2. Deploy the extension to the extloadwiki and make sure it appears in Special:Version and nothing is broken.
- 3. Once deployed there, a cronjob that is run every few minutes will update the localisation cache if needed (without this, you risk breaking wikis).
  4. Deploy to the wiki you actually want, leaving the extension loaded on extloadwiki.
 
+Note: Although  the Localisation cache update used to be run as a cronjob it is now run after pulling changes. When
+deploying a new extension to a wiki there might be a period of 60 seconds which you see Exceptions which is due to
+the Localisation cache update being mid run!
