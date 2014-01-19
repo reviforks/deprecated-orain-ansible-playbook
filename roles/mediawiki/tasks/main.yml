@@ -20,6 +20,7 @@
   notify:
     - Clear APC cache
     - Rebuild Localisation Cache
+    - Notify Irc About LocalSettings Update
   when: mw_localsettings_valid.rc == 0
 
 - name: Copy MediaWiki settings from files
@@ -36,6 +37,9 @@
 
 - name: Copy logrotate configuration
   copy: src="./logrotate.d/mediawiki" dest=/etc/logrotate.d
+
+- name: Copy notify irc script
+  copy: src="./notify_irc.sh" dest=/root/notify_irc.sh owner=root group=root mode=775
 
 - name: Create a cronjob for get_db_list.py
   cron: name="Get DB list" user="www-scripts" job="python3 ~/get_db_list.py"
