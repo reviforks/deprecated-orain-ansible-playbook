@@ -3,9 +3,9 @@
   git: repo=https://github.com/Orain/mediawiki-core.git
        dest=/usr/share/nginx/.orain.org/w
        version=REL1_22
-  notify: Rebuild Localisation Cache
+  notify: Rebuild localisation cache
 
-- name: Install composer
+- name: Install Composer
   shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/
 
 - name: Validate LocalSettings
@@ -19,8 +19,8 @@
     - ./*.php.j2
   notify:
     - Clear APC cache
-    - Rebuild Localisation Cache
-    - Notify Irc About LocalSettings Update
+    - Rebuild localisation cache
+    - Notify IRC of LocalSettings update
   when: mw_localsettings_valid.rc == 0
 
 - name: Copy MediaWiki settings from files
@@ -38,7 +38,7 @@
 - name: Copy logrotate configuration
   copy: src="./logrotate.d/mediawiki" dest=/etc/logrotate.d
 
-- name: Copy notify irc script
+- name: Copy IRC notification script
   copy: src="./notify_irc.sh" dest=/root/notify_irc.sh owner=root group=root mode=775
 
 - name: Create a cronjob for get_db_list.py
@@ -62,6 +62,6 @@
             git submodule update --init --remote
             chdir=/usr/share/nginx/.orain.org/w
   notify:
-    - Composer Install For Validator Extension
-    - Rebuild Localisation Cache
+    - Install Validator using Composer
+    - Rebuild localisation cache
 

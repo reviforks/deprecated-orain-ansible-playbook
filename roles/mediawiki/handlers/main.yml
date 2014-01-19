@@ -1,11 +1,11 @@
 - name: Clear APC cache
   command: wget -qO- {{apc_clear_script}}
 
-- name: Rebuild Localisation Cache
+- name: Rebuild localisation cache
   command: /usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki
 
-- name: Composer Install For Validator Extension
+- name: Install Validator using Composer
   shell: "cd /usr/share/nginx/.orain.org/w/extensions/Validator && /usr/bin/composer.phar install"
 
-- name: Notify Irc About LocalSettings Update
+- name: Notify IRC of LocalSettings update
   shell: "/root/notify_irc.sh"
