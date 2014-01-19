@@ -1128,6 +1128,12 @@ switch( $wgDBname ) {
 	case "foodopediawiki":
 		require_once( "$IP/extensions/Comments/Comment.php" );
 		break;
+	case "keionrailwiki":
+		require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
+		$wgGoogleAnalyticsAccount = "UA-46174304-1";
+		require_once( "$IP/extensions/GoogleSiteVerification/GoogleSiteVerification.php" );
+		$wgGoogleVerificationCode= "JwDcf1TIRRvNQxUU6Nv_LkcpM-gnAIRm28OOAWv9-oo";
+		break;
 	case "loginwiki":
 		$wgGroupPermissions['*']['createtalk'] = false;
 		$wgGroupPermissions['*']['centralauth-autoaccount'] = true;
