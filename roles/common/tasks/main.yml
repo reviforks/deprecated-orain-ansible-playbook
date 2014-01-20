@@ -1,4 +1,3 @@
----
 - name: Install ansible dependencies
   raw: apt-get install -y python-apt python-simplejson
 
@@ -44,9 +43,6 @@
     - { name: 'kudu', group: 'sudo' }
     - { name: 'addshore', group: 'sudo' }
     - { name: 'johnflewis', group: 'sudo' }
-
-- name: Create user "www-scripts"
-  user: name=www-scripts group=www-data shell=/bin/zsh
 
 - name: Copy ferm firewall rules
   copy: src=ferm.conf dest=/etc/ferm/ferm.conf
