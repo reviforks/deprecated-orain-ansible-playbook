@@ -14,3 +14,10 @@
     - php
     - mariadb
     - mediawiki
+
+- hosts: searchservers
+  vars_files:
+    - ../orain_private/vars.yml
+  roles:
+    - elasticsearch
+
