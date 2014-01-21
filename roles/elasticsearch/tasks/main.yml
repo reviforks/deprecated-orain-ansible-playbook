@@ -15,9 +15,15 @@
               line='ES_HEAP_SIZE=256m'
 
 - name: Enable mlockall in ElasticSearch
-  lineinfile: > 
+  lineinfile: >
                 dest=/etc/elasticsearch/elasticsearch.yml
                 regexp='^bootstrap\.mlockall:'
                 insertafter='^# bootstrap\.mlockall: true$'
                 line='bootstrap.mlockall: true'
+
+- name: Disable index autocreation in ElasticSearch
+  lineinfile: >
+                dest=/etc/elasticsearch/elasticsearch.yml
+                regexp='^action\.auto_create_index:'
+                line='action.auto_create_index: false'
 
