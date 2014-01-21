@@ -916,6 +916,17 @@ $wgConf->settings = array(
 	),
 	// /Restrictions
 
+	// Search
+	'wmgUseCirrus' => array(
+		'default' => false,
+		'mediawikitesterswiki' => true,
+	),
+	'wmgUseCirrusAsAlternate' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
+	// /Search
+
 	// Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
@@ -1328,6 +1339,15 @@ if ( $wmgUseCollectionPDF ) {
 
 if ( $wmgUseCharInsert ) {
 	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
+}
+
+if ( $wmgUseCirrus || $wmgUseCirrusAsAlternate ) {
+	require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
+	require_once( "$IP/extensions/Elastica/Elastica.php" );
+}
+
+if ( $wmgUseCirrus ) {
+	$wgSearchType = 'CirrusSearch';
 }
 
 if ( $wmgUseDPLforum ) {
