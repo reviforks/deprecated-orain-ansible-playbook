@@ -1,5 +1,6 @@
 - name: Create user "{{user}}"
-  user: name={{user}} group={{group}} shell=/bin/zsh
+  user: name={{user}} groups={{groups}} shell=/bin/zsh
 
 - name: Upload {{user}}'s public key
   authorized_key: user={{user}} key="{{ lookup('file', './ssh/' ~ user ~ '.pub') }}"
+

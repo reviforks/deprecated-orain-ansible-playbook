@@ -30,9 +30,9 @@
 
 - include: create_user.yml user={{item.name}} group={{item.group}}
   with_items:
-    - { name: 'kudu', group: 'sudo' }
-    - { name: 'addshore', group: 'sudo' }
-    - { name: 'johnflewis', group: 'sudo' }
+    - { name: 'kudu', groups: 'sudo' }
+    - { name: 'addshore', groups: 'sudo' }
+    - { name: 'johnflewis', groups: 'sudo' }
 
 - name: Copy backup.sh
   template: src=backup.sh dest=/root/backup.sh
