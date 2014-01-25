@@ -1426,6 +1426,9 @@ if ( $wmgUseTranslate ) {
 	$wgGroupPermissions['sysop']['translate-manage'] = true;
 	$wgGroupPermissions['*']['translate'] = true;
 	$wgGroupPermissions['user']['translate-messagereview'] = true;
+	
+	$wgGroupPermissions['translate-proofr']['translate-messagereview'] = false;
+	$wgAddGroups['translate-proofr'] = false;
 
 	// Allows the translation of the sidebar - Thanks QuimGil!
 	$wgTranslateCC['wiki-sidebar'] = 'addSidebarMessageGroup';
