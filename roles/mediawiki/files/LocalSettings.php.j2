@@ -114,6 +114,11 @@ define( "NS_WORKSPACE", 524 );
 define( "NS_WORKSPACE_TALK", 525 );
 // /councilwiki
 
+// metawiki
+define( "NS_TECH", 526);
+define( "NS_TECH_TALK", 527);
+// /metawiki
+
 // wikinambaswiki
 define( "NS_OFICINA", 508 );
 define( "NS_OFICINA_TALK", 509 );
@@ -292,7 +297,6 @@ $wgConf->settings = array(
 		'metawiki' => 'orain',
 		'extloadwiki' => 'orain',
 		'loginwiki' => 'orain',
-		'techwiki' => 'orain',
 		// private and closed groups are set further down
 	),
 	// /CentralNotice
@@ -627,6 +631,7 @@ $wgConf->settings = array(
 	// Names
 	'wgContentNamespaces' => array(
 		'botwiki' => array( NS_BOT, NS_FRAMEWORK, NS_SCRIPT ),
+		'metawiki' => array( NS_TECH ),
 	),
 	'wgExtraNamespaces' => array(
 		'allthetropeswiki' => array(
@@ -654,6 +659,10 @@ $wgConf->settings = array(
 			NS_PORTAIL_TALK => 'Discussion_Portail',
 			NS_PROJET => 'Projet',
 			NS_PROJET_TALK => 'Discussion_Projet',
+		),
+		'metawiki' => array(
+			NS_TECH => 'Tech',
+			NS_TECH_TALK => 'Tech_talk',
 		),
 		'wikinambaswiki' => array(
 			NS_OFICINA => 'Oficina',
@@ -716,6 +725,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			NS_MAIN => true,
+			NS_TECH => true,
 		),
 		'+wikinambaswiki' => array(
 			NS_OFICINA => true,
