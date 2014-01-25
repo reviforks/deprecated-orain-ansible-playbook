@@ -28,11 +28,7 @@
               regexp='^\%sudo'
               line='%sudo ALL=(ALL) NOPASSWD:ALL'
 
-- include: create_user.yml user={{item.name}} group={{item.group}}
-  with_items:
-    - { name: 'kudu', groups: 'sudo' }
-    - { name: 'addshore', groups: 'sudo' }
-    - { name: 'johnflewis', groups: 'sudo' }
+- include: create_user.yml
 
 - name: Copy backup.sh
   template: src=backup.sh dest=/root/backup.sh
