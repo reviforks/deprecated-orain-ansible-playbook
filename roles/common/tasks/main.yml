@@ -53,7 +53,10 @@
     - ./quickscripts/*
 
 - name: Set firewall rules
-  command: ufw allow ssh/tcp 60000:61000/udp
+  command: ufw allow {{item}}
+  with_items:
+    - ssh/tcp
+    - 60000:61000/udp
   register: ufw_result
   changed_when: "ufw_result.stdout.startswith('Rule')"
 
