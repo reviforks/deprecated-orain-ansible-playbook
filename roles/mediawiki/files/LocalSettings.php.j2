@@ -92,49 +92,49 @@ $wgConf->localVHosts = array( '{{mysql_address}}' );
 // / extension/DPLforum
 
 // allthetropeswiki
-define( "NS_TROPEWORKSHOP", 520 );
-define( "NS_TROPEWORKSHOP_TALK", 521 );
+define( 'NS_TROPEWORKSHOP', 520 );
+define( 'NS_TROPEWORKSHOP_TALK', 521 );
 // / allthetropeswiki
 
 // botwiki
-define( "NS_FRAMEWORK", 500 );
-define( "NS_FRAMEWORK_TALK", 501 );
-define( "NS_SCRIPT", 502 );
-define( "NS_SCRIPT_TALK", 503 );
-define( "NS_BOT", 504 );
-define( "NS_BOT_TALK", 505 );
-define( "NS_RUN", 506 );
-define( "NS_RUN_TALK", 507 );
+define( 'NS_FRAMEWORK', 500 );
+define( 'NS_FRAMEWORK_TALK', 501 );
+define( 'NS_SCRIPT', 502 );
+define( 'NS_SCRIPT_TALK', 503 );
+define( 'NS_BOT', 504 );
+define( 'NS_BOT_TALK', 505 );
+define( 'NS_RUN', 506 );
+define( 'NS_RUN_TALK', 507 );
 // /botwiki
 
 // councilwiki
-define( "NS_RESOLUTION", 522 );
-define( "NS_RESOLUTION_TALK", 523 );
-define( "NS_WORKSPACE", 524 );
-define( "NS_WORKSPACE_TALK", 525 );
+define( 'NS_RESOLUTION', 522 );
+define( 'NS_RESOLUTION_TALK', 523 );
+define( 'NS_WORKSPACE', 524 );
+define( 'NS_WORKSPACE_TALK', 525 );
 // /councilwiki
 
 // metawiki
-define( "NS_TECH", 526);
-define( "NS_TECH_TALK", 527);
+define( 'NS_TECH', 526);
+define( 'NS_TECH_TALK', 527);
 // /metawiki
 
 // wikinambaswiki
-define( "NS_OFICINA", 508 );
-define( "NS_OFICINA_TALK", 509 );
-define( "NS_PROJETO", 510 );
-define( "NS_PROJETO_TALK", 511 );
-define( "NS_ATIVIDADE", 512 );
-define( "NS_ATIVIDADE_TALK", 513 );
-define( "NS_ESTUDIO", 514 );
-define( "NS_ESTUDIO_TALK", 515 );
+define( 'NS_OFICINA', 508 );
+define( 'NS_OFICINA_TALK', 509 );
+define( 'NS_PROJETO', 510 );
+define( 'NS_PROJETO_TALK', 511 );
+define( 'NS_ATIVIDADE', 512 );
+define( 'NS_ATIVIDADE_TALK', 513 );
+define( 'NS_ESTUDIO', 514 );
+define( 'NS_ESTUDIO_TALK', 515 );
 // /wikinambaswiki
 
 // frmodamobwiki
-define( "NS_PORTAIL", 516 );
-define( "NS_PORTAIL_TALK", 517 );
-define( "NS_PROJET", 518 );
-define( "NS_PROJET_TALK", 519 );
+define( 'NS_PORTAIL', 516 );
+define( 'NS_PORTAIL_TALK', 517 );
+define( 'NS_PROJET', 518 );
+define( 'NS_PROJET_TALK', 519 );
 // /frmodamobwiki
 
 /**
@@ -1149,7 +1149,7 @@ RESP
  * Do specific things for specific wikis
  */
 switch( $wgDBname ) {
-	case "allthetropeswiki":
+	case 'allthetropeswiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
@@ -1165,24 +1165,24 @@ switch( $wgDBname ) {
 		$wgDisableSearchUpdate = true;
 		$wgSectionHideShowtop = 1;
 		break;
-	case "botwiki":
+	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
 		break;
-	case "foodopediawiki":
+	case 'foodopediawiki':
 		require_once( "$IP/extensions/Comments/Comment.php" );
 		break;
-	case "loginwiki":
+	case 'loginwiki':
 		$wgGroupPermissions['*']['createtalk'] = false;
 		$wgGroupPermissions['*']['centralauth-autoaccount'] = true;
 		$wgGroupPermissions['*']['read'] = true; // Make sure read rights are present
 		$wgGroupPermissions['user']['read'] = true; // Make sure read rights are present
 		$wgGroupPermissions['user']['edit'] = false;
 		break;
-	case "metawiki":
+	case 'metawiki':
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
 		break;
-	case "mediawikitesterswiki":
+	case 'mediawikitesterswiki':
 		$wgCategoryTreeMaxChildren = 2000;
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
@@ -1194,15 +1194,15 @@ switch( $wgDBname ) {
 		// $wgSectionHideShowtop = 1; // Disabled per the above
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 		break;
-	case "spiralwiki":
+	case 'spiralwiki':
 		require_once( "$IP/extensions/cldr/cldr.php" );
 		break;
-	case "trainwiki":
+	case 'trainwiki':
 		$wgGroupPermissions['*']['createpage'] = false;
 		$wgGroupPermissions['autoconfirmed']['patrol'] = false;
 		$wgGroupPermissions['user']['createpage'] = false;
 		break;
-	case "extloadwiki":
+	case 'extloadwiki':
 		// all extensions are loaded on this wiki
 		require_once( "$IP/extensions/cldr/cldr.php" );
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
@@ -1224,7 +1224,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
 		require_once( "$IP/extensions/MyVariables/MyVariables.php" );
 		break;
-	case "cpsinfowiki":
+	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		break;
 }
@@ -1237,7 +1237,7 @@ $wgConf->extractAllGlobals( $wgDBname );
 
 $wgGroupPermissions['confirmed'] = & $wgGroupPermissions['autoconfirmed'];
 
-if ( $wgDBname != "metawiki" ) {
+if ( $wgDBname !== 'metawiki' ) {
 	require_once( "$IP/extensions/InterwikiMagic/InterwikiMagic.php" );
 	$wgForeignFileRepos[] = array(
 		'class' => 'ForeignDBRepo',
@@ -1246,8 +1246,8 @@ if ( $wgDBname != "metawiki" ) {
 		'hashLevels' => 2,
 		'transformVia404' => true,
 		'initialCapital' => true,
-		'descBaseUrl' => "//meta.orain.org/wiki/File:",
-		'scriptDirUrl' => "//meta.orain.org/w",
+		'descBaseUrl' => '//meta.orain.org/wiki/File:',
+		'scriptDirUrl' => '//meta.orain.org/w',
 		'fetchDescription' => false,
 		'dbType' => $wgDBtype,
 		'dbServer' => $wgDBserver,
@@ -1330,12 +1330,12 @@ if ( $wmgPrivateWiki ) {
 	// Whitelist! Default carried over for tracking.
 	$wgWhitelistRead =
 		array(
-			"Main Page",
-			"Special:UserLogin",
-			"Special:UserLogout",
-			"Special:ResetPassword",
-			"MediaWiki:Commons.css",
-			"Special:CentralLogin"
+			'Main Page',
+			'Special:UserLogin',
+			'Special:UserLogout',
+			'Special:ResetPassword',
+			'MediaWiki:Commons.css',
+			'Special:CentralLogin'
 		);
 }
 
@@ -1389,9 +1389,9 @@ if ( $wmgUseLiquidThreads ) {
 
 if ( $wmgUseOrainFooter ) {
 	$wgFooterIcons['poweredby']['orain'] = array(
-		"src" => "//$wmgUploadHostname/meta.orain.org/images/archive/9/96/20131129195014!Powered_By_Orain.png",
-		"url" => "//meta.orain.org/",
-		"alt" => "Hosted by Orain",
+		'src' => "//$wmgUploadHostname/meta.orain.org/images/archive/9/96/20131129195014!Powered_By_Orain.png",
+		'url' => '//meta.orain.org/',
+		'alt' => 'Hosted by Orain',
 	);
 }
 
@@ -1469,7 +1469,7 @@ $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
 $wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
 
 $wgDebugLogFile = "/var/log/mediawiki/$wmgHostname.log";
-$wgDBerrorLog = "/var/log/mediawiki/database.log";
+$wgDBerrorLog = '/var/log/mediawiki/database.log';
 $wgDebugLogGroups = array(
 	'404' => '/var/log/mediawiki/404.log',
 	'api' => '/var/log/mediawiki/api.log',
