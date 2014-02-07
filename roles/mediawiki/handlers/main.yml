@@ -9,5 +9,5 @@
 - name: Install Validator dependencies using Composer
   shell: "cd /usr/share/nginx/.orain.org/w/extensions/Validator && /usr/bin/composer.phar install"
 
-- name: Notify IRC of LocalSettings update
+- name: Notify IRC of Mediawiki update
   shell: "/root/notify_irc.sh"
