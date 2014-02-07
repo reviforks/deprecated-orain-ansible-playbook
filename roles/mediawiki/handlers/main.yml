@@ -1,7 +1,7 @@
 - name: Clear APC cache
   command: /usr/bin/wget -qO- {{apc_clear_script}}
   register: clear_apc_cache
-  failed_when: clear_apc_cache.stdout != "{success:true}"
+  failed_when: clear_apc_cache.stdout.find('true') == -1
 
 - name: Rebuild localisation cache
   command: /usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki
