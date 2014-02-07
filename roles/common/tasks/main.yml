@@ -16,6 +16,7 @@
     - python3
     - python-software-properties
     - rkhunter
+    - sudo
     - tmux
     - vim
     - ufw
