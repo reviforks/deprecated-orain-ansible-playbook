@@ -940,11 +940,11 @@ $wgConf->settings = array(
 	// Search
 	'wmgUseCirrus' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'mediawikitesterswiki' => true,
 	),
 	'wmgUseCirrusAsAlternate' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	// /Search
@@ -1370,6 +1370,7 @@ if ( $wmgUseCharInsert ) {
 if ( $wmgUseCirrus || $wmgUseCirrusAsAlternate ) {
 	require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 	require_once( "$IP/extensions/Elastica/Elastica.php" );
+	$wgCirrusSearchServers = array( 'prod3.orain.org ');
 }
 
 if ( $wmgUseCirrus ) {

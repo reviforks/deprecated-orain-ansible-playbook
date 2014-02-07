@@ -27,3 +27,8 @@
                 regexp='^action\.auto_create_index:'
                 line='action.auto_create_index: false'
 
+- name: Set firewall rule
+  command: ufw allow from 192.184.92.154 to any port 9300
+  register: ufw_result
+  changed_when: "ufw_result.stdout.startswith('Rule')"
+
