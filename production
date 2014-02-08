@@ -1,6 +1,6 @@
 [webservers]
 prod2.orain.org
 
-[searchservers]
+[dbservers]
 prod3.orain.org
 
