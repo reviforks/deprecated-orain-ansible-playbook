@@ -789,6 +789,7 @@ $wgConf->settings = array(
 			),
 			'autoconfirmed' => array(
 				'patrol' => true,
+				'upload' => true,
 			),
 			'autopatrolled' => array(
 				'autopatrol' => true,
@@ -1077,6 +1078,7 @@ function efGetSiteParams( $conf, $wiki ) {
 $wgGroupPermissions['bureaucrat']['renameuser'] = false;
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgGroupPermissions['sysop']['importupload'] = false;
+$wgGroupPermissions['user']['upload'] = false;
 unset( $wgGroupPermissions['steward'] );
 
 foreach ( $wgConf->settings['wgServer'] as $db => $server ) {
@@ -1212,6 +1214,7 @@ switch( $wgDBname ) {
 		$wgGroupPermissions['*']['createpage'] = false;
 		$wgGroupPermissions['autoconfirmed']['patrol'] = false;
 		$wgGroupPermissions['user']['createpage'] = false;
+		$wgGroupPermissions['user']['movefile'] = false;
 		break;
 	case 'extloadwiki':
 		// all extensions are loaded on this wiki
