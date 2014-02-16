@@ -114,6 +114,13 @@ define( 'NS_WORKSPACE', 524 );
 define( 'NS_WORKSPACE_TALK', 525 );
 // /councilwiki
 
+// levelswiki
+define( 'NS_GUIDE', 258 );
+define( 'NS_GUIDE_TALK', 259 );
+define( 'NS_MOD', 260 );
+define( 'NS_MOD_TALK', 261 );
+// /levelswiki
+
 // metawiki
 define( 'NS_TECH', 526);
 define( 'NS_TECH_TALK', 527);
@@ -631,6 +638,7 @@ $wgConf->settings = array(
 	// Names
 	'wgContentNamespaces' => array(
 		'botwiki' => array( NS_BOT, NS_FRAMEWORK, NS_SCRIPT ),
+		'levelswiki' => array( NS_GUIDE, NS_MOD ),
 		'metawiki' => array( NS_TECH ),
 	),
 	'wgExtraNamespaces' => array(
@@ -659,6 +667,12 @@ $wgConf->settings = array(
 			NS_PORTAIL_TALK => 'Discussion_Portail',
 			NS_PROJET => 'Projet',
 			NS_PROJET_TALK => 'Discussion_Projet',
+		),
+		'levelswiki' => array(
+			NS_GUIDE => 'Guide',
+			NS_GUIDE_TALK => 'Guide_talk',
+			NS_MOD => 'Mod',
+			NS_MOD_TALK => 'Mod_talk',
 		),
 		'metawiki' => array(
 			NS_TECH => 'Tech',
