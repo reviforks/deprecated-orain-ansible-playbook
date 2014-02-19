@@ -11,3 +11,6 @@
 
 - name: Notify IRC of Mediawiki update
   shell: "/root/notify_irc.sh"
+
+- name: Mediawiki submodule fileMode false
+  shell: "cd /usr/share/nginx/.orain.org/w/ && git submodule foreach git config core.fileMode false"

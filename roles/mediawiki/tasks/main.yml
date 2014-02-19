@@ -12,6 +12,7 @@
   notify:
     - Clear APC cache
     - Rebuild localisation cache
+    - Mediawiki submodule fileMode false
 
 - name: Install Composer
   action: shell curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ creates=/usr/bin/composer.phar
