@@ -36,6 +36,7 @@ server {
 	include /etc/nginx/sites-enabled-agnostic/all.orain.org;
 {% else %}
 	ssl_certificate {{ssl_cert_path}};
+	include /etc/nginx/sites-enabled-agnostic/{{site}};
 {% endif %}
 	listen [::]:443 ssl {{ listen_parameters() }};
 {{ favicon_config() }}
