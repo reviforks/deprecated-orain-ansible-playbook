@@ -67,6 +67,7 @@ require_once( "$IP/extensions/YouTube/YouTube.php" );
 require_once( "$IP/skins/foreground/foreground.php" );
 require_once( "$IP/skins/monaco/monaco.php" );
 require_once( "$IP/extensions/WikiLove/WikiLove.php" );
+require_once( "$IP/extensions/NativeSvgHandler/NativeSvgHandler.php" );
 
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
@@ -1246,7 +1247,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/MyVariables/MyVariables.php" );
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
-		require_once( "$IP/extensions/NativeSvgHandler/NativeSvgHandler.php" );
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
