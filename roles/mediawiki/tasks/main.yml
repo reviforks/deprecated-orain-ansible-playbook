@@ -10,9 +10,9 @@
        dest=/usr/share/nginx/.orain.org/w
        version=REL1_22
   notify:
-    - Clear APC cache
     - Rebuild localisation cache
     - Mediawiki submodule fileMode false
+    - Clear APC cache
     - Notify IRC of Mediawiki update
 
 - name: Install Composer
@@ -34,9 +34,9 @@
   with_fileglob:
     - ./*.php.j2
   notify:
-    - Clear APC cache
     - Rebuild localisation cache
     - Notify IRC of Mediawiki update
+    - Clear APC cache
   when: mw_localsettings_valid.rc == 0
 
 - name: Copy MediaWiki settings from files
