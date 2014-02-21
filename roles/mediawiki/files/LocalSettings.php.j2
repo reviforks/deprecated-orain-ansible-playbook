@@ -1155,7 +1155,7 @@ $wgLocalDatabases = array();
 
 foreach ( $DBlist as $wiki ) {
 	$wiki = explode( '|', $wiki, 3 );
-	list( $DBname, $siteName, $wikiTagList ) = $wiki;
+	list( $DBname, $siteName, $wikiTagList ) = array_pad( $wiki, 3, '' );
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
 	if ( $DBname == $wgDBname ) {
