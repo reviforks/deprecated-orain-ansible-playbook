@@ -604,6 +604,10 @@ $wgConf->settings = array(
 		'mediawikitesterswiki' => true,
 		'testwiki' => true,
 	),
+	'wmgUseMath' => array(
+		'default' => false,
+		'extloadwiki' => true, // all extensions are loaded on this wiki
+	),
 	'wmgUseMobileFrontend' => array(
 		'default' => false,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
@@ -1435,6 +1439,11 @@ if ( $wmgUseOrainFooter ) {
 		'url' => '//meta.orain.org/',
 		'alt' => 'Hosted by Orain',
 	);
+}
+
+if ( $wmgUseMath ) {
+	require_once( "$IP/extensions/Math/Math.php" );
+	$wgMathDisableTexFilter = true; // This is as we didnt Compile texvccheck - addshore
 }
 
 if ( $wmgUseMobileFrontend ) {
