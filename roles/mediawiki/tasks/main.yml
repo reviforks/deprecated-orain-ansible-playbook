@@ -2,6 +2,10 @@
 - name: Create user "www-scripts"
   user: name=www-scripts group=www-data shell=/bin/zsh
 
+# The below is required for 'make'ing the MAth extension
+- name: Install ocaml-native-compilers
+  apt: pkg=ocaml-native-compilers
+
 - name: Install python-requests
   apt: pkg=python3-requests
 
