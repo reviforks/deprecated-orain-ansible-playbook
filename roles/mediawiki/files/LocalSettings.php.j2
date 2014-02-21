@@ -1444,6 +1444,10 @@ if ( $wmgUseOrainFooter ) {
 if ( $wmgUseMath ) {
 	require_once( "$IP/extensions/Math/Math.php" );
 	$wgMathDisableTexFilter = true; // This is as we didnt Compile texvccheck - addshore
+	// Use MathJax? addshore
+	$wgUseMathJax = true;
+	$wgDefaultUserOptions['math'] = MW_MATH_MATHJAX;
+	$wgMathJaxUrl = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML';
 }
 
 if ( $wmgUseMobileFrontend ) {
