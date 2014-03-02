@@ -1457,6 +1457,9 @@ if ( $wmgUseMath ) {
 	$wgUseMathJax = true;
 	$wgDefaultUserOptions['math'] = MW_MATH_MATHJAX;
 	$wgMathJaxUrl = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML';
+	// Image stuff per Jasper Deng -- John
+	$wgMathPath = $wgUploadPath
+	$wgMathDirectory = $wgUploadDirectory
 }
 
 if ( $wmgUseMobileFrontend ) {
