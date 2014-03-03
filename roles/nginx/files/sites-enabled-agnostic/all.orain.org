@@ -5,9 +5,10 @@ location = / {
 	return 301 /wiki/;
 }
 
-location ~ \.php$ {
-	try_files $uri =404;
+location ~ \.php {
 	include fastcgi_params;
+	fastcgi_split_path_info ^(.+\.php)(.*)$;
+	try_files $fastcgi_script_name =404;
 	fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 	fastcgi_pass unix:/var/run/php5-fpm.sock;
 }
