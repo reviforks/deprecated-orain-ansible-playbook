@@ -432,6 +432,15 @@ $wgConf->settings = array(
 	),
 	// /GraphicsMagick
 
+	// Group overrides
+	'defaultGroupOverrides' => array(
+		'default' => array(
+		),
+	),
+	'specificGroupOverrides' => array(
+	),
+	// /Group overrides
+
 	//Hooks
 	'wgSpecialVersionShowHooks' => array(
 		'default' => false,
@@ -1290,6 +1299,21 @@ switch( $wgDBname ) {
 $wgConf->extractAllGlobals( $wgDBname );
 
 $wgGroupPermissions['confirmed'] = & $wgGroupPermissions['autoconfirmed'];
+
+// Group overrides
+foreach ( $defaultGroupOverrides as $group => $permissions ) {
+	if ( !array_key_exists( $group, $wgGroupPermissions ) ) {
+		$wgGroupPermissions[$group] = array();
+	}
+	$wgGroupPermissions[$group] = $permissions + $wgGroupPermissions[$group];
+}
+
+foreach ( $specificGroupOverrides as $group => $permissions ) {
+	if ( !array_key_exists( $group, $wgGroupPermissions ) ) {
+		$wgGroupPermissions[$group] = array();
+	}
+	$wgGroupPermissions[$group] = $permissions + $wgGroupPermissions[$group];
+}
 
 if ( $wgDBname !== 'metawiki' ) {
 	require_once( "$IP/extensions/InterwikiMagic/InterwikiMagic.php" );
