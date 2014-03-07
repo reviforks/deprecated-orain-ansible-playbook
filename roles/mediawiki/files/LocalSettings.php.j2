@@ -530,7 +530,7 @@ $wgConf->settings = array(
 	'wgLanguageCode' => array(
 		'default' => 'en',
 		'frmodamobwiki' => 'fr',
-		'trainwiki' => 'ko',
+		'reviwiki' => 'ko',
 		'keionrailwiki' => 'ko',
 		'ukrwiki1wiki' => 'uk',
 		'wikiconstituciowiki' => 'ca',
@@ -793,7 +793,7 @@ $wgConf->settings = array(
 			'사' => NS_USER,
 			'사토' => NS_USER_TALK,
 		),
-		'trainwiki' => array(
+		'reviwiki' => array(
 			'사' => NS_USER,
 			'사토' => NS_USER_TALK,
 		),
@@ -877,11 +877,11 @@ $wgConf->settings = array(
 	),
 	'wgAutoConfirmAge' => array(
 		'default' => 111600, // 31 h * 60 min/h * 60 s/min
-		'trainwiki' => 259200,
+		'reviwikii' => 259200,
 	),
 	'wgAutoConfirmCount' => array(
 		'default' => 5,
-		'trainwiki' => 20,
+		'reviwiki' => 20,
 	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
@@ -963,7 +963,7 @@ $wgConf->settings = array(
 				'userrights-interwiki' => true,
 			),
 		),
-		'+trainwiki' => array(
+		'+reviwiki' => array(
 			// Continued below, awaiting the creation of a proper override system
 			'autoconfirmed' => array(
 				'createpage' => true,
@@ -1111,7 +1111,7 @@ $wgConf->settings = array(
 		'peachywiki' => '//upload.wikimedia.org/wikipedia/commons/5/51/PeachyFrameworkLogo.png',
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'testwiki' => "//$wmgUploadHostname/test.orain.org/images/8/8d/Twlogo.png",
-		'trainwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Train.svg/135px-Train.svg.png',
+		'reviwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Train.svg/135px-Train.svg.png',
 		'wikiconstituciowiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Catalonia.svg/135px-Flag_of_Catalonia.svg.png',
 		'wikinambaswiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/53/Wikinambá.png/135px-Wikinambá.png',
 	),
@@ -1139,7 +1139,7 @@ $wgConf->settings = array(
 		'mediawikitesterswiki' => true,
 		'metawiki' => true,
 		'spiralwiki' => true,
-		'trainwiki' => true,
+		'reviwiki' => true,
 	),
 	// /Translate
 
@@ -1314,7 +1314,7 @@ switch( $wgDBname ) {
 	case 'spiralwiki':
 		require_once( "$IP/extensions/cldr/cldr.php" );
 		break;
-	case 'trainwiki':
+	case 'reviwiki':
 		$wgGroupPermissions['*']['createpage'] = false;
 		$wgGroupPermissions['autoconfirmed']['patrol'] = false;
 		$wgGroupPermissions['user']['createpage'] = false;
