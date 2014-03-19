@@ -4,3 +4,5 @@ prod2.orain.org
 [dbservers]
 prod3.orain.org
 
+[miscservers]
+prod1.orain.org
