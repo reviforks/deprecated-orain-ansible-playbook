@@ -1563,7 +1563,11 @@ if ( $wmgUseWikilog ) {
 	Wikilog::setupBlogNamespace( 100 );
 }
 
-if ( $wgDBname == "polymetawiki" || "archivoespiralwiki" ) {
+if ( $wgDBname == "polymetawiki") {
+	$wgReadOnly = "Archived wiki";
+}
+
+if ( $wgBDname == "archivoespiralwiki" ) {
 	$wgReadOnly = "Archived wiki";
 }
 
