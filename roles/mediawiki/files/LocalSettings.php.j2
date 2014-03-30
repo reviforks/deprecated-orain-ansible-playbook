@@ -415,7 +415,8 @@ $wgConf->settings = array(
 	// Global Group Settings
 	'+wgAvailableRights' => array( // + to avoid any possible conflicts
 		'default' => array(
-			'steward' // Allow this restriction level be added to the global usergroup
+			'debug', // Debugging for sysadmins
+			'steward', // Allow this restriction level be added to the global usergroup
 		),
 	),
 	// /Global Group Settings
@@ -1570,6 +1571,21 @@ if ( $wmgUseWikilog ) {
 
 if ( $wmgArchivedWiki ) {
 	$wgReadOnly = "Archived wiki";
+}
+
+// Hack
+$wgHooks['ParserFirstCallInit'][] = 'ifUserCanDebug';
+function ifUserCanDebug() {
+	global $wgUser, $wgShowExceptionDetails, $wgDebugToolbar, $wgDevelopmentWarnings, $wgShowSQLErrors, $wgShowDBErrorBacktrace;
+	if ( $wgUser->isAllowed( 'debug' ) ) {
+		error_reporting( -1 );
+		ini_set( 'display_errors', 1 );
+		$wgShowExceptionDetails = true;
+		$wgDebugToolbar = true;
+		$wgDevelopmentWarnings = true;
+		$wgShowSQLErrors = true;
+		$wgShowDBErrorBacktrace = true;
+	}
 }
 
 if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
