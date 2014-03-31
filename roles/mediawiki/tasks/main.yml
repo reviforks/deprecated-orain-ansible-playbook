@@ -13,7 +13,6 @@
     - Rebuild localisation cache
     - Mediawiki submodule fileMode false
     - Clear APC cache
-    - Notify IRC of Mediawiki update
 
 - name: Install Composer
   action: shell curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ creates=/usr/bin/composer.phar
@@ -35,7 +34,6 @@
     - ./*.php.j2
   notify:
     - Rebuild localisation cache
-    - Notify IRC of Mediawiki update
     - Clear APC cache
   when: mw_localsettings_valid.rc == 0
 
