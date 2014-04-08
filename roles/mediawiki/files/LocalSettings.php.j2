@@ -80,12 +80,6 @@ $wgConf->localVHosts = array( '{{mysql_address}}' );
  * @note These namespaces should NEVER be removed unless all wikis that have ever used them have been deleted
  */
 
-// extension/Wikilog
-// @note These are defined automatically by Wikilog::setupBlogNamespace
-// define( 'NS_BLOG', 100 );
-// define( 'NS_BLOG_TALK', 101 );
-// / extension/Wikilog
-
 // extension/DPLforum
 // @note These are defined automatically by the DPLforum entry file
 // define( 'NS_FORUM', 110 );
@@ -725,11 +719,6 @@ $wgConf->settings = array(
 		'elderlordswiki' => false,
 		'encyclopedianationalwiki' => false,
 		'wikinambaswiki' => true,
-	),
-	'wmgUseWikilog' => array(
-		'default' => false,
-		'extloadwiki' => true, // all extensions are loaded on this wiki
-		//'allthetropeswiki' => true, // dsiable per a bunch of errors on ATT -- John
 	),
 	// /Misc. extensions
 
@@ -1576,11 +1565,6 @@ if ( $wmgUseWikiEditor ) {
 	require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
 	$wgDefaultUserOptions['usebetatoolbar'] = 1;
 	$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
-}
-
-if ( $wmgUseWikilog ) {
-	require_once( "$IP/extensions/Wikilog/Wikilog.php" );
-	Wikilog::setupBlogNamespace( 100 );
 }
 
 if ( $wmgArchivedWiki ) {
