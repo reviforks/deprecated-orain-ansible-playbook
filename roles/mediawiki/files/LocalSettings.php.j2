@@ -1334,8 +1334,6 @@ switch( $wgDBname ) {
 		$wgUserStatsPointValues['quiz_points'] = 0; // Points awarded for answering a quiz question
 		$wgUserStatsPointValues['quiz_created'] = 0; // Points awarded for creating a quiz question
 		$wgNamespacesForEditPoints = array( 0 ); // Array of namespaces that can earn you points. Use numerical keys. Default is 0 -- only main namespace edits can earn a user points.
-		require_once("$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php");
-		require_once("$IP/extensions/VoteNY/Vote.php");
 		require_once( "$IP/extensions/WikiForum/WikiForum.php" );
 		break;
 	case 'archivoespiralwiki':
@@ -1404,7 +1402,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CSS/CSS.php" );
 		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
-		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
 		require_once( "$IP/extensions/MyVariables/MyVariables.php" );
@@ -1419,7 +1416,6 @@ switch( $wgDBname ) {
 		require_once("$IP/extensions/PollNY/Poll.php");
 		require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
 		require_once("$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php");
-		require_once("$IP/extensions/VoteNY/Vote.php");
 		require_once( "$IP/extensions/WikiForum/WikiForum.php" );
 		require_once("$IP/extensions/SocialProfile/UserStats/EditCount.php");
 		break;
