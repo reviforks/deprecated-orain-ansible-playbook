@@ -1283,58 +1283,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Tabs/Tabs.php" );
 		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
 		require_once( "$IP/extensions/Arrays/Arrays.php" );
-		require_once("$IP/extensions/BlogPage/Blog.php");
-		require_once( "$IP/extensions/Comments/Comment.php" );
-		require_once( "$IP/extensions/MediaWikiChat/MediaWikiChat.php" );
-		require_once("$IP/extensions/PollNY/Poll.php");
-		require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
-		$wgUserProfileDisplay['friends'] = true;
-		$wgUserProfileDisplay['foes'] = true;
-		$wgUserBoard = true;
-		$wgUserProfileDisplay['board'] = true;
-		$wgUserProfileDisplay['stats'] = true;
-		require_once("$IP/extensions/SocialProfile/UserStats/EditCount.php"); // Necessary edit counter
-		// The actual user level definitions -- key is simple: 'Level name' => points needed
-		$wgUserLevels = array(
-			'Troper Recruit' => 0,
-			'Troper Apprentice' => 1200,
-			'Troper Private' => 1750,
-			'Troper Corporal' => 2500,
-			'Troper Sergeant' => 5000,
-			'Troper Gunnery Sergeant' => 10000,
-			'Troper Lieutenant' => 20000,
-			'Troper Captain' => 35000,
-			'Troper Major' => 50000,
-			'Troper Lieutenant Commander' => 75000,
-			'Troper Commander' => 100000,
-			'Troper Colonel' => 150000,
-			'Troper Brigadier' => 250000,
-			'Troper Brigadier General' => 350000,
-			'Troper Major General' => 500000,
-			'Troper Lieutenant General' => 650000,
-			'Troper General' => 800000,
-			'Troper General of the Army' => 1000000,
-		);
-		$wgUserStatsPointValues['edit'] = 50; // Points awarded on a mainspace edit
-		$wgUserStatsPointValues['vote'] = 0; // Points awarded for voting for an article
-		$wgUserStatsPointValues['comment'] = 0; // Points awarded for leaving a comment
-		$wgUserStatsPointValues['comment_plus'] = 0; // Points awarded if your comment gets a thumbs up
-		$wgUserStatsPointValues['comment_ignored'] = 0; // Points awarded if another user ignores your comments
-		$wgUserStatsPointValues['opinions_created'] = 0; // Points awarded for writing a blog article
-		$wgUserStatsPointValues['opinions_pub'] = 0; // Points awarded for having that article hit the "Blogs" page
-		$wgUserStatsPointValues['referral_complete'] = 0; // Points awarded for recruiting a new user
-		$wgUserStatsPointValues['friend'] = 0; // Points awarded for adding a friend
-		$wgUserStatsPointValues['foe'] = 0; // Points awarded for adding a foe
-		$wgUserStatsPointValues['gift_rec'] = 0; // Points awarded for receiving a gift
-		$wgUserStatsPointValues['gift_sent'] = 0; // Points awarded for giving a gift
-		$wgUserStatsPointValues['points_winner_weekly'] = 0; // Points awarded for having the most points for a week
-		$wgUserStatsPointValues['points_winner_monthly'] = 0; // Points awarded for having the most points for a month
-		$wgUserStatsPointValues['user_image'] = 1000; // Points awarded for adding your first avatar
-		$wgUserStatsPointValues['poll_vote'] = 0; // Points awarded for taking a poll
-		$wgUserStatsPointValues['quiz_points'] = 0; // Points awarded for answering a quiz question
-		$wgUserStatsPointValues['quiz_created'] = 0; // Points awarded for creating a quiz question
-		$wgNamespacesForEditPoints = array( 0 ); // Array of namespaces that can earn you points. Use numerical keys. Default is 0 -- only main namespace edits can earn a user points.
-		require_once( "$IP/extensions/WikiForum/WikiForum.php" );
 		break;
 	case 'archivoespiralwiki':
 		$wgGroupPermissions['*']['edit'] = false;
