@@ -1,2 +1,3 @@
 #!/bin/sh
+/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki metawiki
 /usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki
