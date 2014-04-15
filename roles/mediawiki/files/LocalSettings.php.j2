@@ -660,6 +660,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
 		'metawiki' => true, // Might be nice -- John
+		'testwiki' => true,
 		'spiralwiki' => true,
 	),
 	'wmgUseLiquidThreads' => array(
@@ -1246,12 +1247,13 @@ $wgConf->wikis = & $wgLocalDatabases;
 if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
 	header( "HTTP/1.1 404 Not Found" );
 	echo( <<<RESP
+<!DOCTYPE html>
 <html>
 <head><title>404 Not Found</title></head>
 <body bgcolor="white">
 <center><h1>404 Not Found</h1>
 <h2>Unknown database</h2></center>
-<hr><center>MediaWiki</center>
+<hr /><center>MediaWiki</center>
 </body>
 </html>
 RESP
