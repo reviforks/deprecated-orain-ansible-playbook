@@ -39,7 +39,7 @@
     - ./favicons/*.ico
 
 - name: Copy default robots.txt
-  copy: src=robots.txt dest=/usr/share/nginx/.orain.org owner=www-data group=www-data mode=0770
+  copy: src=robots.txt dest=/usr/share/nginx/default owner=www-data group=www-data mode=0770
 
 - name: Copy default index.html
   copy: src=default.index.html dest=/usr/share/nginx/default/index.html owner=www-data group=www-data mode=0770
