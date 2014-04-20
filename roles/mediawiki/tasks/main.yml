@@ -75,3 +75,10 @@
   copy: src={{item}} dest=/root/{{item|basename}} owner=root group=root mode=770
   with_fileglob:
     - ./quickscripts/*
+
+- name: Copy localisationcache rebuilt script to init.d
+  copy: src="./quickscripts/mw-rebuildlocalisationcache" dest=/etc/init.d/i18n.sh owner=root group=root mode=770
+  
+- name: Add i18n.sh to boot
+  command: update-rc.d i18n.sh defaults 99
+  
