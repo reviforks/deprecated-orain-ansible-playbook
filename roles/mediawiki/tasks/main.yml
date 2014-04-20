@@ -81,4 +81,6 @@
   
 - name: Add i18n.sh to boot
   command: update-rc.d i18n.sh defaults 99
-  
+
+- name: Create mediawiki log directory
+  command: mkdir /var/log/mediawiki/
