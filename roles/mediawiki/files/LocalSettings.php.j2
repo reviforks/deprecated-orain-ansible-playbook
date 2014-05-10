@@ -1028,6 +1028,12 @@ $wgConf->settings = array(
 		'metawiki' => true,
 	),
 	// /Profiling
+	
+	// RC
+	'wmgUseIRCRC' => array(
+		'default' => true,
+		'private' => false,
+	),
 
 	// Redirects
 	'wgFixDoubleRedirects' => array(
@@ -1545,6 +1551,15 @@ if ( $wmgUseDPLforum ) {
 if ( $wmgUseEchoPack ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
 	require_once( "$IP/extensions/Thanks/Thanks.php" );
+}
+
+if ( $wmgUseIRCRC ) {
+	$wgRCFeeds['exampleirc'] = array(
+		'formatter' => 'IRCColourfulRCFeedFormatter',
+		'uri' => 'udp://localhost:5070',
+		'add_interwiki_prefix' => true,
+		'omit_bots' => true,
+	);
 }
 
 if ( $wmgUseLiquidThreads ) {
