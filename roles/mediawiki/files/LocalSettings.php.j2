@@ -1554,12 +1554,13 @@ if ( $wmgUseEchoPack ) {
 }
 
 if ( $wmgUseIRCRC ) {
-	$wgRCFeeds['exampleirc'] = array(
+	$wgRCFeeds['Orain'] = array(
 		'formatter' => 'IRCColourfulRCFeedFormatter',
 		'uri' => 'udp://localhost:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	);
+	$wgAbuseFilterNotifications = "udp";
 }
 
 if ( $wmgUseLiquidThreads ) {
