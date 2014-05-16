@@ -1,5 +1,4 @@
-----
-
+---
 - name: Install nagios3
   raw: apt-get install -y nagios3
 
