@@ -26,3 +26,8 @@
   roles:
     - mariadb
 
+- hosts: miscservers
+  vars_files:
+    - ../orain_private/vars.yml
+  roles:
+    - nagios3
