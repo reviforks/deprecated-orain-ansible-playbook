@@ -947,6 +947,23 @@ $wgConf->settings = array(
 				'user' => true, // Enable a new restriction level globally
 			),
 		),
+		'+archivoespiralwiki' => array(
+			'*' => array(
+				'edit' => false,
+				'createpage' => false,
+				'createtalk' => false,
+			),
+			'user' => array(
+				'edit' => false,
+				'createpage' => false,
+				'createtalk' => false,
+			),
+			'sysop' => array(
+				'edit' => true,
+				'createpage' => true,
+				'createtalk' => true,
+			),
+		),
 		'+encyclopedianationalwiki' => array(
 			'*' => array(
 				'edit' => false,
@@ -955,6 +972,17 @@ $wgConf->settings = array(
 		'+keionrailwiki' => array(
 			'user' => array(
 				'movefile' => false,
+			),
+		),
+		'+loginwiki' => array(
+			'*' => array(
+				'createtalk' => false,
+				'centralauth-autoaccount' => true,
+				'read' => true, // Make sure read rights are present
+			),
+			'user' => array(
+				'read' => true, // Make sure read rights are present
+				'edit' => false,
 			),
 		),
 		'+metawiki' => array(
@@ -974,9 +1002,16 @@ $wgConf->settings = array(
 			),
 		),
 		'+reviwiki' => array(
-			// Continued below, awaiting the creation of a proper override system
+			'*' => array(
+				'createpage' => false,
+			),
+			'user' => array(
+				'createpage' => false,
+				'movefile' => false,
+			),
 			'autoconfirmed' => array(
 				'createpage' => true,
+				'patrol' => false,
 			),
 		),
 	),
@@ -1314,17 +1349,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Arrays/Arrays.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" ); 
 		break;
-	case 'archivoespiralwiki':
-		$wgGroupPermissions['*']['edit'] = false;
-		$wgGroupPermissions['*']['createpage'] = false;
-		$wgGroupPermissions['*']['createtalk'] = false;
-		$wgGroupPermissions['user']['edit'] = false;
-		$wgGroupPermissions['user']['createpage'] = false;
-		$wgGroupPermissions['user']['createtalk'] = false;
-		$wgGroupPermissions['sysop']['edit'] = true;
-		$wgGroupPermissions['sysop']['createpage'] = true;
-		$wgGroupPermissions['sysop']['createtalk'] = true;
-		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
@@ -1333,11 +1357,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Comments/Comment.php" );
 		break;
 	case 'loginwiki':
-		$wgGroupPermissions['*']['createtalk'] = false;
-		$wgGroupPermissions['*']['centralauth-autoaccount'] = true;
-		$wgGroupPermissions['*']['read'] = true; // Make sure read rights are present
-		$wgGroupPermissions['user']['read'] = true; // Make sure read rights are present
-		$wgGroupPermissions['user']['edit'] = false;
+		// Blank comment to keep this in the statement per John's request
 		break;
 	case 'metawiki':
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
@@ -1356,12 +1376,6 @@ switch( $wgDBname ) {
 		break;
 	case 'spiralwiki':
 		require_once( "$IP/extensions/cldr/cldr.php" );
-		break;
-	case 'reviwiki':
-		$wgGroupPermissions['*']['createpage'] = false;
-		$wgGroupPermissions['autoconfirmed']['patrol'] = false;
-		$wgGroupPermissions['user']['createpage'] = false;
-		$wgGroupPermissions['user']['movefile'] = false;
 		break;
 	case 'extloadwiki':
 		// all extensions are loaded on this wiki
