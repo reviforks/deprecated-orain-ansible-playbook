@@ -1430,6 +1430,8 @@ switch( $wgDBname ) {
 		require_once("$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php");
 		require_once( "$IP/extensions/WikiForum/WikiForum.php" );
 		require_once("$IP/extensions/SocialProfile/UserStats/EditCount.php");
+		require_once( "$IP/extensions/Maps/Maps.php" );
+ 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		$wgUserProfileDisplay['friends'] = true;
 		$wgUserProfileDisplay['foes'] = true;
 		$wgUserBoard = true;
@@ -1479,6 +1481,12 @@ switch( $wgDBname ) {
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
+		break;
+		case 'verkeerwiki':
+ 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
+		break;
+ 	case 'russianmaltawiki':
+ 		require_once( "$IP/extensions/Maps/Maps.php" );
 		break;
 }
 
