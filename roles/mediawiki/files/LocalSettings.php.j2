@@ -190,6 +190,11 @@ $wgConf->settings = array(
 	'wgBlockAllowsUTEdit' => array(
 		'default' => true,
 	),
+	'wmgUseTorBlock' => array(
+		'default' => true,
+		'extloadwiki' => true,
+		'private' => false,
+	),
 	// /Block
 
 	// Bigdelete
@@ -1667,6 +1672,11 @@ if ( $wmgUseSideBarMenu ) {
 
 if ( $wmgUseTabber ) {
 	require_once( "$IP/extensions/Tabber/Tabber.php" );
+}
+
+if ( $wmgUseTorBlock ) {
+	require_once( "$IP/extensions/TorBlock/TorBlock.php" );
+	$wgTorLoadNodes = false;
 }
 
 if ( $wmgUseTranslate ) {
