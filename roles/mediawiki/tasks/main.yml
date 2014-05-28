@@ -71,6 +71,13 @@
         hour="*/3"
         job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/updateSpecialPages.php --wiki allthetropeswiki > /var/log/mediawiki/updateSpecialPages.log 2>&1"
 
+- name: Create TorBlock node loader cron
+  cron: name="Load TorBlockNodes"
+        user="www-scripts"
+        minute="0"
+        hour="*/12"
+        job="/home/www-scripts/db_loop.sh /usr/share/nginx/.orain.org/w/extensions/TorBlock/loadExitNodes.php --force"
+
 - name: Copy quickscripts
   copy: src={{item}} dest=/root/{{item|basename}} owner=root group=root mode=770
   with_fileglob:
