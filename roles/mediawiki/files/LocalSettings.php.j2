@@ -412,7 +412,6 @@ $wgConf->settings = array(
 		'default' => array(
 			'debug', // Debugging for sysadmins
 			'steward', // Allow this restriction level be added to the global usergroup
-			'torunblocked' // Prevent globala users being caught by future restrictive torunblocked right management
 		),
 	),
 	// /Global Group Settings
@@ -1204,7 +1203,10 @@ $wgConf->settings = array(
 		'reviwiki' => 'Asia/Seoul',
 	),
 	// /Time
-
+	// Disable $wgTorLoadNodes
+	'wgTorLoadNodes' => array(
+		'default' => false,
+	),
 	// Translate
 	'wgEnablePageTranslation' => array(
 		'default' => true,
