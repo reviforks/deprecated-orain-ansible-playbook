@@ -90,4 +90,5 @@
   command: update-rc.d i18n.sh defaults 99
 
 - name: Create mediawiki log directory
-  command: mkdir /var/log/mediawiki/
+  command: mkdir -p /var/log/mediawiki/
+  changed_when: False # never report as "changed"
