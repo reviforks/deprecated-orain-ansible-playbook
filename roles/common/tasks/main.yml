@@ -74,7 +74,6 @@
   command: ufw logging off
   when: "ansible_lsb['codename'] == 'wheezy' and 'LOGLEVEL=off' not in ufw_config.stdout"
 
-- name: Enable ufw
-  command: ufw --force enable
-  when: "ufw_status.stdout.startswith('Status: inactive') or 'ENABLED=yes' not in ufw_config.stdout"
-
+- name: Enable ufw (if needed)
+  command: service ufw start
+  when: "ufw_status.stdout.startswith('Status: inactive') and 'ENABLED=yes' in ufw_config.stdout"
