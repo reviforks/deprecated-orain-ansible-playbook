@@ -54,6 +54,8 @@
   with_items:
     - ssh/tcp
     - 60000:61000/udp
+    - 53/tcp
+    - 53/udp
   register: ufw_result
   changed_when: "ufw_result.stdout.startswith('Rule')"
 
