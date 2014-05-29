@@ -88,6 +88,8 @@
   
 - name: Add i18n.sh to boot
   command: update-rc.d i18n.sh defaults 99
+  register: update_rc_i18n
+  changed_when: "'System start/stop links for /etc/init.d/i18n.sh already exist.' not in update_rc_i18n.stdout"
 
 - name: Create mediawiki log directory
   command: mkdir -p /var/log/mediawiki/
