@@ -68,6 +68,7 @@
     - from any to 167.88.113.190 port 5070 proto udp
     - 6379
     - 9200
+    - 7001
   register: ufw_result
   changed_when: "'Rule added' in ufw_result.stdout"
 
