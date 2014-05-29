@@ -21,8 +21,8 @@
 - name: Copy my.cnf
   copy: src=my.cnf dest=/etc/my.cnf
 
-- name: Set firewall rule
-  command: ufw allow from 192.184.92.154 to any port 3306
+- name: Set firewall rule for prod4 mysql access
+  command: ufw allow from 167.88.113.190 to any port 3306
   register: ufw_result
   changed_when: "ufw_result.stdout.startswith('Rule')"
 
