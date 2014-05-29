@@ -1490,11 +1490,14 @@ switch( $wgDBname ) {
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		break;
-		case 'verkeerwiki':
+	case 'verkeerwiki':
  		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		break;
  	case 'russianmaltawiki':
- 		require_once( "$IP/extensions/Maps/Maps.php" );
+ 		//require_once( "$IP/extensions/Maps/Maps.php" );
+		break;
+	case 'jossewiki':
+		require_once( "$IP/extensions/Poem/Poem.php" );
 		break;
 }
 
