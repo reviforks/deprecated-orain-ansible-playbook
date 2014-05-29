@@ -1434,7 +1434,8 @@ switch( $wgDBname ) {
 		require_once("$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php");
 		require_once( "$IP/extensions/WikiForum/WikiForum.php" );
 		require_once("$IP/extensions/SocialProfile/UserStats/EditCount.php");
-		require_once( "$IP/extensions/Maps/Maps.php" );
+		// Uncaught exception 'Exception' with message 'You need to have Validator installed in order to use Maps' - Addshore
+		//require_once( "$IP/extensions/Maps/Maps.php" );
  		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		$wgUserProfileDisplay['friends'] = true;
 		$wgUserProfileDisplay['foes'] = true;
