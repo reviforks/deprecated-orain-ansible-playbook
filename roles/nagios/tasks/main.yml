@@ -9,7 +9,7 @@
   notify: Restart nagios3
 
 - name: Copy main config
-  copy: src={{item}} dest=/ect/nagios3
+  copy: src={{item}} dest=/etc/nagios3
   with_items:
   -  cgi.cfg
   -  commands.cfg
