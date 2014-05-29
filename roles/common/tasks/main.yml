@@ -53,7 +53,7 @@
   copy: src="./ufw/default" dest=/etc/default/ufw
 
 - name: Copy ufw files
-  copy: src=./ufw/{{item}} dest=/etc/ufw/{{item|basename}} owner=root group=root mode=770
+  copy: src=./ufw/{{item}} dest=/etc/ufw/{{item|basename}} owner=root group=root mode=700
   with_items:
     - after.rules
     - before.rules
