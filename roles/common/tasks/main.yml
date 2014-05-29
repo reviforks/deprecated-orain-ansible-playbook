@@ -49,6 +49,9 @@
   with_fileglob:
     - ./quickscripts/*
 
+- name: Copy default ufw settings
+  copy: src="./ufw/default" dest=/etc/default/ufw
+
 - name: Set firewall rules
   command: ufw allow {{item}}
   with_items:
