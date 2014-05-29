@@ -66,10 +66,8 @@
     - 53/tcp
     - 53/udp
     - from any to 167.88.113.190 port 5070 proto udp
-    - 6379/tcp
-    - 6379/udp
-    - 9200/tcp
-    - 9200/udp
+    - 6379
+    - 9200
   register: ufw_result
   changed_when: "'Rule added' in ufw_result.stdout"
 
