@@ -67,6 +67,7 @@
   register: ufw_config
   changed_when: False # never report as "changed"
 
+# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=664748
 - name: Disable logging (workaround for known bug in Debian 7)
   command: ufw logging off
   when: "ansible_lsb['codename'] == 'wheezy' and 'LOGLEVEL=off' not in ufw_config.stdout"
