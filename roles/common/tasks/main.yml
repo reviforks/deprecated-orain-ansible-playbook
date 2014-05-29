@@ -56,6 +56,7 @@
     - 60000:61000/udp
     - 53/tcp
     - 53/udp
+    - from any to 167.88.113.190 port 5070 proto udp
   register: ufw_result
   changed_when: "ufw_result.stdout.startswith('Rule')"
 
