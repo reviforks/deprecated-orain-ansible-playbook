@@ -1,6 +1,6 @@
 ---
 - name: Install nagios3
-  raw: apt-get install -y nagios3
+  apt: pkg=nagios3
 
 - name: Copy conf.d
   copy: src={{item}} dest=/etc/nagios3/conf.d
