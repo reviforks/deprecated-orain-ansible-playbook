@@ -30,5 +30,5 @@
 - name: Set firewall rule for prod4 elasticsearch access
   command: ufw allow from 167.88.113.190 to any port 9300
   register: ufw_result
-  changed_when: "ufw_result.stdout.startswith('Rule')"
+  changed_when: "'Rule added' in ufw_result.stdout"
 

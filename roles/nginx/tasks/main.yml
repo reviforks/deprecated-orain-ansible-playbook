@@ -50,5 +50,5 @@
     - http/tcp
     - https/tcp
   register: ufw_result
-  changed_when: "ufw_result.stdout.startswith('Rule')"
+  changed_when: "'Rule added' in ufw_result.stdout"
 
