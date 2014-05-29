@@ -23,6 +23,10 @@
 
 - name: Set firewall rule for prod4 mysql access
   command: ufw allow from 167.88.113.190 to any port 3306
-  register: ufw_result
-  changed_when: "ufw_result.stdout.startswith('Rule')"
+  register: ufw_result_prod4
+  changed_when: "ufw_result4.stdout.startswith('Rule')"
 
+- name: Set firewall rule for prod1(nagios) mysql access
+  command: ufw allow from 54.227.250.92 to any port 3306
+  register: ufw_result_prod1
+  changed_when: "ufw_result1.stdout.startswith('Rule')"
