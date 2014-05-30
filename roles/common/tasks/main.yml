@@ -69,6 +69,8 @@
     - 6379
     - 9200
     - 7001
+    - 993
+    - 587
   register: ufw_result
   changed_when: "'Rule added' in ufw_result.stdout"
 
