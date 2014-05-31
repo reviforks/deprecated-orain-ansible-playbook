@@ -45,7 +45,7 @@
   copy: src="./logrotate.d/ansible" dest=/etc/logrotate.d
 
 - name: Copy quickscripts
-  copy: src={{item}} dest=/root/{{item|basename}} owner=root group=root mode=770
+  template: src={{item}} dest=/root/{{item|basename}} owner=root group=root mode=770
   with_fileglob:
     - ./quickscripts/*
 
