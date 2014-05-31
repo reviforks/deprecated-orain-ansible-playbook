@@ -12,6 +12,7 @@
   roles:
     - nginx
     - php
+    - memcached
     - mediawiki
 
 - hosts: searchservers
