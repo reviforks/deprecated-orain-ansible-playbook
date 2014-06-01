@@ -1,0 +1,8 @@
+server_name _ orain.kr;
+
+root /usr/share/nginx/default;
+index index.html index.htm;
+
+location = / {
+	return 301 $scheme://meta.orain.org/wiki/orain.kr;
+}
