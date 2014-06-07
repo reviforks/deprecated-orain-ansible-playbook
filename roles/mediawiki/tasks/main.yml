@@ -8,7 +8,7 @@
 - name: Check out latest stable WMF branch of MediaWiki
   git: repo=https://github.com/Orain/mediawiki-core.git
        dest=/usr/share/nginx/.orain.org/w
-       version=REL1_22
+       version=REL1_23
   notify:
     - Rebuild localisation cache
     - Mediawiki submodule fileMode false
