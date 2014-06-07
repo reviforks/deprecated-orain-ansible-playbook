@@ -742,11 +742,6 @@ $wgConf->settings = array(
 		'mediawikitesterswiki' => true,
 		'patereswiki' => true,
 	),
-	'wmgUseSideBarMenu' => array(
-		'default' => false,
-		'extloadwiki' => true, // all extensions are loaded on this wiki
-		'allthetropeswiki' => true,
-	),
 	'wmgUseTabber' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -1617,11 +1612,6 @@ if ( $wmgUseQuiz ) {
 
 if ( $wmgUseReplaceText ) {
 	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
-}
-
-if ( $wmgUseSideBarMenu ) {
-	require_once( "$IP/extensions/Validator/ParamProcessor.php" );
-	require_once( "$IP/extensions/SideBarMenu/SideBarMenu.php" );
 }
 
 if ( $wmgUseTabber ) {
