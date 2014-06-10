@@ -9,3 +9,13 @@
 	create 660 www-data www-data
 }
 
+/var/log/mediawiki/debuglogs/*.log {
+	daily
+	missingok
+	rotate 7
+	compress
+	delaycompress
+	notifempty
+	su www-data www-data
+	create 660 www-data www-data
+}
