@@ -201,7 +201,7 @@ $wgConf->settings = array(
 
 	// Bigdelete
 	'wgDeleteRevisionsLimit' => array(
-		'default' => 1000, // Default bigdelete limit
+		'default' => 2000, // Default bigdelete limit
 	),
 	// /Bigdelete
 
@@ -973,7 +973,6 @@ $wgConf->settings = array(
 				'abusefilter-modify' => true,
 				'abusefilter-modify-restricted' => true,
 				'abusefilter-revert' => true,
-				'bigdelete' => false, // Prevent disruption by accidentally deleting large pages
 				'deletelogentry' => true,
 				'deleterevision' => true,
 				'massmessage' => false,
@@ -1273,6 +1272,7 @@ function efGetSiteParams( $conf, $wiki ) {
 $wgGroupPermissions['bureaucrat']['renameuser'] = false;
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgGroupPermissions['sysop']['importupload'] = false;
+$wgGroupPermissions['sysop']['bigdelete'] = false;
 $wgGroupPermissions['user']['upload'] = false;
 unset( $wgGroupPermissions['steward'] );
 
