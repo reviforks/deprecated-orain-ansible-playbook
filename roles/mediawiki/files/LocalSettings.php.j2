@@ -41,8 +41,8 @@ require_once( "$IP/extensions/CentralNotice/CentralNotice.php" );
 require_once( "$IP/extensions/CheckUser/CheckUser.php" );
 require_once( "$IP/extensions/Cite/Cite.php" );
 require_once( "$IP/extensions/Cite/SpecialCite.php" );
-require_once( "$IP/extensions/ConfirmEdit/Asirra.php" );
-require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
+//require_once( "$IP/extensions/ConfirmEdit/Asirra.php" );
+//require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 require_once( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
 require_once( "$IP/extensions/intersection/DynamicPageList.php" );
 require_once( "$IP/extensions/Gadgets/Gadgets.php" );
@@ -1435,6 +1435,8 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
 		require_once( "$IP/extensions/Arrays/Arrays.php" );
  		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
+ 		require_once( "$IP/extensions/ConfirmEdit/Asirra.php" );
+		require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
