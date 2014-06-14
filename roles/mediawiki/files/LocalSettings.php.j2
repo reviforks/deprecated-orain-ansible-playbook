@@ -1581,9 +1581,10 @@ if ( $wmgUseCirrus ) {
 	$wgSearchType = 'CirrusSearch';
 }
 
-if ( $wmgUseDPLforum ) {
-	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
-}
+// Disable per a bunch of exception error.s Need to debug --John
+//if ( $wmgUseDPLforum ) {
+//	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
+//}
 
 if ( $wmgUseEchoPack ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
