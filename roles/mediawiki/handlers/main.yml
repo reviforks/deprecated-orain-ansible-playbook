@@ -1,5 +1,5 @@
 - name: Rebuild localisation cache
-  command: /usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki
+  command: /usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki metawiki && /usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki
 
 - name: Clear APC cache
   command: /usr/bin/wget -qO- {{apc_clear_script}}
