@@ -1601,9 +1601,10 @@ if ( $wmgUseIRCRC ) {
 	$wgAbuseFilterNotifications = "udp";
 }
 
-if ( $wmgUseLiquidThreads ) {
-	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
-}
+// Disable per a bunch of exceptions. Need to debug --John
+//if ( $wmgUseLiquidThreads ) {
+//	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
+//}
 
 if ( $wmgUseOrainFooter ) {
 	$wgFooterIcons['poweredby']['orain'] = array(
