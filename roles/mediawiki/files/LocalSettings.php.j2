@@ -716,13 +716,13 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'jossewiki' => true,
 	),
-	//'wmgUseLiquidThreads' => array( // Disable per a bunch of exceptions. Need to debug --John
-	//	'default' => false,
-	//	'allthetropeswiki' => true,
-	//	'extloadwiki' => true, // all extensions are loaded on this wiki
-	//	'mediawikitesterswiki' => true,
-	//	'wikinambaswiki' => true,
-	//),
+	'wmgUseLiquidThreads' => array(
+		'default' => false,
+	//	'allthetropeswiki' => true, // Disable per a bunch of exceptions. Need to debug --John
+		'extloadwiki' => true, // all extensions are loaded on this wiki
+	//	'mediawikitesterswiki' => true, // Disable per a bunch of exceptions. Need to debug --John
+	//	'wikinambaswiki' => true, // Disable per a bunch of exceptions. Need to debug --John
+	),
 	'wmgUseOrainFooter' => array(
 		'default' => true,
 		'encyclopedianationalwiki' => false,
@@ -1601,10 +1601,9 @@ if ( $wmgUseIRCRC ) {
 	$wgAbuseFilterNotifications = "udp";
 }
 
-// Disable per a bunch of exceptions. Need to debug --John
-//if ( $wmgUseLiquidThreads ) {
-//	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
-//}
+if ( $wmgUseLiquidThreads ) {
+	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
+}
 
 if ( $wmgUseOrainFooter ) {
 	$wgFooterIcons['poweredby']['orain'] = array(
