@@ -659,7 +659,7 @@ $wgConf->settings = array(
 	),
 	'wgThanksConfirmationRequired' => array(
 		'default' => true,
-		'spiralwiki' => false, // required for testing --addshore qgil
+		'spiralwiki' => false,
 		'testwiki' => false,
 	),
 	'wgScribuntoUseGeSHi' => array(
@@ -696,15 +696,15 @@ $wgConf->settings = array(
 		'extloadwiki' => true, // All extensions enabled by default
 		'wikiconstituciowiki' => true,
 	),
-	//'wmgUseDPLforum' => array( // Disable per a bunch of exception error.s Need to debug --John
-	//	'default' => false,
-	//	'extloadwiki' => true, // all extensions are loaded on this wiki
-	//	'allthetropeswiki' => true,
-	//	'frmodamobwiki' => true,
-	//	'mediawikitesterswiki' => true,
-	//	'metawiki' => true,
-	//	'opensourcelearningwiki' => true,
-	//),
+	'wmgUseDPLforum' => array(
+		'default' => false,
+	//	'extloadwiki' => true, // all extensions are loaded on this wiki // Disabled due to "" is not a valid magic word for "useliquidthreads" --Addshore
+	//	'allthetropeswiki' => true, // Disable per a bunch of exceptions. Need to debug --John
+	//	'frmodamobwiki' => true, // Disable per a bunch of exceptions. Need to debug --John
+	//	'mediawikitesterswiki' => true, // Disable per a bunch of exceptions. Need to debug --John
+	//	'metawiki' => true, // Disable per a bunch of exceptions. Need to debug --John
+	//	'opensourcelearningwiki' => true, // Disable per a bunch of exceptions. Need to debug --John
+	),
 	'wmgUseEchoPack' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -719,7 +719,7 @@ $wgConf->settings = array(
 	'wmgUseLiquidThreads' => array(
 		'default' => false,
 	//	'allthetropeswiki' => true, // Disable per a bunch of exceptions. Need to debug --John
-		'extloadwiki' => true, // all extensions are loaded on this wiki
+	//	'extloadwiki' => true, // all extensions are loaded on this wiki // Disabled due to "" is not a valid magic word for "useliquidthreads" --Addshore
 	//	'mediawikitesterswiki' => true, // Disable per a bunch of exceptions. Need to debug --John
 	//	'wikinambaswiki' => true, // Disable per a bunch of exceptions. Need to debug --John
 	),
@@ -1581,10 +1581,9 @@ if ( $wmgUseCirrus ) {
 	$wgSearchType = 'CirrusSearch';
 }
 
-// Disable per a bunch of exception error.s Need to debug --John
-//if ( $wmgUseDPLforum ) {
-//	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
-//}
+if ( $wmgUseDPLforum ) {
+	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
+}
 
 if ( $wmgUseEchoPack ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
