@@ -116,11 +116,6 @@ define( 'NS_MOD', 260 );
 define( 'NS_MOD_TALK', 261 );
 // /levelswiki
 
-// metawiki
-define( 'NS_TECH', 526);
-define( 'NS_TECH_TALK', 527);
-// /metawiki
-
 // wikinambaswiki
 define( 'NS_OFICINA', 508 );
 define( 'NS_OFICINA_TALK', 509 );
@@ -775,7 +770,6 @@ $wgConf->settings = array(
 	'wgContentNamespaces' => array(
 		'botwiki' => array( NS_BOT, NS_FRAMEWORK, NS_SCRIPT ),
 		'levelswiki' => array( NS_GUIDE, NS_MOD ),
-		'metawiki' => array( NS_TECH ),
 	),
 	'wgExtraNamespaces' => array(
 		'allthetropeswiki' => array(
@@ -809,13 +803,6 @@ $wgConf->settings = array(
 			NS_GUIDE_TALK => 'Guide_talk',
 			NS_MOD => 'Mod',
 			NS_MOD_TALK => 'Mod_talk',
-		),
-		'metawiki' => array(
-			NS_TECH => 'Tech',
-			NS_TECH_TALK => 'Tech_talk',
-		),
-		'techwiki' => array(
-		    NS_TECH => 'Tech',
 		),
 		'wikinambaswiki' => array(
 			NS_OFICINA => 'Oficina',
@@ -878,7 +865,6 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			NS_MAIN => true,
-			NS_TECH => true,
 		),
 		'+reviwiki' => array(
 			NS_MAIN => true,
