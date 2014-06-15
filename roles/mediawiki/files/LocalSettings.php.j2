@@ -1669,6 +1669,8 @@ if ( $wmgArchivedWiki ) {
 	$wgReadOnly = "Archived wiki";
 }
 
+require_once( "$IP/extensions/LocalisationCacheHack/LocalisationCacheHack.php" ); // Make sure all LC is overwritten. A MAJOR hack here! -John
+
 // Hack
 $wgHooks['ParserFirstCallInit'][] = 'ifUserCanDebug';
 function ifUserCanDebug() {
