@@ -1570,6 +1570,7 @@ if ( $wmgUseCirrus ) {
 
 if ( $wmgUseDPLforum ) {
 	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
+	require_once( "$IP/extensions/LocalisationCacheHack/LocalisationCacheHack.php" ); // This works. I don't know why, but it does. --John
 }
 
 if ( $wmgUseEchoPack ) {
