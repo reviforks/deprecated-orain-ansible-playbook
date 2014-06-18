@@ -82,8 +82,8 @@ $wgConf->localVHosts = array( '{{mysql_address}}' );
 
 // extension/DPLforum
 // @note These are defined automatically by the DPLforum entry file
-// define( 'NS_FORUM', 110 );
-// define( 'NS_FORUM_TALK', 111 );
+define( 'NS_FORUM', 110 );
+define( 'NS_FORUM_TALK', 111 );
 // / extension/DPLforum
 
 // allthetropeswiki
@@ -219,7 +219,7 @@ $wgConf->settings = array(
 	'wgEnableSidebarCache' => array(
 		'default' => true,
 		'spiralwiki' => false, // This broke displaying of Collection portlets addshore 20-feb-2014 issue #173
-	),
+	),n
 	'wgHitcounterUpdateFreq' => array(
 		'default' => 20,
 	),
@@ -775,6 +775,8 @@ $wgConf->settings = array(
 		'allthetropeswiki' => array(
 			NS_TROPEWORKSHOP => 'Trope_Workshop',
 			NS_TROPEWORKSHOP_TALK => 'Trope_Workshop_talk',
+			NS_FORUM => 'Forum',
+			NS_FORUM_TALK => 'Forum_talk',
 		),
 		'botwiki' => array(
 			NS_BOT => 'Bot',
@@ -797,6 +799,10 @@ $wgConf->settings = array(
 			NS_PORTAIL_TALK => 'Discussion_Portail',
 			NS_PROJET => 'Projet',
 			NS_PROJET_TALK => 'Discussion_Projet',
+		),
+		'metawiki' => array(
+			NS_FORUM => 'Forum',
+			NS_FORUM_TALK => 'Forum_talk',
 		),
 		'levelswiki' => array(
 			NS_GUIDE => 'Guide',
@@ -838,6 +844,7 @@ $wgConf->settings = array(
 		),
 		'+allthetropeswiki' => array(
 			NS_MAIN => true,
+			NS_FORUM => true,
 		),
 		'+botwiki' => array(
 			NS_BOT => true,
@@ -865,6 +872,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			NS_MAIN => true,
+			NS_FORUM => true,
 		),
 		'+reviwiki' => array(
 			NS_MAIN => true,
