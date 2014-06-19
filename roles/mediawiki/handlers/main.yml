@@ -1,7 +1,7 @@
 - name: Rebuild localisation cache
   command: /usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki {{item}}
   with_items:
-    - metawiki
+#    - metawiki # Only uncomment this if things break
     - extloadwiki
 
 - name: Clear APC cache
