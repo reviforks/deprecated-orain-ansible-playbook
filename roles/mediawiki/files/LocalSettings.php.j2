@@ -81,9 +81,9 @@ $wgConf->localVHosts = array( '{{mysql_address}}' );
  */
 
 // extension/DPLforum
-// @note These are defined automatically by the DPLforum entry file
-define( 'NS_FORUM', 110 );
-define( 'NS_FORUM_TALK', 111 );
+// @note These are defined automatically by the DPLforum entry file. They SHOULD NOT be defined here
+//define( 'NS_FORUM', 110 );
+//define( 'NS_FORUM_TALK', 111 );
 // / extension/DPLforum
 
 // allthetropeswiki
@@ -693,7 +693,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseDPLforum' => array(
 		'default' => false,
-	//	'extloadwiki' => true, // all extensions are loaded on this wiki
+		'extloadwiki' => true, // all extensions are loaded on this wiki
 	//	'allthetropeswiki' => true,
 	//	'frmodamobwiki' => true,
 	//	'mediawikitesterswiki' => true,
@@ -714,7 +714,7 @@ $wgConf->settings = array(
 	'wmgUseLiquidThreads' => array(
 		'default' => false,
 	//	'allthetropeswiki' => true,
-	//	'extloadwiki' => true, // all extensions are loaded on this wiki
+		'extloadwiki' => true, // all extensions are loaded on this wiki
 	//	'mediawikitesterswiki' => true,
 	//	'wikinambaswiki' => true,
 	),
@@ -775,8 +775,8 @@ $wgConf->settings = array(
 		'allthetropeswiki' => array(
 			NS_TROPEWORKSHOP => 'Trope_Workshop',
 			NS_TROPEWORKSHOP_TALK => 'Trope_Workshop_talk',
-			NS_FORUM => 'Forum',
-			NS_FORUM_TALK => 'Forum_talk',
+			110 => 'Forum', // NS_FORUM (We might not have the const so use the value)
+			111 => 'Forum_talk', // NS_FORUM_TALK (We might not have the const so use the value)
 		),
 		'botwiki' => array(
 			NS_BOT => 'Bot',
@@ -801,8 +801,8 @@ $wgConf->settings = array(
 			NS_PROJET_TALK => 'Discussion_Projet',
 		),
 		'metawiki' => array(
-			NS_FORUM => 'Forum',
-			NS_FORUM_TALK => 'Forum_talk',
+			110 => 'Forum', // NS_FORUM (We might not have the const so use the value)
+			111 => 'Forum_talk', // NS_FORUM_TALK (We might not have the const so use the value)
 		),
 		'levelswiki' => array(
 			NS_GUIDE => 'Guide',
@@ -844,7 +844,7 @@ $wgConf->settings = array(
 		),
 		'+allthetropeswiki' => array(
 			NS_MAIN => true,
-			NS_FORUM => true,
+			110 => true, // NS_FORUM (We might not have the const so use the value)
 		),
 		'+botwiki' => array(
 			NS_BOT => true,
@@ -872,7 +872,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			NS_MAIN => true,
-			NS_FORUM => true,
+			110 => true, // NS_FORUM (We might not have the const so use the value)
 		),
 		'+reviwiki' => array(
 			NS_MAIN => true,
