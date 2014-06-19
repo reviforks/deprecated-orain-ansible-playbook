@@ -1364,23 +1364,23 @@ switch( $wgDBname ) {
 		//require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
-	//	require_once( "$IP/extensions/CSS/CSS.php" );
+		require_once( "$IP/extensions/CSS/CSS.php" );
 		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
-	//	require_once( "$IP/extensions/VoteNY/Vote.php" );
+		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		$wgMultiBoilerplateOptions = false;
 		$wgMultiBoilerplateDiplaySpecialPage = true;
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
-		//require_once( "$IP/extensions/MyVariables/MyVariables.php" );
+		//require_once( "$IP/extensions/MyVariables/MyVariables.php" ); // Disabled PER KUDU
 		// Configurations
 		$wgSectionHideShowtop = 1;
 		$wgRestrictDisplayTitle = false;
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
-	//	require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
-		//require_once("$IP/extensions/SubPageList3/SubPageList3.php");
+		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
+		require_once("$IP/extensions/SubPageList3/SubPageList3.php");
 		require_once( "$IP/extensions/Tabs/Tabs.php" );
-	//	require_once( "$IP/extensions/RegexFun/RegexFun.php" );
-	//	require_once( "$IP/extensions/Arrays/Arrays.php" );
+		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
+		require_once( "$IP/extensions/Arrays/Arrays.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" ); 
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		break;
@@ -1389,7 +1389,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
 		break;
 	case 'foodopediawiki':
-		//require_once( "$IP/extensions/Comments/Comment.php" );
+		require_once( "$IP/extensions/Comments/Comment.php" );
 		break;
 	case 'loginwiki':
 		// Blank comment to keep this in the statement per John's request
@@ -1401,7 +1401,7 @@ switch( $wgDBname ) {
 		$wgCategoryTreeMaxChildren = 2000;
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
-		//require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
+		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
