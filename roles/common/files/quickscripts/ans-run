@@ -1,5 +1,9 @@
 #!/bin/sh
 #Runs the ansible update
+#
+#NOTE: this script is used by a cronjob added by ansible named "Automatic Run"
+
+echo "Updating server from ansible-playbook"
 
 HOST=$(hostname)
 

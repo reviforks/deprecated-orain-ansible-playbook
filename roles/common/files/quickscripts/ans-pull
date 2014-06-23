@@ -1,4 +1,8 @@
 #!/bin/sh
 #Pulls the latest anisble playbook from github
+#
+#NOTE: this script is used by a cronjob added by ansible named "Automatic Run"
+
+echo "Pulling ansible from github"
 
 ansible all -i "localhost," -c local -m git -a "name=https://github.com/Orain/ansible-playbook.git dest=/root/ansible-playbook version=master"

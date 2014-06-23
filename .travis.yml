@@ -18,8 +18,7 @@ script:
   # Check playbook syntax
   - sudo ansible-playbook -i production local.yml --syntax-check
   # Check php script syntax
-  - php -l roles/mediawiki/files/LocalSettings.php.j2
-  - php -l roles/mediawiki/files/StartProfiler.php
+  - bash .travis.phplint.sh
 
 notifications:
   irc:
