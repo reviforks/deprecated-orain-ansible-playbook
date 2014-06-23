@@ -49,6 +49,12 @@
   with_fileglob:
     - ./quickscripts/*
 
+- name: Create a cronjob for auto running of ansible
+  cron: name="Automatic Run"
+        user="root"
+        minute=*/10
+        job="/root/ans-pull && /root/ans-run"
+
 - name: Copy default ufw default settings
   copy: src="./ufw/default" dest=/etc/default/ufw
 
