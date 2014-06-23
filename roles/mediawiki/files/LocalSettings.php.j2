@@ -188,8 +188,6 @@ $wgConf->settings = array(
 	// BetaFeatures
 	'wmgUseBetaFeatures' => array(
 		'default' => false,
-	//	'allthetropeswiki' => true,
-	//	'extloadwiki' => true,
 	),
 	// /BetaFeatures
 
@@ -283,7 +281,7 @@ $wgConf->settings = array(
 		'default' => 'loginwiki',
 	),
 	'wgCentralAuthSilentLogin' => array(
-		'default' => false, // default value, set to false temporarily -John
+		'default' => true,
 	),
 	'wgDisableUnmergedEditing' => array(
 		'default' => false,
@@ -314,7 +312,7 @@ $wgConf->settings = array(
 		'metawiki' => 'orain',
 		'extloadwiki' => 'orain',
 		'loginwiki' => 'orain',
-		// private and closed groups are set further down
+		// NOTE: private and closed groups are set further down
 	),
 	// /CentralNotice
 
@@ -708,7 +706,7 @@ $wgConf->settings = array(
 		'computechwiki' => true,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
-		'metawiki' => true, // Might be nice -- John
+		'metawiki' => true,
 		'testwiki' => true,
 		'spiralwiki' => true,
 		'jossewiki' => true,
@@ -777,8 +775,8 @@ $wgConf->settings = array(
 		'allthetropeswiki' => array(
 			NS_TROPEWORKSHOP => 'Trope_Workshop',
 			NS_TROPEWORKSHOP_TALK => 'Trope_Workshop_talk',
-			NS_FORUM_ORAIN => 'Forum', // NS_FORUM (We might not have the const so use the value)
-			NS_FORUM_TALK_ORAIN => 'Forum_talk', // NS_FORUM_TALK (We might not have the const so use the value)
+			NS_FORUM_ORAIN => 'Forum', // NS_FORUM_ORAIN should === NS_FORUM
+			NS_FORUM_TALK_ORAIN => 'Forum_talk', // NS_FORUM_TALK_ORAIN should === NS_FORUM_TALK
 		),
 		'botwiki' => array(
 			NS_BOT => 'Bot',
@@ -803,8 +801,8 @@ $wgConf->settings = array(
 			NS_PROJET_TALK => 'Discussion_Projet',
 		),
 		'metawiki' => array(
-			NS_FORUM_ORAIN => 'Forum', // NS_FORUM (We might not have the const so use the value)
-			NS_FORUM_TALK_ORAIN => 'Forum_talk', // NS_FORUM_TALK (We might not have the const so use the value)
+			NS_FORUM_ORAIN => 'Forum', // NS_FORUM_ORAIN should === NS_FORUM
+			NS_FORUM_TALK_ORAIN => 'Forum_talk', // NS_FORUM_TALK_ORAIN should === NS_FORUM_TALK
 		),
 		'levelswiki' => array(
 			NS_GUIDE => 'Guide',
@@ -846,7 +844,7 @@ $wgConf->settings = array(
 		),
 		'+allthetropeswiki' => array(
 			NS_MAIN => true,
-			NS_FORUM_ORAIN => true, // NS_FORUM (We might not have the const so use the value)
+			NS_FORUM_ORAIN => true, // NS_FORUM_ORAIN should === NS_FORUM
 		),
 		'+botwiki' => array(
 			NS_BOT => true,
@@ -874,7 +872,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			NS_MAIN => true,
-			NS_FORUM_ORAIN => true, // NS_FORUM (We might not have the const so use the value)
+			NS_FORUM_ORAIN => true, // NS_FORUM_ORAIN should === NS_FORUM
 		),
 		'+reviwiki' => array(
 			NS_MAIN => true,
@@ -1373,7 +1371,6 @@ switch( $wgDBname ) {
 		$wgMultiBoilerplateOptions = false;
 		$wgMultiBoilerplateDiplaySpecialPage = true;
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
-		//require_once( "$IP/extensions/MyVariables/MyVariables.php" ); // Disabled PER KUDU
 		// Configurations
 		$wgSectionHideShowtop = 1;
 		$wgRestrictDisplayTitle = false;
@@ -1407,8 +1404,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-		// require_once( "$IP/extensions/SectionHide/SectionHide.php" ); // Disabled by Kudu, Requested by Arcane
-		// $wgSectionHideShowtop = 1; // Disabled per the above
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 		break;
 	case 'spiralwiki':
@@ -1433,7 +1428,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
-		//require_once( "$IP/extensions/MyVariables/MyVariables.php" ); // Disabled PER KUDU
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 		require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
@@ -1450,9 +1444,6 @@ switch( $wgDBname ) {
 		break;
 	case 'verkeerwiki':
  		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
-		break;
- 	case 'russianmaltawiki':
- 		//require_once( "$IP/extensions/Maps/Maps.php" );
 		break;
 	case 'jossewiki':
 		require_once( "$IP/extensions/Poem/Poem.php" );
@@ -1612,7 +1603,7 @@ if ( $wmgUseOrainFooter ) {
 
 if ( $wmgUseMath ) {
 	require_once( "$IP/extensions/Math/Math.php" );
-	$wgMathDisableTexFilter = true; // This is as we didnt Compile texvccheck - addshore
+	$wgMathDisableTexFilter = true; // This is as we didn't Compile texvccheck - addshore
 	// Use MathJax? addshore
 	$wgUseMathJax = true;
 	$wgDefaultUserOptions['mathJax'] = true;
