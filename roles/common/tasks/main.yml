@@ -94,3 +94,5 @@
   command: ufw --force enable
   when: "ufw_status.stdout.startswith('Status: inactive') or 'ENABLED=yes' not in ufw_config.stdout"
 
+- name: Create user "nagios"
+  user: name=nagios shell=/bin/zsh
