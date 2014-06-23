@@ -23,7 +23,7 @@
   changed_when: composer_update_output.stdout.find('You are already using composer version') == -1
 
 - name: Validate LocalSettings
-  shell: php -l /root/ansible-playbook/roles/mediawiki/files/LocalSettings.php.j2
+  shell: php -l /root/ansible-playbook/roles/mediawiki/files/localsettings/LocalSettings.php.j2
   register: mw_localsettings_valid
   failed_when: mw_localsettings_valid.rc != 0
   changed_when: False # never report as "changed"
@@ -31,7 +31,7 @@
 - name: Copy MediaWiki settings from templates
   template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}} backup=yes
   with_fileglob:
-    - ./*.php.j2
+    - ./localsettings/*.php.j2
   notify:
     - Rebuild localisation cache
     - Clear APC cache
