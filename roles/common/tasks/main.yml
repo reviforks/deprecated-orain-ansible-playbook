@@ -11,6 +11,7 @@
     - lsof
     - lynis
     - mosh
+    - nagios-nrpe-server
     - nano
     - netcat
     - python3
