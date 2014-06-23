@@ -1,3 +1,6 @@
 ---
 - name: Restart nagios3
   service: name=nagios3 state=restarted
+
+- name: Restart nrpe-plugin
+  service: name=nagios-nrpe-plugin state=restarted
