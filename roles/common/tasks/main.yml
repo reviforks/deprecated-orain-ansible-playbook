@@ -39,7 +39,7 @@
   changed_when: False # never report as "changed"
 
 - name: Copy backup.sh
-  template: src=backup.sh dest=/root/backup.sh
+  template: src=backup.sh dest=/root/backup.sh  owner=root group=root mode=770
 
 - name: Create a cronjob for backup.sh
   cron: name="backup.sh"
