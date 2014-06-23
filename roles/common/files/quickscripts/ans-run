@@ -1,0 +1,13 @@
+#!/bin/sh
+#Runs the ansible update
+
+HOST=$(hostname)
+
+case $HOST in
+  (prod4) limit="prod4.orain.org";;
+  (prod3) limit="prod3.orain.org";;
+  (ip-10-243-33-50) limit="prod1.orain.org";;
+  (*)   echo Failed to match host using $HOST && exit 1;;
+esac
+
+ansible-playbook -c local --limit "$limit" /root/ansible-playbook/local.yml -i "/root/ansible-playbook/production"
