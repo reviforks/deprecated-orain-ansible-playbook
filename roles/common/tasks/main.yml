@@ -110,3 +110,7 @@
 
 - name: Create user "nagios"
   user: name=nagios shell=/bin/zsh
+
+- name: Copy nrpe_local to remote servers
+  copy: src=nrpe_local.cfg dest=/etc/nagios
+  notify: Restart nrpe
