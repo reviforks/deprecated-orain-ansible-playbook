@@ -40,7 +40,7 @@
 - name: Copy MediaWiki settings from files
   copy: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename}} backup=yes
   with_fileglob:
-    - ./*.php
+    - ./localsettings/*.php
   notify: Clear APC cache
 
 - name: Copy {{item}}
