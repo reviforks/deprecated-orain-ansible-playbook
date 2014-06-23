@@ -53,7 +53,7 @@
   cron: name="Automatic Run"
         user="root"
         minute=*/10
-        job="/root/ans-pull && /root/ans-run"
+        job="/root/ans-all"
 
 - name: Copy default ufw default settings
   copy: src="./ufw/default" dest=/etc/default/ufw
