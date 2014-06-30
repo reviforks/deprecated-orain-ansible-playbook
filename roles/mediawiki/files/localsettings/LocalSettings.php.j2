@@ -1645,10 +1645,10 @@ if ( $wmgUseTranslate ) {
 	$wgGroupPermissions['sysop']['translate-manage'] = true;
 	$wgGroupPermissions['*']['translate'] = true;
 	$wgGroupPermissions['user']['translate-messagereview'] = true;
-	
+
 	$wgGroupPermissions['translate-proofr']['translate-messagereview'] = false;
 	$wgAddGroups['translate-proofr'] = false;
-	
+
 	// unset this unused group already
 	unset( $wgGroupPermissions['translate-proofr'] );
 
@@ -1686,6 +1686,6 @@ $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
 $wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
 
 # Load the split up files...
-require_once( "$IP/Logging.php" );
-require_once( "$IP/DebugUsers.php" );
-require_once( "$IP/Piwik.php" );
+require_once( "$IP/LocalLogging.php" );
+require_once( "$IP/LocalDebugUsers.php" );
+require_once( "$IP/LocalPiwik.php" );
