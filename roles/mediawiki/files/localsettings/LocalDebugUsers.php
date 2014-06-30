@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This allows users that are allow to 'debug' to have extra debugging infomation
+ * This allows users that are allow to 'debug' to have extra debugging information
  */
 
 $wgHooks['ParserFirstCallInit'][] = 'ifUserCanDebug';
