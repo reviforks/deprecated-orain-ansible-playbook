@@ -124,6 +124,10 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		require_once( "$IP/extensions/ConfirmEdit/Asirra.php" );
 		require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
+		require_once( "$IP/extensions/TocTree/TocTree.php" );
+		require_once( "$IP/extensions/RefreshSpecial/RefreshSpecial.php" );
+		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
+		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 
 		break;
 	case 'cpsinfowiki':
