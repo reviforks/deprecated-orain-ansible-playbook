@@ -1454,6 +1454,7 @@ $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
 $wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
 
 # Load the split up files...
+require_once( "$IP/LocalExtensions.php" );
 require_once( "$IP/LocalLogging.php" );
 require_once( "$IP/LocalDebugUsers.php" );
 require_once( "$IP/LocalPiwik.php" );
