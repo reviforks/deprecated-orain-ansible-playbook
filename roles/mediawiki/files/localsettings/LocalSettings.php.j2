@@ -92,11 +92,8 @@ define( 'NS_PROJET', 518 );
 define( 'NS_PROJET_TALK', 519 );
 // /frmodamobwiki
 
-# Load the split up files...
-require_once( "$IP/LocalExtensions.php" );
-require_once( "$IP/LocalLogging.php" );
-require_once( "$IP/LocalDebugUsers.php" );
-require_once( "$IP/LocalPiwik.php" );
+# Load the 'globalextensions' here
+require_once( "$IP/GlobalExtensions.php" );
 
 /**
  * NOTE: When changing the below variable all caches need to be updated otherwise
@@ -1415,3 +1412,9 @@ $wgLoadScript = "//$wmgUploadHostname/$wmgHostname/load.php";
 $wgLocalisationCacheConf['manualRecache'] = true;
 $wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
 $wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
+
+# Load the split up files...
+require_once( "$IP/LocalExtensions.php" );
+require_once( "$IP/LocalLogging.php" );
+require_once( "$IP/LocalDebugUsers.php" );
+require_once( "$IP/LocalPiwik.php" );
