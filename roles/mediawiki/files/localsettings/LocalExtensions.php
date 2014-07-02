@@ -90,6 +90,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
 		require_once( "$IP/extensions/ParserFun/ParserFun.php" );
+		require_once( "$IP/extensions/Validator/Validator.php" );
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
