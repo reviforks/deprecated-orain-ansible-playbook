@@ -87,7 +87,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RefreshSpecial/RefreshSpecial.php" );
 		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
-
+		require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
+		require_once( "$IP/extensions/PageTools/PageTools.php" );
+		require_once( "$IP/extensions/ParserFun/ParserFun.php" );
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
