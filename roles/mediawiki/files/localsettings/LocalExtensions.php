@@ -28,6 +28,8 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RefreshSpecial/RefreshSpecial.php" );
 		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
+		require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
+                require_once( "$IP/extensions/PageTools/PageTools.php" );
 		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
@@ -89,8 +91,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 		require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
-		require_once( "$IP/extensions/ParserFun/ParserFun.php" );
-		require_once( "$IP/extensions/Validator/Validator.php" );
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
