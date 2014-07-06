@@ -35,6 +35,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
 		break;
+	case 'detectiveconanwiki':
+		require_once( "$IP/extensions/Widgets/Widgets.php" );
+		break;
 	case 'foodopediawiki':
 		require_once( "$IP/extensions/Comments/Comment.php" );
 		break;
@@ -91,6 +94,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 		//require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
+		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
