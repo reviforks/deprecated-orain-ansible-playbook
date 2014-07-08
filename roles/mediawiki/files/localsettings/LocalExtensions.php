@@ -104,6 +104,7 @@ switch( $wgDBname ) {
 		break;
 	case 'jossewiki':
 		require_once( "$IP/extensions/Poem/Poem.php" );
+		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		break;
 }
 
