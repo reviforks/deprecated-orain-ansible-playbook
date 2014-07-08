@@ -35,6 +35,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
 		break;
+	case 'deguwiki':
+		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
+		break;
 	case 'detectiveconanwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		break;
@@ -95,6 +98,7 @@ switch( $wgDBname ) {
 		//require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
+		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
