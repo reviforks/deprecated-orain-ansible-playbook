@@ -32,4 +32,3 @@
     - ../orain_private/vars.yml
   roles:
     - nagios
-    - elasticsearch
