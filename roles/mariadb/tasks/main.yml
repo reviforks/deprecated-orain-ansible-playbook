@@ -6,8 +6,8 @@
   apt_repository: repo='deb http://ftp.osuosl.org/pub/mariadb/repo/5.5/debian wheezy main'
 
 - name: Set MariaDB root password
-  shell: "debconf-set-selections <<< 'mysql-server-10.0 mysql-server/root_password password {{mysql_root_password}}'"
-  shell: "debconf-set-selections <<< 'mysql-server-10.0 mysql-server/root_password_again password {{mysql_root_password}}'"
+  command: "debconf-set-selections <<< 'mysql-server-10.0 mysql-server/root_password password {{mysql_root_password}}'"
+  command: "debconf-set-selections <<< 'mysql-server-10.0 mysql-server/root_password_again password {{mysql_root_password}}'"
 
 - name: Install MariaDB
   apt: pkg=mariadb-server
