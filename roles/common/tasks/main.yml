@@ -11,6 +11,7 @@
     - lsof
     - lynis
     - mosh
+    - mysql-client # Needed for testing mysql connectivity between instance - Addshore
     - nagios-nrpe-server
     - nano
     - netcat
