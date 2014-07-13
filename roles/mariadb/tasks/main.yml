@@ -19,7 +19,10 @@
 #               priv=*.*:ALL
 
 - name: Copy my.cnf
-  copy: src=my.cnf dest=/etc/my.cnf
+  copy: src=my.cnf dest=/etc/mysql/my.cnf
+
+- name: Delete the old my.cnf
+  command: rm /etc/my.cfg removes=/etc/my.cfg
 
 - name: Set firewall rule for prod4 mysql access
   command: ufw allow from 167.88.113.190 to any port 3306
