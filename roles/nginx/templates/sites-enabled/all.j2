@@ -23,7 +23,7 @@ server {
 	listen [::]:80 {{ listen_parameters() }};
 {{ favicon_config() }}
 
-	add_header Content-Security-Policy "default-src 'self' http://d326vv62q24mzw.cloudfront.net; script-src 'self' http://d326vv62q24mzw.cloudfront.net http://bits.orain.org http://login.orain.org 'unsafe-inline' 'unsafe-eval' http://bits.wikimedia.org http://challenge.asirra.com; style-src 'self' http://d326vv62q24mzw.cloudfront.net 'unsafe-inline' http://fonts.googleapis.com; font-src http://*.orain.org https://themes.googleusercontent.com; frame-src http://*.youtube.com; object-src http://*.youtube.com; img-src 'self' data: http://d326vv62q24mzw.cloudfront.net http://upload.wikimedia.org http://challenge.asirra.com http://s3.amazonaws.com http//static.orain.org";
+	add_header Content-Security-Policy "default-src 'self' http://d326vv62q24mzw.cloudfront.net; script-src 'self' http://d326vv62q24mzw.cloudfront.net http://bits.orain.org http://login.orain.org 'unsafe-inline' 'unsafe-eval' http://bits.wikimedia.org http://challenge.asirra.com; style-src 'self' http://d326vv62q24mzw.cloudfront.net 'unsafe-inline' http://fonts.googleapis.com; font-src http://*.orain.org https://themes.googleusercontent.com; frame-src http://*.youtube.com; object-src http://*.youtube.com; img-src 'self' data: http://d326vv62q24mzw.cloudfront.net http://upload.wikimedia.org http://challenge.asirra.com http://s3.amazonaws.com http://static.orain.org";
 }
 
 server {
