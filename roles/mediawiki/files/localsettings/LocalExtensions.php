@@ -121,10 +121,10 @@ switch( $wgDBname ) {
             			$moduleInfos["skins.vector.collapsibleNav"] = array();
             			$mi->setValue($resourceLoader, $moduleInfos);
         			$mi->setAccessible(false);
-			 }
-        catch (Exception $e) {
-            exit("Error disabling collapsible sidebar (".basename(__FILE__)." line ".__LINE__."). This is supported only on MediaWiki 1.23, there is no need for this on MediaWiki 1.24.");
-        }
+			}
+        		catch (Exception $e) {
+            			exit("Error disabling collapsible sidebar (".basename(__FILE__)." line ".__LINE__."). This is supported only on MediaWiki 1.23, there is no need for this on MediaWiki 1.24.");
+        		}
 }
 		break;
 }
