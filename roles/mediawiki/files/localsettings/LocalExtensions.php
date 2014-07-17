@@ -125,7 +125,7 @@ switch( $wgDBname ) {
         		catch (Exception $e) {
             			exit("Error disabling collapsible sidebar (".basename(__FILE__)." line ".__LINE__."). This is supported only on MediaWiki 1.23, there is no need for this on MediaWiki 1.24.");
         		}
-}
+		}
 		break;
 }
 
