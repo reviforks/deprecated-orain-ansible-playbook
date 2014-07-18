@@ -37,3 +37,11 @@ location ^~ /wiki {
 	fastcgi_pass unix:/var/run/php5-fpm.sock;
 }
 
+error_page 500 /500.html;
+location = /500.html {
+	root /usr/share/nginx/errorpages/500.html;
+}
+error_page 502 /502.html;
+location = /502.html {
+	root /usr/share/nginx/errorpages/502.html;
+}
