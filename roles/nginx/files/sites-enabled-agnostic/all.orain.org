@@ -39,9 +39,9 @@ location ^~ /wiki {
 
 error_page 500 /500.html;
 location = /500.html {
-	root /usr/share/nginx/errorpages/500.html;
+	root /usr/share/nginx/errorpages;
 }
 error_page 502 /502.html;
 location = /502.html {
-	root /usr/share/nginx/errorpages/502.html;
+	root /usr/share/nginx/errorpages;
 }
