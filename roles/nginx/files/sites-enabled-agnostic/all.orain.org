@@ -2,6 +2,7 @@ root /usr/share/nginx/.orain.org;
 index index.html index.htm index.php;
 
 location = / {
+	ssi on;
 	return 301 /wiki/;
 }
 
