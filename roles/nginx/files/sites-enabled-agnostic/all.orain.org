@@ -14,9 +14,9 @@ location ~ \.php {
 	fastcgi_pass unix:/var/run/php5-fpm.sock;
 }
 
-location = /wiki/Special:Upload {
+location ~ \Special:Upload {
 	proxy_set_header Accept-Encoding "";
-	proxy_pass http://prod4.orain.org/wiki/Special:Upload;
+	proxy_pass http://prod4.orain.org;
 }
 
 location ^~ /w/languages   { deny all; }
