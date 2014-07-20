@@ -147,6 +147,9 @@ if ( $wmgUseBetaFeatures ) {
 	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" ); // VectorBeta
 	$wgVectorBetaTypography = true;
 	$wgVectorBetaVectorBetaWinter = true; // Winter design
+	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
+	require_once( "$IP/extensions/PageImages/PageImages.php" );
+	require_once( "$IP/extensions/Popups/Popups.php" );
 }
 
 if ( $wmgUseCodeEditor ) {
