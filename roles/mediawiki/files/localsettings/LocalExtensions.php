@@ -142,10 +142,10 @@ if ( $wmgUseAPISandbox ) {
 
 if ( $wmgUseBetaFeatures ) {
 	require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" ); //Get BF
-	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" ); // MediaViwer
-	$wgMediaViewerIsInBeta = true; // Register MediaViewer as Beta
+	//require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" ); // MediaViwer
+	//$wgMediaViewerIsInBeta = true; // Register MediaViewer as Beta
 	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" ); // VectorBeta
-	$wgVectorBetaTypography = true;
+	//$wgVectorBetaTypography = true;
 	$wgVectorBetaVectorBetaWinter = true; // Winter design
 	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
 	require_once( "$IP/extensions/PageImages/PageImages.php" );
