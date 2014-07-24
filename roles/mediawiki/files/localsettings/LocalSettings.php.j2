@@ -67,12 +67,24 @@ define( 'NS_WORKSPACE', 524 );
 define( 'NS_WORKSPACE_TALK', 525 );
 // /councilwiki
 
+// frmodamobwiki
+define( 'NS_PORTAIL', 516 );
+define( 'NS_PORTAIL_TALK', 517 );
+define( 'NS_PROJET', 518 );
+define( 'NS_PROJET_TALK', 519 );
+// /frmodamobwiki
+
 // levelswiki
 define( 'NS_GUIDE', 258 );
 define( 'NS_GUIDE_TALK', 259 );
 define( 'NS_MOD', 260 );
 define( 'NS_MOD_TALK', 261 );
 // /levelswiki
+
+// Reviwiki
+define( 'NS_SERVER', 526);
+define( 'NS_SERVER_TALK', 527);
+// /Reviwiki
 
 // wikinambaswiki
 define( 'NS_OFICINA', 508 );
@@ -85,12 +97,6 @@ define( 'NS_ESTUDIO', 514 );
 define( 'NS_ESTUDIO_TALK', 515 );
 // /wikinambaswiki
 
-// frmodamobwiki
-define( 'NS_PORTAIL', 516 );
-define( 'NS_PORTAIL_TALK', 517 );
-define( 'NS_PROJET', 518 );
-define( 'NS_PROJET_TALK', 519 );
-// /frmodamobwiki
 
 # Load the 'globalextensions' here
 require_once( "$IP/GlobalExtensions.php" );
@@ -770,6 +776,10 @@ $wgConf->settings = array(
 			NS_MOD => 'Mod',
 			NS_MOD_TALK => 'Mod_talk',
 		),
+        	'reviwiki' => array(
+            		NS_SERVER => '서버',
+            		NS_SERVER_TALK => '서버토론',
+        	),
 		'wikinambaswiki' => array(
 			NS_OFICINA => 'Oficina',
 			NS_OFICINA_TALK => 'Oficina_Discussão',
