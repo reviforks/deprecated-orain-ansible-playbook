@@ -44,6 +44,11 @@ switch( $wgDBname ) {
 	case 'foodopediawiki':
 		require_once( "$IP/extensions/Comments/Comment.php" );
 		break;
+	case 'jasperinternalwiki':
+		// Per request; storing images on the wiki which should not be visible for technical reasons -John
+		$wgUploadPath = "$wgScriptPath/img_auth.php";
+		$wgUploadDirectory = '/usr/share/nginx/private/mediawiki/jasperinternal.orain.org/images'; // Directory inaccessible via web access
+		break;
 	case 'loginwiki':
 		// Blank comment to keep this in the statement per John's request
 		break;
