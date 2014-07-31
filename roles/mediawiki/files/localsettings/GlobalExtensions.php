@@ -20,6 +20,7 @@ require_once( "$IP/extensions/ConfirmEdit/Asirra.php" );
 require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 require_once( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
 require_once( "$IP/extensions/intersection/DynamicPageList.php" );
+require_once( "$IP/extensions/EventLogging/EventLogging.php" );
 require_once( "$IP/extensions/Gadgets/Gadgets.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
 require_once( "$IP/extensions/InputBox/InputBox.php" );
