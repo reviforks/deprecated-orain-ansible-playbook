@@ -14,8 +14,8 @@ server {
 {% if site == 'all.orain.org' %}
 	server_name *.orain.org degu.wiki www.degu.wiki rationalwiki.ssu.lt wikiconstitucio.org wiki.revi.pe.kr localhost;
 {% endif %}
-{% if site == 'espiral.org' %}
-	server_name espiral.org;
+{% if site == 'spiral.wiki' %}
+	server_name spiral.wiki;
 	include /etc/nginx/sites-enabled-agnostic/all.orain.org;
 {% else %}
 	include /etc/nginx/sites-enabled-agnostic/{{site}};
@@ -30,8 +30,8 @@ server {
 {% if site == 'all.orain.org' %}
 	server_name *.orain.org localhost;
 {% endif %}
-{% if site == 'espiral.org' %}
-	server_name espiral.org;
+{% if site == 'spiral.wiki' %}
+	server_name spiral.wiki;
 	ssl_certificate {{espiral_ssl_cert_path}};
 	include /etc/nginx/sites-enabled-agnostic/all.orain.org;
 {% else %}
