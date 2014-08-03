@@ -32,7 +32,7 @@ server {
 {% endif %}
 {% if site == 'spiral.wiki' %}
 	server_name spiral.wiki;
-	ssl_certificate {{espiral_ssl_cert_path}};
+	#ssl_certificate {{espiral_ssl_cert_path}}; -- SSL issues -John
 	include /etc/nginx/sites-enabled-agnostic/all.orain.org;
 {% else %}
 	ssl_certificate {{ssl_cert_path}};
