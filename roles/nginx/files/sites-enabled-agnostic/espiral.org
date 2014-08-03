@@ -1,4 +1,4 @@
-server_name _ espiral.org;
+server_name  espiral.org;
 
 root /usr/share/nginx/default;
 index index.html index.htm;
