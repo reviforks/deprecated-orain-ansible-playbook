@@ -27,6 +27,7 @@ require_once( "$IP/extensions/InputBox/InputBox.php" );
 require_once( "$IP/extensions/Interwiki/Interwiki.php" );
 require_once( "$IP/extensions/MassMessage/MassMessage.php" );
 require_once( "$IP/extensions/Nuke/Nuke.php" );
+require_once( "$IP/extensions/OAuth/OAuth.php" );
 require_once( "$IP/extensions/OrainMessages/OrainMessages.php" );
 require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 require_once( "$IP/extensions/Renameuser/Renameuser.php" );

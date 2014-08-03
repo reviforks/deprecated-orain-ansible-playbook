@@ -869,6 +869,18 @@ $wgConf->settings = array(
 	),
 	// /Names
 
+	// OAuth
+	'wgMWOAuthCentralWiki' => array(
+		'default' => 'metawiki',
+	),
+	'wgMWOAuthSecureTokenTransfer' => array(
+		'default' => true,
+	),
+	'wgMWOAuthSharedUserSource' => array(
+		'default' => 'CentralAuth',
+	),
+	// /OAuth
+
 	// ParserFunctions
 	'wgPFEnableStringFunctions' => array(
 		'default' => true,
@@ -1019,6 +1031,10 @@ $wgConf->settings = array(
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
+			),
+			'user' => array(
+				'mwoauthproposeconsumer' => true,
+				'mwoauthupdateownconsumer' => true,
 			),
 		),
 		'+reviwiki' => array(
