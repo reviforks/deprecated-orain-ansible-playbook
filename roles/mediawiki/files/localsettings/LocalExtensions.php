@@ -104,6 +104,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
+		require_once( "$IP/skins/Erudite/erudite.php" );
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
@@ -134,7 +135,7 @@ switch( $wgDBname ) {
 		break;
 	case 'wikidemoswiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
-		require_once( "$IP/skins/Erudite/Erudite.php" );
+		require_once( "$IP/skins/Erudite/erudite.php" );
 		break;
 }
 
