@@ -13,6 +13,7 @@ $wgDebugLogGroups = array(
 	'collection' => "$wmgLogDir/debuglogs/collection.log",
 	'exception' => "$wmgLogDir/debuglogs/exception.log",
 	'Math' => "$wmgLogDir/debuglogs/Math.log",
+	'OAuth' => "$wmgLogDir/debuglogs/OAuth.log",
 	'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
 	'torblock' => "$wmgLogDir/debuglogs/torblock.log",
 );
