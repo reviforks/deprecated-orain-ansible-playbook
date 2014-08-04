@@ -195,7 +195,7 @@ if ( $wmgUseEchoPack ) {
 
 if ( $wmgUseIRCRC ) {
 	$wgRCFeeds['Orain'] = array(
-		'formatter' => 'OrainRCFeedFormatter',
+		'formatter' => 'IRCColourfulRCFeedFormatter',
 		'uri' => 'udp://prod4.orain.org:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
