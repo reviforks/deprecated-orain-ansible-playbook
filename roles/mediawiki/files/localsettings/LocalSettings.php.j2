@@ -1308,6 +1308,9 @@ $wgGroupPermissions['sysop']['bigdelete'] = false;
 $wgGroupPermissions['user']['upload'] = false;
 unset( $wgGroupPermissions['steward'] );
 
+// OrainRC Formatter
+$wgAutoloadClasses['OrainRCFeedFormatter'] = "$IP/includes/rcfeed/OrainRCFeedFormatter.php";
+
 foreach ( $wgConf->settings['wgServer'] as $db => $server ) {
 	if ( substr( $server, 0, 2 ) == '//' ) {
 		$canonical =& $wgConf->settings['wgCanonicalServer'][$db];
