@@ -132,6 +132,9 @@ switch( $wgDBname ) {
         		}
 		}
 		break;
+	case 'wikidemoswiki':
+		require_once( "$IP/extensions/Widgets/Widgets.php" );
+		break;
 }
 
 
