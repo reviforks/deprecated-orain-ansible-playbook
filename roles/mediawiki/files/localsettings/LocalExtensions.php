@@ -2,6 +2,7 @@
 
 // Switch case
 switch( $wgDBname ) {
+    case 'nlallthetropeswiki':
 	case 'allthetropeswiki':
 		//require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
@@ -146,6 +147,29 @@ if ( $wgDBname !== 'metawiki' ) {
 }
 
 //wmgUSE
+if ( $wmgUseATTImages ) {
+    $wgForeignFileRepos[] = array(
+		'class' => 'ForeignDBRepo',
+		'name' => 'allthetropeswiki-foreign',
+		'url' => "//$wmgUploadHostname/allthetropes.orain.org/images",
+		'hashLevels' => 2,
+		'transformVia404' => true,
+		'initialCapital' => true,
+		'descBaseUrl' => '//allthetropes.orain.org/wiki/File:',
+		'scriptDirUrl' => '//allthetropes.orain.org/w',
+		'fetchDescription' => false,
+		'dbType' => $wgDBtype,
+		'dbServer' => $wgDBserver,
+		'dbUser' => $wgDBuser,
+		'dbPassword' => $wgDBpassword,
+		'dbName' => 'allthetropeswiki',
+		'dbFlags' => DBO_DEFAULT,
+		'tablePrefix' => '',
+		'hasSharedCache' => true,
+		'directory' => "/usr/share/nginx/$wmgUploadHostname/allthetropes.orain.org/images",
+	);
+}
+
 if ( $wmgUseAPISandbox ) {
 	require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
 }
