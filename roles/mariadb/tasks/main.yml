@@ -30,10 +30,10 @@
   register: ufw_result_prod4
   changed_when: "'Rule added' in ufw_result_prod4.stdout"
 
-- name: Set firewall rule for prod1 (nagios) mysql access
-  command: ufw allow from 54.227.250.92 to any port 3306
-  register: ufw_result_prod1
-  changed_when: "'Rule added' in ufw_result_prod1.stdout"
+- name: Set firewall rule for prod6 (nagios) mysql access
+  command: ufw allow from 107.191.107.155 to any port 3306
+  register: ufw_result_nagios
+  changed_when: "'Rule added' in ufw_result_nagios.stdout"
 
 - name: Set firewall rule for prod5 mysql access
   command: ufw allow from 107.191.118.238 to any port 3306
