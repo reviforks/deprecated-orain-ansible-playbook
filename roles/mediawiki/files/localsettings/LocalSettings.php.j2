@@ -1472,7 +1472,15 @@ if ( $wmgPrivateWiki ) {
 		$wgNoticeProject = 'private';
 	}
 	// Whitelist! Default carried over for tracking.
-	$wgWhitelistRead = array( "Main Page", "Special:UserLogin", "Special:UserLogout", "Special:PasswordReset", "MediaWiki:Common.css", "Special:CentralLogin" );
+	$wgWhitelistRead =
+		array(
+			"Main Page",
+			"Special:UserLogin",
+			"Special:UserLogout",
+			"Special:ResetPassword",
+			"MediaWiki:Common.css",
+			"Special:CentralLogin"
+		);
 }
 
 if ( $wmgDisableAnonEditing ) {
