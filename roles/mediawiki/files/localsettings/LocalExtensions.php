@@ -106,6 +106,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 		require_once( "$IP/skins/Erudite/erudite.php" );
+		require_once( "$IP/extensions/CustomData/CustomData.php" );
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
