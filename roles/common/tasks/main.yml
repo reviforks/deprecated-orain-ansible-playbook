@@ -1,10 +1,6 @@
 - name: Install ansible dependencies
   raw: apt-get install -y python-apt python-simplejson
 
-- name: Set PATH
-  command: PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-  changed_when: False # never report as "changed"
-
 - name: Install packages
   apt: pkg={{item}}
   with_items:
