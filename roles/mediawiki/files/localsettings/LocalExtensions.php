@@ -3,10 +3,6 @@
 // Switch case
 switch( $wgDBname ) {
 	case 'nlallthetropeswiki':
-		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
-		require_once( "$IP/extensions/CustomData/CustomData.php" );
-		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
-		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
 	case 'allthetropeswiki':
 		//require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
@@ -35,6 +31,10 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 		//require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
+		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
+		require_once( "$IP/extensions/CustomData/CustomData.php" );
+		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
+		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
 		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
