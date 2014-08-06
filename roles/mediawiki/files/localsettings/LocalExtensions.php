@@ -2,7 +2,7 @@
 
 // Switch case
 switch( $wgDBname ) {
-    case 'nlallthetropeswiki':
+	case 'nlallthetropeswiki':
 	case 'allthetropeswiki':
 		//require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
@@ -19,7 +19,7 @@ switch( $wgDBname ) {
 		$wgRestrictDisplayTitle = false;
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
-		require_once("$IP/extensions/SubPageList3/SubPageList3.php");
+		require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 		require_once( "$IP/extensions/Tabs/Tabs.php" );
 		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
 		require_once( "$IP/extensions/Arrays/Arrays.php" );
@@ -30,7 +30,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 		//require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
-                require_once( "$IP/extensions/PageTools/PageTools.php" );
+		require_once( "$IP/extensions/PageTools/PageTools.php" );
 		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
@@ -120,26 +120,26 @@ switch( $wgDBname ) {
 	case 'religionwiki':
 		$wgHooks['ResourceLoaderRegisterModules'][] = 'lfRemoveCollapsibleNav';
 		function lfRemoveCollapsibleNav( &$resourceLoader ) {
-        		try {
-            			$rl = new ReflectionClass($resourceLoader);
-            			$mi = $rl->getProperty("moduleInfos");
-            			$mi->setAccessible(true);
-            			$moduleInfos = $mi->getValue($resourceLoader);
-            			$moduleInfos["skins.vector.collapsibleNav"] = array();
-            			$mi->setValue($resourceLoader, $moduleInfos);
-        			$mi->setAccessible(false);
+			try {
+				$rl = new ReflectionClass( $resourceLoader );
+				$mi = $rl->getProperty( "moduleInfos" );
+				$mi->setAccessible( true );
+				$moduleInfos = $mi->getValue( $resourceLoader );
+				$moduleInfos["skins.vector.collapsibleNav"] = array();
+				$mi->setValue( $resourceLoader, $moduleInfos );
+				$mi->setAccessible( false );
 			}
-        		catch (Exception $e) {
-            			exit("Error disabling collapsible sidebar (".basename(__FILE__)." line ".__LINE__."). This is supported only on MediaWiki 1.23, there is no need for this on MediaWiki 1.24.");
-        		}
+			catch( Exception $e ) {
+				exit( "Error disabling collapsible sidebar (" . basename( __FILE__ ) . " line " . __LINE__ . "). This is supported only on MediaWiki 1.23, there is no need for this on MediaWiki 1.24." );
+			}
 		}
+
 		break;
 	case 'wikidemoswiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		require_once( "$IP/skins/Erudite/erudite.php" );
 		break;
 }
-
 
 // Load InterwikiMagic on all wikis except for metawiki
 if ( $wgDBname !== 'metawiki' ) {
@@ -148,7 +148,7 @@ if ( $wgDBname !== 'metawiki' ) {
 
 //wmgUSE
 if ( $wmgUseATTImages ) {
-    $wgForeignFileRepos[] = array(
+	$wgForeignFileRepos[] = array(
 		'class' => 'ForeignDBRepo',
 		'name' => 'allthetropeswiki-foreign',
 		'url' => "//$wmgUploadHostname/allthetropes.orain.org/images",
@@ -206,7 +206,7 @@ if ( $wmgUseCharInsert ) {
 if ( $wmgUseCirrus || $wmgUseCirrusAsAlternate ) {
 	require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 	require_once( "$IP/extensions/Elastica/Elastica.php" );
-	$wgCirrusSearchServers = array( '23.226.230.178');
+	$wgCirrusSearchServers = array( '23.226.230.178' );
 }
 
 if ( $wmgUseCirrus ) {
