@@ -34,7 +34,9 @@
   copy: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename}} backup=yes
   with_fileglob:
     - ./localsettings/*.php
-  notify: Clear APC cache
+  notify:
+    - Rebuild localisation cache
+    - Clear APC cache
 
 - name: Copy {{item}}
   copy: src={{item}} dest=/home/www-scripts owner=www-scripts group=www-data mode=770 backup=yes
