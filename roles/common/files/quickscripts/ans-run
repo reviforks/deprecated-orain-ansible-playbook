@@ -12,7 +12,6 @@ case $HOST in
   (prod5) limit="prod5.orain.org";;
   (prod4) limit="prod4.orain.org";;
   (prod3) limit="prod3.orain.org";;
-  (ip-10-243-33-50) limit="prod1.orain.org";;
   (*)   echo Failed to match host using $HOST && exit 1;;
 esac
 
