@@ -5,9 +5,7 @@
 # accepted). You will need to 'disable' and then 'enable' the firewall for
 # the changes to take affect.
 
-# Commented out below per http://blog.kylemanna.com/linux/2013/04/26/ufw-vps/ - 29-5-2014 Addshore
-#IPV6=yes
-IPV6=no
+IPV6=yes
 
 # Set the default input policy to ACCEPT, ACCEPT_NO_TRACK, DROP, or REJECT.
 # ACCEPT enables connection tracking for NEW inbound packets on the INPUT
