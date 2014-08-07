@@ -26,7 +26,3 @@
 
 - name: Install nrpe plugin
   apt: pkg=nagios-nrpe-plugin
-
-- name: Copy nrpe config
-  copy: src=nrpe_local.cfg dest=/etc/nagios
-  notify: Restart nrpe
