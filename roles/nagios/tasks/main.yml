@@ -2,11 +2,6 @@
 - name: Install nagios3
   apt: pkg=nagios3
 
-- name: Copy plugin files over
-  copy: src={{item}} dest=/usr/lib/nagios/plugins
-  with_fileglob:
-  -  ./plugins/*
-
 - name: Copy conf.d
   copy: src={{item}} dest=/etc/nagios3/conf.d
   with_fileglob:
