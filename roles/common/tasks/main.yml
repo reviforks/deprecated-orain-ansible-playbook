@@ -9,24 +9,28 @@
   with_items:
     - denyhosts
     - fail2ban
-    - git
-    - htop
     - lsof
     - lynis
-    - mosh
-    - mysql-client # Needed for testing mysql connectivity between instance - Addshore
     - nagios-nrpe-server
-    - nano
-    - netcat
     - python3
     - python-software-properties
     - rkhunter
     - sudo
     - tmux
-    - vim
     - ufw
-    - zip
     - zsh
+
+- name: Install packages (latest)
+  apt: pkg={{item}} state=latest
+  with_items:
+    - git
+    - htop
+    - mysql-client # Needed for testing mysql connectivity between instance - Addshore
+    - mosh
+    - nano
+    - netcat
+    - vim
+    - zip
 
 # Don't edit without validating first
 - name: Allow users in the sudo group to run sudo without a password
