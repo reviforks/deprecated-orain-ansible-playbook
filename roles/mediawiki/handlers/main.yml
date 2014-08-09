@@ -17,8 +17,3 @@
 
 - name: Update mediawiki
   shell: "/root/mw-updateall"
-
-- name: Delete old mediawiki files
-  command: rm {{itm}} removes={{item}}
-  with_items:
-    - /root/notify_irc.sh
