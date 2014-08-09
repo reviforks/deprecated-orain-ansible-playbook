@@ -15,6 +15,9 @@
 - name: Mediawiki submodule fileMode false
   shell: "cd /usr/share/nginx/.orain.org/w/ && git submodule foreach --recursive git config core.fileMode false"
 
+- name: Update mediawiki
+  shell: "/root/mw-updateall"
+
 - name: Delete old mediawiki files
   command: rm {{itm}} removes={{item}}
   with_items:

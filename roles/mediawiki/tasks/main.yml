@@ -11,6 +11,7 @@
        version=REL1_23
   notify:
     - Rebuild localisation cache
+    - Update mediawiki
     - Mediawiki submodule fileMode false
     - Clear APC cache
 
