@@ -35,6 +35,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CustomData/CustomData.php" );
 		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
+		require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
+		$wgDynamicSidebarUseUserpages = true;
+		$wgDynamicSidebarUseGroups = true;
 		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
@@ -113,6 +116,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CustomData/CustomData.php" );
 		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
+		require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
