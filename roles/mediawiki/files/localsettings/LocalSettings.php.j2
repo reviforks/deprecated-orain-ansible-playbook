@@ -217,6 +217,7 @@ $wgConf->settings = array(
 	// CentralAuth
 	'wgCentralAuthAutoLoginWikis' => array(
 		'default' => array(
+            		'encyclopediamuricana.us' => 'encyclopediamuricanawiki',
 			'rationalwiki.ssu.lt' => 'rationalwiki',
 			'nazis.exposed' => 'nazisexposedwiki',
 			'spiral.wiki' => 'spiralwiki',
@@ -536,11 +537,13 @@ $wgConf->settings = array(
 		'jossewiki' => 'nl',
 		'nederlandwiki' => 'nl',
 		'nlallthetropeswiki' => 'nl',
+		'nlhistowiki' => 'nl',
 		'nsswiki' => 'ko',
 		'reviwiki' => 'ko',
 		'keionrailwiki' => 'ko',
 		'programwiki' => 'nl',
 		'samandcatwiki' => 'es',
+		'shiranowiki' => 'he',
 		'ukrwiki1wiki' => 'uk',
 		'verkeerwiki' => 'nl',
 		'wikiconstituciowiki' => 'ca',
@@ -549,6 +552,7 @@ $wgConf->settings = array(
 		'wikiproustwiki' => 'fr',
 		'worldpediawiki' => 'zh-hant',
 		'worldnewswiki' => 'zh-tw',
+		'wviruswiki' => 'fr',
 		'zutphenwiki' => 'nl',
 		
 	),
@@ -869,6 +873,9 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_SERVER => true,
 		),
+		'+techwiki' => array(
+			NS_MAIN => true,
+		),
 		'+wikinambaswiki' => array(
 			NS_OFICINA => true,
 			NS_OFICINA_TALK => true,
@@ -940,6 +947,7 @@ $wgConf->settings = array(
 			),
 			'autoconfirmed' => array(
 				'patrol' => true,
+				'skipcaptcha' => true,
 				'upload' => true,
 			),
 			'autopatrolled' => array(
@@ -1147,6 +1155,10 @@ $wgConf->settings = array(
 			'delete'
 		),
 	),
+	'$wgRestrictDisplayTitle' => array(
+		'default' => true,
+		'portalwiki' => false,
+	),
 	// /Restrictions
 
 	// Search
@@ -1182,6 +1194,7 @@ $wgConf->settings = array(
 	),
 	'wgServer' => array(
 		'default' => '//$lang.orain.org',
+        	'encyclopediamuricanawiki' => 'http://encyclopediamuricana.us',
 		'deguwiki' => 'http://degu.wiki',
 		'nazisexposedwiki' => 'http://nazis.exposed',
 		'nlallthetropeswiki' => '//nl-allthetropes.orain.org', // make it clear this wiki is a nl version (SSL does not cover nl.allthetropes.orain.org -John
@@ -1202,6 +1215,7 @@ $wgConf->settings = array(
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
 		'elderlordswiki' => 'monobook',
+		'wikidemoswiki' => 'foreground',
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/meta.orain.org/images/c/c6/Orain.png",
@@ -1211,16 +1225,19 @@ $wgConf->settings = array(
                'dangsunsnwiki' => '//upload.wikimedia.org/wikipedia/commons/e/e8/Kd-logo.png',
                'deguwiki' => '//$wmgUploadHostname/meta.orain.org/images/b/ba/Deguwikilogo.png',
 		'enmodamobwiki' => "//$wmgUploadHostname/meta.orain.org/images/d/d6/Modamob-logo.png",
+		'electrumwiki' => "//$wmgUploadHostname/electrum.orain.org/images/0/00/Logo_text_135.png",
 		'frmodamobwiki' => "//$wmgUploadHostname/meta.orain.org/images/d/d6/Modamob-logo.png",
 		'grayhawkwiki' => '//upload.wikimedia.org/wikipedia/commons/4/49/GrayhawkPaladinsLogo_%28small%29.png',
 		'keionrailwiki' => '//upload.wikimedia.org/wikipedia/commons/e/e4/Subway_TokyoTozai.png',
 		'levelswiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wikilevels_logo_text.png/135px-Wikilevels_logo_text.png',
+		'linuxwiki' => '//$wmgUploadHostname/linux.orain.org/images/e/ed/Wiki_logo_Linux.png',
 		'mediawikitesterswiki' => '//upload.wikimedia.org/wikipedia/commons/9/9a/MediaWikiTestersWiki.png',
 		'mwmwiki' => "//$wmgUploadHostname/mwm.orain.org/images/a/a6/Wiki-Logo.png",
         	'nationalewiki' => "//$wmgUploadHostname/nationale.orain.org/images/2/29/Logo_of_the_Encyclopedia_Nationale.png",
 		'nlallthetropeswiki' => "//$wmgUploadHostname/allthetropes.orain.org/images/8/86/Logo-Square-v1-1x.png",
 		'peachywiki' => '//upload.wikimedia.org/wikipedia/commons/5/51/PeachyFrameworkLogo.png',
 		'pigawiki' => "//$wmgUploadHostname/piga.orain.org/images/2/23/PigaLore.png",
+		'portalwiki' => "//$wmgUploadHostname/portal.orain.org/images/f/fa/Portalpedia_Logo.png",
 		'reviwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/53/Server-multiple.svg/135px-Server-multiple.svg.png',
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'testwiki' => "//$wmgUploadHostname/test.orain.org/images/8/8d/Twlogo.png",
@@ -1280,6 +1297,7 @@ $wgConf->settings = array(
 		'default' => array(
 			'(.*\.)?orain\.org',
 			'degu\.wiki',
+			'encyclopediamuricana\.us',
 			'espiral\.org',
 			'wikiconstitucio\.org',
 			'wiki\.revi\.pe\.kr'

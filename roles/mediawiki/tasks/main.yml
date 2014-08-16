@@ -11,6 +11,7 @@
        version=REL1_23
   notify:
     - Rebuild localisation cache
+    - Update mediawiki
     - Mediawiki submodule fileMode false
     - Clear APC cache
 
@@ -46,9 +47,6 @@
 
 - name: Copy logrotate configuration
   copy: src="./logrotate.d/mediawiki" dest=/etc/logrotate.d
-
-- name: Copy IRC notification script
-  copy: src="./notify_irc.sh" dest=/root/notify_irc.sh owner=root group=root mode=775
 
 - name: Create a cronjob for get_db_list.py
   cron: name="Get DB list" user="www-scripts" job="python3 ~/get_db_list.py"
@@ -92,3 +90,8 @@
     - /var/log/mediawiki/
     - /var/log/mediawiki/debuglogs/
   changed_when: False # never report as "changed"
+
+- name: Delete old mediawiki files
+  command: rm {{item}} removes={{item}}
+  with_items:
+    - /root/notify_irc.sh
