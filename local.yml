@@ -6,7 +6,7 @@
   roles:
     - common
 
-- hosts: webservers
+- hosts: mediawikiservers
   vars_files:
     - ../orain_private/vars.yml
   roles:
@@ -15,19 +15,13 @@
     - memcached
     - mediawiki
 
-- hosts: searchservers
-  vars_files:
-    - ../orain_private/vars.yml
-  roles:
-    - elasticsearch
-
 - hosts: dbservers
   vars_files:
     - ../orain_private/vars.yml
   roles:
     - mariadb
 
-- hosts: miscservers
+- hosts: monitoringservers
   vars_files:
     - ../orain_private/vars.yml
   roles:
