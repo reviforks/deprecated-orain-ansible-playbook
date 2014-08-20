@@ -23,6 +23,3 @@
     - https/tcp
   register: ufw_result
   changed_when: "'Rule added' in ufw_result.stdout"
-
-- name: Install nrpe plugin
-  apt: pkg=nagios-nrpe-plugin

@@ -114,6 +114,9 @@
 - name: Create user "nagios"
   user: name=nagios shell=/bin/zsh
 
+- name: Install nrpe plugin
+  apt: pkg=nagios-nrpe-plugin
+
 - name: Copy nagios plugins over
   copy: src={{item}} dest=/usr/lib/nagios/plugins/
   with_fileglob:
