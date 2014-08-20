@@ -7,3 +7,15 @@ prod5
 
 [monitoringservers]
 prod6
+
+[loadbalancingservers]
+prod7
+
+[staticservers]
+prod7
+
+[mailservers]
+prod6
+
+[redisservers]
+prod7
