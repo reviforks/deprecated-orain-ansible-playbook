@@ -5,9 +5,3 @@
   with_items:
   - /mnt/mediawiki/uploads
   - /mnt/mediawiki/private/uploads
-  
-- name: Mount public uploads
-  mount: name=/mnt/mediawiki/uploads fstype=nfs src=10.131.243.247:/var/mediawiki/uploads state=mounted
-  
-- name: Mount private uploads
-  mount: name=/mnt/mediawiki/private/uploads fstype=nfs src=10.131.243.247:/var/mediawiki/private/uploads state=mounted
