@@ -1,0 +1,7 @@
+---
+- name: Install nginx as the base
+  apt: pkg=nginx
+  
+- name: Move load balancing file over
+  copy: src=default dest=/etc/nginx/site-available
+  notify: restart nginx
