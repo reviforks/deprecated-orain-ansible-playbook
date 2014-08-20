@@ -1,0 +1,7 @@
+---
+- name: Install redis server
+  apt: pkg=redis-server
+  
+- name: Copy redis config
+  copy: src=redis.conf dest=/etc/redis
+  notify: restart redis
