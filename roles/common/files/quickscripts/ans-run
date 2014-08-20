@@ -8,6 +8,7 @@ echo "Updating server from ansible-playbook"
 HOST=$(hostname)
 
 case $HOST in
+  (prod7.orain.org) limit="prod7";;
   (prod6.orain.org) limit="prod6";;
   (prod5.orain.org) limit="prod5";;
   (prod4.orain.org) limit="prod4";;
