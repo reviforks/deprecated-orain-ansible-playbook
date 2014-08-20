@@ -1,0 +1,21 @@
+myhostname = mail.orain.org
+myorigin = /etc/mailname
+mydestination = mail.orain.org, orain.org, lists.orain.org, locahost
+relayhost =
+mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+mailbox_size_limit = 0
+recipient_delimiter = +
+inet_interfaces = all
+
+alias_maps = hash:/etc/aliases
+alias_databases = hash:/etc/aliases
+
+smtpd_tls_cert_file={{ssl_cert_path}}
+smtpd_tls_key_file={{ssl_cert_key_path}}
+smtpd_use_tls=yes
+smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
+smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
+smtpd_tls_security_level=may
+smtpd_tls_protocols = !SSLv2, !SSLv3
+
+local_recipient_maps = proxy:unix:passwd.byname $alias_maps

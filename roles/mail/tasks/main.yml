@@ -1,0 +1,19 @@
+---
+- name: Install mail packages
+  apt: pkg={{item}}
+  with_items:
+  - postfix
+  - dovecote-core
+  - dovecot-imapd
+    
+- name: Copy postfix config
+  copy: src={{item}} dest=/etc/postfix
+  with_fileglob:
+  - ./postfix/*
+  notify: restart postfix
+  
+- name: Copy dovecot config
+  copy: src={{item}} dest=/etc/dovecot
+  with_fileglob:
+  - ./dovecot/*
+  notify: restart dovecot
