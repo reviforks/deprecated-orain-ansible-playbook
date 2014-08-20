@@ -1,0 +1,19 @@
+---
+- name: Install NFS Server
+  apt: pkg={{item}}
+  with_items:
+  - nfs-kernel-server
+  - portmap
+  
+- name: Ensure export directories exist
+  command: mkdir -p {{item}}
+  with_items:
+  - /var/mediawiki/uploads
+  - /var/mediawiki/private/uploads
+  
+- name: nobody owns /var/mediawiki
+  command: chown nobody:nogroup /var/mediawiki/ -R
+  
+- name: Move exports over
+  copy: src=exports dest=/etc/
+  notify: update exports

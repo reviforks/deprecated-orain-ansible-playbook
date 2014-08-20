@@ -1,0 +1,4 @@
+/var/mediawiki/uploads              10.131.243.244(rw,sync,no_root_squash,no_subtree_check)
+/var/mediawiki/uploads              10.131.243.245(rw,sync,no_root_squash,no_subtree_check)
+/var/mediawiki/private/uploads      10.131.243.244(rw,sync,no_root_squash,no_subtree_check)
+/var/mediawiki/private/uploads      10.131.243.245(rw,sync,no_root_squash,no_subtree_check)
