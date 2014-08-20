@@ -8,10 +8,10 @@ echo "Updating server from ansible-playbook"
 HOST=$(hostname)
 
 case $HOST in
-  (prod6) limit="prod6.orain.org";;
-  (prod5) limit="prod5.orain.org";;
-  (prod4) limit="prod4.orain.org";;
-  (prod3) limit="prod3.orain.org";;
+  (prod6.orain.org) limit="prod6";;
+  (prod5.orain.org) limit="prod5";;
+  (prod4.orain.org) limit="prod4";;
+  (prod3.orain.org) limit="prod3";;
   (*)   echo Failed to match host using $HOST && exit 1;;
 esac
 
