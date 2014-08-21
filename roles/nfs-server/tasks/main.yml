@@ -17,3 +17,9 @@
 - name: Move exports over
   copy: src=exports dest=/etc/
   notify: update exports
+
+- name: open NFS ports
+  command: ufw allow {{item}}
+  with_items:
+  - 111
+  - 2049
