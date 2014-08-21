@@ -3,5 +3,9 @@
   apt: pkg=redis-server
   
 - name: Copy redis config
-  copy: src=redis.conf dest=/etc/redis
+  copy: src={{item}} dest=/etc/redis
+  with_items:
+  - redis.conf
+  - persist.conf
+  - evict.conf
   notify: restart redis
