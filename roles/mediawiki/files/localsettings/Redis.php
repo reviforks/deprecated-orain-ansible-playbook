@@ -1,3 +1,4 @@
+<?php
 $wgObjectCaches['redis'] = array(
     'class'             => 'RedisBagOStuff',
     'servers'           => array( '10.131.243.247:6379' ),
@@ -10,6 +11,7 @@ $wgJobTypeConf['default'] = array(
     'redisConfig'   => array(), // Keep blank array here
 );
 
+$wgMainCacheType = 'redis';
 $wgSessionCacheType = 'redis';
  
 $wgMessageCacheType = 'redis';
