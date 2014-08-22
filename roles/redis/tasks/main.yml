@@ -1,11 +1,13 @@
 ---
 - name: Install redis server
   apt: pkg=redis-server
+
+- name: Copy redis config (j2)
+  copy: src]{{item}} dest=/etc/redis/{{item|basename|replace('.j2','')}}
   
 - name: Copy redis config
   copy: src={{item}} dest=/etc/redis
   with_items:
-  - redis.conf
   - persist.conf
   - evict.conf
   notify: restart redis
