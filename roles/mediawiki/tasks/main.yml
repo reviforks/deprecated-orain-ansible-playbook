@@ -27,6 +27,7 @@
   template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}} backup=yes
   with_fileglob:
     - ./localsettings/*.php.j2
+    - ./localsettings/Redis.php
   notify:
     - Rebuild localisation cache
     - Clear APC cache
