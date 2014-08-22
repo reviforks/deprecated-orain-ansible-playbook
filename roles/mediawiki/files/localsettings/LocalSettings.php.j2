@@ -189,10 +189,7 @@ $wgConf->settings = array(
 		'default' => 20,
 	),
 	'wgMainCacheType' => array(
-		'default' => CACHE_MEMCACHED,
-	),
-	'wgMemCachedServers' => array(
-		'default' => array( '167.88.113.190:11211' ),
+		'default' => 'redis',
 	),
 	'wgMiserMode' => array(
 		'allthetropeswiki' => true,
@@ -1528,5 +1525,6 @@ require_once( "$IP/LocalExtensions.php" );
 require_once( "$IP/LocalLogging.php" );
 require_once( "$IP/LocalDebugUsers.php" );
 require_once( "$IP/LocalPiwik.php" );
+require_once( "$IP/Redis.php" );
 
 // $wgReadOnly = 'Orain is currently in the process of migration datacenters.';
