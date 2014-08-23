@@ -105,7 +105,7 @@ require_once( "$IP/GlobalExtensions.php" );
  * NOTE: When changing the below variable all caches need to be updated otherwise
  * we will continue linking to old file locations on cached pages!
  */
-$wmgUploadHostname = "d326vv62q24mzw.cloudfront.net";
+$wmgUploadHostname = "static.orain.org";
 
 /**
  * Define settings per wiki
@@ -1463,7 +1463,7 @@ if ( $wgDBname !== 'metawiki' ) {
 		'dbFlags' => DBO_DEFAULT,
 		'tablePrefix' => '',
 		'hasSharedCache' => true,
-		'directory' => "/usr/share/nginx/$wmgUploadHostname/meta.orain.org/images",
+		'directory' => "/mnt/mediawiki/uploads/meta.orain.org/images",
 	);
 }
 
@@ -1514,7 +1514,7 @@ $wgCacheDirectory = '/tmp/mw-cache';
 $wgFileCacheDirectory = "/var/tmp/mediawiki/cache/$wmgHostname";
 $wgLoadScript = "//$wmgUploadHostname/$wmgHostname/load.php";
 $wgLocalisationCacheConf['manualRecache'] = true;
-$wgUploadDirectory = "/usr/share/nginx/static.orain.org/$wmgHostname/images";
+$wgUploadDirectory = "/mnt/mediawiki/uploads/$wmgHostname/images";
 $wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
 
 # Load the split up files...

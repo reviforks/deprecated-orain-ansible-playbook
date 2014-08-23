@@ -55,7 +55,7 @@ switch( $wgDBname ) {
 	case 'jasperinternalwiki':
 		// Per request; storing images on the wiki which should not be visible for technical reasons -John
 		$wgUploadPath = "$wgScriptPath/img_auth.php";
-		$wgUploadDirectory = '/usr/share/nginx/private/mediawiki/jasperinternal.orain.org/images'; // Directory inaccessible via web access
+		$wgUploadDirectory = '/mnt/mediawiki/private/uploads/jasperinternal.orain.org/images'; // Directory inaccessible via web access
 		break;
 	case 'loginwiki':
 		// Blank comment to keep this in the statement per John's request
@@ -177,7 +177,7 @@ if ( $wmgUseATTImages ) {
 		'dbFlags' => DBO_DEFAULT,
 		'tablePrefix' => '',
 		'hasSharedCache' => true,
-		'directory' => "/usr/share/nginx/$wmgUploadHostname/allthetropes.orain.org/images",
+		'directory' => "/mnt/mediawiki/uploads/allthetropes.orain.org/images",
 	);
 }
 
@@ -236,7 +236,7 @@ if ( $wmgUseEchoPack ) {
 if ( $wmgUseIRCRC ) {
 	$wgRCFeeds['Orain'] = array(
 		'formatter' => 'IRCColourfulRCFeedFormatter',
-		'uri' => 'udp://prod4.orain.org:5070',
+		'uri' => 'udp://10.131.243.246:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	);
