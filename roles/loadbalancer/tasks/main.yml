@@ -3,5 +3,5 @@
   apt: pkg=nginx
   
 - name: Move load balancing file over
-  copy: src=default dest=/etc/nginx/site-available
+  template: src=default.j2 dest=/etc/nginx/sites-available/default
   notify: restart nginx

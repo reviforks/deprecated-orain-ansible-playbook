@@ -1,0 +1,16 @@
+upstream mediawiki {
+	server  prod4.orain.org:443;
+	server  prod5.orain.org:443;
+}
+
+server {
+	server_name orain.org
+	listen  [::]:80		ipv6only=off;
+	listen	[::]:443 ssl	ipv6only=off;
+	ssl_certificate {{ssl_cert_path}};
+        ssl_certificate_key {{ssl_cert_key_path}};
+
+	location / {
+		proxy_pass 	$scheme://mediawiki;
+	}
+}
