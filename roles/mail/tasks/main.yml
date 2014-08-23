@@ -3,7 +3,7 @@
   apt: pkg={{item}}
   with_items:
   - postfix
-  - dovecote-core
+  - dovecot-core
   - dovecot-imapd
     
 - name: Copy postfix config
