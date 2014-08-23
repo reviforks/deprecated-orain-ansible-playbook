@@ -13,7 +13,7 @@
   notify: restart postfix
   
 - name: Copy dovecot config
-  copy: src={{item}} dest=/etc/dovecot
+  template: src={{item}} dest=/etc/dovecot/dovecot.conf
   with_fileglob:
-  - ./dovecot/*
+  - ./dovecot/dovecot.conf.j2
   notify: restart dovecot
