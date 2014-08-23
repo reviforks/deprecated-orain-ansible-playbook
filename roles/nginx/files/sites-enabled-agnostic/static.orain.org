@@ -1,6 +1,6 @@
 server_name static.orain.org upload.orain.org;
 
-root /usr/share/nginx/static.orain.org;
+root /mnt/mediawiki/uploads;
 
 expires 2w;
 
