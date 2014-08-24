@@ -24,7 +24,7 @@
   changed_when: composer_update_output.stdout.find('You are already using composer version') == -1
 
 - name: Copy MediaWiki settings from templates
-  template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}} backup=yes
+  template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}}
   with_fileglob:
     - ./localsettings/*.php.j2
   notify:
@@ -32,7 +32,7 @@
     - Clear APC cache
 
 - name: Copy MediaWiki settings from files
-  copy: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename}} backup=yes
+  copy: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename}}
   with_fileglob:
     - ./localsettings/*.php
   notify:
@@ -40,7 +40,7 @@
     - Clear APC cache
 
 - name: Copy {{item}}
-  copy: src={{item}} dest=/home/www-scripts owner=www-scripts group=www-data mode=770 backup=yes
+  copy: src={{item}} dest=/home/www-scripts owner=www-scripts group=www-data mode=770
   with_items:
     - get_db_list.py
     - db_loop.sh
