@@ -49,9 +49,6 @@ switch( $wgDBname ) {
 	case 'detectiveconanwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		break;
-	case 'foodopediawiki':
-		require_once( "$IP/extensions/Comments/Comment.php" );
-		break;
 	case 'jasperinternalwiki':
 		// Per request; storing images on the wiki which should not be visible for technical reasons -John
 		$wgUploadPath = "$wgScriptPath/img_auth.php";
