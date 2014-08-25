@@ -1,5 +1,6 @@
 [dbservers]
 prod3
+prod5
 
 [mediawikiservers]
 prod4
