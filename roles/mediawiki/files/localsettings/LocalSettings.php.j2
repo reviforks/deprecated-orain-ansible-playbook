@@ -21,7 +21,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
-$wgConf->localVHosts = array( '{{mysql_address}}' );
+$wgConf->localVHosts = array( '10.131.243.49', '10.131.243.243' );
 
 // @note TBLSRC_LOCALPAGE and TBLSRC_URL are defined automatically by the TitleBlacklist entry file.
 //       therefore we use the below ORAIN constants for referencing the values in LocalSettings.php
@@ -295,7 +295,8 @@ $wgConf->settings = array(
 		'default' => '',
 	),
 	'wgDBserver' => array(
-		'default' => "{{mysql_address}}",
+		'default' => "10.131.243.49",
+		'allthetropeswiki' => "10.131.243.243",
 	),
 	'wgDBTableOptions' => array(
 		'default' => "ENGINE=InnoDB, DEFAULT CHARSET=binary",
