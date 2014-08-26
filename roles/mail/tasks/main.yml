@@ -21,3 +21,10 @@
 - name: Copy aliases
   copy: src=aliases dest=/etc/
   notify: newaliases
+
+- name: Install mailman
+  apt: pkg=mailman
+
+- name: Copy over MailMan config
+  copy: src=mm_cfg.py dest=/etc/mailman
+  notify: restart mailman
