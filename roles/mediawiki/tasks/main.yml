@@ -95,3 +95,7 @@
   command: rm {{item}} removes={{item}}
   with_items:
     - /root/notify_irc.sh
+
+- name: chown all.dblist
+  command: chown www-scripts:www-data /usr/share/nginx/.orain.org/w/all.dblist
+  changed_when: False
