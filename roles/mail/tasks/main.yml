@@ -17,3 +17,7 @@
   with_fileglob:
   - ./dovecot/dovecot.conf.j2
   notify: restart dovecot
+
+- name: Copy aliases
+  copy: src=aliases dest=/etc/
+  notify: newaliases

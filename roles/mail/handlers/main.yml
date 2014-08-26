@@ -4,3 +4,6 @@
   
 - name: restart dovecot
   service: name=dovecot state=restarted
+
+- name: newaliases
+  command: newaliases
