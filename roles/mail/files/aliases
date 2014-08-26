@@ -11,3 +11,6 @@ security: root
 
 # phase out help!
 help: dusti,john
+
+# I get shell mail but don't read it so... -John
+johnflewis: john
