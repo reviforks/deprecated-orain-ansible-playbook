@@ -14,3 +14,9 @@ help: dusti,john
 
 # I get shell mail but don't read it so... -John
 johnflewis: john
+
+# nagios
+nagios: john
+
+# addshore
+addshore: addshorewiki@gmail.com
