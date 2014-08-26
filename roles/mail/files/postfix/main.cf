@@ -10,7 +10,7 @@ recipient_delimiter = +
 inet_interfaces = all
 transport_maps = hash:/etc/postfix/transport
 
-alias_maps = hash:/etc/aliases
+alias_maps = hash:/etc/aliases, hash:/var/lib/mailman/data/aliases
 alias_database = hash:/etc/aliases
 
 smtpd_tls_cert_file = {{ssl_cert_path}}
