@@ -74,6 +74,11 @@ define( 'NS_PROJET', 518 );
 define( 'NS_PROJET_TALK', 519 );
 // /frmodamobwiki
 
+// grepobot
+define( 'NS_OP', 526 );
+define( 'NS_OP_TALK', 527 );
+// /grepobot
+
 // levelswiki
 define( 'NS_GUIDE', 258 );
 define( 'NS_GUIDE_TALK', 259 );
@@ -763,6 +768,10 @@ $wgConf->settings = array(
 			NS_WORKSPACE => 'Workspace',
 			NS_WORKSPACE_TALK => 'Workspace_talk',
 		),
+		'grepobotwiki' => array(
+			NS_OP => 'Op',
+			NS_OP_TALK => 'Op_talk',
+		),
 		'frmodamobwiki' => array(
 			NS_PORTAIL => 'Portail',
 			NS_PORTAIL_TALK => 'Discussion_Portail',
@@ -912,15 +921,26 @@ $wgConf->settings = array(
 				'bot',
 				'bureaucrat',
 				'confirmed',
-				'member',
 				'rollbacker',
 				'sysop',
 			),
 			'sysop' => array(
 				'autopatrolled',
 				'confirmed',
-				'member',
 				'rollbacker',
+			),
+		),
+		'+grepobotwiki' => array(
+			'bureaucrat' => array(
+				'botop',
+			),
+		),
+		'+private' => array(
+			'bureaucrat' => array(
+				'member',
+			),
+			'sysop' => array(
+				'member',
 			),
 		),
 	),
@@ -1008,6 +1028,11 @@ $wgConf->settings = array(
 				'createtalk' => true,
 			),
 		),
+		'+grepobotwiki' => array(
+			'botop' => array(
+				'read' => true,
+			),
+		),
 		'+nationalewiki' => array(
 			'*' => array(
 				'edit' => false,
@@ -1084,6 +1109,19 @@ $wgConf->settings = array(
 				'confirmed',
 				'member',
 				'rollbacker',
+			),
+		),
+		'+grepobot' => array(
+			'bureaucrat' => array(
+				'botop',
+			),
+		),
+		'+private' => array(
+			'bureaucrat' => array(
+				'member',
+			),
+			'sysop' => array(
+				'member',
 			),
 		),
 	),

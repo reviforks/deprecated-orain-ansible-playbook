@@ -49,6 +49,11 @@ switch( $wgDBname ) {
 	case 'detectiveconanwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		break;
+	case 'grepobotwiki':
+		require_once( "$IP/extensions/Lockdown/Lockdown.php" );
+		$wgNamespacePermissionLockdown[NS_OP]['read'] = array( 'sysop', 'botop' );
+		$wgNamespacePermissionLockdown[NS_OP]['edit'] = array( 'sysop' );
+		break;
 	case 'jasperinternalwiki':
 		// Per request; storing images on the wiki which should not be visible for technical reasons -John
 		$wgUploadPath = "$wgScriptPath/img_auth.php";
