@@ -7,7 +7,7 @@
   - dovecot-imapd
     
 - name: Copy postfix config
-  copy: src={{item}} dest=/etc/postfix
+  template: src={{item}} dest=/etc/postfix
   with_fileglob:
   - ./postfix/*
   notify: restart postfix
