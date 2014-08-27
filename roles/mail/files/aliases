@@ -10,7 +10,7 @@ noc: root
 security: root
 
 # phase out help!
-help: dusti,john
+help: dusti,john,addshore
 
 # I get shell mail but don't read it so... -John
 johnflewis: john
