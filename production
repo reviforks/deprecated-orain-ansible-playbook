@@ -8,9 +8,6 @@ prod4
 [monitoringservers]
 prod6
 
-[loadbalancingservers]
-prod7
-
 [staticservers]
 prod7
 
