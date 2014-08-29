@@ -529,34 +529,6 @@ $wgConf->settings = array(
 	// Language
 	'wgLanguageCode' => array(
 		'default' => 'en',
-		'archivoespiral' => 'es',
-		'dangsunsnwiki' => 'ko',
-		'fairytailwiki' => 'es',
-		'frmodamobwiki' => 'fr',
-		'jossewiki' => 'nl',
-		'nederlandwiki' => 'nl',
-		'netwiki' => 'fr',
-		'nlallthetropeswiki' => 'nl',
-		'nlhistowiki' => 'nl',
-		'nsswiki' => 'ko',
-		'reviwiki' => 'ko',
-		'keionrailwiki' => 'ko',
-		'programwiki' => 'nl',
-		'samandcatwiki' => 'es',
-		'shiranowiki' => 'he',
-		'ukrwiki1wiki' => 'uk',
-		'verkeerwiki' => 'nl',
-		'wikiconstituciowiki' => 'ca',
-		'wikidemoswiki' => 'es',
-		'wikinambaswiki' => 'pt-br',
-		'wikiproustwiki' => 'fr',
-		'wizlongwiki' => 'ko',
-		'worldpediawiki' => 'zh-hant',
-		'worldnewswiki' => 'zh-tw',
-		'wviruswiki' => 'fr',
-		'zutphenwiki' => 'nl',
-		'zywiki' => 'ru',
-		
 	),
 	// /Language
 
@@ -1435,10 +1407,11 @@ $DBlist = array_map( 'trim', file( "$IP/all.dblist" ) );
 $wgLocalDatabases = array();
 
 foreach ( $DBlist as $wiki ) {
-	$wiki = explode( '|', $wiki, 3 );
-	list( $DBname, $siteName, $wikiTagList ) = array_pad( $wiki, 3, '' );
+	$wiki = explode( '|', $wiki, 4 );
+	list( $DBname, $siteName, $siteLang, $wikiTagList ) = array_pad( $wiki, 4, '' );
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
+	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
 	if ( $DBname == $wgDBname ) {
 		$wikiTags = array_filter( explode( '|', $wikiTagList ) );
 	}
