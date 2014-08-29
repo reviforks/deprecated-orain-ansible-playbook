@@ -30,6 +30,7 @@
     - mosh
     - nano
     - netcat
+    - screen
     - vim
     - zip
 
