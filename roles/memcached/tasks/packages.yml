@@ -1,0 +1,2 @@
+- name: Install Memcached
+  apt: pkg=memcached
