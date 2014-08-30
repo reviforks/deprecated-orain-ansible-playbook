@@ -10,11 +10,17 @@
 - name: Set firewall rules
   command: ufw allow {{item}}
   with_items:
+  # Allow access by ssh
     - ssh/tcp
+  # What is this for
     - 60000:61000/udp
+  # What is this for
     - 53/tcp
+  # What is this for
     - 53/udp
+  # What is this for
     - 7001
+  # What is this for
     - 5666
   register: ufw_result
   changed_when: "'Rule added' in ufw_result.stdout"
