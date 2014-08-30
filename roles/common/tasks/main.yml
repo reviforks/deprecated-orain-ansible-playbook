@@ -1,17 +1,7 @@
 - include: packages.yml
 - include: users.yml
 - include: backup.yml
-- include: logging.yml
 - include: ufw.yml
 - include: nagios.yml
-
-- name: Copy quickscripts
-  template: src={{item}} dest=/root/{{item|basename}} owner=root group=root mode=770
-  with_fileglob:
-    - ./quickscripts/*
-
-- name: Create a cronjob for auto running of ansible
-  cron: name="Automatic Run"
-        user="root"
-        minute=*/10
-        job="/root/ans-all  > /var/log/ans-all.log 2>&1"
+- include: files.yml
+- include: cron.yml

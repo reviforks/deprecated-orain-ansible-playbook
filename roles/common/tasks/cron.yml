@@ -1,0 +1,5 @@
+- name: Create a cronjob for auto running of ansible
+  cron: name="Automatic Run"
+        user="root"
+        minute=*/10
+        job="/root/ans-all  > /var/log/ans-all.log 2>&1"
