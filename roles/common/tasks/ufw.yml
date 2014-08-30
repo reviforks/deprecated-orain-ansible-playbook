@@ -12,15 +12,14 @@
   with_items:
   # Allow access by ssh
     - ssh/tcp
-  # What is this for
+  # TODO What is this for
     - 60000:61000/udp
-  # What is this for
+  # DNS
     - 53/tcp
-  # What is this for
     - 53/udp
-  # What is this for
+  # TODO What is this for
     - 7001
-  # What is this for
+  # Nagios NRPE
     - 5666
   register: ufw_result
   changed_when: "'Rule added' in ufw_result.stdout"

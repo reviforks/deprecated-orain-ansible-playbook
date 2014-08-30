@@ -1,7 +1,9 @@
 - name: Port rules
   command: ufw allow {{item}}
   with_items:
+  # TODO what exactly am I? My access should be limited?
   - 6379
+  # TODO what exactly am I? My access should be limited?
   - 6380
   register: ufw_result
   changed_when: "'Rule added' in ufw_result.stdout"

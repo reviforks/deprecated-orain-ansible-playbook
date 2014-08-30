@@ -1,7 +1,9 @@
 - name: open NFS ports
   command: ufw allow {{item}}
   with_items:
+  # NFS daemon
   - 111
+  # NFS remote filesystem access
   - 2049
   register: ufw_result
   changed_when: "'Rule added' in ufw_result.stdout"
