@@ -3,6 +3,7 @@
   with_items:
   - /var/mediawiki/uploads
   - /var/mediawiki/private/uploads
+  changed_when: False # never report as "changed"
 
 - name: nobody owns /var/mediawiki
   command: chown nobody:nogroup /var/mediawiki/ -R
