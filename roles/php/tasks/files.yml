@@ -1,0 +1,11 @@
+- name: Copy php-fpm pool configuration
+  copy: src={{item}} dest=/etc/php5/fpm/pool.d/{{item|basename}} backup=yes
+  with_fileglob:
+    - ./pool.d/*.conf
+  notify: Reload php-fpm
+
+- name: Copy php-fpm conf.d
+  copy: src={{item}} dest=/etc/php5/fpm/conf.d/{{item|basename}} backup=yes
+  with_fileglob:
+    - ./conf.d/*.ini
+  notify: Reload php-fpm

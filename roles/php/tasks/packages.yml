@@ -1,0 +1,17 @@
+- name: Install php and related libraries
+  apt: pkg={{item}}
+  with_items:
+    - graphicsmagick
+    - graphicsmagick-imagemagick-compat
+    - libpcre3
+    - libpcre3-dev
+    - php-apc
+    - php-mail
+    - php-pear
+    - php5-cli
+    - php5-curl
+    - php5-dev
+    - php5-fpm
+    - php5-geoip
+    - php5-intl
+    - php5-mysqlnd

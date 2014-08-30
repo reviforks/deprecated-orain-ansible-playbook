@@ -1,41 +1,8 @@
----
-- name: Install php and related libraries
-  apt: pkg={{item}}
-  with_items:
-    - graphicsmagick
-    - graphicsmagick-imagemagick-compat
-    - libpcre3
-    - libpcre3-dev
-    - php-apc
-    - php-mail
-    - php-pear
-    - php5-cli
-    - php5-curl
-    - php5-dev
-    - php5-fpm
-    - php5-geoip
-    - php5-intl
-    - php5-mysqlnd
-
-- name: Copy php-fpm pool configuration
-  copy: src={{item}} dest=/etc/php5/fpm/pool.d/{{item|basename}} backup=yes
-  with_fileglob:
-    - ./pool.d/*.conf
-  notify: Reload php-fpm
-
-- name: Copy php-fpm conf.d
-  copy: src={{item}} dest=/etc/php5/fpm/conf.d/{{item|basename}} backup=yes
-  with_fileglob:
-    - ./conf.d/*.ini
-  notify: Reload php-fpm
+- include: packages.yml
+- include: files.yml
 
 - name: Disable MySQLi
   lineinfile: dest=/etc/php5/fpm/conf.d/20-mysqli.ini regexp='^;?extension\=mysqli\.so' line=';extension=mysqli.so'
   notify: Reload php-fpm
 
-- name: Create a cronjob for Piwik report archiving
-  cron: name="Archive Piwik reports"
-        user="www-scripts"
-        minute=0
-        job="php /usr/share/nginx/bits.orain.org/piwik/misc/cron/archive.php --url=http://bits.orain.org/piwik/ > /var/log/piwik-archive.log"
-
+- include: cron.yml
