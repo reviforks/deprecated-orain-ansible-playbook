@@ -5,7 +5,13 @@
   - 167.88.113.190
   #prod3
   - 23.226.230.178
-  #prod1
-  - 54.227.250.92
   register: ufw_result
   changed_when: "'Rule added' in ufw_result.stdout"
+
+- name: Remove old firewall rules
+  command: ufw delete {{item}}
+  with_items:
+  # 30-August-2014 - prod1
+  - allow from 54.227.250.92 to any port 9300
+  register: ufw_delete_result
+  changed_when: "'Rule deleted' in ufw_delete_result.stdout"
