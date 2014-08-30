@@ -38,6 +38,10 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
 		$wgDynamicSidebarUseUserpages = true;
 		$wgDynamicSidebarUseGroups = true;
+		require_once( "$IP/extensions/WebChat/WebChat.php" );
+		$wgWebChatServer  = ''; // Not needed due to wgWebChatClient --SPF
+		$wgWebChatChannel = '#allthetropes';
+		$wgWebChatClient = 'freenodeChat';
 		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
