@@ -1,44 +1,8 @@
----
-- name: Add MariaDB apt key
-  apt_key: url=http://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0xcbcb082a1bb943db
-
-- name: Add MariaDB apt repository
-  apt_repository: repo='deb http://ftp.osuosl.org/pub/mariadb/repo/5.5/debian wheezy main'
-
 - name: Set MariaDB root password
   command: "debconf-set-selections <<< 'mysql-server-10.0 mysql-server/root_password password {{mysql_root_password}}'"
   command: "debconf-set-selections <<< 'mysql-server-10.0 mysql-server/root_password_again password {{mysql_root_password}}'"
   changed_when: False # Never report as changed
 
-- name: Install MariaDB
-  apt: pkg=mariadb-server
-
-## Kudu - 31-08-13 - Comment out DB user creation which doesn't seem to support MariaDB
-# - name: Create a MariaDB user for MediaWiki
-#   mysql_user: login_user=root login_password={{mysql_root_password}}
-#               name={{mw_db_user}} password={{mw_db_password}}
-#               priv=*.*:ALL
-
-- name: Copy my.cnf
-  copy: src=my.cnf dest=/etc/mysql/my.cnf
-
-- name: Delete the old my.cnf
-  command: rm /etc/my.cfg removes=/etc/my.cfg
-
-- name: Copy debian.cnf
-  template: src=debian.cnf.j2 dest=/etc/mysql/debian.cnf
-
-- name: Set firewall rule for prod4 mysql access
-  command: ufw allow from 10.131.243.244 to any port 3306
-  register: ufw_result_prod4
-  changed_when: "'Rule added' in ufw_result_prod4.stdout"
-
-- name: Set firewall rule for prod6 (nagios) mysql access
-  command: ufw allow from 10.131.243.246 to any port 3306
-  register: ufw_result_nagios
-  changed_when: "'Rule added' in ufw_result_nagios.stdout"
-
-- name: Set firewall rule for useranalysis access
-  command: ufw allow from 208.80.155.255 to any port 3306
-  register: ufw_result_ua
-  changed_when: "'Rule added' in ufw_result_ua.stdout"
+- include: packages.yml
+- include: files.yml
+- include: ufw.yml
