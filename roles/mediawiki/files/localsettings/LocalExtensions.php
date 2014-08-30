@@ -123,6 +123,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
 		require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
+		require_once( "$IP/extensions/WebChat/WebChat.php" );
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
