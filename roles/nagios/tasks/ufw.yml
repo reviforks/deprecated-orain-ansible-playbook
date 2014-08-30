@@ -1,0 +1,7 @@
+- name: Set firewall rules
+  command: ufw allow {{item}}
+  with_items:
+    - http/tcp
+    - https/tcp
+  register: ufw_result
+  changed_when: "'Rule added' in ufw_result.stdout"
