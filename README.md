@@ -39,12 +39,6 @@ Before making any changes to MediaWiki stuff, make sure the user requesting the 
 ### Deploying new MediaWiki LocalSettings.php
 
 After any change in LocalSettings.php, please make sure the syntax is correct!
-If LocalSettings syntax is incorrect, the ansible-pull will fail.
-
-To check the syntax simply run the following command:
- > php -l roles/mediawiki/files/LocalSettings.php.j2
-
-If you cannot run this on your machine, then submit you change as a branch of the repo and make a pull request! This way, Travis CI will run the validation test for you.
 
 ### Deploying new MediaWiki extensions
 
