@@ -1,12 +1,5 @@
----
-- name: Add ElasticSearch apt key
-  apt_key: id=D88E42B4 url=http://packages.elasticsearch.org/GPG-KEY-elasticsearch
-
-- name: Add ElasticSearch apt repository
-  apt_repository: repo='deb http://packages.elasticsearch.org/elasticsearch/0.90/debian stable main'
-
-- name: Install ElasticSearch
-  apt: pkg=elasticsearch
+- include: packages.yml
+- include: ufw.yml
 
 - name: Set ElasticSearch heap size to 75m
   lineinfile: dest=/etc/init.d/elasticsearch
@@ -26,16 +19,3 @@
                 dest=/etc/elasticsearch/elasticsearch.yml
                 regexp='^action\.auto_create_index:'
                 line='action.auto_create_index: false'
-
-- name: Set firewall rule for prod* elasticsearch access
-  command: ufw allow from {{item}} to any port 9300
-  with_items:
-  #prod4
-  - 167.88.113.190
-  #prod3
-  - 23.226.230.178
-  #prod1
-  - 54.227.250.92
-  register: ufw_result
-  changed_when: "'Rule added' in ufw_result.stdout"
-
