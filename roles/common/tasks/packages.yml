@@ -1,0 +1,35 @@
+- name: Install ansible dependencies
+  raw: apt-get install -y python-apt python-simplejson
+
+- name: Update Apt Cache (on the hour)
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: Install packages
+  apt: pkg={{item}}
+  with_items:
+    - aptitude
+    - denyhosts
+    - fail2ban
+    - lsof
+    - lynis
+    - nagios-nrpe-server
+    - python3
+    - python-software-properties
+    - rkhunter
+    - sudo
+    - tmux
+    - ufw
+    - zsh
+
+- name: Install packages (latest)
+  apt: pkg={{item}} state=latest
+  with_items:
+    - git
+    - htop
+    - mysql-client # Needed for testing mysql connectivity between instance - Addshore
+    - mosh
+    - nano
+    - netcat
+    - screen
+    - vim
+    - zip
