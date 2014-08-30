@@ -2,4 +2,10 @@
 #Runs all of the parts of ansible that are needed
 #Also touches our files that is used by nagios
 
-/root/ans-pull && /root/ans-run && echo "Touching .ansible.timestamp" && touch /.ansible.timestamp && chmod 775 /.ansible.timestamp
+if [ -z "$1" ]; then
+   branch="master"
+else
+   branch=$1
+fi
+
+/root/ans-pull $branch && /root/ans-run && echo "Touching .ansible.timestamp" && touch /.ansible.timestamp && chmod 775 /.ansible.timestamp
