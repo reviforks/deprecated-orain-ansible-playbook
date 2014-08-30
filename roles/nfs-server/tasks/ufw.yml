@@ -3,3 +3,5 @@
   with_items:
   - 111
   - 2049
+  register: ufw_result
+  changed_when: "'Rule added' in ufw_result.stdout"
