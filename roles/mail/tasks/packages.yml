@@ -1,0 +1,9 @@
+- name: Install mail packages
+  apt: pkg={{item}}
+  with_items:
+  - postfix
+  - dovecot-core
+  - dovecot-imapd
+
+- name: Install mailman
+  apt: pkg=mailman
