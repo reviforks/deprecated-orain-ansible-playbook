@@ -1,2 +1,0 @@
-- name: Copy memcached.conf
-  copy: src=memcached.conf dest=/etc/memcached.conf
