@@ -1,0 +1,27 @@
+- name: Create a cronjob for get_db_list.py
+  cron: name="Get DB list" user="www-scripts" job="python3 ~/get_db_list.py"
+
+- name: Create a cronjob for the MediaWiki job queue
+  cron: name="MediaWiki job queue"
+        user="www-scripts"
+        minute=0
+        job="/home/www-scripts/db_loop.sh /usr/share/nginx/.orain.org/w/maintenance/runJobs.php > /var/log/mediawiki/runJobs.log 2>&1"
+
+- name: Create a cronjob for MediaWiki special page updating on All The Tropes
+  cron: name="MediaWiki special page updating"
+        user="www-scripts"
+        minute="0"
+        hour="*/3"
+        job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/updateSpecialPages.php --wiki allthetropeswiki > /var/log/mediawiki/updateSpecialPages.log 2>&1"
+
+- name: Create TorBlock node loader cron
+  cron: name="Load TorBlockNodes"
+        user="www-scripts"
+        minute="0"
+        hour="*/12"
+        job="/home/www-scripts/db_loop.sh /usr/share/nginx/.orain.org/w/extensions/TorBlock/loadExitNodes.php --force"
+
+- name: Add i18n.sh to boot
+  command: update-rc.d i18n.sh defaults 99
+  register: update_rc_i18n
+  changed_when: "'System start/stop links for /etc/init.d/i18n.sh already exist.' not in update_rc_i18n.stdout"
