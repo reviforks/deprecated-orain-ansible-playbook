@@ -8,6 +8,17 @@
   action: shell /usr/bin/composer.phar self-update
   register: composer_update_output
   changed_when: composer_update_output.stdout.find('You are already using composer version') == -1
+  
+  # wget until we decide to set up an apt-repo. {{item}} because we have a few of these but only one exists right now
+- name: wget Orain deb packages
+  command: wget apt.orain.org/debian/{{item}}
+  with_items:
+  - php5-redis.deb
+  
+- name: Install Orain deb packages
+  command: dpkg -i {{item}}
+  with_items:
+  - php5-redis.deb
 
 - name: Check out latest stable WMF branch of MediaWiki
   git: repo=https://github.com/Orain/mediawiki-core.git
