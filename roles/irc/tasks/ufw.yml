@@ -1,5 +1,3 @@
----
-- name: ufw ports
-  command: ufw allow 7001
-  register: ports
-  changed_when: ''Rule added' in ports.stdout'
+#TODO this rule should be more specific than this! what host?
+- name: irc ufw ports
+  ufw: rule=allow port=7001

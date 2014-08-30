@@ -7,36 +7,47 @@
     - after.rules
     - before.rules
 
-- name: Set firewall rules
-  command: ufw allow {{item}}
+- name: Allow access on all production IPs
+  ufw: rule=allow src={{ item }}
   with_items:
-  # Allow access by ssh
-    - ssh/tcp
-  # TODO What is this for
-    - 60000:61000/udp
-  # DNS
-    - 53/tcp
-    - 53/udp
-  # Nagios NRPE
-    - 5666
-  register: ufw_result
-  changed_when: "'Rule added' in ufw_result.stdout"
+  #prod3 extv4 extv6 intv4
+  - 178.62.5.12
+  - 2a03:b0c0:1:d0::bd:e001
+  - 10.131.243.49
+  #prod4 extv4 extv6 intv4
+  - 178.62.7.226
+  - 2a03:b0c0:1:d0::b7:b001
+  - 10.131.243.244
+  #prod5 extv4 extv6 intv4
+  - 178.62.7.225
+  - 2a03:b0c0:1:d0::b7:a001
+  - 10.131.243.243
+  #prod6 extv4 extv6 intv4
+  - 178.62.7.228
+  - 2a03:b0c0:1:d0::b7:d001
+  - 10.131.243.246
+  #prod7 extv4 extv6 intv4
+  - 178.62.7.230
+  - 2a03:b0c0:1:d0::b7:f001
+  - 10.131.243.247
 
-- name: Check status of ufw
-  command: ufw status
-  register: ufw_status
-  changed_when: False # never report as "changed"
+- name: Allow ssh access
+  ufw: rule=allow name=ssh
 
-- name: Check config of ufw
-  command: cat /etc/ufw/ufw.conf
-  register: ufw_config
-  changed_when: False # never report as "changed"
+- name: Allow DNS port
+  ufw: rule=allow port=53
+
+# Deleted since 30 August 2014 - https://github.com/Orain/ansible-playbook/issues/340
+- name: Delete allow access on old port range
+  ufw: rule=allow port=60000:61000 proto=udp delete=yes
+
+# Deleted since 30 August 2014 - nrpe port, no longer needed as all internal ips are open
+- name: Delete allow access on old random port - 5666
+  ufw: rule=allow delete=yes port=5666
 
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=664748
-- name: Disable logging (workaround for known bug in Debian 7)
-  command: ufw logging off
-  when: "ansible_lsb['codename'] == 'wheezy' and 'LOGLEVEL=off' not in ufw_config.stdout"
+- name: Disable ufw logging (workaround for known bug in Debian 7)
+  ufw: logging=off
 
 - name: Enable ufw
-  command: ufw --force enable
-  when: "ufw_status.stdout.startswith('Status: inactive') or 'ENABLED=yes' not in ufw_config.stdout"
+  ufw: state=enabled policy=deny
