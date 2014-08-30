@@ -17,8 +17,6 @@
   # DNS
     - 53/tcp
     - 53/udp
-  # TODO What is this for
-    - 7001
   # Nagios NRPE
     - 5666
   register: ufw_result

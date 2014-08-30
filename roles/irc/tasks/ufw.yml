@@ -1,0 +1,5 @@
+---
+- name: ufw ports
+  command: ufw allow 7001
+  register: ports
+  changed_when: ''Rule added' in ports.stdout'
