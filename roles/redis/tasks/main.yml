@@ -1,21 +1,3 @@
----
-- name: Install redis server
-  apt: pkg=redis-server
-
-- name: Copy redis config (j2)
-  template: src={{item}} dest=/etc/redis/{{item|basename|replace('.j2','')}}
-  with_fileglob:
-  - ./*.j2
-  
-- name: Copy redis config
-  copy: src={{item}} dest=/etc/redis
-  with_items:
-  - persist.conf
-  - evict.conf
-  notify: restart redis
-
-- name: Port rules
-  command: ufw allow {{item}}
-  with_items:
-  - 6379
-  - 6380
+- include: packages.yml
+- include: files.yml
+- include: ufw.yml

@@ -1,0 +1,39 @@
+- name: Copy default ufw default settings
+  copy: src="./ufw/default" dest=/etc/default/ufw
+
+- name: Copy ufw files
+  copy: src=./ufw/{{item}} dest=/etc/ufw/{{item|basename}} owner=root group=root mode=700
+  with_items:
+    - after.rules
+    - before.rules
+
+- name: Set firewall rules
+  command: ufw allow {{item}}
+  with_items:
+    - ssh/tcp
+    - 60000:61000/udp
+    - 53/tcp
+    - 53/udp
+    - 7001
+    - 5666
+  register: ufw_result
+  changed_when: "'Rule added' in ufw_result.stdout"
+
+- name: Check status of ufw
+  command: ufw status
+  register: ufw_status
+  changed_when: False # never report as "changed"
+
+- name: Check config of ufw
+  command: cat /etc/ufw/ufw.conf
+  register: ufw_config
+  changed_when: False # never report as "changed"
+
+# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=664748
+- name: Disable logging (workaround for known bug in Debian 7)
+  command: ufw logging off
+  when: "ansible_lsb['codename'] == 'wheezy' and 'LOGLEVEL=off' not in ufw_config.stdout"
+
+- name: Enable ufw
+  command: ufw --force enable
+  when: "ufw_status.stdout.startswith('Status: inactive') or 'ENABLED=yes' not in ufw_config.stdout"

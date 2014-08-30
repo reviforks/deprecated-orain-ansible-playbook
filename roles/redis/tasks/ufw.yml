@@ -1,0 +1,5 @@
+- name: Port rules
+  command: ufw allow {{item}}
+  with_items:
+  - 6379
+  - 6380

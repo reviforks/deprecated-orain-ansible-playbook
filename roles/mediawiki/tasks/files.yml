@@ -1,0 +1,48 @@
+- name: Create mediawiki log directory
+  command: mkdir -p {{item}}
+  with_items:
+    - /var/log/mediawiki/
+    - /var/log/mediawiki/debuglogs/
+  changed_when: False # never report as "changed"
+
+- name: Delete old mediawiki files
+  command: rm {{item}} removes={{item}}
+  with_items:
+    - /root/notify_irc.sh
+
+- name: chown all.dblist
+  command: chown www-scripts:www-data /usr/share/nginx/.orain.org/w/all.dblist
+  changed_when: False
+
+- name: Copy MediaWiki settings from templates
+  template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}}
+  with_fileglob:
+    - ./localsettings/*.php.j2
+  notify:
+    - Rebuild localisation cache
+    - Clear APC cache
+
+- name: Copy MediaWiki settings from files
+  copy: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename}}
+  with_fileglob:
+    - ./localsettings/*.php
+  notify:
+    - Rebuild localisation cache
+    - Clear APC cache
+
+- name: Copy {{item}}
+  copy: src={{item}} dest=/home/www-scripts owner=www-scripts group=www-data mode=770
+  with_items:
+    - get_db_list.py
+    - db_loop.sh
+
+- name: Copy logrotate configuration
+  copy: src="./logrotate.d/mediawiki" dest=/etc/logrotate.d
+
+- name: Copy quickscripts
+  template: src={{item}} dest=/root/{{item|basename}} owner=root group=root mode=770
+  with_fileglob:
+    - ./quickscripts/*
+
+- name: Copy localisationcache rebuilt script to init.d
+  copy: src="./quickscripts/mw-rebuildlocalisationcache" dest=/etc/init.d/i18n.sh owner=root group=root mode=770

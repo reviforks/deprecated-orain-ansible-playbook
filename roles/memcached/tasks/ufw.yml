@@ -1,0 +1,4 @@
+- name: Set firewall rule for prod5 access
+  command: ufw allow from 107.191.118.238 to any port 11211
+  register: ufw_result_prod5
+  changed_when: "'Rule added' in ufw_result_prod5.stdout"

@@ -1,0 +1,6 @@
+# TODO This should NOT be in the php role
+- name: Create a cronjob for Piwik report archiving
+  cron: name="Archive Piwik reports"
+        user="www-scripts"
+        minute=0
+        job="php /usr/share/nginx/bits.orain.org/piwik/misc/cron/archive.php --url=http://bits.orain.org/piwik/ > /var/log/piwik-archive.log"

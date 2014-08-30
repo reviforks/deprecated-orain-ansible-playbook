@@ -1,0 +1,8 @@
+- name: Add nginx apt key
+  apt_key: id=7BD9BF62 url=http://nginx.org/keys/nginx_signing.key
+
+- name: Add nginx apt repository
+  apt_repository: repo='deb http://nginx.org/packages/debian/ wheezy nginx'
+
+- name: Install nginx
+  apt: pkg=nginx

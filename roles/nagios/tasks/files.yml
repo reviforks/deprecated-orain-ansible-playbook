@@ -1,0 +1,13 @@
+- name: Copy conf.d
+  copy: src={{item}} dest=/etc/nagios3/conf.d
+  with_fileglob:
+  -  ./conf.d/*
+  notify: Restart nagios3
+
+- name: Copy main config
+  copy: src={{item}} dest=/etc/nagios3
+  with_items:
+  -  cgi.cfg
+  -  commands.cfg
+  -  nagios.cfg
+  notify: Restart nagios3

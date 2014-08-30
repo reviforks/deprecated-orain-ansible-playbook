@@ -1,0 +1,5 @@
+- name: open NFS ports
+  command: ufw allow {{item}}
+  with_items:
+  - 111
+  - 2049

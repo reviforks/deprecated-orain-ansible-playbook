@@ -1,0 +1,19 @@
+- name: Copy postfix config
+  template: src={{item}} dest=/etc/postfix
+  with_fileglob:
+  - ./postfix/*
+  notify: restart postfix
+
+- name: Copy dovecot config
+  template: src={{item}} dest=/etc/dovecot/dovecot.conf
+  with_fileglob:
+  - ./dovecot/dovecot.conf.j2
+  notify: restart dovecot
+
+- name: Copy aliases
+  copy: src=aliases dest=/etc/
+  notify: newaliases
+
+- name: Copy over MailMan config
+  copy: src=mm_cfg.py dest=/etc/mailman
+  notify: restart mailman

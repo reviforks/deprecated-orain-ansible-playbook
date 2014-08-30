@@ -1,0 +1,3 @@
+- name: Move load balancing file over
+  template: src=default.j2 dest=/etc/nginx/sites-available/default
+  notify: restart nginx
