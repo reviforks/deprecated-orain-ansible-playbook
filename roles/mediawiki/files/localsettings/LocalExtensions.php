@@ -29,7 +29,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RefreshSpecial/RefreshSpecial.php" );
 		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
-		require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
+		//require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
 		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
 		require_once( "$IP/extensions/CustomData/CustomData.php" );
@@ -42,9 +42,6 @@ switch( $wgDBname ) {
 		$wgWebChatServer  = ''; // Not needed due to wgWebChatClient --SPF
 		$wgWebChatChannel = '#allthetropes';
 		$wgWebChatClient = 'freenodeChat';
-		require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
-		require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" );
-		require_once( "$IP/extensions/Popups/Popups.php" );
 		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
@@ -117,7 +114,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RefreshSpecial/RefreshSpecial.php" );
 		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
-		require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
+		//require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
@@ -127,9 +124,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
 		require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
 		require_once( "$IP/extensions/WebChat/WebChat.php" );
-		require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
-		require_once( "$IP/extensions/Popups/Popups.php" );
-		require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" );
 		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
