@@ -20,6 +20,7 @@
   - php5-redis.deb
   args:
     chdir: /root/debs/
+    creates: /root/debs/{{item}}
   changed_when: False # never report as changed
   
 - name: Install Orain deb packages
