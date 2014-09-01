@@ -188,10 +188,6 @@ if ( $wmgUseATTImages ) {
 	);
 }
 
-if ( $wmgUseAPISandbox ) {
-	require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
-}
-
 if ( $wmgUseBetaFeatures ) {
 	require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" ); //Get BF
 	//require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" ); // MediaViwer
