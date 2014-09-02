@@ -6,8 +6,8 @@ webmaster: root
 www: root
 ftp: root
 abuse: root
-noc: root
-security: root
+noc: sysadmin
+security: sysadmin
 
 # phase out help!
 help: dusti,john,addshore
