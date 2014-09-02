@@ -16,7 +16,7 @@ def main():
     text = r.text.replace('<pre>\n', '').replace('</pre>', '').rstrip('\n')
 
     # Write to a file to be read by our settings
-    with open("/usr/share/nginx/.orain.org/w/all.dblist", "w") as db_list:
+    with open("/srv/mediawiki/w/all.dblist", "w") as db_list:
         db_list.write(text)
 
 if __name__ == "__main__":

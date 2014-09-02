@@ -5,21 +5,21 @@
   cron: name="MediaWiki job queue"
         user="www-scripts"
         minute=0
-        job="/home/www-scripts/db_loop.sh /usr/share/nginx/.orain.org/w/maintenance/runJobs.php > /var/log/mediawiki/runJobs.log 2>&1"
+        job="/home/www-scripts/db_loop.sh /srv/mediawiki/w/maintenance/runJobs.php > /var/log/mediawiki/runJobs.log 2>&1"
 
 - name: Create a cronjob for MediaWiki special page updating on All The Tropes
   cron: name="MediaWiki special page updating"
         user="www-scripts"
         minute="0"
         hour="*/3"
-        job="/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/updateSpecialPages.php --wiki allthetropeswiki > /var/log/mediawiki/updateSpecialPages.log 2>&1"
+        job="/usr/bin/php /srv/mediawiki/w/maintenance/updateSpecialPages.php --wiki allthetropeswiki > /var/log/mediawiki/updateSpecialPages.log 2>&1"
 
 - name: Create TorBlock node loader cron
   cron: name="Load TorBlockNodes"
         user="www-scripts"
         minute="0"
         hour="*/12"
-        job="/home/www-scripts/db_loop.sh /usr/share/nginx/.orain.org/w/extensions/TorBlock/loadExitNodes.php --force"
+        job="/home/www-scripts/db_loop.sh /srv/mediawiki/w/extensions/TorBlock/loadExitNodes.php --force"
 
 - name: Add i18n.sh to boot
   command: update-rc.d i18n.sh defaults 99
