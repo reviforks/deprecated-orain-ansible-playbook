@@ -1,12 +1,18 @@
 - name: Add user group "{{item}}"
-  group: name={{item}}
+  group: name={{item}} state=present
   with_items:
   - roots
   - operations
 
+- name: Remove old user group "{{item}}"
+  group: name={{item}} state=absent
+  with_items:
+  - sudo
+
 # NOTE: Don't edit without validating first
 - name: Allow users in the roots group to run sudo without a password
   lineinfile: dest=/etc/sudoers
+              state=present
               regexp='^\%roots'
               line='%roots ALL=(ALL) NOPASSWD:ALL'
               validate='visudo -cf %s'
@@ -14,8 +20,17 @@
 # NOTE: Don't edit without validating first
 - name: Allow users in the operations group to run sudo without a password
   lineinfile: dest=/etc/sudoers
+              state=present
               regexp='^\%operations'
               line='%operations ALL=(ALL) NOPASSWD:ALL'
+              validate='visudo -cf %s'
+
+# NOTE: Don't edit without validating first
+- name: Dont Allow users in the sudo group to run sudo without a password
+  lineinfile: dest=/etc/sudoers
+              state=absent
+              regexp='^\%sudo'
+              line='%sudo ALL=(ALL) NOPASSWD:ALL'
               validate='visudo -cf %s'
 
 - name: Create user "{{item.name}}" in "{{item.groups}}"
