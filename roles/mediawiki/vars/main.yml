@@ -256,7 +256,7 @@ extensions:
     version: '792dd9c'
     }
   - { 
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-NativeSvgHandler.git',
+    repo: 'https://github.com/Orain/NativeSvgHandler.git',
     dest: 'extensions/NativeSvgHandler', 
     version: '823abbd'
     }
