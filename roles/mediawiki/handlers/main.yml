@@ -1,5 +1,5 @@
 - name: Rebuild localisation cache
-  command: /usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki {{item}}
+  command: /usr/bin/php /srv/mediawiki/w/maintenance/rebuildLocalisationCache.php --wiki {{item}}
   with_items:
 #    - metawiki # Only uncomment this if things break
     - extloadwiki
@@ -10,10 +10,10 @@
   failed_when: clear_apc_cache.stdout.find('true') == -1
 
 - name: Install Validator dependencies using Composer
-  shell: "cd /usr/share/nginx/.orain.org/w/extensions/Validator && /usr/bin/composer.phar install"
+  shell: "cd /srv/mediawiki/w/extensions/Validator && /usr/bin/composer.phar install"
 
 - name: Mediawiki submodule fileMode false
-  shell: "cd /usr/share/nginx/.orain.org/w/ && git submodule foreach --recursive git config core.fileMode false"
+  shell: "cd /srv/mediawiki/w/ && git submodule foreach --recursive git config core.fileMode false"
 
 - name: Update mediawiki
   shell: "/root/mw-updateall"

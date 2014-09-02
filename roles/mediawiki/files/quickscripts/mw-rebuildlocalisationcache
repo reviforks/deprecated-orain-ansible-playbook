@@ -11,5 +11,5 @@
 # Description:       Rebuilds the Mediawiki localisation cache
 ### END INIT INFO
 
-/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki metawiki
-/usr/bin/php /usr/share/nginx/.orain.org/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki
+/usr/bin/php /srv/mediawiki/w/maintenance/rebuildLocalisationCache.php --wiki metawiki
+/usr/bin/php /srv/mediawiki/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki

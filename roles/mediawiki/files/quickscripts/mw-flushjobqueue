@@ -1,2 +1,2 @@
 #!/bin/sh
-/home/www-scripts/db_loop.sh /usr/share/nginx/.orain.org/w/maintenance/runJobs.php
+/home/www-scripts/db_loop.sh /srv/mediawiki/w/maintenance/runJobs.php

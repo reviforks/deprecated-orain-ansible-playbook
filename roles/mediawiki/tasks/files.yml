@@ -11,11 +11,11 @@
     - /root/notify_irc.sh
 
 - name: chown all.dblist
-  command: chown www-scripts:www-data /usr/share/nginx/.orain.org/w/all.dblist
+  command: chown www-scripts:www-data /srv/mediawiki/w/all.dblist
   changed_when: False
 
 - name: Copy MediaWiki settings from templates
-  template: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename|replace('.j2','')}}
+  template: src={{item}} dest=/srv/mediawiki/w/{{item|basename|replace('.j2','')}}
   with_fileglob:
     - ./localsettings/*.php.j2
   notify:
@@ -23,7 +23,7 @@
     - Clear APC cache
 
 - name: Copy MediaWiki settings from files
-  copy: src={{item}} dest=/usr/share/nginx/.orain.org/w/{{item|basename}}
+  copy: src={{item}} dest=/srv/mediawiki/w/{{item|basename}}
   with_fileglob:
     - ./localsettings/*.php
   notify:

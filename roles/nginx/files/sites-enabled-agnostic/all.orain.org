@@ -1,4 +1,4 @@
-root /usr/share/nginx/.orain.org;
+root /srv/mediawiki;
 index index.html index.htm index.php;
 
 location = / {
