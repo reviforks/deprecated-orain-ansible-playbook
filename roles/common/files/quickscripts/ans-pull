@@ -1,13 +1,25 @@
-#!/bin/sh
+#!/bin/bash
 #Pulls the latest anisble playbook from github
-#
-#NOTE: this script is used by a cronjob added by ansible named "Automatic Run"
 
-if [ -z "$1" ]; then
-   branch="master"
-else
-   branch=$1
-fi
+# Get options
+branch='master'
+while test $# -gt 0; do
+        case "$1" in
+                --help)
+                        echo "options:"
+                        echo "--help                show brief help"
+                        echo "--branch=BRANCH       specify a branch to use"
+                        exit 0
+                        ;;
+                --branch*)
+                        branch=`echo $1 | sed -e 's/^[^=]*=//g'`
+                        shift
+                        ;;
+                *)
+                        break
+                        ;;
+        esac
+done
 
 echo "Pulling ansible from github - $branch"
 
