@@ -40,9 +40,9 @@
     - Clear APC cache
 
 - name: Check out extensions for MediaWiki
-  git: repo={{repo}}
-       dest=srv/mediawiki/w/{{dest}}
-       version={{version}}
+  git: repo={{item.repo}}
+       dest=srv/mediawiki/w/{{item.dest}}
+       version={{item.version}}
   with_items: extensions
   notify:
     - Rebuild localisation cache
@@ -51,9 +51,9 @@
     - Clear APC cache
 
 - name: Check out skins for MediaWiki
-  git: repo={{repo}}
-       dest=/srv/mediawiki/w/{{dest}}
-       version={{version}}
+  git: repo={{item.repo}}
+       dest=/srv/mediawiki/w/{{item.dest}}
+       version={{item.version}}
   with_items: skins
   notify:
     - Mediawiki submodule fileMode false
