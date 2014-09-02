@@ -1,6 +1,6 @@
 ---
 users:
-  - { name: 'kudu', groups: 'sudo' }
-  - { name: 'addshore', groups: 'sudo' }
-  - { name: 'johnflewis', groups: 'sudo' }
+  - { name: 'kudu', group: 'roots', groups: 'roots,operations' }
+  - { name: 'addshore', group: 'roots', groups: 'roots,operations' }
+  - { name: 'johnflewis', group: 'roots', groups: 'roots,operations' }
 

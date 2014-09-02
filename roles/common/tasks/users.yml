@@ -1,11 +1,25 @@
-# Don't edit without validating first
-- name: Allow users in the sudo group to run sudo without a password
-  lineinfile: dest=/etc/sudoers
-              regexp='^\%sudo'
-              line='%sudo ALL=(ALL) NOPASSWD:ALL'
+- name: Add user group "{{item}}"
+  group: name={{item}}
+  with_items:
+  - roots
+  - operations
 
-- name: Create user "{{item.name}}"
-  user: name={{item.name}} groups={{item.groups}} shell=/bin/zsh
+# NOTE: Don't edit without validating first
+- name: Allow users in the roots group to run sudo without a password
+  lineinfile: dest=/etc/sudoers
+              regexp='^\%roots'
+              line='%roots ALL=(ALL) NOPASSWD:ALL'
+              validate='visudo -cf %s'
+
+# NOTE: Don't edit without validating first
+- name: Allow users in the operations group to run sudo without a password
+  lineinfile: dest=/etc/sudoers
+              regexp='^\%operations'
+              line='%operations ALL=(ALL) NOPASSWD:ALL'
+              validate='visudo -cf %s'
+
+- name: Create user "{{item.name}}" in "{{item.groups}}"
+  user: name={{item.name}} group={{item.group}} groups={{item.groups}} shell=/bin/zsh
   with_items: users
 
 - name: Upload {{item.name}}'s public key
