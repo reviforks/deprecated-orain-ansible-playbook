@@ -20,3 +20,6 @@ nagios: john
 
 # addshore
 addshore: addshorewiki@gmail.com
+
+# pingdom notification stuff
+pingdom: john,addshore
