@@ -552,8 +552,23 @@ skins:
     dest: 'skins/Erudite',
     version: 'fc5b868'
     }
-#TODO skin cologneblue
-#TODO skin common
-#TODO skin modern
-#TODO skin monobook
-#TODO skin vector
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-skins-CologneBlue.git',
+    dest: 'skins/CologneBlue',
+    version: 'master'
+    }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-skins-Modern.git',
+    dest: 'skins/Modern',
+    version: 'master'
+    }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-skins-MonoBook.git',
+    dest: 'skins/MonoBook',
+    version: 'master'
+    }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-skins-Vector.git',
+    dest: 'skins/Vector',
+    version: 'master'
+    }
