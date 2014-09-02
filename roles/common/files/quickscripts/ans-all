@@ -1,11 +1,24 @@
-#!/bin/sh
+#!/bin/bash
 #Runs all of the parts of ansible that are needed
-#Also touches our files that is used by nagios
+#TODO enable a --force option!
 
+# Select the branch
 if [ -z "$1" ]; then
    branch="master"
 else
    branch=$1
 fi
 
-/root/ans-pull $branch && /root/ans-run && echo "Touching .ansible.timestamp" && touch /.ansible.timestamp && chmod 775 /.ansible.timestamp
+# Pull the playbook
+pullout=$(/root/ans-pull "$branch")
+
+# If the book has changed run it!
+if [[ $pullout == *true* ]]; then
+   /root/ans-run
+fi
+
+# If the last command was successful then touch the file used by nagios
+# It doesn't matter if this was the pull or the run!
+if [[ $? == 0 ]]; then
+   echo "Touching .ansible.timestamp" && touch /.ansible.timestamp && chmod 775 /.ansible.timestamp
+fi
