@@ -44,17 +44,22 @@
        dest=srv/mediawiki/w/{{item.dest}}
        version={{item.version}}
   with_items: extensions
+  tags:
+    - slow
   notify:
     - Rebuild localisation cache
     - Update mediawiki
     - Mediawiki submodule fileMode false
     - Clear APC cache
 
+
 - name: Check out skins for MediaWiki
   git: repo={{item.repo}}
        dest=/srv/mediawiki/w/{{item.dest}}
        version={{item.version}}
   with_items: skins
+  tags:
+    - slow
   notify:
     - Mediawiki submodule fileMode false
     - Clear APC cache
