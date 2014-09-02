@@ -510,10 +510,26 @@ extensions:
     dest: 'extensions/skins', 
     version: '14902cd'
     }
-#TODO extension CreateBox
-#TODO extension RandomSelection
-#TODO extension SectionHide
-#TODO extension YouTube
+  - {
+    repo: 'https://github.com/Orain/CreateBox.git',
+    dest: 'extensions/CreateBox',
+    version: 'master'
+    }
+  - {
+    repo: 'https://github.com/Orain/RandomSelection.git',
+    dest: 'extensions/RandomSelection',
+    version: 'master'
+    }
+  - {
+    repo: 'https://github.com/Orain/SectionHide.git',
+    dest: 'extensions/SectionHide',
+    version: 'master'
+    }
+  - {
+    repo: 'https://github.com/Orain/YouTube.git',
+    dest: 'extensions/YouTube',
+    version: 'master'
+    }
 
 skins:
   - {
