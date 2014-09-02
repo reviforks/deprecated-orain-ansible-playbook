@@ -166,11 +166,6 @@ extensions:
     version: '421f8d9'
     }
   - { 
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-GoogleSiteVerification.git',
-    dest: 'extensions/GoogleSiteVerification', 
-    version: '0a80633'
-    }
-  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-HeaderTabs.git',
     dest: 'extensions/HeaderTabs', 
     version: 'd6d3e0d'
