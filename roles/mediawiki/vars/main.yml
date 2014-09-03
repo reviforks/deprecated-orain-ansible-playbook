@@ -458,7 +458,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-VectorBeta.git',
     dest: 'extensions/VectorBeta', 
-    version: 'a4913dc'
+    version: 'fb8696130793aa52ee4794d520e47862aa5becdc'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-VoteNY.git',
@@ -484,6 +484,11 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiLove.git',
     dest: 'extensions/WikiLove', 
     version: '89cfb87'
+    }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-GoogleAdSense.git',
+    dest: 'extensions/GoogleAdSense',
+    version: '0b0688f94b904fece0b881218bfa94b0011ba9ae'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-cldr.git',
@@ -546,6 +551,11 @@ skins:
     repo: 'https://github.com/wikimedia/mediawiki-skins-erudite.git',
     dest: 'skins/Erudite',
     version: 'fc5b868'
+    }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-skins-BlueSky.git',
+    dest: 'skins/BlueSky',
+    version: 'ed2b24d018394bdeee88b4ea76bfbaedd68f85a5'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-skins-CologneBlue.git',
