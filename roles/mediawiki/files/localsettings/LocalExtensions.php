@@ -167,6 +167,18 @@ if ( $wgDBname !== 'metawiki' ) {
 }
 
 //wmgUSE
+if ( $wmgUseAds ) {
+	require_once( "$IP/extensions/GoogleAdSense/GoogleAdSense.php" );
+	$wgGoogleAdSenseClient = 'ca-pub-1601537392559952';
+	$wgGoogleAdSenseSlot = '1005587824';
+	$wgGoogleAdSenseID = 'lefttoolbar';
+	$wgGoogleAdSenseAnonOnly = false;
+}
+
+if ( $wmgUseAdsAnon && $wmgUseAds ) { // Prevent this being enabled but not ads
+	$wgGoogleAdSenseAnonOnly = true;
+}
+
 if ( $wmgUseATTImages ) {
 	$wgForeignFileRepos[] = array(
 		'class' => 'ForeignDBRepo',
