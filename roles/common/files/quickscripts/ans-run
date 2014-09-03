@@ -13,7 +13,7 @@ while test $# -gt 0; do
                         ;;
                 --skip-tags*)
                         skiptags=`echo $1 | sed -e 's/^[^=]*=//g'`
-                        skiptags=" --skip-tags \"$skiptags\""
+                        skiptags="--skip-tags $skiptags"
                         shift
                         ;;
                 *)
@@ -34,5 +34,5 @@ case $HOST in
 esac
 
 echo "Updating $limit from ansible-playbook: $skiptags"
-
-ansible-playbook -c local --limit "$limit""$skiptags" /root/ansible-playbook/local.yml -i "/root/ansible-playbook/production"
+set -x
+ansible-playbook -c local --limit $limit /root/ansible-playbook/local.yml -i "/root/ansible-playbook/production" $skiptags
