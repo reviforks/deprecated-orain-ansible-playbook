@@ -557,23 +557,3 @@ skins:
     dest: 'skins/BlueSky',
     version: 'ed2b24d018394bdeee88b4ea76bfbaedd68f85a5'
     }
-  - {
-    repo: 'https://github.com/wikimedia/mediawiki-skins-CologneBlue.git',
-    dest: 'skins/CologneBlue',
-    version: 'master'
-    }
-  - {
-    repo: 'https://github.com/wikimedia/mediawiki-skins-Modern.git',
-    dest: 'skins/Modern',
-    version: 'master'
-    }
-  - {
-    repo: 'https://github.com/wikimedia/mediawiki-skins-MonoBook.git',
-    dest: 'skins/MonoBook',
-    version: 'master'
-    }
-  - {
-    repo: 'https://github.com/wikimedia/mediawiki-skins-Vector.git',
-    dest: 'skins/Vector',
-    version: 'master'
-    }
