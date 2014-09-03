@@ -2,19 +2,41 @@
 #Runs all of the parts of ansible that are needed
 #TODO enable a --force option!
 
-# Select the branch
-if [ -z "$1" ]; then
-   branch="master"
-else
-   branch=$1
-fi
+# Get options
+branch='master'
+skiptags=''
+while test $# -gt 0; do
+        case "$1" in
+                --help)
+                        echo "options:"
+                        echo "--help                show brief help"
+                        echo "--branch=BRANCH       specify a branch to use"
+                        echo "--skip-tags=TAGS      specify any tags to skip"
+                        exit 0
+                        ;;
+                --branch*)
+                        branch=`echo $1 | sed -e 's/^[^=]*=//g'`
+                        shift
+                        ;;
+                --skip-tags*)
+                        skiptags=`echo $1 | sed -e 's/^[^=]*=//g'`
+                        skiptags="--skip-tags=$skiptags"
+                        shift
+                        ;;
+                *)
+                        break
+                        ;;
+        esac
+done
+
+echo "Pulling from $branch"
 
 # Pull the playbook
 pullout=$(/root/ans-pull "$branch")
 
 # If the book has changed run it!
 if [[ $pullout == *true* ]]; then
-   /root/ans-run
+   /root/ans-run "$skiptags"
 fi
 
 # If the last command was successful then touch the file used by nagios

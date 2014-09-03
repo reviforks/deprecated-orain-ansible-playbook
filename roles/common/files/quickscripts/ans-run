@@ -1,9 +1,26 @@
-#!/bin/sh
+#!/bin/bash
 #Runs the ansible update
-#
-#NOTE: this script is used by a cronjob added by ansible named "Automatic Run"
 
-echo "Updating server from ansible-playbook"
+# Get options
+skiptags=''
+while test $# -gt 0; do
+        case "$1" in
+                --help)
+                        echo "options:"
+                        echo "--help                show brief help"
+                        echo "--skip-tags=TAGS      specify any tags to skip"
+                        exit 0
+                        ;;
+                --skip-tags*)
+                        skiptags=`echo $1 | sed -e 's/^[^=]*=//g'`
+                        skiptags="--skip-tags $skiptags"
+                        shift
+                        ;;
+                *)
+                        break
+                        ;;
+        esac
+done
 
 HOST=$(hostname)
 
@@ -16,4 +33,6 @@ case $HOST in
   (*)   echo Failed to match host using $HOST && exit 1;;
 esac
 
-ansible-playbook -c local --limit "$limit" /root/ansible-playbook/local.yml -i "/root/ansible-playbook/production"
+echo "Updating $limit from ansible-playbook: $skiptags"
+set -x
+ansible-playbook -c local --limit $limit /root/ansible-playbook/local.yml -i "/root/ansible-playbook/production" $skiptags
