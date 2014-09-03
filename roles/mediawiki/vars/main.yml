@@ -458,7 +458,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-VectorBeta.git',
     dest: 'extensions/VectorBeta', 
-    version: 'fb8696130793aa52ee4794d520e47862aa5becdc'
+    version: 'REL1_23'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-VoteNY.git',
