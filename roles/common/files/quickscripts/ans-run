@@ -33,6 +33,7 @@ case $HOST in
   (*)   echo Failed to match host using $HOST && exit 1;;
 esac
 
-echo "Updating $limit from ansible-playbook: $skiptags"
 set -x
+
+echo "Updating $limit from ansible-playbook: $skiptags"
 ansible-playbook -c local --limit $limit /root/ansible-playbook/local.yml -i "/root/ansible-playbook/production" $skiptags

@@ -31,13 +31,15 @@ done
 
 echo "Pulling from $branch"
 
-# Pull the playbook
-pullout=$(/root/ans-pull "$branch")
+set -x
 
-# If the book has changed run it!
-if [[ $pullout == *true* ]]; then
-   /root/ans-run "$skiptags"
-fi
+# Pull the playbook
+/root/ans-pull --branch="$branch"
+
+# Run the playbook
+/root/ans-run "$skiptags"
+
+set +x
 
 # If the last command was successful then touch the file used by nagios
 # It doesn't matter if this was the pull or the run!
