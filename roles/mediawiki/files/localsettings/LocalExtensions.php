@@ -204,14 +204,20 @@ if ( $wmgUseATTImages ) {
 
 if ( $wmgUseBetaFeatures ) {
 	require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" ); //Get BF
-	//require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" ); // MediaViwer
-	//$wgMediaViewerIsInBeta = true; // Register MediaViewer as Beta
-	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" ); // VectorBeta
-	//$wgVectorBetaTypography = true;
-	$wgVectorBetaVectorBetaWinter = true; // Winter design
+
+	require_once( "$IP/extensions/EventLogging/EventLogging.php" );
 	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
 	require_once( "$IP/extensions/PageImages/PageImages.php" );
 	require_once( "$IP/extensions/Popups/Popups.php" );
+
+	//require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" ); // MediaViwer
+	//$wgMediaViewerIsInBeta = true; // Register MediaViewer as Beta
+
+	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" ); // VectorBeta
+	//NOTE: Globals must be set after extension is loaded
+	//$wgVectorBetaTypography = true; // Disabled for now
+	$wgVectorBetaVectorBetaWinter = true;
+	$wgVectorBetaPersonalBar = true; // REQUIRES EventLogging
 }
 
 if ( $wmgUseCodeEditor ) {
