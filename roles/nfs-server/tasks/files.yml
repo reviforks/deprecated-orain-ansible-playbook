@@ -5,8 +5,12 @@
   - /var/mediawiki/private/uploads
   changed_when: False # never report as "changed"
 
-- name: nobody owns /var/mediawiki
-  command: chown nobody:nogroup /var/mediawiki/ -R
+- name: 1003:33 own /var/mediawiki
+  command: chown 1003:33 /var/mediawiki/ -R
+
+- name: user needs x for all /var/mediawiki
+  command: chmod 0764 /var/mediawiki/ -R
+  changed_when: False
 
 - name: Move exports over
   copy: src=exports dest=/etc/
