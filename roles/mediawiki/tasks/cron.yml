@@ -12,7 +12,7 @@
         user="www-scripts"
         minute="0"
         hour="*/3"
-        job="/usr/bin/php /srv/mediawiki/w/maintenance/updateSpecialPages.php --wiki allthetropeswiki > /var/log/mediawiki/updateSpecialPages.log 2>&1"
+        job="/usr/bin/php /srv/mediawiki/w/maintenance/updateSpecialPages.php --wiki allthetropeswiki"
 
 - name: Create TorBlock node loader cron
   cron: name="Load TorBlockNodes"
