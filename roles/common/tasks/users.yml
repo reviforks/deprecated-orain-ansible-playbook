@@ -1,8 +1,8 @@
-- name: Add user group "{{item}}"
-  group: name={{item}} state=present
+- name: Add user group "{{item.name}}"
+  group: name={{item.name}} gid={{item.gid}} state=present
   with_items:
-  - roots
-  - operations
+  - { name: 'roots', gid: '2003' }
+  - { name: 'operations', gid: '2004' }
 
 - name: Remove old user group "{{item}}"
   group: name={{item}} state=absent
@@ -34,7 +34,7 @@
               validate='visudo -cf %s'
 
 - name: Create user "{{item.name}}" in "{{item.groups}}"
-  user: name={{item.name}} group={{item.group}} groups={{item.groups}} shell=/bin/zsh
+  user: name={{item.name}} group={{item.group}} groups={{item.groups}} uid={{item.uid}} shell=/bin/zsh
   with_items: users
 
 - name: Upload {{item.name}}'s public key
