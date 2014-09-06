@@ -5,7 +5,7 @@
   cron: name="MediaWiki job queue"
         user="www-scripts"
         minute=0
-        job="/home/www-scripts/db_loop.sh /srv/mediawiki/w/maintenance/runJobs.php > /var/log/mediawiki/runJobs.log 2>&1"
+        job="/home/www-scripts/db_loop.sh /srv/mediawiki/w/maintenance/runJobs.php"
 
 - name: Create a cronjob for MediaWiki special page updating on All The Tropes
   cron: name="MediaWiki special page updating"
