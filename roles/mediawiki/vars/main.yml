@@ -540,7 +540,7 @@ skins:
   - {
     repo: 'https://github.com/WikiWonders/foreground.git',
     dest: 'skins/foreground',
-    version: '39cf6db'
+    version: '1.0'
     }
   - {
     repo: 'https://github.com/Orain/monaco.git',
