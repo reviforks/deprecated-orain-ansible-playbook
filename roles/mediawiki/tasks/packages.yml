@@ -46,6 +46,7 @@
   with_items: extensions
   tags:
     - slow
+    - mwext
   notify:
     - Rebuild localisation cache
     - Update mediawiki
@@ -60,6 +61,7 @@
   with_items: skins
   tags:
     - slow
+    - mwskin
   notify:
     - Mediawiki submodule fileMode false
     - Clear APC cache
