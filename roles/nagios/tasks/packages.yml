@@ -14,7 +14,7 @@
   changed_when: False # never report as changed
   
 - name: Install Orain deb packages
-  command: dpkg -i {{item}}
+  apt: deb={{item}}
   with_items:
   - /root/debs/ircecho.deb
   changed_when: False # never report as changed
