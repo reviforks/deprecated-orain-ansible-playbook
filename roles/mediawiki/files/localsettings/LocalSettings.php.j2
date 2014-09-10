@@ -79,6 +79,11 @@ define( 'NS_OP', 526 );
 define( 'NS_OP_TALK', 527 );
 // /grepobot
 
+// ircwiki
+define( 'NS_BLOG', 528);
+define( 'NS_BLOG_TALK', 529);
+// /ircwiki
+
 // levelswiki
 define( 'NS_GUIDE', 258 );
 define( 'NS_GUIDE_TALK', 259 );
@@ -760,6 +765,10 @@ $wgConf->settings = array(
 			NS_PORTAIL_TALK => 'Discussion_Portail',
 			NS_PROJET => 'Projet',
 			NS_PROJET_TALK => 'Discussion_Projet',
+		),
+		'ircwiki' => array(
+			NS_BLOG => 'Blog',
+			NS_BLOG_TALK => 'Blog talk',
 		),
 		'metawiki' => array(
 			NS_FORUM_ORAIN => 'Forum', // NS_FORUM_ORAIN should === NS_FORUM
