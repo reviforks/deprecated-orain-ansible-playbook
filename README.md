@@ -14,6 +14,13 @@ On every new pull request or commit, Travis CI will run a series of checks on th
 
 See https://travis-ci.org/Orain/ansible-playbook
 
+New Instances
+----------------
+
+New instances will first require you to install ansible before running the playbook!
+
+> pip install ansible
+
 Changing Ansible stuff
 ----------------
 
