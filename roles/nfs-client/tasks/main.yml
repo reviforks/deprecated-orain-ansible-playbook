@@ -14,3 +14,7 @@
   
 - name: Mount private uploads
   mount: name=/mnt/mediawiki/private/uploads fstype=nfs src=10.131.243.247:/var/mediawiki/private/uploads state=mounted
+
+# Used in the mediawiki role
+- name: Create user "mediawiki"
+  user: name=mediawiki shell=/bin/zsh uid='1001'
