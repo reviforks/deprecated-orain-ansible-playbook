@@ -4,11 +4,10 @@
 
 # Mount on all devices - not all are accessible to all devices
 - name: Ensure directories exist
-  command: mkdir -p {{item}}
+  file: path={{item}} state=directory
   with_items:
   - /mnt/mediawiki/uploads
   - /mnt/mediawiki/private/uploads
-  changed_when: False # never report as "changed"
   
 - name: Mount public uploads
   mount: name=/mnt/mediawiki/uploads fstype=nfs src=10.131.243.247:/var/mediawiki/uploads state=mounted
