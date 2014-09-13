@@ -1,0 +1,3 @@
+---
+- name: Create user "mediawiki"
+  user: name=mediawiki shell=/bin/zsh uid='1001'

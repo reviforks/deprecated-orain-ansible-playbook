@@ -5,8 +5,8 @@
 	compress
 	delaycompress
 	notifempty
-	su www-data www-data
-	create 660 www-data www-data
+	su mediawiki mediawiki
+	create 660 mediawiki mediawiki
 }
 
 /var/log/mediawiki/debuglogs/*.log {
@@ -16,6 +16,6 @@
 	compress
 	delaycompress
 	notifempty
-	su www-data www-data
-	create 660 www-data www-data
+	su mediawiki mediawiki
+	create 660 mediawiki mediawiki
 }

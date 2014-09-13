@@ -5,8 +5,8 @@
   - /var/mediawiki/private/uploads
   changed_when: False # never report as "changed"
 
-- name: 1003:33 own /var/mediawiki
-  command: chown 1003:33 /var/mediawiki/ -R
+- name: 1001:1001 own /var/mediawiki
+  command: chown 1001:1001 /var/mediawiki/ -R
 
 - name: user needs x for all /var/mediawiki
   command: chmod 0764 /var/mediawiki/ -R

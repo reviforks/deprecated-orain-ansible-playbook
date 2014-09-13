@@ -1,9 +1,8 @@
-- name: Create mediawiki log directory
-  command: mkdir -p {{item}}
+- name: Create mediawiki log directories
+  file: path={{item}} state=directory owner=mediawiki
   with_items:
     - /var/log/mediawiki/
     - /var/log/mediawiki/debuglogs/
-  changed_when: False # never report as "changed"
 
 - name: Delete old mediawiki files
   command: rm {{item}} removes={{item}}
@@ -11,7 +10,7 @@
     - /root/notify_irc.sh
 
 - name: Copy {{item}}
-  copy: src={{item}} dest=/home/www-scripts owner=www-scripts group=www-data mode=770
+  copy: src={{item}} dest=/home/mediawiki owner=mediawiki group=mediawiki mode=770
   with_items:
     - get_db_list.py
     - db_loop.sh
@@ -21,16 +20,18 @@
   args:
     creates: /srv/mediawiki/w/all.dblist
   sudo: yes
-  sudo_user: www-scripts
+  sudo_user: mediawiki
 
 - name: chown all.dblist
-  command: chown www-scripts:www-data /srv/mediawiki/w/all.dblist
+  command: chown mediawiki /srv/mediawiki/w/all.dblist
   changed_when: False
 
 - name: Copy MediaWiki settings from templates
   template: src={{item}} dest=/srv/mediawiki/w/{{item|basename|replace('.j2','')}}
   with_fileglob:
     - ./localsettings/*.php.j2
+  sudo: yes
+  sudo_user: mediawiki
   notify:
     - Rebuild localisation cache
     - Clear APC cache
@@ -39,6 +40,8 @@
   copy: src={{item}} dest=/srv/mediawiki/w/{{item|basename}}
   with_fileglob:
     - ./localsettings/*.php
+  sudo: yes
+  sudo_user: mediawiki
   notify:
     - Rebuild localisation cache
     - Clear APC cache
