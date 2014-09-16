@@ -47,41 +47,14 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
 		break;
+	case 'cpsinfowiki':
+		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
+		break;
 	case 'deguwiki':
 		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 		break;
 	case 'detectiveconanwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
-		break;
-	case 'grepobotwiki':
-		require_once( "$IP/extensions/Lockdown/Lockdown.php" );
-		$wgNamespacePermissionLockdown[NS_OP]['read'] = array( 'sysop', 'botop' );
-		$wgNamespacePermissionLockdown[NS_OP]['edit'] = array( 'sysop' );
-		break;
-	case 'jasperinternalwiki':
-		// Per request; storing images on the wiki which should not be visible for technical reasons -John
-		$wgUploadPath = "$wgScriptPath/img_auth.php";
-		$wgUploadDirectory = '/mnt/mediawiki/private/uploads/jasperinternal.orain.org/images'; // Directory inaccessible via web access
-		break;
-	case 'loginwiki':
-		// Blank comment to keep this in the statement per John's request
-		break;
-	case 'metawiki':
-		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
-		break;
-	case 'mediawikitesterswiki':
-		$wgCategoryTreeMaxChildren = 2000;
-		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
-		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
-		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
-		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
-		require_once( "$IP/extensions/Poem/Poem.php" );
-		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
-		break;
-	case 'spiralwiki':
-		require_once( "$IP/extensions/cldr/cldr.php" );
-		require_once( "$IP/skins/BlueSky/BlueSky.php" );
 		break;
 	case 'extloadwiki':
 		// all extensions are loaded on this wiki
@@ -127,11 +100,35 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/WebChat/WebChat.php" );
 		require_once( "$IP/skins/BlueSky/BlueSky.php" );
 		break;
-	case 'cpsinfowiki':
-		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
+	case 'grepobotwiki':
+		require_once( "$IP/extensions/Lockdown/Lockdown.php" );
+		$wgNamespacePermissionLockdown[NS_OP]['read'] = array( 'sysop', 'botop' );
+		$wgNamespacePermissionLockdown[NS_OP]['edit'] = array( 'sysop' );
 		break;
-	case 'verkeerwiki':
-		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
+	case 'jasperinternalwiki':
+		// Per request; storing images on the wiki which should not be visible for technical reasons -John
+		$wgUploadPath = "$wgScriptPath/img_auth.php";
+		$wgUploadDirectory = '/mnt/mediawiki/private/uploads/jasperinternal.orain.org/images'; // Directory inaccessible via web access
+		break;
+	case 'loginwiki':
+		// Blank comment to keep this in the statement per John's request
+		break;
+	case 'mediawikitesterswiki':
+		$wgCategoryTreeMaxChildren = 2000;
+		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
+		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
+		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
+		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
+		require_once( "$IP/extensions/Poem/Poem.php" );
+		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
+		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
+		break;
+	case 'metawiki':
+		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
+		break;
+	case 'spiralwiki':
+		require_once( "$IP/extensions/cldr/cldr.php" );
+		require_once( "$IP/skins/BlueSky/BlueSky.php" );
 		break;
 	case 'jossewiki':
 		require_once( "$IP/extensions/Poem/Poem.php" );
@@ -155,9 +152,15 @@ switch( $wgDBname ) {
 		}
 
 		break;
+	case 'verkeerwiki':
+		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
+		break;
 	case 'wikidemoswiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		require_once( "$IP/skins/Erudite/erudite.php" );
+		break;
+	case 'wikilistswiki':
+		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 		break;
 }
 
