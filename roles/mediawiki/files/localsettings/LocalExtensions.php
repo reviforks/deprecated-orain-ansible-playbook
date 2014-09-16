@@ -113,9 +113,6 @@ switch( $wgDBname ) {
 	case 'loginwiki':
 		// Blank comment to keep this in the statement per John's request
 		break;
-	case 'metawiki':
-		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
-		break;
 	case 'mediawikitesterswiki':
 		$wgCategoryTreeMaxChildren = 2000;
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
@@ -125,6 +122,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
+		break;
+	case 'metawiki':
+		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
 		break;
 	case 'spiralwiki':
 		require_once( "$IP/extensions/cldr/cldr.php" );
