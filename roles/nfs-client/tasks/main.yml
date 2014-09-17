@@ -3,12 +3,11 @@
   apt: name=nfs-common
 
 # Mount on all devices - not all are accessible to all devices
-- name: Ensure directories exist
-  file: path={{item}} state=directory owner=mediawiki
-  with_items:
-  - /mnt/mediawiki/uploads
-  - /mnt/mediawiki/private/uploads
-  changed_when: False
+#- name: Ensure directories exist
+#  file: path={{item}} state=directory owner=mediawiki
+#  with_items:
+#  - /mnt/mediawiki/uploads
+#  - /mnt/mediawiki/private/uploads
   
 - name: Mount public uploads
   mount: name=/mnt/mediawiki/uploads fstype=nfs src=10.131.243.247:/var/mediawiki/uploads state=mounted
