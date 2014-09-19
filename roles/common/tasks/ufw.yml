@@ -36,7 +36,7 @@
   - 10.131.243.245
 
 - name: Allow ssh access
-  ufw: rule=allow name=ssh
+  ufw: rule=allow port=22
 
 - name: Allow DNS port
   ufw: rule=allow port=53
