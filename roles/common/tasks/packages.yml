@@ -8,7 +8,6 @@
   apt: pkg={{item}}
   with_items:
     - aptitude
-    - denyhosts
     - fail2ban
     - lsof
     - lynis
