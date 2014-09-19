@@ -1,0 +1,14 @@
+- name: Get {{item}} deb
+  shell: wget apt.orain.org/ubuntu/{{item}}
+  with_items:
+  - hhvm-dev.deb
+  args:
+    chdir: /root/debs/
+    creates: /root/debs/{{item}}
+  changed_when: False # never report as changed
+
+- name: Install Orain deb packages
+  apt: deb={{item}}
+  with_items:
+  - /root/debs/hhvm-dev.deb
+  changed_when: False # never report as changed
