@@ -4,5 +4,3 @@
 - name: Disable MySQLi
   lineinfile: dest=/etc/php5/fpm/conf.d/20-mysqli.ini regexp='^;?extension\=mysqli\.so' line=';extension=mysqli.so'
   notify: Reload php-fpm
-
-- include: cron.yml
