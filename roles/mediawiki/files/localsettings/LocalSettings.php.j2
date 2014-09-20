@@ -321,8 +321,9 @@ $wgConf->settings = array(
 	'wgDBprefix' => array(
 		'default' => '',
 	),
-	'wgDBserver' => array(
-		'default' => "{{mysql_address}}",
+	'wgDBservers' => array( // HHVM errors using LB for Uploads?
+		'default' => "10.131.243.243",
+		'allthetropeswiki' => "10.131.243.49",
 	),
 	'wgDBTableOptions' => array(
 		'default' => "ENGINE=InnoDB, DEFAULT CHARSET=binary",
