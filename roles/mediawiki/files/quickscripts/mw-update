@@ -19,6 +19,6 @@ if [ $# -eq 0 ]; then
    echo Update.php has run for ALL wikis
 else
    echo Running update.php for $1
-   /usr/bin/php /srv/mediawiki/w/maintenance/update.php --quick --wiki $1
+   /usr/bin/php5 /srv/mediawiki/w/maintenance/update.php --quick --wiki $1
    echo Update.php has run for $1
 fi
