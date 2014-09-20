@@ -1,5 +1,8 @@
+- name: Create group "mediawiki"
+  group: name=mediawiki gid='1001'
+
 - name: Create user "mediawiki"
-  user: name=mediawiki shell=/bin/zsh uid='1001'
+  user: name=mediawiki group=mediawiki shell=/bin/zsh uid='1001'
 
 # This would perhaps be better named mediawiki-scripts?
 - name: Create user "www-scripts"
