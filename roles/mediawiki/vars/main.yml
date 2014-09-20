@@ -40,7 +40,7 @@ extensions:
     dest: 'extensions/BetaFeatures', 
     version: '13bc685'
     }
-    {
+  - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-BlogPage.git',
     dest: 'extensions/BlogPage',
     version: 'b63f60e'
@@ -205,7 +205,7 @@ extensions:
     dest: 'extensions/LabeledSectionTransclusion', 
     version: '98e6ab8'
     }
-    {
+  - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Lingo.git',
     dest: 'extensions/Lingo',
     version: '0855b14'
@@ -490,7 +490,7 @@ extensions:
     dest: 'extensions/WikiEditor', 
     version: '74b6cd4'
     }
-    {
+  - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Wikilog.git',
     dest: 'extensions/Wikilog',
     version: '1efe7ee'
