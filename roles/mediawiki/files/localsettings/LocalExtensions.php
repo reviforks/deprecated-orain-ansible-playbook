@@ -26,7 +26,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/TocTree/TocTree.php" );
-		require_once( "$IP/extensions/RefreshSpecial/RefreshSpecial.php" );
+		//require_once( "$IP/extensions/RefreshSpecial/RefreshSpecial.php" );
 		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 		//require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
@@ -85,7 +85,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/ConfirmEdit/Asirra.php" );
 		require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 		require_once( "$IP/extensions/TocTree/TocTree.php" );
-		require_once( "$IP/extensions/RefreshSpecial/RefreshSpecial.php" );
+		//require_once( "$IP/extensions/RefreshSpecial/RefreshSpecial.php" );
 		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 		//require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
