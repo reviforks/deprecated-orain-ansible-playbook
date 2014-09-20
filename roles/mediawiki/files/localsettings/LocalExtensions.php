@@ -221,7 +221,10 @@ if ( $wmgUseBetaFeatures ) {
 	//$wgVectorBetaTypography = true; // Disabled for now
 	$wgVectorBetaVectorBetaWinter = true;
 	$wgVectorBetaPersonalBar = true; // REQUIRES EventLogging
+}
 
+if ( $wmgUseBetaHHVM ) {
+	require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" );
 	require_once( "$IP/LocalBetaFeatureHHVM.php" ); // Should be removed once deployed everywhere --John
 }
 
