@@ -177,6 +177,8 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'allthetropeswiki' => true,
 		'nlallthetropeswiki' => true,
+		'metawiki' => true,
+		'testwiki' => true,
 	),
 	// /BetaFeatures
 
@@ -319,8 +321,9 @@ $wgConf->settings = array(
 	'wgDBprefix' => array(
 		'default' => '',
 	),
-	'wgDBserver' => array(
-		'default' => "{{mysql_address}}",
+	'wgDBservers' => array( // HHVM errors using LB for Uploads?
+		'default' => "10.131.243.243",
+		'allthetropeswiki' => "10.131.243.49",
 	),
 	'wgDBTableOptions' => array(
 		'default' => "ENGINE=InnoDB, DEFAULT CHARSET=binary",
@@ -1567,3 +1570,4 @@ require_once( "$IP/LocalDebugUsers.php" );
 require_once( "$IP/LocalPiwik.php" );
 require_once( "$IP/Redis.php" );
 require_once( "$IP/Database.php" ); // Multi-master set up --John
+require_once( "$IP/LocalHHVMPowered.php" );

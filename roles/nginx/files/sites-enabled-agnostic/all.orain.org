@@ -12,13 +12,15 @@ location ~ \.php {
 	try_files $fastcgi_script_name =404;
 	fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 	fastcgi_pass unix:/var/run/php5-fpm.sock;
+
+	if( $cookie_hhvm = "1" ) {
+	#       fastcgi_pass unix:/var/run/hhvm/sock; # While prod4 is not set up; use port 9000 for fastcgi
+		fastcgi_pass 10.131.243.245:9000;
+	}
 }
 
-location ^~ /w/languages   { deny all; }
-location ^~ /w/maintenance { deny all; }
-location ^~ /w/serialized  { deny all; }
-location ~ /.git(/|$)      { deny all; }
-
+location ^~ /w/languages { deny all; } location ^~ /w/maintenance { deny all; } location ^~ /w/serialized { deny all; } 
+location ~ /.git(/|$) { deny all; }
 location ~ ^/wk/(.*) {
 	return 301 /wiki/$1;
 }
@@ -31,6 +33,11 @@ location ^~ /wiki {
 	include fastcgi_params;
 	fastcgi_param SCRIPT_FILENAME $document_root/w/index.php;
 	fastcgi_pass unix:/var/run/php5-fpm.sock;
+
+	if( $cookie_hhvm = "1" ) {
+	#	fastcgi_pass unix:/var/run/hhvm/sock; # While prod4 is not set up; use port 9000 for fastcgi
+		fastcgi_pass 10.131.243.245:9000;
+	}
 }
 
 error_page 404 /404.html;
