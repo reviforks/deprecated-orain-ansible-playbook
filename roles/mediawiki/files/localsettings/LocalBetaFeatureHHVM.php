@@ -11,7 +11,7 @@ $wgHooks['GetBetaFeaturePreferences'][] = function ( $user, &$prefs ) {
 		'label-message' => 'hhvm-beta-label',
 		'desc-message' => 'hhvm-beta-desc',
 		'info-link' => 'http://www.hhvm.com/',
-		'discussion-link' => '/wiki/m:Forum:HHVM',
+		'discussion-link' => 'https://meta.orain.org/wiki/Forum:HHVM',
 	);
 };
 $wgHooks['BeforePageDisplay'][] = function ( OutputPage $out ) {
