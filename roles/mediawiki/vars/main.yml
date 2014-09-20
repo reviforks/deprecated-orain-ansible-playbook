@@ -40,6 +40,11 @@ extensions:
     dest: 'extensions/BetaFeatures', 
     version: '13bc685'
     }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-BlogPage.git',
+    dest: 'extensions/BlogPage',
+    version: 'b63f60e'
+    }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CSS.git',
     dest: 'extensions/CSS', 
@@ -199,6 +204,11 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-LabeledSectionTransclusion.git',
     dest: 'extensions/LabeledSectionTransclusion', 
     version: '98e6ab8'
+    }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-Lingo.git',
+    dest: 'extensions/Lingo',
+    version: '0855b14'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-LiquidThreads.git',
@@ -479,6 +489,11 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiEditor.git',
     dest: 'extensions/WikiEditor', 
     version: '74b6cd4'
+    }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-Wikilog.git',
+    dest: 'extensions/Wikilog',
+    version: '1efe7ee'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiLove.git',
