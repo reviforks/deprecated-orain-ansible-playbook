@@ -1,6 +1,9 @@
 - name: Create a cronjob for get_db_list.py
   cron: name="Get DB list" user="mediawiki" job="python3 ~/get_db_list.py"
 
+- name: Create a cronjob for getting private databases
+  cron: name="Get private DB list" user="mediawiki" job="python3 ~/get_privatedb_list.py"
+
 - name: Create a cronjob for the MediaWiki job queue
   cron: name="MediaWiki job queue"
         user="mediawiki"
