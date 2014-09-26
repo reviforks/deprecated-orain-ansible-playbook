@@ -1,5 +1,5 @@
 - name: Rebuild localisation cache
-  command: /usr/bin/php /srv/mediawiki/w/maintenance/rebuildLocalisationCache.php --wiki {{item}}
+  command: /usr/bin/php5 /srv/mediawiki/w/maintenance/rebuildLocalisationCache.php --wiki {{item}}
   sudo: yes
   sudo_user: mediawiki
   with_items:
