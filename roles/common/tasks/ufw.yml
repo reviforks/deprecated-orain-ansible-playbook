@@ -23,9 +23,9 @@
   - 2a03:b0c0:1:d0::b7:a001
   - 10.131.243.243
   #prod6 extv4 extv6 intv4
-  - 178.62.7.228
-  - 2a03:b0c0:1:d0::b7:d001
-  - 10.131.243.246
+  - 178.62.57.223
+  - 2a03:b0c0:1:d0::13d:a001
+  - 10.131.232.174
   #prod7 extv4 extv6 intv4
   - 178.62.7.230
   - 2a03:b0c0:1:d0::b7:f001
@@ -34,6 +34,13 @@
   - 178.62.7.227
   - 2a03:b0c0:1:d0::b7:c001
   - 10.131.243.245
+
+- name: Remove old access rules
+  ufw: rule=allow src={{ item }} delete=yes
+  with_items:
+  - 178.62.7.228
+  - 2a03:b0c0:1:d0::b7:d001
+  - 10.131.243.246
 
 - name: Allow ssh access
   ufw: rule=allow port=22
