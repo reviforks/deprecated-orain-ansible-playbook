@@ -43,7 +43,7 @@
   copy: src=default.index.html dest=/usr/share/nginx/default/index.html owner=www-data group=www-data mode=0770
 
 - name: Create /etc/nginx/site-enabled
-  action: file path=/ect/nginx/site-enabled state=directory owner=root group=root mode=0755
+  action: file path=/etc/nginx/site-enabled state=directory owner=root group=root mode=0755
 
 - name: Copy issuer.crt to nginx
   copy: src=issuer.crt dest=/etc/nginx/
