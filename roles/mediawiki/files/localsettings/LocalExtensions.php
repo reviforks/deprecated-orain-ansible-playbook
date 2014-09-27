@@ -267,7 +267,7 @@ if ( $wmgUseEchoPack ) {
 if ( $wmgUseIRCRC ) {
 	$wgRCFeeds['Orain'] = array(
 		'formatter' => 'IRCColourfulRCFeedFormatter',
-		'uri' => 'udp://10.131.243.246:5070',
+		'uri' => 'udp://10.131.232.174:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	);
