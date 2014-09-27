@@ -1,0 +1,10 @@
+Log {
+	Level = Error
+	NoSiliencer = false
+	AlwaysLogUnhandledExceptions = true
+	RuntimeErrorReportingLevel = 8191
+	MaxMessagesPerRequest = -1
+
+	UseLogFile = true
+	File = /var/log/hhvm/hhvm.log
+}
