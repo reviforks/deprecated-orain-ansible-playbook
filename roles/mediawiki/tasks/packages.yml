@@ -31,7 +31,7 @@
   apt: deb={{item}}
   with_items:
   - /root/debs/php5-redis.deb
-  changed_when: False # never report as changed
+  failed_when: False # never report as changed
 
 - name: Create /srv/mediawiki
   file: path=/srv/mediawiki state=directory owner=mediawiki
