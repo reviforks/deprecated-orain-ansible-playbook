@@ -194,7 +194,7 @@ if ( $wmgUseATTImages ) {
 		'scriptDirUrl' => '//allthetropes.orain.org/w',
 		'fetchDescription' => false,
 		'dbType' => $wgDBtype,
-		'dbServer' => '10.131.243.243',
+		'dbServer' => '10.131.243.246',
 		'dbUser' => $wgDBuser,
 		'dbPassword' => $wgDBpassword,
 		'dbName' => 'allthetropeswiki',
