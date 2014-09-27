@@ -31,6 +31,6 @@ $wgLBFactoryConf = array(
 	// Below is required to be here. This also allows us to easily take a cluster out of service for a reason
 	'readOnlyBySection' => array(
 	//	'DEFAULT' => '',
-	//	'c2' => '',
+		'c2' => 'Currently in read-only move while we upgrade our infrastructure. -John',
 	),
 );
