@@ -8,8 +8,8 @@
 - name: 1001:1001 own /var/mediawiki
   command: chown 1001:1001 /var/mediawiki/ -R
 
-- name: user needs x for all /var/mediawiki
-  command: chmod 0764 /var/mediawiki/ -R
+- name: other need x for all /var/mediawiki
+  command: chmod 0775 /var/mediawiki/ -R
   changed_when: False
 
 - name: Move exports over
