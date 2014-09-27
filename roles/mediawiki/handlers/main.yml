@@ -6,13 +6,6 @@
 #    - metawiki # Only uncomment this if things break
     - extloadwiki
 
-- name: Clear APC cache
-  command: /usr/bin/wget -qO- {{apc_clear_script}}
-  sudo: yes
-  sudo_user: mediawiki
-  register: clear_apc_cache
-  failed_when: clear_apc_cache.stdout.find('true') == -1
-
 - name: Install Validator dependencies using Composer
   shell: "cd /srv/mediawiki/w/extensions/Validator && /usr/bin/composer.phar install"
   sudo: yes

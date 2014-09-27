@@ -46,7 +46,6 @@
     - Rebuild localisation cache
     - Update mediawiki
     - Mediawiki submodule fileMode false
-    - Clear APC cache
 
 - name: Check out extensions for MediaWiki
   git: repo={{item.repo}}
@@ -62,7 +61,6 @@
     - Rebuild localisation cache
     - Update mediawiki
     - Mediawiki submodule fileMode false
-    - Clear APC cache
 
 
 - name: Check out skins for MediaWiki
@@ -77,4 +75,3 @@
     - mwskin
   notify:
     - Mediawiki submodule fileMode false
-    - Clear APC cache

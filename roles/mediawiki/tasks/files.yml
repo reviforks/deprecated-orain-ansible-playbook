@@ -35,7 +35,6 @@
   sudo_user: mediawiki
   notify:
     - Rebuild localisation cache
-    - Clear APC cache
 
 - name: Copy MediaWiki settings from files
   copy: src={{item}} dest=/srv/mediawiki/w/{{item|basename}}
@@ -45,7 +44,6 @@
   sudo_user: mediawiki
   notify:
     - Rebuild localisation cache
-    - Clear APC cache
 
 - name: Copy logrotate configuration
   copy: src="./logrotate.d/mediawiki" dest=/etc/logrotate.d
