@@ -4,8 +4,6 @@ prod5
 
 [mediawikiservers]
 prod4
-
-[mediawikiservers-hhvm]
 prod8
 
 [monitoringservers]

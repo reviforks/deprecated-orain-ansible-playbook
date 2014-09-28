@@ -10,15 +10,6 @@
   vars_files:
     - ../private/vars.yml
   roles:
-    - nginx
-    - php
-    - mediawiki
-    - nfs-client
-
-- hosts: mediawikiservers-hhvm
-  vars_files:
-    - ../private/vars.yml
-  roles:
     - hhvm
     - nginx
     - php
