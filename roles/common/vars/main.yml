@@ -3,3 +3,4 @@ users:
   - { name: 'kudu', group: 'roots', groups: 'roots,operations', uid: '2000' }
   - { name: 'addshore', group: 'roots', groups: 'roots,operations', uid: '2001' }
   - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002' }
+  - { name: 'arcane', group: 'operations', uid: '2003' }
