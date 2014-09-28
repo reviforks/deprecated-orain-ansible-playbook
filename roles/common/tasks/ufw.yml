@@ -11,9 +11,9 @@
   ufw: rule=allow src={{ item }}
   with_items:
   #prod3 extv4 extv6 intv4
-  - 178.62.5.12
+  - 178.62.7.230
   - 2a03:b0c0:1:d0::bd:e001
-  - 10.131.243.49
+  - 10.131.243.243
   #prod4 extv4 extv6 intv4
   - 178.62.7.226
   - 2a03:b0c0:1:d0::b7:b001
@@ -38,8 +38,6 @@
 - name: Remove old access rules
   ufw: rule=allow src={{ item }} delete=yes
   with_items:
-  # prod7
-  - 178.62.7.230
   - 2a03:b0c0:1:d0::b7:f001
   - 10.131.243.247
 - name: Allow ssh access
