@@ -223,11 +223,6 @@ if ( $wmgUseBetaFeatures ) {
 	$wgVectorBetaPersonalBar = true; // REQUIRES EventLogging
 }
 
-if ( $wmgUseBetaHHVM ) {
-	require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" );
-	require_once( "$IP/LocalBetaFeatureHHVM.php" ); // Should be removed once deployed everywhere --John
-}
-
 if ( $wmgUseCodeEditor ) {
 	require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 	$wgScribuntoUseCodeEditor = true;

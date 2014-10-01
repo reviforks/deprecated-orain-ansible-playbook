@@ -1,6 +1,5 @@
 Log {
 	Level = Error
-	NoSiliencer = false
 	AlwaysLogUnhandledExceptions = true
 	RuntimeErrorReportingLevel = 8191
 	MaxMessagesPerRequest = -1
