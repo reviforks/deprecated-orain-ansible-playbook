@@ -1,6 +1,8 @@
 ---
-users:
+roots:
   - { name: 'kudu', group: 'roots', groups: 'roots,operations', uid: '2000' }
   - { name: 'addshore', group: 'roots', groups: 'roots,operations', uid: '2001' }
   - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002' }
-  - { name: 'arcane', group: 'operations', groups: 'operations', uid: '2003' }
+
+users:
+  - { name: 'arcane', group: 'operations', groups: 'operations', uid: '2003', hosts: 'mediawikiservers' }

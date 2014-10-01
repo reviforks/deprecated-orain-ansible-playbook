@@ -33,11 +33,20 @@
               line='%sudo ALL=(ALL) NOPASSWD:ALL'
               validate='visudo -cf %s'
 
+- name: Create root user "{{item.name}}" in "{{item.groups}}"
+  user: name={{item.name}} group={{item.group}} groups={{item.groups}} uid={{item.uid}} shell=/bin/zsh
+  with_items: roots
+
 - name: Create user "{{item.name}}" in "{{item.groups}}"
   user: name={{item.name}} group={{item.group}} groups={{item.groups}} uid={{item.uid}} shell=/bin/zsh
+  when: "'{{item.hosts}}' in group_names"
   with_items: users
+
+- name: Upload root user {{item.name}}'s public key
+  authorized_key: user={{item.name}} key="{{ lookup('file', './ssh/' ~ item.name ~ '.pub') }}"
+  with_items: roots
 
 - name: Upload {{item.name}}'s public key
   authorized_key: user={{item.name}} key="{{ lookup('file', './ssh/' ~ item.name ~ '.pub') }}"
+  when: "'{{item.hosts}}' in group_names"  
   with_items: users
-
