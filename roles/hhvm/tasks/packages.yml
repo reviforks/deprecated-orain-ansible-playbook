@@ -11,4 +11,4 @@
   apt: deb={{item}}
   with_items:
   - /root/debs/hhvm-dev.deb
-  changed_when: False # never report as changed
+  failed_when: False # never report as changed
