@@ -19,7 +19,7 @@
   
   # wget until we decide to set up an apt-repo. {{item}} because we have a few of these but only one exists right now
 - name: wget Orain deb packages
-  shell: wget apt.orain.org/debian/{{item}}
+  shell: wget apt.orain.org/ubuntu/{{item}}
   with_items:
   - php5-redis.deb
   args:
