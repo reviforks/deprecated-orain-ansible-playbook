@@ -242,7 +242,7 @@ extensions:
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MediaWikiChat',
-    dest: '/srv/mediawiki/w/extensions/MediaWikiChat', 
+    dest: 'extensions/MediaWikiChat', 
     version: '3164a29'
     }
   - { 
