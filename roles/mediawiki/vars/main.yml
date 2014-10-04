@@ -31,6 +31,11 @@ extensions:
     version: '261b2d8'
     }
   - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-AutomaticBoardWelcome.git',
+    dest: 'extensions/AutomaticBoardWelcome', 
+    version: '48e2a60'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Babel.git',
     dest: 'extensions/Babel', 
     version: '944381d'
@@ -331,6 +336,11 @@ extensions:
     version: 'b88932a'
     }
   - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-PollNY.git',
+    dest: 'extensions/PollNY', 
+    version: 'c0de3db'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Popups.git',
     dest: 'extensions/Popups', 
     version: '7e9bd81'
@@ -381,6 +391,11 @@ extensions:
     version: 'c95b78a'
     }
   - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-SiteMetrics.git',
+    dest: 'extensions/SiteMetrics', 
+    version: '18b2209'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SkinPerPage.git',
     dest: 'extensions/SkinPerPage', 
     version: '0ab06b2'
@@ -429,6 +444,11 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Thanks.git',
     dest: 'extensions/Thanks', 
     version: '22333e0'
+    }
+  - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-TimedMediaHandler.git',
+    dest: 'extensions/TimedMediaHandler', 
+    version: '7313086'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TitleBlacklist.git',
@@ -494,6 +514,11 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiEditor.git',
     dest: 'extensions/WikiEditor', 
     version: '74b6cd4'
+    }
+  - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiForum.git',
+    dest: 'extensions/WikiForum', 
+    version: 'c066021'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Wikilog.git',
