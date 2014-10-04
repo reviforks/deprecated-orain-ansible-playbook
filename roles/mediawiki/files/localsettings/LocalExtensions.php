@@ -106,7 +106,6 @@ switch( $wgDBname ) {
                 require_once( "$IP/extensions/PollNY/PollNY.php" );
                 require_once( "$IP/extensions/SiteMetrics/SiteMetrics.php" );
                 require_once( "$IP/extensions/WikiForum/WikiForum.php" );
-                
 		break;
 	case 'grepobotwiki':
 		require_once( "$IP/extensions/Lockdown/Lockdown.php" );
