@@ -75,6 +75,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
+                require_once( "$IP/extensions/MediaWikiChat/MediaWikiChat.php"  );                    
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 		require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
