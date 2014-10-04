@@ -49,7 +49,7 @@
 
 - name: Check out extensions for MediaWiki
   git: repo={{item.repo}}
-       dest=srv/mediawiki/w/{{item.dest}}
+       dest=/srv/mediawiki/w/{{item.dest}}
        version={{item.version}}
   with_items: extensions
   sudo: yes
