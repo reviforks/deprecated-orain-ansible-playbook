@@ -99,6 +99,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
 		require_once( "$IP/extensions/WebChat/WebChat.php" );
 		require_once( "$IP/skins/BlueSky/BlueSky.php" );
+		require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
 		require_once( "$IP/extensions/AutomaticBoardWelcome/AutomaticBoardWelcome.php" );
 		require_once( "$IP/extensions/BlogPage/BlogPage.php" );
                 require_once( "$IP/extensions/SiteMetrics/SiteMetrics.php" );
