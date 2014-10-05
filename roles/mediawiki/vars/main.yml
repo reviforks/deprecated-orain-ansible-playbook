@@ -118,7 +118,7 @@ extensions:
   - { 
     repo: 'https://github.com/Orain/CreateWiki.git',
     dest: 'extensions/CreateWiki', 
-    version: '56c97c3'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CustomData.git',
@@ -183,7 +183,7 @@ extensions:
   - { 
     repo: 'https://github.com/Orain/HighlightLinksInCategory.git',
     dest: 'extensions/HighlightLinksInCategory', 
-    version: '2c71f7d'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-ImageMap.git',
@@ -258,12 +258,12 @@ extensions:
   - { 
     repo: 'https://github.com/Orain/MultiBoilerplate.git',
     dest: 'extensions/MultiBoilerplate', 
-    version: '14527ef'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/Orain/MultiCategorySearch.git',
     dest: 'extensions/MultiCategorySearch', 
-    version: '67bd51d'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MultimediaViewer.git',
@@ -278,7 +278,7 @@ extensions:
   - { 
     repo: 'https://github.com/Orain/NativeSvgHandler.git',
     dest: 'extensions/NativeSvgHandler', 
-    version: '823abbd'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-NewUserMessage.git',
@@ -303,7 +303,7 @@ extensions:
   - { 
     repo: 'https://github.com/Orain/OrainMessages.git',
     dest: 'extensions/OrainMessages', 
-    version: 'cb4a815'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-PageImages.git',
@@ -590,7 +590,7 @@ skins:
   - {
     repo: 'https://github.com/Orain/monaco.git',
     dest: 'skins/monaco',
-    version: 'fba1a05'
+    version: 'master'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-skins-erudite.git',
