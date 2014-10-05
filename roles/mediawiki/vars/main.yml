@@ -406,6 +406,11 @@ extensions:
     version: 'd6bd4c1'
     }
   - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-SocialProfile.git',
+    dest: 'extensions/SocialProfile', 
+    version: '3c7dd9a'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SubPageList3.git',
     dest: 'extensions/SubPageList3', 
     version: '355020d'
