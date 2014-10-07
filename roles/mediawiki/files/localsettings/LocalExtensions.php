@@ -75,7 +75,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
-                require_once( "$IP/extensions/MediaWikiChat/MediaWikiChat.php"  );                    
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 		require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
@@ -99,10 +98,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
 		require_once( "$IP/extensions/WebChat/WebChat.php" );
 		require_once( "$IP/skins/BlueSky/BlueSky.php" );
-		require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
-		require_once( "$IP/extensions/AutomaticBoardWelcome/AutomaticBoardWelcome.php" );
-		require_once( "$IP/extensions/BlogPage/BlogPage.php" );
-                require_once( "$IP/extensions/SiteMetrics/SiteMetrics.php" );
                 require_once( "$IP/extensions/WikiForum/WikiForum.php" );
 		break;
 	case 'grepobotwiki':
