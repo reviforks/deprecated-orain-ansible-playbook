@@ -1568,11 +1568,9 @@ $wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
 
 // Sweet QuestyCaptcha
 $myChallengeString = substr(md5(uniqid(mt_rand(), true)), 0, 8);
-$myChallengeIndex = rand(0, 7) + 1;
-$myChallengePositions = array ('first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth');
 $wgCaptchaQuestions[] = array (
-	'question' => "Please provide the $myChallengePositions character from the sequence <code>$myChallengeString</code>:",
-	'answer' => $myChallengeString[$myChallengeIndex - 1]
+	'question' => "Please provide the following sequence below <code>$myChallengeString</code>:",
+	'answer' => $myChallengeString
 );
 
 # Load the split up files...
