@@ -607,3 +607,8 @@ skins:
     dest: 'skins/BlueSky',
     version: 'ed2b24d018394bdeee88b4ea76bfbaedd68f85a5'
     }
+  - {
+    repo: 'https://github.com/Orain/MediaWikiPlayer',
+    dest: 'extensions/MediaWikiPlayer',
+    version: 'd87423a'
+    }    
