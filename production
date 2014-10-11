@@ -17,3 +17,6 @@ prod6
 
 [redisservers]
 prod7
+
+[dnsservers]
+prod6
