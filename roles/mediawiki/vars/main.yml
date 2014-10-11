@@ -68,7 +68,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CentralAuth.git',
     dest: 'extensions/CentralAuth', 
-    version: 'f8fc1aa'
+    version: 'REL1_23'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CentralNotice.git',
