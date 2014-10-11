@@ -1559,6 +1559,8 @@ if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
 	$wgCentralAuthCookieDomain = $wmgHostname;
 }
 
+$wgScribuntoEngineConf['luastandalone']['luaPath'] = "$IP/extensions/Scribunto/engines/LuaStandalone/binaries/lua5_1_5_linux_64_generic/lua";
+
 $wgCacheDirectory = '/tmp/mw-cache';
 $wgFileCacheDirectory = "/var/tmp/mediawiki/cache/$wmgHostname";
 $wgLoadScript = "//$wmgUploadHostname/$wmgHostname/load.php";
