@@ -2,5 +2,5 @@
   apt: pkg=gdnsd
 
 - name: Get DNS configuration
-  git: repo=https://github.com/orain/dns dest=/etc/gdnsd version=master
+  git: repo=https://github.com/orain/dns dest=/etc/gdnsd/ version=master
   notify: reload gdnsd
