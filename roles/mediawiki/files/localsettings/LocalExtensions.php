@@ -132,6 +132,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		break;
+	case 'szkwiki':
+		require_once( "$IP/extensions/Widgets/Widgets.php" );
+		break;
 	case 'religionwiki':
 		$wgHooks['ResourceLoaderRegisterModules'][] = 'lfRemoveCollapsibleNav';
 		function lfRemoveCollapsibleNav( &$resourceLoader ) {
