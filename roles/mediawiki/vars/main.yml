@@ -580,7 +580,12 @@ extensions:
     dest: 'extensions/YouTube',
     version: 'master'
     }
-
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-MwEmbedSupport.git',
+    dest: 'extensions/MwEmbedSupport',
+    version: '218b3a5'
+    }
+    
 skins:
   - {
     repo: 'https://github.com/WikiWonders/filament.git',
