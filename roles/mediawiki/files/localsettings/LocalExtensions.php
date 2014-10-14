@@ -38,6 +38,8 @@ switch( $wgDBname ) {
 		$wgWebChatServer  = ''; // Not needed due to wgWebChatClient --SPF
 		$wgWebChatChannel = '#allthetropes';
 		$wgWebChatClient = 'freenodeChat';
+		require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
+                require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
 		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
