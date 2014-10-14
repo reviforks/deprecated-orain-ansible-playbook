@@ -34,9 +34,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CustomData/CustomData.php" );
 		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
-		require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
-		$wgDynamicSidebarUseUserpages = true;
-		$wgDynamicSidebarUseGroups = true;
 		require_once( "$IP/extensions/WebChat/WebChat.php" );
 		$wgWebChatServer  = ''; // Not needed due to wgWebChatClient --SPF
 		$wgWebChatChannel = '#allthetropes';
