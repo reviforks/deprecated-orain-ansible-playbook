@@ -12,4 +12,4 @@
 # Description:       Starts a HHVM FastCGI instance via a sock
 ### END INIT INFO
 
-hhvm --mode daemon --config /etc/hhvm/php.ini -vServer.Type=fastcgi -vServer.FileSocket=/var/run/hhvm/sock
+hhvm --mode daemon --config /etc/hhvm/php.ini --config /etc/hhvm/config.hdf -vServer.Type=fastcgi -vServer.FileSocket=/var/run/hhvm/sock
