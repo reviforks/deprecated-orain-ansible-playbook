@@ -38,8 +38,6 @@ switch( $wgDBname ) {
 		$wgWebChatServer  = ''; // Not needed due to wgWebChatClient --SPF
 		$wgWebChatChannel = '#allthetropes';
 		$wgWebChatClient = 'freenodeChat';
-		require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
-                require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
 		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
@@ -96,6 +94,8 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/WebChat/WebChat.php" );
 		require_once( "$IP/skins/BlueSky/BlueSky.php" );
 		require_once( "$IP/extensions/MediaWikiPlayer/MediawikiPlayer.php" );
+		require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
+                require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
 		break;
 	case 'grepobotwiki':
 		require_once( "$IP/extensions/Lockdown/Lockdown.php" );
