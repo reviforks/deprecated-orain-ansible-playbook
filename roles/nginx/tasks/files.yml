@@ -7,7 +7,7 @@
     - ./sites-enabled-agnostic/*
   notify: Reload nginx
   
-  - name: Create /etc/nginx/sites-enabled
+- name: Create /etc/nginx/sites-enabled
   action: file path=/etc/nginx/sites-enabled state=directory owner=root group=root mode=0755
 
 - name: Copy nginx enabled sites configuration
