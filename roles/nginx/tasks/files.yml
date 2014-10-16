@@ -6,6 +6,9 @@
   with_fileglob:
     - ./sites-enabled-agnostic/*
   notify: Reload nginx
+  
+  - name: Create /etc/nginx/sites-enabled
+  action: file path=/etc/nginx/sites-enabled state=directory owner=root group=root mode=0755
 
 - name: Copy nginx enabled sites configuration
   template: src="./sites-enabled/all.j2" dest=/etc/nginx/sites-enabled/all
@@ -41,9 +44,6 @@
 
 - name: Copy default index.html
   copy: src=default.index.html dest=/usr/share/nginx/default/index.html owner=www-data group=www-data mode=0770
-
-- name: Create /etc/nginx/site-enabled
-  action: file path=/etc/nginx/site-enabled state=directory owner=root group=root mode=0755
 
 - name: Copy issuer.crt to nginx
   copy: src=issuer.crt dest=/etc/nginx/
