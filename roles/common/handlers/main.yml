@@ -4,3 +4,6 @@
 
 - name: Restart nrpe
   service: name=nagios-nrpe-server state=restarted
+
+- name: Restart ganglia-monitor
+  service: name=ganglia-monitor state=restarted

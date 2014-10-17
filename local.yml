@@ -57,3 +57,9 @@
     - ../private/vars.yml
   roles:
     - dns
+
+- hosts: gangliaservers
+  vars_files:
+    - ../private/vars.yml
+  roles:
+    - ganglia

@@ -1,0 +1,7 @@
+- name: Copy configuration
+  template: src={{item}} dest=/etc/ganglia/ owner=root group=root mode=644
+  with_fileglob:
+    - ./*.conf
+  notify:
+  - Restart ganglia-monitor
+  - Restart gmetad

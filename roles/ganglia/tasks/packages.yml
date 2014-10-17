@@ -1,0 +1,7 @@
+- name: Install Ganglia server packages
+  apt: pkg={{item}}
+  with_items:
+  - ganglia-monitor
+  - rrdtool
+  - gmetad
+  - ganglia-webfrontend

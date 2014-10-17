@@ -1,0 +1,6 @@
+---
+- name: Restart ganglia-monitor
+  service: name=ganglia-monitor state=restarted
+
+- name: Restart gmetad
+  service: name=gmetad state=restarted
