@@ -5,3 +5,4 @@
 - include: nagios.yml
 - include: files.yml
 - include: cron.yml
+- include: ganglia.yml
