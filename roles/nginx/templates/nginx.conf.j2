@@ -57,6 +57,7 @@ http {
 	ssl_stapling on;
 	ssl_stapling_verify on;
 	ssl_trusted_certificate /etc/nginx/issuer.crt;
+	ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
 
 	include /etc/nginx/sites-enabled/all;
 }
