@@ -1,2 +1,2 @@
 - name: reload gdnsd
-  service: name=gdnsd state=reloaded
+  service: name=gdnsd state=restarted
