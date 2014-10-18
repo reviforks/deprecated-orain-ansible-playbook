@@ -42,7 +42,6 @@
 - name: Remove old access rules
   ufw: rule=allow src={{ item }} delete=yes
   with_items:
-  - 10.131.243.244
   - 2a03:b0c0:1:d0::b7:b001
   - 178.62.7.226
   - 2a03:b0c0:1:d0::b7:f001
