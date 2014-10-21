@@ -4,6 +4,7 @@ sites:
   - bits.orain.org
   - default
   - espiral.org
+  - hhvm-admin.orain.org
   - orain.kr
   - spiral.wiki
   - static.orain.org
