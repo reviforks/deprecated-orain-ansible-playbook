@@ -8,4 +8,4 @@
   changed_when: False # never report as "changed"
 
 - name: Copy config.hdf over
-  copy: src="config.hdf" dest=/etc/hhvm/config.hdf owner=root group=root mode=644
+  template: src="config.hdf" dest=/etc/hhvm/config.hdf owner=root group=root mode=644
