@@ -12,3 +12,9 @@ AdminServer {
 	Port = 9001
 	Password = {{hhvm_admin}}
 }
+
+Repo {
+	Central {
+		Path = /var/run/hhvm.hhbc.sq3
+	}
+}
