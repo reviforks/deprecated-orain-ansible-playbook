@@ -1,0 +1,9 @@
+server_name _ prod9.orain.org;
+
+root /usr/share/nginx/default;
+index index.html index.htm;
+
+location ~ {
+	fastastcgi_s	127.0.0.1:9001;
+	include		fastcgi_params;
+}
