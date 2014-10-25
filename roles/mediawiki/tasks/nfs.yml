@@ -2,7 +2,6 @@
 - name: Install nfs-common
   apt: name=nfs-common
 
-# Mount on all devices - not all are accessible to all devices
 #- name: Ensure directories exist
 #  file: path={{item}} state=directory owner=mediawiki
 #  with_items:
