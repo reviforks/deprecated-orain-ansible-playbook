@@ -566,6 +566,11 @@ extensions:
     version: 'master'
     }
   - {
+    repo: 'https://github.com/Orain/Random.git',
+    dest: 'extensions/Random',
+    version: 'master'
+    }
+  - {
     repo: 'https://github.com/Orain/RandomSelection.git',
     dest: 'extensions/RandomSelection',
     version: 'master'
