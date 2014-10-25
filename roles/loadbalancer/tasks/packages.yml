@@ -1,2 +1,0 @@
-- name: Install nginx as the base
-  apt: pkg=nginx

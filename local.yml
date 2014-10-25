@@ -28,12 +28,6 @@
   roles:
     - nagios
 
-- hosts: loadbalancingservers
-  vars_files:
-    - ../private/vars.yml
-  roles:
-    - loadbalancer
-    
 - hosts: staticservers
   vars_files:
     - ../private/vars.yml
