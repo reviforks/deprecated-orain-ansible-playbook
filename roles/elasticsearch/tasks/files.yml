@@ -1,0 +1,5 @@
+- name:
+  copy: src={{item}} dest=/etc/elasticsearch
+  with_fileglob:
+    - ./*
+  notify: restart elasticsearch

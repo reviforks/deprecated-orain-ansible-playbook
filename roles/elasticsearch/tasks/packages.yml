@@ -1,0 +1,14 @@
+- name: wget Orain deb packages
+  shell: wget apt.orain.org/ubuntu/{{item}}
+  with_items:
+  - elasticsearch-0.90.7.deb
+  args:
+    chdir: /root/debs/
+    creates: /root/debs/{{item}}
+  changed_when: False # never report as changed
+
+- name: Install Orain deb packages
+  apt: deb={{item}}
+  with_items:
+  - /root/debs/elasticsearch-0.90.7.deb
+  failed_when: False # never report as changed

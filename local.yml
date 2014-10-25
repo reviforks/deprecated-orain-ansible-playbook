@@ -56,3 +56,9 @@
     - ../private/vars.yml
   roles:
     - ganglia
+
+- hosts: elasticsearchservers
+  vars_files:
+    - ../private/vars.yml
+  roles:
+    - elasticsearch

@@ -1,0 +1,7 @@
+cluster.name: mediawiki
+node.name: "prod10"
+
+node.master: true
+node.data: true
+
+bootstrap.mlockall: true
