@@ -6,3 +6,4 @@
 - include: files.yml
 - include: cron.yml
 - include: ganglia.yml
+- include: git.yml
