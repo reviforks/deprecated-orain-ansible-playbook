@@ -58,9 +58,5 @@
 - name: Delete allow access on old random port - 5666
   ufw: rule=allow delete=yes port=5666
 
-# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=664748
-- name: Disable ufw logging (workaround for known bug in Debian 7)
-  ufw: logging=off
-
 - name: Enable ufw
   ufw: state=enabled policy=deny
