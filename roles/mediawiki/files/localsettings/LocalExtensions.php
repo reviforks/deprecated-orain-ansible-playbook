@@ -245,14 +245,12 @@ if ( $wmgUseCharInsert ) {
 	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 }
 
-if ( $wmgUseCirrus || $wmgUseCirrusAsAlternate ) {
+if ( $wmgUseCirrus ) {
 	require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 	require_once( "$IP/extensions/Elastica/Elastica.php" );
-	$wgCirrusSearchServers = array( '23.226.230.178' );
-}
-
-if ( $wmgUseCirrus ) {
 	$wgSearchType = 'CirrusSearch';
+	$wgCirrusSearchServers = array( '10.131.243.49' );
+	$wgCirrusSearchShowNowUsing = true; // 'now using' notice on search
 }
 
 if ( $wmgUseDPLforum ) {
