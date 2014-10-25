@@ -53,6 +53,10 @@ switch( $wgDBname ) {
 	case 'detectiveconanwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		break;
+	case 'ejderhanefesiwiki':
+		require_once( "$IP/extensions/Lingo/Lingo.php" );
+		require_once( "$IP/extensions/Random/Random.php" );
+		break;
 	case 'extloadwiki':
 		// all extensions are loaded on this wiki
 		require_once( "$IP/extensions/cldr/cldr.php" );
