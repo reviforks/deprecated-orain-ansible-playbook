@@ -1579,8 +1579,8 @@ $myChallengeIndex = rand(0, 7) + 1;
 $myChallengePositions = array ('first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth');
 $myChallengePositionName = $myChallengePositions[$myChallengeIndex - 1];
 $wgCaptchaQuestions[] = array (
-    'question' => "Please provide the $myChallengePositionName character from the sequence <code>$myChallengeString</code>:",
-    'answer' => $myChallengeString[$myChallengeIndex - 1]
+	'question' => "Please provide the $myChallengePositionName character from the sequence <code>$myChallengeString</code>:",
+	'answer' => $myChallengeString[$myChallengeIndex - 1]
 );
 
 # Load the split up files...
