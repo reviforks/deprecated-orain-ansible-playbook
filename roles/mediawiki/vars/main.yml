@@ -88,7 +88,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CirrusSearch.git',
     dest: 'extensions/CirrusSearch', 
-    version: 'ef02cfa'
+    version: 'wmf/1.25wmf5'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Cite.git',
@@ -153,7 +153,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Elastica.git',
     dest: 'extensions/Elastica', 
-    version: '91fc4c3'
+    version: 'wmf/1.25wmf5'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-EventLogging.git',
