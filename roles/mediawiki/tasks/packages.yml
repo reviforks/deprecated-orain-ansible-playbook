@@ -16,23 +16,10 @@
 
 - name: Install Lua 5.1
   apt: pkg=liblua5.1-0
-  
-  # wget until we decide to set up an apt-repo. {{item}} because we have a few of these but only one exists right now
-- name: wget Orain deb packages
-  shell: wget apt.orain.org/ubuntu/{{item}}
-  with_items:
-  - php5-redis.deb
-  args:
-    chdir: /root/debs/
-    creates: /root/debs/{{item}}
-  changed_when: False # never report as changed
-  
-- name: Install Orain deb packages
-  apt: deb={{item}}
-  with_items:
-  - /root/debs/php5-redis.deb
-  failed_when: False # never report as changed
 
+- name: Install php5-reids
+  apt: pkg=php5-redis
+  
 - name: Create /srv/mediawiki
   file: path=/srv/mediawiki state=directory owner=mediawiki
 

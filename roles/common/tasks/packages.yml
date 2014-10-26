@@ -32,3 +32,6 @@
     - screen
     - vim
     - zip
+
+- name: Add Wikimedia Trusty repo
+  apt_repository: repo='deb http://apt.wikimedia.org/wikimedia trusty-wikimedia main universe' state=present
