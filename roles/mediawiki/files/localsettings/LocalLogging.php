@@ -11,9 +11,12 @@ $wgDebugLogGroups = array(
 	'CentralAuth' => "$wmgLogDir/debuglogs/CentralAuth.log",
 	'CirrusSearch' => "$wmgLogDir/debuglogs/CirrusSearch.log",
 	'collection' => "$wmgLogDir/debuglogs/collection.log",
+	'DBPerformance' => "$wmgLogDir/debuglogs/dbperformance.log",
 	'exception' => "$wmgLogDir/debuglogs/exception.log",
+	'exec' => "$wmgLogDir/debuglogs/exec.log",
 	'Math' => "$wmgLogDir/debuglogs/Math.log",
 	'OAuth' => "$wmgLogDir/debuglogs/OAuth.log",
+	'redis' => "$wmgLogDir/debuglogs/redis.log",
 	'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
 	'torblock' => "$wmgLogDir/debuglogs/torblock.log",
 );
