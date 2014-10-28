@@ -5,4 +5,4 @@ roots:
   - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002' }
 
 users:
-  - { name: 'arcane', group: 'operations', groups: 'operations', uid: '2003', hosts: 'mediawikiservers' }
+  - { name: 'arcane', group: 'mediawiki-ops', groups: 'mediawiki-ops', uid: '2003', hosts: 'mediawikiservers' }
