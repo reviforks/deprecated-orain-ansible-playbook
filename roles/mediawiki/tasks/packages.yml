@@ -8,11 +8,10 @@
 - name: Remove old Composer install at /usr/bin/composer.phar
   command: rm /usr/bin/composer.phar removes=/usr/bin/composer.phar
 
-# Fail ansible because of HHVM
-#- name: Update Composer
-#  action: shell /usr/local/bin/composer.phar self-update
-#  register: composer_update_output
-#  changed_when: composer_update_output.stdout.find('You are already using composer version') == -1
+- name: Update Composer
+  action: shell /usr/local/bin/composer.phar self-update
+  register: composer_update_output
+  changed_when: composer_update_output.stdout.find('You are already using composer version') == -1
 
 - name: Install Lua 5.1
   apt: pkg=liblua5.1-0
