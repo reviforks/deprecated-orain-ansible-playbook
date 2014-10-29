@@ -98,9 +98,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
 		require_once( "$IP/extensions/WebChat/WebChat.php" );
 		require_once( "$IP/skins/BlueSky/BlueSky.php" );
-		require_once( "$IP/extensions/MediaWikiPlayer/MediawikiPlayer.php" );
-		require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
-                require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
 		break;
 	case 'grepobotwiki':
 		require_once( "$IP/extensions/Lockdown/Lockdown.php" );
