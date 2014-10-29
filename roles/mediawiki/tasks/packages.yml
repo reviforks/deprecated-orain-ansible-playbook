@@ -17,7 +17,7 @@
   apt: pkg=liblua5.1-0
 
 - name: Install php5-reids
-  apt: pkg=php5-redis force=yes
+  apt: pkg=php5-redis force=yes state=latest
   
 - name: Create /srv/mediawiki
   file: path=/srv/mediawiki state=directory owner=mediawiki
