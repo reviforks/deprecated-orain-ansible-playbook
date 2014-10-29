@@ -114,6 +114,8 @@ switch( $wgDBname ) {
 		break;
 	case 'loginwiki':
 		// Blank comment to keep this in the statement per John's request
+		$wgNamespaceProtection[NS_MAIN] = array( 'editinterface' );
+		$wgNamespaceProtection[NS_USER] = array( 'editinterface' );
 		break;
 	case 'mediawikitesterswiki':
 		$wgCategoryTreeMaxChildren = 2000;
