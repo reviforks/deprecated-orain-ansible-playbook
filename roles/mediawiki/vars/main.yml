@@ -451,11 +451,6 @@ extensions:
     version: '22333e0'
     }
   - { 
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-TimedMediaHandler.git',
-    dest: 'extensions/TimedMediaHandler', 
-    version: '7313086'
-    }
-  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TitleBlacklist.git',
     dest: 'extensions/TitleBlacklist', 
     version: '3feef42'
@@ -580,16 +575,6 @@ extensions:
     dest: 'extensions/SectionHide',
     version: 'master'
     }
-  - {
-    repo: 'https://github.com/Orain/YouTube.git',
-    dest: 'extensions/YouTube',
-    version: 'master'
-    }
-  - {
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-MwEmbedSupport.git',
-    dest: 'extensions/MwEmbedSupport',
-    version: '218b3a5'
-    }
     
 skins:
   - {
@@ -617,8 +602,3 @@ skins:
     dest: 'skins/BlueSky',
     version: 'ed2b24d018394bdeee88b4ea76bfbaedd68f85a5'
     }
-  - {
-    repo: 'https://github.com/Orain/MediaWikiPlayer.git',
-    dest: 'extensions/MediaWikiPlayer',
-    version: 'd87423a'
-    }    
