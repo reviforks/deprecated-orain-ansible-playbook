@@ -40,7 +40,6 @@ require_once( "$IP/extensions/TemplateSandbox/TemplateSandbox.php" );
 require_once( "$IP/extensions/TitleBlacklist/TitleBlacklist.php" );
 require_once( "$IP/extensions/TitleKey/TitleKey.php" );
 require_once( "$IP/extensions/Variables/Variables.php" );
-require_once( "$IP/extensions/YouTube/YouTube.php" );
 require_once( "$IP/skins/foreground/foreground.php" );
 require_once( "$IP/skins/monaco/monaco.php" );
 require_once( "$IP/extensions/WikiLove/WikiLove.php" );
