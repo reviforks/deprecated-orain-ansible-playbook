@@ -123,6 +123,12 @@ $wmgUploadHostname = "static.orain.org";
  */
 $wgConf->settings = array(
 	// AbuseFilter
+	'wgAbuseFilterAnonBlockDuration' => array(
+		'default' => '3 months',
+	),
+	'wgAbuseFilterBlockDuration' => array(
+		'default' => 'indefinite',
+	),
 	'wgAbuseFilterCentralDB' => array(
 		'default' => 'metawiki',
 	),
