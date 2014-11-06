@@ -4,7 +4,7 @@ mydestination = mail.orain.org, orain.org, locahost
 relayhost =
 relay_domains = lists.orain.org
 mailman_destination_recipient_limit = 1
-mynetworks = 0.0.0.0/0
+mynetworks = 10.0.0.0/8
 mailbox_size_limit = 0
 recipient_delimiter = +
 inet_interfaces = all
@@ -27,3 +27,4 @@ smtpd_tls_security_level = may
 smtpd_tls_protocols = !SSLv2, !SSLv3
 
 local_recipient_maps = proxy:unix:passwd.byname $alias_maps
+smtpd_relay_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
