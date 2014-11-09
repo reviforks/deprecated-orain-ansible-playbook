@@ -66,6 +66,7 @@ switch( $wgDBname ) {
 		   'descriptionCacheExpiry'  => 43200, // 12 hours, optional (values are seconds)
 		   'apiThumbCacheExpiry'     => 43200, // 12 hours, optional, but required for local thumb caching
 		);
+		require_once( "$IP/extensions/DPLforum/DPLforum.php" );
 	case 'extloadwiki':
 		// all extensions are loaded on this wiki
 		require_once( "$IP/extensions/cldr/cldr.php" );
