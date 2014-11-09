@@ -1,6 +1,6 @@
 myhostname = mail.orain.org
 myorigin = /etc/mailname
-mydestination = mail.orain.org, orain.org, locahost
+mydestination = mail.orain.org, orain.org, localhost
 relayhost =
 relay_domains = lists.orain.org
 mailman_destination_recipient_limit = 1
