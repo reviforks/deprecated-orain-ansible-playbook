@@ -40,12 +40,12 @@
               line='%sudo ALL=(ALL) NOPASSWD:ALL'
               validate='visudo -cf %s'
 
-- name: Create root user "{{item.name}}" in "{{item.groups}}"
-  user: name={{item.name}} group={{item.group}} groups={{item.groups}} uid={{item.uid}} shell=/bin/zsh
+- name: Manage root user "{{item.name}}" in "{{item.groups}}"
+  user: name={{item.name}} group={{item.group}} groups={{item.groups}} uid={{item.uid}} shell=/bin/zsh state={{item.state}}
   with_items: roots
 
-- name: Create user "{{item.name}}" in "{{item.groups}}"
-  user: name={{item.name}} group={{item.group}} groups={{item.groups}} uid={{item.uid}} shell=/bin/zsh
+- name: Manage user "{{item.name}}" in "{{item.groups}}"
+  user: name={{item.name}} group={{item.group}} groups={{item.groups}} uid={{item.uid}} shell=/bin/zsh state={{item.state}}
   when: "'{{item.hosts}}' in group_names"
   with_items: users
 
