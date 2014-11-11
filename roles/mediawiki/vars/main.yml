@@ -458,7 +458,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TitleBlacklist.git',
     dest: 'extensions/TitleBlacklist', 
-    version: '3feef42'
+    version: 'ead5577'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TitleKey.git',
