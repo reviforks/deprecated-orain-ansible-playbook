@@ -111,6 +111,11 @@ extensions:
     version: 'c46b109'
     }
   - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-CommonsMetadata.git',
+    dest: 'extensions/CommonsMetadata', 
+    version: '3effffe'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-ConfirmEdit.git',
     dest: 'extensions/ConfirmEdit', 
     version: '0c63352'
@@ -246,9 +251,9 @@ extensions:
     version: 'd0e998f'
     }
   - { 
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-MediaWikiChat',
-    dest: 'extensions/MediaWikiChat', 
-    version: '3164a29'
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-MultimediaViewer.git',
+    dest: 'extensions/MultimediaViewer', 
+    version: 'fb6216c'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MobileFrontend.git',
@@ -515,11 +520,6 @@ extensions:
     dest: 'extensions/WikiEditor', 
     version: '74b6cd4'
     }
-  - { 
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiForum.git',
-    dest: 'extensions/WikiForum', 
-    version: 'c066021'
-    }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Wikilog.git',
     dest: 'extensions/Wikilog',
@@ -529,6 +529,11 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiLove.git',
     dest: 'extensions/WikiLove', 
     version: '89cfb87'
+    }
+  - { 
+    repo: 'https://github.com/tinymighty/wiki-seo.git',
+    dest: 'extensions/WikiSEO', 
+    version: '2c76559'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-GoogleAdSense.git',
