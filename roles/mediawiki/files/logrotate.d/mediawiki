@@ -6,7 +6,7 @@
 	delaycompress
 	notifempty
 	su mediawiki mediawiki
-	create 660 mediawiki mediawiki
+	create 664 mediawiki mediawiki
 }
 
 /var/log/mediawiki/debuglogs/*.log {
@@ -17,5 +17,5 @@
 	delaycompress
 	notifempty
 	su mediawiki mediawiki
-	create 660 mediawiki mediawiki
+	create 664 mediawiki mediawiki
 }
