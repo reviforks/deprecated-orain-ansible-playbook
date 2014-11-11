@@ -1465,23 +1465,6 @@ foreach ( $DBlist as $wiki ) {
 
 $wgConf->wikis = & $wgLocalDatabases;
 
-if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
-	header( "HTTP/1.1 404 Not Found" );
-	echo( <<<RESP
-<!DOCTYPE html>
-<html>
-<head><title>404 Not Found</title></head>
-<body bgcolor="white">
-<center><h1>404 Not Found</h1>
-<h2>Unknown database</h2></center>
-<hr /><center>MediaWiki</center>
-</body>
-</html>
-RESP
-	);
-	exit();
-}
-
 /**
  * Generally setup the given wiki
  */
@@ -1598,3 +1581,4 @@ require_once( "$IP/LocalPiwik.php" );
 require_once( "$IP/Redis.php" );
 require_once( "$IP/Database.php" ); // Multi-master set up --John
 require_once( "$IP/LocalHHVMPowered.php" );
+require_once( "$IP/Missing.php" );
