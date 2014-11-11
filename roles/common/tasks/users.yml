@@ -51,6 +51,7 @@
 
 - name: Upload root user {{item.name}}'s public key
   authorized_key: user={{item.name}} key="{{ lookup('file', './ssh/' ~ item.name ~ '.pub') }}" state={{item.state}}
+  when: "'{{item.state}}' == 'present'"
   with_items: roots
 
 - name: Upload {{item.name}}'s public key
