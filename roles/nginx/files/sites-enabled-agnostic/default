@@ -7,3 +7,15 @@ location = / {
 	return 301 $scheme://meta.orain.org/wiki/;
 }
 
+error_page 404 /404.html; location = /404.html {
+	ssi on;
+	root /usr/share/nginx/errorpages;
+}
+error_page 500 /500.html; location = /500.html {
+	ssi on;
+	root /usr/share/nginx/errorpages;
+}
+error_page 502 /502.html; location = /502.html {
+	ssi on;
+	root /usr/share/nginx/errorpages;
+}
