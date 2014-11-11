@@ -108,7 +108,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
 		require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
 		require_once( "$IP/extensions/WebChat/WebChat.php" );
-		require_once( "$IP/extensions/WikiSEO/WikiSEO.php" );
 		require_once( "$IP/skins/BlueSky/BlueSky.php" );
 		break;
 	case 'grepobotwiki':
