@@ -16,4 +16,4 @@
   copy: src=/root/private/ssl/Orain_GlobalSign_2014.crt dest=/etc/ssl/certs/Orain_GlobalSign_2014.crt
 
 - name: Copy SSL key
-  copy@ src=/root/private/ssl/Orain_GlobalSign_2014.key dest=/etc/ssl/private/Orain_GlobalSign_2014.key
+  copy: src=/root/private/ssl/Orain_GlobalSign_2014.key dest=/etc/ssl/private/Orain_GlobalSign_2014.key
