@@ -7,6 +7,7 @@ switch( $wgDBname ) {
 		//require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
+		require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
 		require_once( "$IP/extensions/CSS/CSS.php" );
 		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
@@ -27,6 +28,8 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/TocTree/TocTree.php" );
 		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
+		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php");
+		$wgMediaViewerIsInBeta = true;
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 		//require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
