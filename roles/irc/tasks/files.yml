@@ -1,0 +1,2 @@
+- name: Copy UDP script
+  copy: src=./udp.py dest=/home/johnflewis/udp.py owner=root group=root
