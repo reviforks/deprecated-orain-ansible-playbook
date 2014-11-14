@@ -7,3 +7,6 @@
 
 - name: Restart ganglia-monitor
   service: name=ganglia-monitor state=restarted
+
+- name: Reload ssh
+  service: name=ssh state=reloaded

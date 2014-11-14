@@ -17,3 +17,7 @@
 
 - name: Copy SSL key
   copy: src=/root/private/ssl/Orain_GlobalSign_2014.key dest=/etc/ssl/private/Orain_GlobalSign_2014.key
+
+- name: Copy ssh configuration
+  copy: src=./ssh/ssh_config dest=/etc/ssh/sshd_config
+  notify: Reload ssh
