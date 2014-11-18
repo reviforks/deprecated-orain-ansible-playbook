@@ -113,6 +113,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/WebChat/WebChat.php" );
 		require_once( "$IP/skins/BlueSky/BlueSky.php" );
 		break;
+	case 'fmucanatwiki':
+	        require_once( "$IP/extensions/Collection/Collection.php" );
+	        require_once( "$IP/extensions/PdfBook/PdfBook.php" );
 	case 'grepobotwiki':
 		require_once( "$IP/extensions/Lockdown/Lockdown.php" );
 		$wgNamespacePermissionLockdown[NS_OP]['read'] = array( 'sysop', 'botop' );
