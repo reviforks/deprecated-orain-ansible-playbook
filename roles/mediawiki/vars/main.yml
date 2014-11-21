@@ -93,7 +93,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Collection.git',
     dest: 'extensions/Collection', 
-    version: '925913b'
+    version: 'fae5e2a'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Comments.git',
