@@ -270,6 +270,11 @@ extensions:
     dest: 'extensions/MyVariables', 
     version: '792dd9c'
     }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-MsUpload.git',
+    dest: 'extensions/MsUpload',
+    version: '699aacb'
+    }
   - { 
     repo: 'https://github.com/Orain/NativeSvgHandler.git',
     dest: 'extensions/NativeSvgHandler', 
@@ -279,6 +284,11 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-NewUserMessage.git',
     dest: 'extensions/NewUserMessage', 
     version: '713d39f'
+    }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-NoTitle.git',
+    dest: 'extensions/NoTitle',
+    version: '699aacb'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Nuke.git',
