@@ -181,6 +181,13 @@ switch( $wgDBname ) {
 	case 'wikilistswiki':
 		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 		break;
+	case 'wizardwiki':
+		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+		$wgMediaViewerIsInBeta = true;
+		require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
+		require_once( "$IP/extensions/MsUpload/MsUpload.php" );
+		require_once( "$IP/extensions/NoTitle/NoTitle.php" );
+		break;
 }
 
 // Load InterwikiMagic on all wikis except for metawiki
