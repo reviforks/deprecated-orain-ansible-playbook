@@ -31,11 +31,6 @@ extensions:
     version: '261b2d8'
     }
   - { 
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-AutomaticBoardWelcome.git',
-    dest: 'extensions/AutomaticBoardWelcome', 
-    version: '48e2a60'
-    }
-  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Babel.git',
     dest: 'extensions/Babel', 
     version: '944381d'
@@ -44,11 +39,6 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-BetaFeatures.git',
     dest: 'extensions/BetaFeatures', 
     version: '13bc685'
-    }
-  - {
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-BlogPage.git',
-    dest: 'extensions/BlogPage',
-    version: 'b63f60e'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CSS.git',
@@ -103,7 +93,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Collection.git',
     dest: 'extensions/Collection', 
-    version: 'bf7c4b9'
+    version: '925913b'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Comments.git',
@@ -409,11 +399,6 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SpamBlacklist.git',
     dest: 'extensions/SpamBlacklist', 
     version: 'd6bd4c1'
-    }
-  - { 
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-SocialProfile.git',
-    dest: 'extensions/SocialProfile', 
-    version: '3c7dd9a'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SubPageList3.git',
