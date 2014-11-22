@@ -98,7 +98,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
-		require_once "$IP/extensions/RSS/RSS.php";
+		require_once( "$IP/extensions/RSS/RSS.php" );
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
