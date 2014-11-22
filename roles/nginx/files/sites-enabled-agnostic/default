@@ -1,4 +1,4 @@
-server_name _ www.orain.org;
+server_name www.orain.org;
 
 root /usr/share/nginx/default;
 index index.html index.htm;
