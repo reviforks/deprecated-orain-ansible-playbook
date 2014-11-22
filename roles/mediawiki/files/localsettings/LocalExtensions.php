@@ -87,6 +87,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/MsUpload/MsUpload.php" );
+		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
+		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php");
+		$wgMediaViewerIsInBeta = true;
                 require_once( "$IP/extensions/NoTitle/NoTitle.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
@@ -94,25 +97,15 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
-		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
-		require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
-		require_once( "$IP/extensions/Tabs/Tabs.php" );
 		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
+		require_once "$IP/extensions/RSS/RSS.php";
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
-		require_once( "$IP/extensions/TocTree/TocTree.php" );
-		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php");
-		$wgMediaViewerIsInBeta = true;
-		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
-		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
-		require_once( "$IP/extensions/PageTools/PageTools.php" );
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
+		require_once( 'extensions/Wikilog/Wikilog.php' );
+                Wikilog::setupNamespace( 100, 'Blog', 'Blog_talk' );
 		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 		require_once( "$IP/skins/Erudite/erudite.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
-		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
-		require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
-		require_once( "$IP/extensions/WebChat/WebChat.php" );
 		require_once( "$IP/skins/BlueSky/BlueSky.php" );
 		break;
 	case 'grepobotwiki':
