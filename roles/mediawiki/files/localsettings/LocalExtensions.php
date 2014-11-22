@@ -101,8 +101,6 @@ switch( $wgDBname ) {
 		require_once "$IP/extensions/RSS/RSS.php";
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
-		require_once( 'extensions/Wikilog/Wikilog.php' );
-                Wikilog::setupNamespace( 100, 'Blog', 'Blog_talk' );
 		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 		require_once( "$IP/skins/Erudite/erudite.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
