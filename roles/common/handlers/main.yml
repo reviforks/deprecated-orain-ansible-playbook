@@ -10,3 +10,9 @@
 
 - name: Reload ssh
   service: name=ssh state=reloaded
+
+- name: Restart postfix
+  service: name=postfix state=restarted
+
+- name: Reload aliases
+  command: newaliases

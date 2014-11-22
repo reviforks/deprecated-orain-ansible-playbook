@@ -21,3 +21,10 @@
 - name: Copy ssh configuration
   copy: src=./ssh/ssh_config dest=/etc/ssh/sshd_config
   notify: Reload ssh
+
+- name: Copy aliases file
+  copy: src=./mail/aliases dest=/etc/aliases
+  when: "'mailservers' not in group_names"
+  notify:
+    - Reload aliases
+    - Restart postfix

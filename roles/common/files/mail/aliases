@@ -1,0 +1,6 @@
+hostmaster: root
+abuse: root
+noc: root
+security: root
+
+root: root@orain.org
