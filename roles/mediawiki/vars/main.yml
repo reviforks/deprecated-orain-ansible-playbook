@@ -380,7 +380,7 @@ extensions:
     dest: 'extensions/ReplaceText',
     version: '9fdb582'
     }
-      - { 
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-RSS.git',
     dest: 'extensions/RSS',
     version: 'c7c5f15'
