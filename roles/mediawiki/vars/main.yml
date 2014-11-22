@@ -380,6 +380,11 @@ extensions:
     dest: 'extensions/ReplaceText',
     version: '9fdb582'
     }
+      - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-RSS.git',
+    dest: 'extensions/RSS',
+    version: 'c7c5f15'
+    }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Scribunto.git',
     dest: 'extensions/Scribunto', 
@@ -394,11 +399,6 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SiteMatrix.git',
     dest: 'extensions/SiteMatrix', 
     version: 'c95b78a'
-    }
-  - { 
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-SiteMetrics.git',
-    dest: 'extensions/SiteMetrics', 
-    version: '18b2209'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SkinPerPage.git',
@@ -516,9 +516,9 @@ extensions:
     version: '74b6cd4'
     }
   - {
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-Wikilog.git',
+    repo: 'https://github.com/mediawiki4intranet/Wikilog.git',
     dest: 'extensions/Wikilog',
-    version: '1efe7ee'
+    version: 'd41339c'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiLove.git',
