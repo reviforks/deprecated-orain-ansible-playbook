@@ -40,6 +40,11 @@ extensions:
     dest: 'extensions/BetaFeatures', 
     version: '13bc685'
     }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-BlogPage.git',
+    dest: 'extensions/BlogPage',
+    version: '7596157'
+    }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CSS.git',
     dest: 'extensions/CSS', 
@@ -519,11 +524,6 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiEditor.git',
     dest: 'extensions/WikiEditor', 
     version: '74b6cd4'
-    }
-  - {
-    repo: 'https://github.com/mediawiki4intranet/Wikilog.git',
-    dest: 'extensions/Wikilog',
-    version: 'd41339c'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiLove.git',
