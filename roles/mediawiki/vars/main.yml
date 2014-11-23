@@ -410,6 +410,11 @@ extensions:
     dest: 'extensions/SpamBlacklist', 
     version: 'd6bd4c1'
     }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-SocialProfile.git',
+    dest: 'extensions/SocialProfile',
+    version: '0ec1390'
+    }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SubPageList3.git',
     dest: 'extensions/SubPageList3', 
