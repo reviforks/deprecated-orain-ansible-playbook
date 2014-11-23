@@ -102,6 +102,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
 		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
+		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 		require_once( "$IP/extensions/RSS/RSS.php" );
 		require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
 		require_once( "$IP/extensions/TocTree/TocTree.php" );
