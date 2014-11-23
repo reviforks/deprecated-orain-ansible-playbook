@@ -94,13 +94,16 @@ switch( $wgDBname ) {
                 require_once( "$IP/extensions/NoTitle/NoTitle.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
+		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
+		require_once( "$IP/extensions/PageTools/PageTools.php" );
 		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
 		require_once( "$IP/extensions/RSS/RSS.php" );
 		require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
+		require_once( "$IP/extensions/TocTree/TocTree.php" );
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
