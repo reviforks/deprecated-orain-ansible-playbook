@@ -266,11 +266,6 @@ extensions:
     version: 'master'
     }
   - { 
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-MultimediaViewer.git',
-    dest: 'extensions/MultimediaViewer', 
-    version: 'e0d3c9e'
-    }
-  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MyVariables.git',
     dest: 'extensions/MyVariables', 
     version: '792dd9c'
