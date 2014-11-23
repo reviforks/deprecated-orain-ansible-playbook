@@ -73,6 +73,7 @@ switch( $wgDBname ) {
 		// all extensions are loaded on this wiki
 		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
 		require_once( "$IP/extensions/Arrays/Arrays.php" );
+		require_once( "$IP/extensions/BlogPage/BlogPage.php" );
 		require_once( "$IP/extensions/cldr/cldr.php" );
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/Comments/Comment.php" );
@@ -99,6 +100,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
 		require_once( "$IP/extensions/RSS/RSS.php" );
+		require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
