@@ -272,6 +272,7 @@ if ( $wmgUseCirrus ) {
 	$wgSearchType = 'CirrusSearch';
 	$wgCirrusSearchServers = array( '10.131.243.49' );
 	$wgCirrusSearchShowNowUsing = true; // 'now using' notice on search
+	$wgDisableSearchUpdate = true;
 }
 
 if ( $wmgUseDPLforum ) {
