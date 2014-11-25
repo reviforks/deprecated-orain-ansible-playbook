@@ -113,6 +113,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/skins/BlueSky/BlueSky.php" );
 		break;
+	case 'goldcraftmcwiki':
+		require_once( "$IP/extensions/Widgets/Widgets.php" );
+		break;
 	case 'grepobotwiki':
 		require_once( "$IP/extensions/Lockdown/Lockdown.php" );
 		$wgNamespacePermissionLockdown[NS_OP]['read'] = array( 'sysop', 'botop' );
