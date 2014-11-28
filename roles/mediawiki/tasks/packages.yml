@@ -25,7 +25,7 @@
 - name: Check out latest stable WMF branch of MediaWiki
   git: repo=https://github.com/Orain/mediawiki-core.git
        dest=/srv/mediawiki/w
-       version=REL1_23
+       version=REL1_24
   sudo: yes
   sudo_user: mediawiki
   notify:

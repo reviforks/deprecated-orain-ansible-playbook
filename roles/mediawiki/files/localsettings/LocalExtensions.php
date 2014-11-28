@@ -322,6 +322,7 @@ if ( $wmgUseMath ) {
 }
 
 if ( $wmgUseMobileFrontend ) {
+	require_once( "$IP/extensions/Mantle/Mantle.php" );
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 }
 
