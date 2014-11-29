@@ -273,7 +273,7 @@ extensions:
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MsUpload.git',
     dest: 'extensions/MsUpload',
-    version: '699aacb'
+    version: 'dc19d41'
     }
   - { 
     repo: 'https://github.com/Orain/NativeSvgHandler.git',
