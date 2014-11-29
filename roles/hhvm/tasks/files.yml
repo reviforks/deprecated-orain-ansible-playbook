@@ -9,3 +9,6 @@
 
 - name: Copy config.hdf over
   template: src="config.hdf" dest=/etc/hhvm/config.hdf owner=root group=root mode=644
+
+- name: Copy logrotate
+  copy: src="./logrotate.d/hhvm" dest=/etc/logrotate.d/hhvm
