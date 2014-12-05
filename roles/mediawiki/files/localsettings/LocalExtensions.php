@@ -269,14 +269,15 @@ if ( $wmgUseCharInsert ) {
 	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 }
 
-if ( $wmgUseCirrus ) {
-	require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
-	require_once( "$IP/extensions/Elastica/Elastica.php" );
-	$wgSearchType = 'CirrusSearch';
-	$wgCirrusSearchServers = array( '10.131.243.49' );
-	$wgCirrusSearchShowNowUsing = true; // 'now using' notice on search
-	$wgDisableSearchUpdate = true;
-}
+//if ( $wmgUseCirrus ) {
+	// Keep commented in case of emergency fall back -J
+	//require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
+	//require_once( "$IP/extensions/Elastica/Elastica.php" );
+	//$wgSearchType = 'CirrusSearch';
+	//$wgCirrusSearchServers = array( '10.131.243.49' );
+	//$wgCirrusSearchShowNowUsing = true; // 'now using' notice on search
+	//$wgDisableSearchUpdate = true;
+//}
 
 if ( $wmgUseDPLforum ) {
 	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
