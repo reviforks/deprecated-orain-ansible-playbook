@@ -7,8 +7,8 @@
   failed_when: "'error' in update_rc_hhvm.stdout"
   changed_when: False # never report as "changed"
 
-- name: Copy config.hdf over
-  template: src="config.hdf" dest=/etc/hhvm/config.hdf owner=root group=root mode=644
+- name: Copy hhvm.ini over
+  template: src="hhvm.ini" dest=/etc/hhvm/hhvm.ini owner=root group=root mode=644
 
 - name: Copy logrotate
   copy: src="./logrotate.d/hhvm" dest=/etc/logrotate.d/hhvm

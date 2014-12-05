@@ -16,7 +16,7 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="HHVM FastCGI"
 NAME=hhvm
 DAEMON=/usr/bin/$NAME
-DAEMON_ARGS="--mode daemon --config /etc/php5/fpm/php.ini --config /etc/hhvm/config.hdf -vServer.Type=fastcgi -vServer.FileSocket=/var/run/hhvm/sock -vAdminServer.Port=9001"
+DAEMON_ARGS="--mode daemon --config /etc/php5/fpm/php.ini --config /etc/hhvm/hhvm.ini -vServer.Type=fastcgi -vServer.FileSocket=/var/run/hhvm/sock -vAdminServer.Port=9001"
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
 
