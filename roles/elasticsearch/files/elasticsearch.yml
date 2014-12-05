@@ -1,5 +1,5 @@
 cluster.name: mediawiki
-node.name: "prod10"
+node.name: "Orain"
 
 node.master: true
 node.data: true

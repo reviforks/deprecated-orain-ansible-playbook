@@ -25,7 +25,6 @@ done
 HOST=$(hostname)
 
 case $HOST in
-  (prod10.orain.org) limit="prod10";;
   (prod9.orain.org) limit="prod9";;
   (prod8.orain.org) limit="prod8";;
   (prod7.orain.org) limit="prod7";;
