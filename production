@@ -5,6 +5,7 @@ prod5
 [mediawikiservers]
 prod8
 prod9
+prod11
 
 [monitoringservers]
 prod6
