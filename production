@@ -24,3 +24,6 @@ prod7
 
 [gangliaservers]
 prod6
+
+[loadbalancerservers]
+prod10

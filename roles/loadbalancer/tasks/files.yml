@@ -3,4 +3,4 @@
   notify: Restart HAProxy
 
 - name: Copy pem files
-  copy: src=/root/private/ssl/*.pem dest=/etc/ssl/private/
+  copy: src=/root/private/ssl/Orain_GlobalSign_2014.pem dest=/etc/ssl/private/Orain_GlobalSign_2014.pem
