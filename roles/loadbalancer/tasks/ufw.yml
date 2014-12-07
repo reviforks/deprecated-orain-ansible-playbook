@@ -1,0 +1,5 @@
+- name: Allow web traffic
+  ufw: rule=allow port={{item}}
+  with_items:
+  - 80
+  - 443
