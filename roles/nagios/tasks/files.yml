@@ -7,7 +7,10 @@
 - name: Copy main config
   copy: src={{item}} dest=/etc/nagios3
   with_items:
-  -  cgi.cfg
-  -  commands.cfg
-  -  nagios.cfg
+  - cgi.cfg
+  - nagios.cfg
+  notify: Restart nagios3
+
+- name: Template commands
+  template: src=commands.cfg dest=/etc/nagios3
   notify: Restart nagios3
