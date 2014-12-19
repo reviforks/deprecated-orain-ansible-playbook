@@ -111,6 +111,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/skins/Erudite/erudite.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/skins/BlueSky/BlueSky.php" );
+		require_once( "$IP/extensions/Tabs/Tabs.php" );
 		break;
 	case 'goldcraftmcwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
