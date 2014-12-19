@@ -3,82 +3,82 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-AJAXPoll.git', 
     dest: 'extensions/AJAXPoll', 
-    version: 'cf93eaa'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-AbuseFilter.git',
     dest: 'extensions/AbuseFilter', 
-    version: '50f299d'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-AdminLinks.git',
     dest: 'extensions/AdminLinks', 
-    version: '473a419'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-AntiSpoof.git',
     dest: 'extensions/AntiSpoof', 
-    version: '0be7191'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-ApiSandbox.git',
     dest: 'extensions/ApiSandbox', 
-    version: 'f4dfbff'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Arrays.git',
     dest: 'extensions/Arrays', 
-    version: '261b2d8'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Babel.git',
     dest: 'extensions/Babel', 
-    version: '944381d'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-BetaFeatures.git',
     dest: 'extensions/BetaFeatures', 
-    version: '13bc685'
+    version: 'REL1_24'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-BlogPage.git',
     dest: 'extensions/BlogPage',
-    version: '7596157'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CSS.git',
     dest: 'extensions/CSS', 
-    version: '8a468d3'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CategoryTagSorter.git',
     dest: 'extensions/CategoryTagSorter', 
-    version: '1eebc4a'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CategoryTree.git',
     dest: 'extensions/CategoryTree', 
-    version: 'c7333ea'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CentralAuth.git',
     dest: 'extensions/CentralAuth', 
-    version: 'REL1_23'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CentralNotice.git',
     dest: 'extensions/CentralNotice',
-    version: '2273504'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CharInsert.git',
     dest: 'extensions/CharInsert', 
-    version: '32b1906'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CheckUser.git',
     dest: 'extensions/CheckUser', 
-    version: '02a3696'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CirrusSearch.git',
@@ -88,32 +88,32 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Cite.git',
     dest: 'extensions/Cite', 
-    version: '2342915'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CodeEditor.git',
     dest: 'extensions/CodeEditor', 
-    version: 'c3b2385'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Collection.git',
     dest: 'extensions/Collection', 
-    version: 'fae5e2a'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Comments.git',
     dest: 'extensions/Comments', 
-    version: 'c46b109'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CommonsMetadata.git',
     dest: 'extensions/CommonsMetadata', 
-    version: '3effffe'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-ConfirmEdit.git',
     dest: 'extensions/ConfirmEdit', 
-    version: '0c63352'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/Orain/CreateWiki.git',
@@ -123,32 +123,32 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CustomData.git',
     dest: 'extensions/CustomData', 
-    version: 'eb13d01'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-DPLforum.git',
     dest: 'extensions/DPLforum', 
-    version: '01211c5'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Disambiguator.git',
     dest: 'extensions/Disambiguator', 
-    version: 'cf11744'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-DismissableSiteNotice.git',
     dest: 'extensions/DismissableSiteNotice', 
-    version: '83777f2'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-DynamicSidebar.git',
     dest: 'extensions/DynamicSidebar', 
-    version: '047aed8'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Echo.git',
     dest: 'extensions/Echo', 
-    version: 'aa6714b'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Elastica.git',
@@ -158,27 +158,27 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-EventLogging.git',
     dest: 'extensions/EventLogging', 
-    version: 'a3a626b'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Gadgets.git',
     dest: 'extensions/Gadgets', 
-    version: '90ba2f4'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-GlobalBlocking.git',
     dest: 'extensions/GlobalBlocking', 
-    version: '7f10931'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-GlobalUsage.git',
     dest: 'extensions/GlobalUsage', 
-    version: '421f8d9'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-HeaderTabs.git',
     dest: 'extensions/HeaderTabs', 
-    version: 'd6d3e0d'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/Orain/HighlightLinksInCategory.git',
@@ -188,72 +188,77 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-ImageMap.git',
     dest: 'extensions/ImageMap', 
-    version: '1f17b01'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-InputBox.git',
     dest: 'extensions/InputBox', 
-    version: 'c48ebed'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Interwiki.git',
     dest: 'extensions/Interwiki', 
-    version: 'f9ed98e'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-InterwikiMagic.git',
     dest: 'extensions/InterwikiMagic', 
-    version: '2209b26'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-LabeledSectionTransclusion.git',
     dest: 'extensions/LabeledSectionTransclusion', 
-    version: '98e6ab8'
+    version: 'REL1_24'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Lingo.git',
     dest: 'extensions/Lingo',
-    version: '0855b14'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-LiquidThreads.git',
     dest: 'extensions/LiquidThreads', 
-    version: 'db0b64f'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-LocalisationUpdate.git',
     dest: 'extensions/LocalisationUpdate', 
-    version: '6fcdea6'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Lockdown.git',
     dest: 'extensions/Lockdown', 
-    version: 'd08bcd8'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MagicNoCache.git',
     dest: 'extensions/MagicNoCache', 
-    version: 'a6aac2c'
+    version: 'REL1_24'
+    }
+  - {
+    repo: 'https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Mantle.git',
+    dest: 'extensions/Mantle',
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MassMessage.git',
     dest: 'extensions/MassMessage', 
-    version: 'ca68596'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Math.git',
     dest: 'extensions/Math', 
-    version: 'd0e998f'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MultimediaViewer.git',
     dest: 'extensions/MultimediaViewer', 
-    version: 'fb6216c'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MobileFrontend.git',
     dest: 'extensions/MobileFrontend', 
-    version: '984e276'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/Orain/MultiBoilerplate.git',
@@ -268,12 +273,12 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MyVariables.git',
     dest: 'extensions/MyVariables', 
-    version: '792dd9c'
+    version: 'REL1_24'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MsUpload.git',
     dest: 'extensions/MsUpload',
-    version: 'dc19d41'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/Orain/NativeSvgHandler.git',
@@ -283,27 +288,27 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-NewUserMessage.git',
     dest: 'extensions/NewUserMessage', 
-    version: '713d39f'
+    version: 'REL1_24'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-NoTitle.git',
     dest: 'extensions/NoTitle',
-    version: '699aacb'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Nuke.git',
     dest: 'extensions/Nuke', 
-    version: '7e017e2'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-OAuth.git',
     dest: 'extensions/OAuth', 
-    version: 'b6efd90'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-OnlineStatus.git',
     dest: 'extensions/OnlineStatus', 
-    version: '54e7c9c'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/Orain/OrainMessages.git',
@@ -313,247 +318,242 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-PageImages.git',
     dest: 'extensions/PageImages', 
-    version: 'cd0513b'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-PageTools.git',
     dest: 'extensions/PageTools', 
-    version: '17fc53f'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-ParserFun.git',
     dest: 'extensions/ParserFun', 
-    version: '84fecc2'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-ParserFunctions.git',
     dest: 'extensions/ParserFunctions', 
-    version: 'e4a11db'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-PdfBook.git',
     dest: 'extensions/PdfBook', 
-    version: '5fcb44b'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Poem.git',
     dest: 'extensions/Poem', 
-    version: 'b88932a'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-PollNY.git',
     dest: 'extensions/PollNY', 
-    version: 'c0de3db'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Popups.git',
     dest: 'extensions/Popups', 
-    version: '7e9bd81'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Quiz.git',
     dest: 'extensions/Quiz', 
-    version: 'fa9a27d'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-RefreshSpecial.git',
     dest: 'extensions/RefreshSpecial', 
-    version: '349b634'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-RegexFun.git',
     dest: 'extensions/RegexFun', 
-    version: 'a3be331'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-RelatedArticles.git',
     dest: 'extensions/RelatedArticles', 
-    version: '8996d32'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Renameuser.git',
     dest: 'extensions/Renameuser', 
-    version: 'a5cd087'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-ReplaceText.git',
     dest: 'extensions/ReplaceText',
-    version: '9fdb582'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-RSS.git',
     dest: 'extensions/RSS',
-    version: 'c7c5f15'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Scribunto.git',
     dest: 'extensions/Scribunto', 
-    version: 'b4b099d'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SimpleAntiSpam.git',
     dest: 'extensions/SimpleAntiSpam', 
-    version: '413d19f'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SiteMatrix.git',
     dest: 'extensions/SiteMatrix', 
-    version: 'c95b78a'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SkinPerPage.git',
     dest: 'extensions/SkinPerPage', 
-    version: '0ab06b2'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SpamBlacklist.git',
     dest: 'extensions/SpamBlacklist', 
-    version: 'd6bd4c1'
+    version: 'REL1_24'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SocialProfile.git',
     dest: 'extensions/SocialProfile',
-    version: '0ec1390'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SubPageList3.git',
     dest: 'extensions/SubPageList3', 
-    version: '355020d'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SubpageFun.git',
     dest: 'extensions/SubpageFun', 
-    version: 'ef686d5'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SyntaxHighlight_GeSHi.git',
     dest: 'extensions/SyntaxHighlight_GeSHi', 
-    version: '2f064f4'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Tabber.git',
     dest: 'extensions/Tabber', 
-    version: '996ae03'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Tabs.git',
     dest: 'extensions/Tabs', 
-    version: '4e0556c'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TemplateSandbox.git',
     dest: 'extensions/TemplateSandbox', 
-    version: '1e880cc'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TextExtracts.git',
     dest: 'extensions/TextExtracts', 
-    version: '484b27b'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Thanks.git',
     dest: 'extensions/Thanks', 
-    version: '22333e0'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TitleBlacklist.git',
     dest: 'extensions/TitleBlacklist', 
-    version: 'ead5577'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TitleKey.git',
     dest: 'extensions/TitleKey', 
-    version: '0cbe9f4'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TocTree.git',
     dest: 'extensions/TocTree', 
-    version: 'bce88c6'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TorBlock.git',
     dest: 'extensions/TorBlock', 
-    version: '887c86d'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Translate.git',
     dest: 'extensions/Translate', 
-    version: '4b88fc4'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-UniversalLanguageSelector.git',
     dest: 'extensions/UniversalLanguageSelector', 
-    version: '4200b42'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-UrlShortener.git',
     dest: 'extensions/UrlShortener', 
-    version: 'a0439da'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Variables.git',
     dest: 'extensions/Variables', 
-    version: '86f6fa6'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-VectorBeta.git',
     dest: 'extensions/VectorBeta', 
-    version: 'REL1_23'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-VoteNY.git',
     dest: 'extensions/VoteNY', 
-    version: '0bb3214'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WebChat.git',
     dest: 'extensions/WebChat', 
-    version: '3e9c612'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Widgets.git',
     dest: 'extensions/Widgets', 
-    version: 'd5568f6'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiEditor.git',
     dest: 'extensions/WikiEditor', 
-    version: '74b6cd4'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiLove.git',
     dest: 'extensions/WikiLove', 
-    version: '89cfb87'
-    }
-  - { 
-    repo: 'https://github.com/tinymighty/wiki-seo.git',
-    dest: 'extensions/WikiSEO', 
-    version: '2c76559'
+    version: 'REL1_24'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-GoogleAdSense.git',
     dest: 'extensions/GoogleAdSense',
-    version: '0b0688f94b904fece0b881218bfa94b0011ba9ae'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-cldr.git',
     dest: 'extensions/cldr', 
-    version: '64b5b19'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-googleAnalytics.git',
     dest: 'extensions/googleAnalytics', 
-    version: '7f6e6e3'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-intersection.git',
     dest: 'extensions/intersection', 
-    version: '85116d8'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-skins.git',
     dest: 'extensions/skins', 
-    version: '14902cd'
+    version: 'REL1_24'
     }
   - {
     repo: 'https://github.com/Orain/CreateBox.git',
@@ -580,12 +580,12 @@ skins:
   - {
     repo: 'https://github.com/WikiWonders/filament.git',
     dest: 'skins/filament',
-    version: '7964bfe'
+    version: 'master'
     }
   - {
     repo: 'https://github.com/WikiWonders/foreground.git',
     dest: 'skins/foreground',
-    version: '7d098d2'
+    version: 'master'
     }
   - {
     repo: 'https://github.com/Orain/monaco.git',
@@ -595,10 +595,20 @@ skins:
   - {
     repo: 'https://github.com/wikimedia/mediawiki-skins-erudite.git',
     dest: 'skins/Erudite',
-    version: 'fc5b868'
+    version: 'REL1_24'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-skins-BlueSky.git',
     dest: 'skins/BlueSky',
-    version: 'ed2b24d018394bdeee88b4ea76bfbaedd68f85a5'
+    version: 'REL1_24'
+    }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-skins-MonoBook',
+    dest: 'skins/MonoBook',
+    version: 'REL1_24'
+    }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-skins-Vector',
+    dest: 'skins/Vector',
+    version: 'REL1_24'
     }
