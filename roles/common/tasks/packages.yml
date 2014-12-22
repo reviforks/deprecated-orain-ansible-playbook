@@ -14,9 +14,6 @@
     - fail2ban
     - lsof
     - lynis
-    - nagios-nrpe-server
-    - python3
-    - python-software-properties
     - rkhunter
     - sudo
     - tmux
@@ -26,14 +23,22 @@
 - name: Install packages (latest)
   apt: pkg={{item}} state=latest
   with_items:
+    - bash
+    - curl
     - git
     - htop
     - mysql-client # Needed for testing mysql connectivity between instance - Addshore
     - mosh
+    - mount
+    - nagios-nrpe-server
     - nano
     - netcat
+    - openssl
+    - python3
+    - python-software-properties
     - screen
     - vim
+    - wget
     - zip
 
 - name: Add Wikimedia Trusty repo

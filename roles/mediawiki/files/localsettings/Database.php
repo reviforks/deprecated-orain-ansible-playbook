@@ -9,10 +9,10 @@ $wgLBFactoryConf = array(
 	),
 	'sectionLoads' => array(
 		'DEFAULT' => array( // ALL wikis unless overriden
-			'prod3' => 1,
+			'prod12' => 1,
 		),
 		'c1' => array( // Non-wikis needing to be directed to c1
-			'prod3' => 1,
+			'prod12' => 1,
 		),
 		'c2' => array(
 			'prod5' => 1,
@@ -25,7 +25,7 @@ $wgLBFactoryConf = array(
 		'type' => 'mysql',
 	),
 	'hostsByName' => array(
-		'prod3' => '10.131.243.243',
+		'prod12' => '10.131.209.107',
 		'prod5' => '10.131.243.246',
 	),
 	// Below is required to be here. This also allows us to easily take a cluster out of service for a reason

@@ -42,6 +42,8 @@
   - 178.62.104.119
   - 2a03:b0c0:1:d0::b7:f001
   - 10.131.243.247
+  # prod12
+  - 10.131.209.107
 
 - name: Remove old access rules
   ufw: rule=allow src={{ item }} delete=yes
