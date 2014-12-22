@@ -25,8 +25,8 @@ $wgLBFactoryConf = array(
 		'type' => 'mysql',
 	),
 	'hostsByName' => array(
-		'prod12' => '10.131.209.107',
 		'prod5' => '10.131.243.246',
+		'prod12' => '10.131.209.107',
 	),
 	// Below is required to be here. This also allows us to easily take a cluster out of service for a reason
 	'readOnlyBySection' => array(

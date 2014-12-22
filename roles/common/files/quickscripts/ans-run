@@ -25,6 +25,7 @@ done
 HOST=$(hostname)
 
 case $HOST in
+  (prod12.orain.org) limit="prod12";;
   (prod11.orain.org) limit="prod11";;
   (prod10.orain.org) limit="prod10";;
   (prod9.orain.org) limit="prod9";;
@@ -32,7 +33,6 @@ case $HOST in
   (prod7.orain.org) limit="prod7";;
   (prod6.orain.org) limit="prod6";;
   (prod5.orain.org) limit="prod5";;
-  (prod3.orain.org) limit="prod3";;
   (*)   echo Failed to match host using $HOST && exit 1;;
 esac
 
