@@ -5,4 +5,4 @@
   apt_repository: repo='deb http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu trusty main'
 
 - name: Install MariaDB
-  apt: pkg=mariadb-server
+  apt: pkg=mariadb-server=5.5.41+maria-1~trusty force=yes
