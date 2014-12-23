@@ -15,6 +15,7 @@ root: sysadmin
 
 # phase out help!
 help: dusti,john,addshore
+paypal: dusti,john
 
 # I get shell mail but don't read it so... -John
 johnflewis: john
