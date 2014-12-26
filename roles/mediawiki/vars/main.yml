@@ -161,6 +161,11 @@ extensions:
     version: 'wmf/1.25wmf5'
     }
   - { 
+    repo: 'https://github.com/Alexia/mediawiki-embedvideo.git',
+    dest: 'extensions/EmbedVideo', 
+    version: 'master'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-EventLogging.git',
     dest: 'extensions/EventLogging', 
     version: 'REL1_24'
