@@ -86,6 +86,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CSS/CSS.php" );
 		require_once( "$IP/extensions/CustomData/CustomData.php" );
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
+		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
@@ -94,6 +95,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
 		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php");
 		$wgMediaViewerIsInBeta = true;
+		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
                 require_once( "$IP/extensions/NoTitle/NoTitle.php" );
                 require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
@@ -178,8 +180,6 @@ switch( $wgDBname ) {
 
 		break;
 	case 'rightwiki':
-		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
-		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 		break;
 	case 'verkeerwiki':
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
