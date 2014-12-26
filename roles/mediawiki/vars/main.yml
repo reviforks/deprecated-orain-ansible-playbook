@@ -622,3 +622,13 @@ skins:
     dest: 'skins/Vector',
     version: 'REL1_24'
     }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-skins-CologneBlue',
+    dest: 'skins/CologneBlue',
+    version: 'REL1_24'
+    }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-skins-Modern',
+    dest: 'skins/Modern',
+    version: 'REL1_24'
+    }
