@@ -96,6 +96,11 @@ extensions:
     version: 'REL1_24'
     }
   - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-CollapsibleVector.git',
+    dest: 'extensions/CollapsibleVector', 
+    version: 'REL1_24'
+    } 
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Collection.git',
     dest: 'extensions/Collection', 
     version: 'REL1_24'
