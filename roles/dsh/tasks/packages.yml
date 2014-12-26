@@ -1,0 +1,2 @@
+- name: Install dsh
+  apt: name=dsh state=latest

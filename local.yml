@@ -5,6 +5,7 @@
     - ../private/vars.yml
   roles:
     - common
+    - dsh
 
 - hosts: mediawikiservers
   vars_files:
