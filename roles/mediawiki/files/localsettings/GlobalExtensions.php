@@ -17,7 +17,6 @@ require_once( "$IP/extensions/CheckUser/CheckUser.php" );
 require_once( "$IP/extensions/Cite/Cite.php" );
 require_once( "$IP/extensions/Cite/SpecialCite.php" );
 require_once( "$IP/extensions/CollapsibleVector/CollapsibleVector.php" );
-$wgVectorFeatures['collapsiblenav']['user'] = true;
 require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 require_once( "$IP/extensions/ConfirmEdit/QuestyCaptcha.php" );
 require_once( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
