@@ -261,6 +261,11 @@ extensions:
     version: 'REL1_24'
     }
   - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-MultiUpload.git',
+    dest: 'extensions/MultiUpload', 
+    version: 'REL1_24'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MobileFrontend.git',
     dest: 'extensions/MobileFrontend', 
     version: 'REL1_24'
