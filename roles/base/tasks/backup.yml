@@ -1,5 +1,5 @@
 - name: Copy backup.sh
-  template: src=backup.sh dest=/root/backup.sh  owner=root group=root mode=770
+  template: src=backup.sh dest=/root/backup.sh  owner=root group=root mode=770 state=absent
 
 - name: Create a cronjob for backup.sh
   cron: name="backup.sh"
@@ -7,3 +7,4 @@
         minute=0
         hour=0
         job="/root/backup.sh > /var/log/cron/backup.log 2>&1"
+        state=absent
