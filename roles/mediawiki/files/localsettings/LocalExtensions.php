@@ -47,6 +47,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
 		break;
+	case 'cannabiswiki':
+		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		break;
