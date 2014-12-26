@@ -2,4 +2,4 @@
   copy: src=dsh.conf dest=/etc/dsh
 
 - name: Copy group/
-  copy: src=group/* dest=/etc/dsh/group
+  copy: src=group/ dest=/etc/dsh/group
