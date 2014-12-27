@@ -341,6 +341,11 @@ extensions:
     version: 'REL1_24'
     }
   - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-PageTriage.git',
+    dest: 'extensions/PageTriage', 
+    version: 'REL1_24'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-ParserFun.git',
     dest: 'extensions/ParserFun', 
     version: 'REL1_24'
@@ -374,6 +379,11 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Quiz.git',
     dest: 'extensions/Quiz', 
     version: 'REL1_24'
+    }
+  - { 
+    repo: 'https://github.com/poke/mediawiki-RecentChangesLogFilter.git',
+    dest: 'extensions/RecentChangesLogFilter', 
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-RefreshSpecial.git',
