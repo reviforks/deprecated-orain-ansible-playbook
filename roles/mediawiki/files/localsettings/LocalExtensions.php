@@ -98,6 +98,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
                 require_once( "$IP/extensions/NoTitle/NoTitle.php" );
                 require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
+                require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
@@ -106,6 +107,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
+		require_once( "$IP/extensions/RecentChangesLogFilter/RecentChangesLogFilter.php" );
 		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
 		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 		require_once( "$IP/extensions/RSS/RSS.php" );
