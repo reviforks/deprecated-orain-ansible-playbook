@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ufw allow 22 $>/dev/null
+if [ $? -ne 0 ]; then
+    echo "CRITICAL - UFW add rule failed"
+    exit 2
+else
+    echo "OK - UFW add rule successful"
+    exit 0
+fi
