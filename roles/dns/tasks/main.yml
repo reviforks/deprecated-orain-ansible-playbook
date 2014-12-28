@@ -1,5 +1,5 @@
 - name: Get GDNSD
-  apt: pkg=gdnsd
+  apt: pkg=gdnsd=2.1.0-1 state=present
 
 - name: Get DNS configuration
   git: repo=https://github.com/orain/dns dest=/etc/gdnsd/ version=master
