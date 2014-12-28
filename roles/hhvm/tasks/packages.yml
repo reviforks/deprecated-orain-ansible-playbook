@@ -1,2 +1,2 @@
-- name: Install hhvm-dev
-  apt: pkg=hhvm-dev force=yes state=latest
+- name: Install hhvm
+  apt: pkg=hhvm force=yes state=latest
