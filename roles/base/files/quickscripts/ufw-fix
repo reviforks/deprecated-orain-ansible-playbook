@@ -2,6 +2,8 @@
 set -e
 set -o pipefail
 
+ufw disable
+
 iptables --flush
 rules=($(iptables --list | grep Chain | grep -Eo "ufw-[a-z-]+" | xargs echo))
 for i in "${rules[@]}"
@@ -14,3 +16,5 @@ for i in "${rules6[@]}"
 do
   ip6tables --delete-chain $i
 done
+
+ufw enable
