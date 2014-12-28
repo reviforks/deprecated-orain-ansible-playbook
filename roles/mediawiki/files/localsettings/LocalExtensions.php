@@ -9,6 +9,10 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
 		require_once( "$IP/extensions/CSS/CSS.php" );
+		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+		require_once( "$IP/extensions/RecentChangesLogFilter/RecentChangesLogFilter.php" );
+                require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
@@ -151,6 +155,9 @@ switch( $wgDBname ) {
 		break;
 	case 'metawiki':
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
+		break;
+	case 'poserdazfreebieswiki':
+		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 		break;
 	case 'spiralwiki':
 		require_once( "$IP/extensions/cldr/cldr.php" );
