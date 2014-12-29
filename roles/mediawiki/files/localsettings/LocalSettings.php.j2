@@ -84,13 +84,6 @@ define( 'NS_BLOG', 528);
 define( 'NS_BLOG_TALK', 529);
 // /ircwiki
 
-// levelswiki
-define( 'NS_GUIDE', 258 );
-define( 'NS_GUIDE_TALK', 259 );
-define( 'NS_MOD', 260 );
-define( 'NS_MOD_TALK', 261 );
-// /levelswiki
-
 // Reviwiki
 define( 'NS_SERVER', 526);
 define( 'NS_SERVER_TALK', 527);
@@ -655,7 +648,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'keionrailwiki' => true,
 		'mediawikitesterswiki' => true,
-		'nlallthetropeswiki' => true,
 		'verkeerwiki' => true,
 	),
 	'wmgUseCodeEditor' => array(
@@ -663,7 +655,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'allthetropeswiki' => true,
 		'mediawikitesterswiki' => true,
-		'nlallthetropeswiki' => true,
 		'wikinambaswiki' => true,
 	),
 	'wmgUseCollectionPDF' => array(
@@ -681,8 +672,6 @@ $wgConf->settings = array(
 		'frmodamobwiki' => true,
 		'mediawikitesterswiki' => true,
 		'metawiki' => true,
-		'nlallthetropeswiki' => true,
-		'opensourcelearningwiki' => true,
 		'redsecwiki' => true,
 		'wh40kwiki' => true,
 	),
@@ -693,7 +682,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
 		'metawiki' => true,
-		'nlallthetropeswiki' => true,
 		'testwiki' => true,
 		'spiralwiki' => true,
 		'jossewiki' => true,
@@ -703,7 +691,6 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
-		'nlallthetropeswiki' => true,
 		'wikinambaswiki' => true,
 	),
 	'wmgUseOrainFooter' => array(
@@ -722,7 +709,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'keionrailwiki' => true,
-		'grayhawkwiki' => true,
 		'spiralwiki' => true,
 		'wikiconstituciowiki' => true,
 		'wikinambaswiki' => true,
@@ -731,13 +717,11 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
-		'patereswiki' => true,
 	),
 	'wmgUseReplaceText' => array(
 		'default' => false,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
-		'patereswiki' => true,
 	),
 	'wmgUseTabber' => array(
 		'default' => false,
@@ -745,13 +729,10 @@ $wgConf->settings = array(
 		'botwiki' => true,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
-		'nlallthetropeswiki' => true,
-		'patereswiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
-		'elderlordswiki' => false,
 		'nationalewiki' => false,
 		'wikinambaswiki' => true,
 	),
@@ -760,7 +741,6 @@ $wgConf->settings = array(
 	// Names
 	'wgContentNamespaces' => array(
 		'botwiki' => array( NS_BOT, NS_FRAMEWORK, NS_SCRIPT ),
-		'levelswiki' => array( NS_GUIDE, NS_MOD ),
 	),
 	'wgExtraNamespaces' => array(
 		'allthetropeswiki' => array(
@@ -803,18 +783,6 @@ $wgConf->settings = array(
 			NS_FORUM_ORAIN => 'Forum', // NS_FORUM_ORAIN should === NS_FORUM
 			NS_FORUM_TALK_ORAIN => 'Forum_talk', // NS_FORUM_TALK_ORAIN should === NS_FORUM_TALK
 		),
-		'nlallthetropeswiki' => array(
-			NS_TROPEWORKSHOP => 'Trope_Workshop',
-			NS_TROPEWORKSHOP_TALK => 'Trope_Workshop_talk',
-			NS_FORUM_ORAIN => 'Forum', // NS_FORUM_ORAIN should === NS_FORUM
-			NS_FORUM_TALK_ORAIN => 'Forum_talk', // NS_FORUM_TALK_ORAIN should === NS_FORUM_TALK
-		),
-		'levelswiki' => array(
-			NS_GUIDE => 'Guide',
-			NS_GUIDE_TALK => 'Guide_talk',
-			NS_MOD => 'Mod',
-			NS_MOD_TALK => 'Mod_talk',
-		),
         	'reviwiki' => array(
             		NS_SERVER => '서버',
             		NS_SERVER_TALK => '서버토론',
@@ -841,10 +809,6 @@ $wgConf->settings = array(
 		'keionrailwiki' => array(
 			'사' => NS_USER,
 			'사토' => NS_USER_TALK,
-		),
-		'nlallthetropeswiki' => array(
-			'YKTTW' => 520,
-			'ATT' => NS_PROJECT,
 		),
 		'reviwiki' => array(
 			'사' => NS_USER,
@@ -886,10 +850,6 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 		),
 		'+metawiki' => array(
-			NS_MAIN => true,
-			NS_FORUM_ORAIN => true, // NS_FORUM_ORAIN should === NS_FORUM
-		),
-		'+nlallthetropeswiki' => array(
 			NS_MAIN => true,
 			NS_FORUM_ORAIN => true, // NS_FORUM_ORAIN should === NS_FORUM
 		),
@@ -1359,11 +1319,8 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'encyclopediamuricanawiki' => true,
 		'nationalewiki' => true,
-		'nlallthetropeswiki' => true,
 		'hyperiondevwiki' => true,
 		'loginwiki' => true,
-		'opensourcelearningwiki' => true,
-		'patereswiki' => true,
 		'peachywiki' => true,
 		'poserdazfreebieswiki' => true,
 		'reviwiki' => true,
@@ -1385,7 +1342,6 @@ $wgConf->settings = array(
 	'wgEnableProfileInfo' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'nlallthetropeswiki' => true,
 		'metawiki' => true,
 	),
 	// /Profiling
@@ -1400,7 +1356,6 @@ $wgConf->settings = array(
 	'wgFixDoubleRedirects' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'nlallthetropeswiki' => true,
 	),
 	// /Redirects
 
@@ -1465,7 +1420,6 @@ $wgConf->settings = array(
 	// Style
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
-		'elderlordswiki' => 'monobook',
 		'spiralwiki' => 'foreground',
 		'wikidemoswiki' => 'foreground',
 	),
@@ -1478,20 +1432,16 @@ $wgConf->settings = array(
 		'computerclanwiki' => '//upload.wikimedia.org/wikipedia/commons/f/f7/CC_Wiki_Graphic_Mark_Small.png',
 		'dangsunsnwiki' => '//upload.wikimedia.org/wikipedia/commons/e/e8/Kd-logo.png',
 		'deguwiki' => "//$wmgUploadHostname/meta.orain.org/images/b/ba/Deguwikilogo.png",
-		'enmodamobwiki' => "//$wmgUploadHostname/meta.orain.org/images/d/d6/Modamob-logo.png",
 		'electrumwiki' => "//$wmgUploadHostname/electrum.orain.org/images/0/00/Logo_text_135.png",
 		'frmodamobwiki' => "//$wmgUploadHostname/meta.orain.org/images/d/d6/Modamob-logo.png",
 		'goldcraftmcwiki' => "//$wmgUploadHostname/meta.orain.org/images/5/5c/Goldcraftwikilogo.png",
-		'grayhawkwiki' => '//upload.wikimedia.org/wikipedia/commons/4/49/GrayhawkPaladinsLogo_%28small%29.png',
 		'isvwiki' => "//$wmgUploadHostname/isv.orain.org/images/b/bc/Wiki.png",
 		'keionrailwiki' => '//upload.wikimedia.org/wikipedia/commons/e/e4/Subway_TokyoTozai.png',
-		'levelswiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wikilevels_logo_text.png/135px-Wikilevels_logo_text.png',
 		'linuxwiki' => "//$wmgUploadHostname/linux.orain.org/images/e/ed/Wiki_logo_Linux.png",
 		'mediawikitesterswiki' => '//upload.wikimedia.org/wikipedia/commons/9/9a/MediaWikiTestersWiki.png',
 		'mwmwiki' => "//$wmgUploadHostname/mwm.orain.org/images/a/a6/Wiki-Logo.png",
         	'nationalewiki' => "//$wmgUploadHostname/nationale.orain.org/images/2/29/Logo_of_the_Encyclopedia_Nationale.png",
 		'netwiki' => '//upload.wikimedia.org/wikipedia/commons/3/30/Repr%C3%A9sentation_d%27internet.jpg',
-		'nlallthetropeswiki' => "//$wmgUploadHostname/allthetropes.orain.org/images/8/86/Logo-Square-v1-1x.png",
 		'peachywiki' => '//upload.wikimedia.org/wikipedia/commons/5/51/PeachyFrameworkLogo.png',
 		'pigawiki' => "//$wmgUploadHostname/piga.orain.org/images/2/23/PigaLore.png",
 		'portalwiki' => "//$wmgUploadHostname/portal.orain.org/images/f/fa/Portalpedia_Logo.png",
