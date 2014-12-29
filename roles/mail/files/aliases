@@ -1,3 +1,4 @@
+# standard stuff
 mailer-daemon: postmaster
 postmaster: root
 nobody: root
@@ -32,3 +33,6 @@ pingdom: john,addshore
 
 # mirror groups
 operations: sysadmin
+
+# GlobalSign auth
+admin: accounts
