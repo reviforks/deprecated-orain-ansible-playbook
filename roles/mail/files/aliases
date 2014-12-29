@@ -13,9 +13,10 @@ security: root
 sysadmin: john,addshore
 root: sysadmin
 
-# phase out help!
-help: dusti,john
+# paypal for paypal
 paypal: dusti,john
+# accounts for umbrella of other stuff
+accounts: dusti,john
 
 # I get shell mail but don't read it so... -John
 johnflewis: john
