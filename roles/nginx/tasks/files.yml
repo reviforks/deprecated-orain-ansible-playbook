@@ -47,3 +47,6 @@
 
 - name: Copy issuer.crt to nginx
   copy: src=issuer.crt dest=/etc/nginx/
+
+- name: Copy logrotate.d
+  copy: src="./logrotate.d/nginx" dest=/etc/logrotate.d/nginx
