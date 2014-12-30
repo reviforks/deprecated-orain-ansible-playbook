@@ -2,7 +2,6 @@
 
 // Switch case
 switch( $wgDBname ) {
-	case 'nlallthetropeswiki':
 	case 'allthetropeswiki':
 		//require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
