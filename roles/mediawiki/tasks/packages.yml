@@ -15,7 +15,7 @@
 
 - name: Install packages for MediaWiki extensions
   apt: pkg={{item}}
-  With_items:
+  with_items:
   - liblua5.1-0
   - ploticus
 
