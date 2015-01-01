@@ -122,8 +122,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/skins/BlueSky/BlueSky.php" );
 		require_once( "$IP/extensions/Tabs/Tabs.php" );
-		require_once( "$IP/extensions/Timeline/Timeline.php" );
-		$fontFile = 'ascii'; // Use the internal Ploticus font
 		break;
 	case 'goldcraftmcwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
