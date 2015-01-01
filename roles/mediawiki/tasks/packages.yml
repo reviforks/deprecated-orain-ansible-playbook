@@ -13,10 +13,13 @@
   register: composer_update_output
   changed_when: composer_update_output.stdout.find('You are already using composer version') == -1
 
-- name: Install Lua 5.1
-  apt: pkg=liblua5.1-0
+- name: Install packages for MediaWiki extensions
+  apt: pkg={{item}}
+  With_items:
+  - liblua5.1-0
+  - ploticus
 
-- name: Install php5-reids
+- name: Install php5-redis
   apt: pkg=php5-redis force=yes state=latest
   
 - name: Create /srv/mediawiki
