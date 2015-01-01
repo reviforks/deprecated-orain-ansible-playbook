@@ -485,6 +485,11 @@ extensions:
     dest: 'extensions/Thanks', 
     version: 'REL1_24'
     }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-Timeline.git',
+    dest: 'extensions/Timeline',
+    version: 'REL1_24'
+    }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TitleBlacklist.git',
     dest: 'extensions/TitleBlacklist', 
