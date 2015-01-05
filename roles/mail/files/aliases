@@ -36,3 +36,9 @@ operations: sysadmin
 
 # GlobalSign auth
 admin: accounts
+
+# staff
+staff: addshore,dusti,john,southparkfan
+
+# southparkfan
+southparkfan: southparkfan223@hotmail.com
