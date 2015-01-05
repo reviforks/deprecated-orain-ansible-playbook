@@ -12,6 +12,8 @@ security: root
 
 # sysadmin group
 sysadmin: john,addshore
+root: sysadmin
+operations: sysadmin
 
 # paypal for paypal
 paypal: dusti,john
