@@ -4,3 +4,4 @@ noc: root
 security: root
 
 root: root@orain.org
+operations: operations@orain.org
