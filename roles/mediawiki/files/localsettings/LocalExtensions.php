@@ -62,6 +62,13 @@ switch( $wgDBname ) {
 	case 'detectiveconanwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		break;
+	case 'donjonwiki':
+		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+		$wgMediaViewerIsInBeta = true;
+		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+		require_once( "$IP/extensions/NoTitle/NoTitle.php" );
+		break;
 	case 'ejderhanefesiwiki':
 		require_once( "$IP/extensions/Lingo/Lingo.php" );
 		require_once( "$IP/extensions/Random/Random.php" );
