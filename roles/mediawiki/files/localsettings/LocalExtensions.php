@@ -106,9 +106,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php");
 		$wgMediaViewerIsInBeta = true;
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
-                require_once( "$IP/extensions/NoTitle/NoTitle.php" );
-                require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
-                require_once( "$IP/extensions/PageTriage/PageTriage.php" );
+		require_once( "$IP/extensions/NoTitle/NoTitle.php" );
+		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
+		require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
@@ -163,6 +163,10 @@ switch( $wgDBname ) {
 		break;
 	case 'metawiki':
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
+		break;
+	case 'netwiki':
+		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+		$wgMediaViewerIsInBeta = true;
 		break;
 	case 'poserdazfreebieswiki':
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
