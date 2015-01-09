@@ -3,43 +3,43 @@
 // Switch case
 switch( $wgDBname ) {
 	case 'allthetropeswiki':
-		//require_once( "$IP/extensions/CreateBox/CreateBox.php" );
-		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
+		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
+		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 		require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
 		require_once( "$IP/extensions/CSS/CSS.php" );
+		require_once( "$IP/extensions/CustomData/CustomData.php" );
+		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
-		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
-		require_once( "$IP/extensions/RecentChangesLogFilter/RecentChangesLogFilter.php" );
-                require_once( "$IP/extensions/PageTriage/PageTriage.php" );
-		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
-		require_once( "$IP/extensions/VoteNY/Vote.php" );
+		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
+		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
+		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
+		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		$wgMultiBoilerplateOptions = false;
 		$wgMultiBoilerplateDiplaySpecialPage = true;
-		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
+		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
+		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php");
+		$wgMediaViewerIsInBeta = true;
+		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
+		require_once( "$IP/extensions/NoTitle/NoTitle.php" );
+		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
+		require_once( "$IP/extensions/PageTriage/PageTriage.php" );
+		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
+		require_once( "$IP/extensions/RecentChangesLogFilter/RecentChangesLogFilter.php" );
+		require_once( "$IP/extensions/PageTools/PageTools.php" );
+		require_once( "$IP/extensions/Poem/Poem.php" );
+		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
+		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		// Configurations
 		$wgSectionHideShowtop = 1;
 		$wgRestrictDisplayTitle = false;
-		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 		require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 		require_once( "$IP/extensions/Tabs/Tabs.php" );
-		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
-		require_once( "$IP/extensions/Arrays/Arrays.php" );
-		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
-		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/TocTree/TocTree.php" );
-		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
-		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php");
-		$wgMediaViewerIsInBeta = true;
-		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
-		//require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
-		require_once( "$IP/extensions/PageTools/PageTools.php" );
-		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
-		require_once( "$IP/extensions/CustomData/CustomData.php" );
 		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
-		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
+		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/WebChat/WebChat.php" );
 		$wgWebChatServer  = ''; // Not needed due to wgWebChatClient --SPF
 		$wgWebChatChannel = '#allthetropes';
