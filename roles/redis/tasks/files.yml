@@ -4,8 +4,5 @@
   - ./*.j2
 
 - name: Copy redis config
-  copy: src={{item}} dest=/etc/redis
-  with_items:
-  - persist.conf
-  - evict.conf
+  copy: src=evict.conf dest=/etc/redis
   notify: restart redis
