@@ -31,3 +31,6 @@ admin: accounts
 
 # staff
 staff: addshore,dusti,john,southparkfan223@hotmail.com,arcane@live.com
+
+# forward dusti@ to dusti's email temporarily
+dusti: dahowe@bsugmail.net
