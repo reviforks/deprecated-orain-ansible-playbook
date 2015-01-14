@@ -84,9 +84,9 @@ switch( $wgDBname ) {
 		);
 	case 'extloadwiki':
 		// all extensions are loaded on this wiki
-		require_once "$IP/extensions/AdManager/AdManager.php";
-		$wgAdManagerService = 'openx';
-		$wgAdManagerCode = $1;
+		#require_once "$IP/extensions/AdManager/AdManager.php";
+		#$wgAdManagerService = 'openx';
+		#$wgAdManagerCode = $1;
 		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
 		require_once( "$IP/extensions/Arrays/Arrays.php" );
 		require_once( "$IP/extensions/BlogPage/BlogPage.php" );
