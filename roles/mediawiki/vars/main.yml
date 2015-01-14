@@ -11,6 +11,11 @@ extensions:
     version: 'REL1_24'
     }
   - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-AdManager.git',
+    dest: 'extensions/AdManager', 
+    version: 'REL1_24'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-AdminLinks.git',
     dest: 'extensions/AdminLinks', 
     version: 'REL1_24'
