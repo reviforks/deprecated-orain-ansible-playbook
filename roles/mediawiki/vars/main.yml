@@ -556,6 +556,11 @@ extensions:
     version: 'REL1_24'
     }
   - { 
+    repo: 'https://github.com/Sturmkrieg/mw-WikiBanner.git',
+    dest: 'extensions/WikiBanner', 
+    version: 'master'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiEditor.git',
     dest: 'extensions/WikiEditor', 
     version: 'REL1_24'
@@ -610,6 +615,7 @@ extensions:
     dest: 'extensions/SectionHide',
     version: 'master'
     }
+    
     
 skins:
   - {
