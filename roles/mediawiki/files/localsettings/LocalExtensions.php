@@ -102,6 +102,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
+		require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
 		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/MsUpload/MsUpload.php" );
