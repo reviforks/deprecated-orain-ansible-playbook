@@ -556,7 +556,7 @@ extensions:
     version: 'REL1_24'
     }
   - { 
-    repo: 'https://github.com/Sturmkrieg/mw-WikiBanner.git',
+    repo: 'https://github.com/Pavelovich/WikiBanner.git',
     dest: 'extensions/WikiBanner', 
     version: 'master'
     }
