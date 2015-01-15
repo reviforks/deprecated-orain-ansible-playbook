@@ -138,6 +138,7 @@ switch( $wgDBname ) {
 		$wgWebChatServer  = ''; // Not needed due to wgWebChatClient --SPF
 		$wgWebChatChannel = '#orain';
 		$wgWebChatClient = 'freenodeChat';
+		require_once "$IP/extensions/WikiBanner/WikiBanner.php";
 		break;
 	case 'goldcraftmcwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
