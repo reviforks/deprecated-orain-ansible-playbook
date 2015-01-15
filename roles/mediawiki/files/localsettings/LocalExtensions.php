@@ -139,7 +139,7 @@ switch( $wgDBname ) {
 		$wgWebChatChannel = '#orain';
 		$wgWebChatClient = 'freenodeChat';
 		require_once "$IP/extensions/WikiBanner/WikiBanner.php";
-		$wgTopBannerCode = '<script type="text/javascript">
+	#	$wgTopBannerCode = '<script type="text/javascript">
   ( function() {
     if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
     var unit = {"calltype":"async[2]","publisher":"damuniz","width":550,"height":250,"sid":"Chitika Default"};
