@@ -24,6 +24,20 @@
         hour="*/12"
         job="/home/mediawiki/db_loop.sh /srv/mediawiki/w/extensions/TorBlock/loadExitNodes.php --force"
 
+- name: Purge CheckUser data
+  cron: name="Purge CheckUser"
+        user="mediawiki"
+        minute="0"
+        hour="*/12"
+        job="/home/mediawiki/db_loop.sh /srv/mediawiki/w/extensions/CheckUser/maintenance/purgeOldData.php"
+
+- name: Purge AbuseFilter IPs
+  cron: name="Purge AbuseFilter"
+        user="mediawiki"
+        minute="0"
+        hour="*/12"
+        job="/home/mediawiki/db_loop.sh /srv/mediawiki/w/extensions/AbuseFilter/maintenance/purgeOldLogIPData.php"
+
 - name: Add i18n.sh to boot
   command: update-rc.d i18n.sh defaults 99
   register: update_rc_i18n
