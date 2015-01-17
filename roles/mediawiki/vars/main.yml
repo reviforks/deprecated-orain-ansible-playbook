@@ -631,7 +631,7 @@ skins:
   - {
     repo: 'https://github.com/Orain/monaco.git',
     dest: 'skins/monaco',
-    version: 'master'
+    version: 'Orain'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-skins-erudite.git',
