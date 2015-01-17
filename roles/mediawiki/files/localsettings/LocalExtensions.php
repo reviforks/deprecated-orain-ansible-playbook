@@ -47,6 +47,10 @@ switch( $wgDBname ) {
 		$wgWebChatChannel = '#allthetropes';
 		$wgWebChatClient = 'freenodeChat';
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
+
+		// Break this off - Do not modify
+		$wgDisableTextSearch = true;
+		$wgSearchForwardUrl = "https://www.google.co.uk/search?q=$1&sitesearch=http://allthetropes.orain.org";
 		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
