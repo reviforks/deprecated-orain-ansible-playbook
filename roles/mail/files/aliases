@@ -20,6 +20,9 @@ paypal: dusti,john
 # accounts for umbrella of other stuff
 accounts: dusti,john
 
+# recover twitter
+joeg: dusti
+
 # nagios
 nagios: john
 
