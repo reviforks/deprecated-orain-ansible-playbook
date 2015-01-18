@@ -634,6 +634,11 @@ skins:
     version: 'Orain'
     }
   - {
+    repo: 'https://github.com/Orain/Nimbus.git',
+    dest: 'skins/nimbus',
+    version: 'master'
+    }
+  - {
     repo: 'https://github.com/wikimedia/mediawiki-skins-erudite.git',
     dest: 'skins/Erudite',
     version: 'REL1_24'
