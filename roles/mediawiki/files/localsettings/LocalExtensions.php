@@ -117,7 +117,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php");
 		$wgMediaViewerIsInBeta = true;
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
-		require_once( "$IP/skins/Nimbus/Nimbus.php" );
+		require_once( "$IP/skins/nimbus/Nimbus.php" );
 		require_once( "$IP/extensions/NoTitle/NoTitle.php" );
 		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
 		require_once( "$IP/extensions/PageTriage/PageTriage.php" );
