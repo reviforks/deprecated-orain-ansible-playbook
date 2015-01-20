@@ -281,6 +281,11 @@ extensions:
     version: 'REL1_24'
     }
   - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-MsCatSelect',
+    dest: 'extensions/MsCatSelect', 
+    version: 'REL1_24'
+    }
+  - { 
     repo: 'https://github.com/Orain/MultiBoilerplate.git',
     dest: 'extensions/MultiBoilerplate', 
     version: 'master'
