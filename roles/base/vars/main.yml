@@ -2,7 +2,7 @@
 roots:
   - { name: 'kudu', group: 'roots', groups: 'roots,operations', uid: '2000', state: 'absent' }
   - { name: 'addshore', group: 'roots', groups: 'roots,operations', uid: '2001', state: 'present' }
-  - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002', state: 'present' }
+  - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002', state: 'absent' }
 
 users:
   - { name: 'arcane', group: 'mediawiki-ops', groups: 'mediawiki-ops', uid: '2003', hosts: 'mediawikiservers', state: 'present' }
