@@ -11,18 +11,18 @@ noc: root
 security: root
 
 # sysadmin group
-sysadmin: john,addshore
+sysadmin: addshore
 root: sysadmin
 operations: sysadmin
 
 # paypal for paypal
-paypal: dusti,john
+paypal: dusti,addshore
 
 # accounts for umbrella of other stuff
-accounts: dusti,john
+accounts: dusti,addshore
 
 # nagios
-nagios: john
+nagios: sysadmin
 
 # addshore - skip server side mailbox
 addshore: addshorewiki@gmail.com
@@ -31,7 +31,7 @@ addshore: addshorewiki@gmail.com
 admin: accounts
 
 # staff
-staff: addshore,dusti,john,southparkfan223@hotmail.com,arcane@live.com
+staff: addshore,dusti,southparkfan223@hotmail.com,arcane@live.com
 
 # forward dusti@ to dusti's email temporarily
 dusti: dahowe@bsugmail.net
