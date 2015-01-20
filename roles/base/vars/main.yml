@@ -1,9 +1,11 @@
 ---
 roots:
-  - { name: 'kudu', group: 'roots', groups: 'roots,operations', uid: '2000', state: 'absent' }
+  - { name: 'kudu', group: 'roots', groups: 'roots,operations', uid: '2000', state: 'present' }
   - { name: 'addshore', group: 'roots', groups: 'roots,operations', uid: '2001', state: 'present' }
   - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002', state: 'absent' }
+  - { name: 'arcane', group: 'roots', groups: 'roots,operations', uid: '2003', hosts: 'mediawikiservers', state: 'present' }
+  - { name: 'southparkfan', group: 'roots', groups: 'roots,operations', uid: '2004', hosts: 'mediawikiservers', state: 'present' }
+
 
 users:
-  - { name: 'arcane', group: 'mediawiki-ops', groups: 'mediawiki-ops', uid: '2003', hosts: 'mediawikiservers', state: 'present' }
-  - { name: 'southparkfan', group: 'mediawiki-ops', groups: 'mediawiki-ops', uid: '2004', hosts: 'mediawikiservers', state: 'present' }
+
