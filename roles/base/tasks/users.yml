@@ -29,7 +29,7 @@
   lineinfile: dest=/etc/sudoers
               state=present
               regexp='^\%mediawiki-ops'
-              line='%mediawiki-ops ALL=(ALL) NOPASSWD:/usr/bin/php, /usr/bin/php5, /root/ans-run, /root/ans-all, /home/mediawiki/db_loop.sh, /etc/init.d/hhvm, /usr/sbin/service nginx'
+              line='%mediawiki-ops ALL=(ALL) NOPASSWD:/usr/bin/php, /usr/bin/php5, /root/ans-run, /root/ans-all, /home/mediawiki/db_loop.sh, /etc/init.d/hhvm, /usr/sbin/service nginx, /usr/sbin/service apache2'
               validate='visudo -cf %s'
 
 # NOTE: Don't edit without validating first

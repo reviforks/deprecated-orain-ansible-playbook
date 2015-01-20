@@ -6,4 +6,4 @@ roots:
 
 users:
   - { name: 'arcane', group: 'mediawiki-ops', groups: 'mediawiki-ops', uid: '2003', hosts: 'mediawikiservers', state: 'present' }
-  - { name: 'southparkfan', group: 'mediawiki-ops', groups: 'mediawiki-ops', uid: '2004', hosts: 'mediawikiservers', state: 'present' }
+  - { name: 'southparkfan', group: 'mediawiki-ops', groups: 'mediawiki-ops', uid: '2004', hosts: 'mediawikiservers,gangliaservers', state: 'present' }
