@@ -5,4 +5,5 @@ roots:
   - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002', state: 'absent' }
   - { name: 'arcane', group: 'roots', groups: 'roots,operations', uid: '2003', state: 'present' }
   - { name: 'southparkfan', group: 'roots', groups: 'roots,operations', uid: '2004', state: 'present' }
+  - { name: 'tanner', group: 'roots,' groups: 'roots,operations', uid: '2005', state: 'present' }
 users:
