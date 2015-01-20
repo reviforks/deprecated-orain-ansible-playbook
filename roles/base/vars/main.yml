@@ -6,6 +6,3 @@ roots:
   - { name: 'arcane', group: 'roots', groups: 'roots,operations', uid: '2003', hosts: 'mediawikiservers', state: 'present' }
   - { name: 'southparkfan', group: 'roots', groups: 'roots,operations', uid: '2004', hosts: 'mediawikiservers', state: 'present' }
 
-
-users:
-
