@@ -114,7 +114,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/MsCatSelect/MsCatSelect.php" );
 		$wgMSCS_WarnNoCategories = false;
-		$wgMSCS_WarnNoCategoriesException = array( NS_TALK, NS_FILE_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_USER, NS_USER_TALK, NS_CATEGORY_TALK );
 		$wgGroupPermissions['*']['apihighlimits'] = true;
 		require_once( "$IP/extensions/MsUpload/MsUpload.php" );
 		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
