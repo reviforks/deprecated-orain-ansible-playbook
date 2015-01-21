@@ -11,7 +11,7 @@ noc: root
 security: root
 
 # sysadmin group
-sysadmin: addshore
+sysadmin: addshore,southparkfan223@hotmail.com
 root: sysadmin
 operations: sysadmin
 
