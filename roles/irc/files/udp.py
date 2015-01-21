@@ -38,5 +38,5 @@ class Echo(DatagramProtocol):
         recver.gotUDP(data)
 
 reactor.listenUDP(5070, Echo())
-reactor.connectTCP("hwan.irc.jasperswebsite.com", 6667, RCFactory())
+reactor.connectTCP("irc.freenode.net", 6667, RCFactory())
 reactor.run()
