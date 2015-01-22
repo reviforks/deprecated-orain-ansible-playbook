@@ -16,6 +16,10 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
+		require_once( "$IP/extensions/MsCatSelect/MsCatSelect.php" );
+		$wgMSCS_MainCategories = array( 'Index Index' );
+		$wgMSCS_WarnNoCategories = false;
+		$wgGroupPermissions['*']['apihighlimits'] = true;
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		$wgMultiBoilerplateOptions = false;
 		$wgMultiBoilerplateDiplaySpecialPage = true;
