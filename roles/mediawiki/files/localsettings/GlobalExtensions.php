@@ -25,6 +25,7 @@ require_once( "$IP/extensions/EventLogging/EventLogging.php" );
 require_once( "$IP/extensions/Gadgets/Gadgets.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
 require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
+$wgGoogleAnalyticsAccount = "UA-58596506-4";
 require_once( "$IP/extensions/InputBox/InputBox.php" );
 require_once( "$IP/extensions/Interwiki/Interwiki.php" );
 require_once( "$IP/extensions/MassMessage/MassMessage.php" );
