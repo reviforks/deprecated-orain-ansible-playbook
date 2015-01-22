@@ -10,8 +10,8 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CustomData/CustomData.php" );
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
-		require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
-		$wgGoogleAnalyticsAccount = "UA-58596506-3";
+		#require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
+		#$wgGoogleAnalyticsAccount = "UA-58596506-3";
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
@@ -108,8 +108,8 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
-		require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
-		$wgGoogleAnalyticsAccount = "UA-58596506-2";
+		#require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
+		#$wgGoogleAnalyticsAccount = "UA-58596506-2";
 		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/MsCatSelect/MsCatSelect.php" );
@@ -182,8 +182,8 @@ switch( $wgDBname ) {
 		break;
 	case 'metawiki':
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
-		require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
-		$wgGoogleAnalyticsAccount = "UA-58596506-1";
+		#require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
+		#$wgGoogleAnalyticsAccount = "UA-58596506-1";
 		break;
 	case 'netwiki':
 		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
