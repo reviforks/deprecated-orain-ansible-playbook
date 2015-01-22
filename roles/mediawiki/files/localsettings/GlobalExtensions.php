@@ -24,6 +24,7 @@ require_once( "$IP/extensions/intersection/DynamicPageList.php" );
 require_once( "$IP/extensions/EventLogging/EventLogging.php" );
 require_once( "$IP/extensions/Gadgets/Gadgets.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
+require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
 require_once( "$IP/extensions/InputBox/InputBox.php" );
 require_once( "$IP/extensions/Interwiki/Interwiki.php" );
 require_once( "$IP/extensions/MassMessage/MassMessage.php" );
