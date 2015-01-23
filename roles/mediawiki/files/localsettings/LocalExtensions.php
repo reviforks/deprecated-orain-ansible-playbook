@@ -10,8 +10,8 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CustomData/CustomData.php" );
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
-		#require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
-		#$wgGoogleAnalyticsAccount = "UA-58596506-3";
+		require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
+		$wgGoogleAnalyticsAccount = "UA-58596506-3";
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
