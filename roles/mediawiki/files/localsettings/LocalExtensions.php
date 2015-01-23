@@ -113,7 +113,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
-		require_once( "$IP/extensions/LiquidThreadsOverview/LiquidThreadsOverview.php" );
 		#require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
 		#$wgGoogleAnalyticsAccount = "UA-58596506-2";
 		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
