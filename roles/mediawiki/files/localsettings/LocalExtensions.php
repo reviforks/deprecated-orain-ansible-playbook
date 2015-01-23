@@ -16,10 +16,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
-		#require_once( "$IP/extensions/MsCatSelect/MsCatSelect.php" );
-		#$wgMSCS_MainCategories = array( 'Index Index' );
-		#$wgMSCS_WarnNoCategories = false;
-		#$wgGroupPermissions['*']['apihighlimits'] = true;
+		require_once( "$IP/extensions/MsLinks/MsLinks.php" );
+		require_once( "$IP/extensions/MsUpload/MsUpload.php" );
+		$wgAllowJavaUploads = true;
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		$wgMultiBoilerplateOptions = false;
 		$wgMultiBoilerplateDiplaySpecialPage = true;
@@ -109,7 +108,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CSS/CSS.php" );
 		require_once( "$IP/extensions/CustomData/CustomData.php" );
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
-		require_once( "$IP/extensions/Drafts/Drafts.php" );
+		#require_once( "$IP/extensions/Drafts/Drafts.php" );
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
