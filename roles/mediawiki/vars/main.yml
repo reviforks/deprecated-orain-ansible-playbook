@@ -151,6 +151,11 @@ extensions:
     version: 'REL1_24'
     }
   - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-Drafts.git',
+    dest: 'extensions/Drafts', 
+    version: 'REL1_24'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-DynamicSidebar.git',
     dest: 'extensions/DynamicSidebar', 
     version: 'REL1_24'
@@ -236,6 +241,11 @@ extensions:
     version: 'REL1_24'
     }
   - { 
+    repo: 'https://github.com/GeneralVolkoV/LiquidThreadsOverview.git',
+    dest: 'extensions/LiquidThreadsOverview', 
+    version: 'master'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-LocalisationUpdate.git',
     dest: 'extensions/LocalisationUpdate', 
     version: 'REL1_24'
@@ -284,6 +294,11 @@ extensions:
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MsCatSelect',
     dest: 'extensions/MsCatSelect', 
     version: 'master'
+    }
+  - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-MsLinks',
+    dest: 'extensions/MsLinks', 
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/Orain/MultiBoilerplate.git',
