@@ -6,8 +6,7 @@ $wgHooks['SkinAfterBottomScripts'][] = 'lfPiwikScript';
 function lfPiwikScript( $skin, &$text = '' ) {
 	global $wmgPiwikSiteID, $wgUser;
 	if ( !$wmgPiwikSiteID ) {
-		$text .= "<!-- Piwik not enabled -->\n";
-		return true;
+		$wmgPiwikSiteID = 1;
 	}
 	// Disabled Piwik admin blacklisting below Kudu 12/11/13
 	/* if ( $wgUser->isAllowed('noanalytics') ) {
@@ -27,7 +26,7 @@ function lfPiwikScript( $skin, &$text = '' ) {
 	_paq.push(["enableLinkTracking"]);
 
 	(function() {
-		var u=(("https:" == document.location.protocol) ? "https" : "http") + "://bits.orain.org/piwik/";
+		var u = "http://piwik.orain.org";
 		_paq.push(["setTrackerUrl", u+"piwik.php"]);
 		_paq.push(['setDocumentTitle', {$jstitle}]);
 		_paq.push(["setSiteId", "{$id}"]);
@@ -39,7 +38,7 @@ function lfPiwikScript( $skin, &$text = '' ) {
 <!-- End Piwik Code -->
 <!-- Piwik Image Tracker -->
 <noscript>
-<img src="//bits.orain.org/piwik/piwik.php?idsite={$id}&amp;rec=1&amp;action_name={$urltitle}" style="border:0" alt="" />
+<img src="//piwik.orain.org/piwik.php?idsite={$id}&amp;rec=1&amp;action_name={$urltitle}" style="border:0" alt="" />
 </noscript>
 <!-- End Piwik -->
 SCRIPT;
