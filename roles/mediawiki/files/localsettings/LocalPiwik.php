@@ -26,7 +26,7 @@ function lfPiwikScript( $skin, &$text = '' ) {
 	_paq.push(["enableLinkTracking"]);
 
 	(function() {
-		var u = "http://piwik.orain.org/";
+		var u = "//piwik.orain.org/";
 		_paq.push(["setTrackerUrl", u+"piwik.php"]);
 		_paq.push(['setDocumentTitle', {$jstitle}]);
 		_paq.push(["setSiteId", "{$id}"]);
