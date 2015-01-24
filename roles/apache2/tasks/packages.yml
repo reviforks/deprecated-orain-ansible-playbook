@@ -1,0 +1,17 @@
+- name: Install apache2
+  apt: pkg=apache2
+
+- name: Install PHP modules for apache2
+  apt: pkg={{item}}
+  with_items:
+  - libapache2-mod-php5
+  - php5
+  - php5-cli
+  - php5-common
+  - php5-curl
+  - php5-gd
+  - php5-geoip
+  - php5-json
+  - php5-mcrypt
+  - php5-mysql
+  - php5-readline

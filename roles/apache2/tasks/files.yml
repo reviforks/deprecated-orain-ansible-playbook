@@ -1,0 +1,5 @@
+- name: Copy apache2 sites to sites-enabled
+  copy: src={{item}} dest=/etc/apache2/sites-enabled
+  with_fileglob:
+    - ./sites-enabled/*
+  notify: Reload apache2
