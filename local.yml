@@ -26,6 +26,7 @@
   vars_files:
     - ../private/vars.yml
   roles:
+    - apache2
     - nagios
 
 - hosts: staticservers
