@@ -551,6 +551,11 @@ extensions:
     version: 'REL1_24'
     }
   - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-Validator.git',
+    dest: 'extensions/Validator', 
+    version: 'REL1_24'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Variables.git',
     dest: 'extensions/Variables', 
     version: 'REL1_24'
