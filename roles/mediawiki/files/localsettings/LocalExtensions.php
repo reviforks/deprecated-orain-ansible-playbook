@@ -93,6 +93,7 @@ switch( $wgDBname ) {
 		);
 	case 'extloadwiki':
 		// all extensions are loaded on this wiki
+		require_once( "$IP/extensions/Validator/Validator.php" );
 		require_once "$IP/extensions/AdManager/AdManager.php";
 		#$wgAdManagerService = 'openx';
 		#$wgAdManagerCode = $1;
@@ -143,7 +144,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RSS/RSS.php" );
 		require_once( "$IP/extensions/TocTree/TocTree.php" );
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
-		require_once( "$IP/extensions/Validator/Validator.php" );
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 		require_once( "$IP/skins/Erudite/erudite.php" );
