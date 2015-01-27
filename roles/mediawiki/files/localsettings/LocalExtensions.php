@@ -130,7 +130,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
 		require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
-		require_once( "$IP/extensions/SideBarMenu/SideBarMenu.php" );
+		#require_once( "$IP/extensions/SideBarMenu/SideBarMenu.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
