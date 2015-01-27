@@ -11,5 +11,5 @@
 # Description:       Rebuilds the Mediawiki localisation cache
 ### END INIT INFO
 
-/usr/bin/php5 /srv/mediawiki/w/maintenance/rebuildLocalisationCache.php --wiki metawiki --lang en
-/usr/bin/php5 /srv/mediawiki/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki
+/usr/bin/php5 /srv/mediawiki/w/maintenance/rebuildLocalisationCache.php --wiki metawiki --lang en --threads 4
+/usr/bin/php5 /srv/mediawiki/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki --threads 4
