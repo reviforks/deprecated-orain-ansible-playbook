@@ -93,7 +93,7 @@ switch( $wgDBname ) {
 		);
 	case 'extloadwiki':
 		// all extensions are loaded on this wiki
-		require_once( "$IP/extensions/Validator/Validator.php" );
+		#require_once( "$IP/extensions/Validator/Validator.php" );
 		require_once "$IP/extensions/AdManager/AdManager.php";
 		#$wgAdManagerService = 'openx';
 		#$wgAdManagerCode = $1;
