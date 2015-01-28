@@ -1373,6 +1373,13 @@ $wgConf->settings = array(
 	),
 	// /Restrictions
 
+	// Robots
+	'wgDefaultRobotPolicy' => array(
+		'default' => 'index,follow',
+		'internalwiki' => 'noindex,nofollow',
+	),
+	// /Robots
+
 	// Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
