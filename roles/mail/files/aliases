@@ -11,7 +11,7 @@ noc: root
 security: root
 
 # sysadmin group
-sysadmin: addshore,southparkfan223@hotmail.com
+sysadmin: addshore,southparkfan223@hotmail.com,fastlizard4
 root: sysadmin
 operations: sysadmin
 
@@ -31,10 +31,13 @@ addshore: addshorewiki@gmail.com
 admin: accounts
 
 # staff
-staff: addshore,dusti,southparkfan223@hotmail.com,arcane@live.com,kudu.py@gmail.com
+staff: addshore,dusti,southparkfan223@hotmail.com,arcane@live.com,kudu.py@gmail.com,fastlizard4
 
 # forward dusti@ to dusti's email temporarily
 dusti: dahowe@bsugmail.net
+
+# forward fastlizard4 to fl4's email
+fastlizard4: fastlizard4@gmail.com
 
 # help for old accounts
 help: dusti
