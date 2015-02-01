@@ -5,8 +5,8 @@ roots:
   - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002', state: 'absent' }
   - { name: 'tanner', group: 'roots', groups: 'roots,operations', uid: '2005', state: 'present' }
   - { name: 'fastlizard4', group: 'roots', groups: 'roots,operations', uid: '2007', state: 'present' }
+  - { name: 'zacharydubois', group: 'roots', groups: 'roots,operations', uid: '2006', state: 'present' }
 users:
   - { name: 'arcane', group: 'roots', groups: 'roots,operations', hosts: 'mediawikiservers', uid: '2003', state: 'present' }
   - { name: 'southparkfan', group: 'roots', groups: 'roots,operations', hosts: 'mediawikiservers', uid: '2004', state: 'present' }
-  - { name: 'zacharydubois', group: 'roots', groups: 'roots,operations', hosts: 'mediawikiservers', uid: '2006', state: 'present' }
 
