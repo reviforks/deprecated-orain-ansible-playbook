@@ -172,6 +172,9 @@ switch( $wgDBname ) {
 		$wgUploadPath = "$wgScriptPath/img_auth.php";
 		$wgUploadDirectory = '/mnt/mediawiki/private/uploads/jasperinternal.orain.org/images'; // Directory inaccessible via web access
 		break;
+	case 'hmwiki':
+		require_once( "$IP/extensions/Jmol/Jmol.php" );
+		break;
 	case 'loginwiki':
 		// Blank comment to keep this in the statement per John's request
 		$wgNamespaceProtection[NS_MAIN] = array( 'editinterface' );
