@@ -113,6 +113,12 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/Jmol/Jmol.php" );
+		$wgJmolAuthorizeUrl = true;
+		$wgJmolAuthorizeUploadedFile = true;
+		$wgJmolAuthorizeJmolPdbTag = true;
+		$wgJmolAuthorizeChoosingSignedApplet = true;
+		$wgJmolDrawControls = false; // if true draw Jmol controls under applet
+		$wgJmolForceHTML5 = true; // false=uses HTML5 for tablets only , true=always HTML5
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		#require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
 		#$wgGoogleAnalyticsAccount = "UA-58596506-2";
