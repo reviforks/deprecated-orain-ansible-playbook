@@ -226,6 +226,11 @@ extensions:
     version: 'REL1_24'
     }
   - { 
+    repo: 'https://github.com/Orain/Jmol.git',
+    dest: 'extensions/Jmol', 
+    version: 'master'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-LabeledSectionTransclusion.git',
     dest: 'extensions/LabeledSectionTransclusion', 
     version: 'REL1_24'
