@@ -174,6 +174,11 @@ switch( $wgDBname ) {
 		break;
 	case 'hmwiki':
 		require_once( "$IP/extensions/Jmol/Jmol.php" );
+		$wgXMLMimeTypes = array_merge( $wgXMLMimeTypes, array(
+		'http://www.xml-cml.org/schema:cml'                => 'chemical/x-cml',
+		'http://www.xml-cml.org/schema:molecule'           => 'chemical/x-cml',
+		'http://www.xml-cml.org/schema/cml2/core:list'     => 'chemical/x-cml',
+		'http://www.xml-cml.org/schema/cml2/core:molecule' => 'chemical/x-cml' ) );
 		break;
 	case 'loginwiki':
 		// Blank comment to keep this in the statement per John's request
