@@ -16,3 +16,6 @@
 
 - name: Reload aliases
   command: newaliases
+
+- name: Reload denyhosts
+  service: name=denyhosts state=restarted

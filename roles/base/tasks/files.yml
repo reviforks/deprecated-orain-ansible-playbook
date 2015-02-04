@@ -28,3 +28,7 @@
   notify:
     - Reload aliases
     - Restart postfix
+
+- name: Copy DenyHosts config
+  copy: src=./denyhosts/denyhosts.conf dest=/etc/denyhosts.conf owner=root group=root mode="u=rw,g=r,o="
+  notify: Reload denyhosts
