@@ -410,6 +410,7 @@ $wgConf->settings = array(
 		'+spiralwiki'=> array( 'pdf' ),
 		'+bushidogempeijiwiki' => array( 'zip' ),
 		'+allthetropeswiki' => array( 'ogg', 'ogv', 'webm', 'oga' ),
+		'+hmwiki' => array( 'cml' ),
 	),
 	'wgAllowTitlesInSVG' => array(
 		'default' => true,
@@ -721,6 +722,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'keionrailwiki' => true,
 		'spiralwiki' => true,
@@ -746,6 +748,7 @@ $wgConf->settings = array(
 		'botwiki' => true,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
 		'mediawikitesterswiki' => true,
+		'riderpediawiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
@@ -1453,6 +1456,7 @@ $wgConf->settings = array(
 		'pigawiki' => "//$wmgUploadHostname/piga.orain.org/images/2/23/PigaLore.png",
 		'portalwiki' => "//$wmgUploadHostname/portal.orain.org/images/f/fa/Portalpedia_Logo.png",
 		'reviwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/53/Server-multiple.svg/135px-Server-multiple.svg.png',
+		'riderpediawiki' => "//$wmgUploadHostname/riderpedia.orain.org/images/5/5d/Riderpedia_Logo.png",
 		'rightwiki' => "//$wmgUploadHostname/right.orain.org/images/4/46/Male-anatomy.png",
 		'robloxclanswiki' => "//$wmgUploadHostname/robloxclans.orain.org/images/3/33/Clan-Icon-700px.png",
 		'sapelliwiki' => "//$wmgUploadHostname/sapelli.orain.org/images/2/2c/Sapelli_logo_135.png",
@@ -1764,3 +1768,7 @@ require_once( "$IP/Redis.php" );
 require_once( "$IP/Database.php" ); // Multi-master set up --John
 require_once( "$IP/LocalHHVMPowered.php" );
 require_once( "$IP/Missing.php" );
+
+# Lock the database temp.
+# $wgReadOnly = "Orain is currently in read-only mode. This should be completed by 1/2/2015 00:00 UTC.";
+
