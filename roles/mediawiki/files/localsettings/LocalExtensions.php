@@ -112,13 +112,6 @@ switch( $wgDBname ) {
 		#require_once( "$IP/extensions/Drafts/Drafts.php" );
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
-		require_once( "$IP/extensions/jmol/wiki/Jmol.php" );
-		$wgJmolAuthorizeUrl = true;
-		$wgJmolAuthorizeUploadedFile = true;
-		$wgJmolAuthorizeJmolPdbTag = true;
-		$wgJmolAuthorizeChoosingSignedApplet = true;
-		$wgJmolDrawControls = false; // if true draw Jmol controls under applet
-		$wgJmolForceHTML5 = true; // false=uses HTML5 for tablets only , true=always HTML5
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		#require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
 		#$wgGoogleAnalyticsAccount = "UA-58596506-2";
@@ -179,18 +172,6 @@ switch( $wgDBname ) {
 		$wgUploadDirectory = '/mnt/mediawiki/private/uploads/jasperinternal.orain.org/images'; // Directory inaccessible via web access
 		break;
 	case 'hmwiki':
-		require_once( "$IP/extensions/jmol/wiki/Jmol.php" );
-		$wgJmolAuthorizeUrl = true;
-		$wgJmolAuthorizeUploadedFile = true;
-		$wgJmolAuthorizeJmolPdbTag = true;
-		$wgJmolAuthorizeChoosingSignedApplet = true;
-		$wgJmolDrawControls = false; // if true draw Jmol controls under applet
-		$wgJmolForceHTML5 = true; // false=uses HTML5 for tablets only , true=always HTML5
-		$wgXMLMimeTypes = array_merge( $wgXMLMimeTypes, array(
-		'http://www.xml-cml.org/schema:cml'                => 'chemical/x-cml',
-		'http://www.xml-cml.org/schema:molecule'           => 'chemical/x-cml',
-		'http://www.xml-cml.org/schema/cml2/core:list'     => 'chemical/x-cml',
-		'http://www.xml-cml.org/schema/cml2/core:molecule' => 'chemical/x-cml' ) );
 		break;
 	case 'loginwiki':
 		// Blank comment to keep this in the statement per John's request
