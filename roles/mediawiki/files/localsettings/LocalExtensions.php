@@ -112,7 +112,7 @@ switch( $wgDBname ) {
 		#require_once( "$IP/extensions/Drafts/Drafts.php" );
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
-		require_once( "$IP/extensions/jsmol/wiki/Jmol.php" );
+		require_once( "$IP/extensions/jmol/wiki/Jmol.php" );
 		$wgJmolAuthorizeUrl = true;
 		$wgJmolAuthorizeUploadedFile = true;
 		$wgJmolAuthorizeJmolPdbTag = true;
@@ -179,7 +179,7 @@ switch( $wgDBname ) {
 		$wgUploadDirectory = '/mnt/mediawiki/private/uploads/jasperinternal.orain.org/images'; // Directory inaccessible via web access
 		break;
 	case 'hmwiki':
-		require_once( "$IP/extensions/jsmol/wiki/Jmol.php" );
+		require_once( "$IP/extensions/jmol/wiki/Jmol.php" );
 		$wgJmolAuthorizeUrl = true;
 		$wgJmolAuthorizeUploadedFile = true;
 		$wgJmolAuthorizeJmolPdbTag = true;
