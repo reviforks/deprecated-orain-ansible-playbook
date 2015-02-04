@@ -24,7 +24,6 @@
   with_items:
     - bash
     - curl
-    - denyhosts
     - git
     - htop
     - mysql-client # Needed for testing mysql connectivity between instance - Addshore
