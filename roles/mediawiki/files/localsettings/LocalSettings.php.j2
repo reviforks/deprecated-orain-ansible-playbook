@@ -418,7 +418,7 @@ $wgConf->settings = array(
 	'wgGenerateThumbnailOnParse' => array(
 		'default' => false,
 	),
-	'wgUseInstantCommons' => array(
+	'wmgUseInstantCommons' => array(
 		'default' => true,
 		'corruptionofchampionswiki' => false,
 		'fallofedenthegamewiki' => false,
@@ -1687,6 +1687,20 @@ if ( $wgDBname !== 'metawiki' ) {
 		'tablePrefix' => '',
 		'hasSharedCache' => true,
 		'directory' => "/mnt/mediawiki/uploads/meta.orain.org/images",
+	);
+}
+
+// $wgUseInstantCommons uses http or https by WebRequest::detectProtocol(), but it is
+// getting misleaded by load balancing so it thinks the protocol is http (but it should always be https, hardcoded or not). --Southparkfan
+if ( $wmgUseInstantCommons ) {
+	$wgForeignFileRepos[] = array(
+		'class' => 'ForeignAPIRepo',
+		'name' => 'wikimediacommons',
+		'apibase' => 'https://commons.wikimedia.org/w/api.php',
+		'hashLevels' => 2,
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 43200,
+		'apiThumbCacheExpiry' => 86400,
 	);
 }
 
