@@ -233,6 +233,7 @@ switch( $wgDBname ) {
 		break;
 	case 'rightwiki':
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		require_once( "$IP/extensions/Math/Math.php" );
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 		break;
 	case 'testwiki':
