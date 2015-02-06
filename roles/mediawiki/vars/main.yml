@@ -481,6 +481,11 @@ extensions:
     version: 'REL1_24'
     }
   - { 
+    repo: 'https://github.com/jmnote/SimpleMathJax.git',
+    dest: 'extensions/SimpleMathJax', 
+    version: 'master'
+    }
+  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SubPageList3.git',
     dest: 'extensions/SubPageList3', 
     version: 'REL1_24'
