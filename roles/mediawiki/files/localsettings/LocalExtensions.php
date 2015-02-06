@@ -117,11 +117,6 @@ switch( $wgDBname ) {
 		#$wgGoogleAnalyticsAccount = "UA-58596506-2";
 		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
-		require_once( "$IP/extensions/Math/Math.php" );
-		$wgMathValidModes[] = MW_MATH_MATHJAX; // Define MathJax as one of the valid math rendering modes
-		$wgUseMathJax = true; // Enable MathJax as a math rendering option for users to pick
-		$wgDefaultUserOptions['math'] = MW_MATH_MATHJAX; // Set MathJax as the default rendering option for all users (optional)
-		$wgMathDisableTexFilter = true; // or compile "texvccheck"
 		require_once( "$IP/extensions/MsLinks/MsLinks.php" );
 		#require_once( "$IP/extensions/MsCatSelect/MsCatSelect.php" );
 		#$wgMSCS_WarnNoCategories = false;
@@ -148,7 +143,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 		require_once( "$IP/extensions/RSS/RSS.php" );
 		require_once "$IP/extensions/SimpleMathJax/SimpleMathJax.php";
-		#$wgSimpleMathJaxSize = 120;
+		$wgSimpleMathJaxSize = 120;
 		require_once( "$IP/extensions/TocTree/TocTree.php" );
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
@@ -239,8 +234,9 @@ switch( $wgDBname ) {
 		break;
 	case 'rightwiki':
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
-		require_once( "$IP/extensions/Math/Math.php" );
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+		require_once "$IP/extensions/SimpleMathJax/SimpleMathJax.php";
+		$wgSimpleMathJaxSize = 120;
 		break;
 	case 'testwiki':
 		require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
