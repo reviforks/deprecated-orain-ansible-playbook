@@ -117,6 +117,7 @@ switch( $wgDBname ) {
 		#$wgGoogleAnalyticsAccount = "UA-58596506-2";
 		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
+		require_once( "$IP/extensions/Math/Math.php" );
 		require_once( "$IP/extensions/MsLinks/MsLinks.php" );
 		#require_once( "$IP/extensions/MsCatSelect/MsCatSelect.php" );
 		#$wgMSCS_WarnNoCategories = false;
@@ -234,6 +235,7 @@ switch( $wgDBname ) {
 		break;
 	case 'rightwiki':
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		require_once( "$IP/extensions/Math/Math.php" );
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 		require_once "$IP/extensions/SimpleMathJax/SimpleMathJax.php";
 		$wgSimpleMathJaxSize = 120;
