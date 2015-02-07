@@ -52,10 +52,12 @@
     - Mediawiki submodule fileMode false
     
 - name: Install dependencies for MediaWiki extensions with composer
-  shell: "/usr/local/bin/composer.phar install" chdir="/srv/mediawiki/w/extensions/{{item}}"
+  shell: cd /srv/mediawiki/w/extensions/"{{item}}" && /usr/local/bin/composer.phar install
   with_items:
     - Validator
     - reCaptcha
+  tags:
+    - mwext
 
 - name: Check out skins for MediaWiki
   git: repo={{item.repo}}
