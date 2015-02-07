@@ -1,5 +1,5 @@
 - name: Clone private git repo
-  git: repo=ssh://git@prod7.orain.org/etc/git/private
+  git: repo=ssh://git@github.com:Orain/private.git
        dest=/root/private
        accept_hostkey=yes
        key_file=/root/private/git_private
