@@ -50,7 +50,12 @@
     - Rebuild localisation cache
     - Update mediawiki
     - Mediawiki submodule fileMode false
-
+    
+- name: Install dependencies for MediaWiki extensions with composer
+  shell: "/usr/local/bin/composer.phar install" chdir="/srv/mediawiki/w/extensions/{{item}}"
+  with_items:
+    - Validator
+    - reCaptcha
 
 - name: Check out skins for MediaWiki
   git: repo={{item.repo}}
