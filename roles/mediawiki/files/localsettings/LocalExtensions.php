@@ -93,7 +93,6 @@ switch( $wgDBname ) {
 		);
 	case 'extloadwiki':
 		// all extensions are loaded on this wiki
-		#require_once( "$IP/extensions/Validator/Validator.php" );
 		require_once "$IP/extensions/AdManager/AdManager.php";
 		#$wgAdManagerService = 'openx';
 		#$wgAdManagerCode = $1;
@@ -103,13 +102,13 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/cldr/cldr.php" );
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/Comments/Comment.php" );
+		$wgCommentsInRecentChanges = true;
 		require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
 		require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
 		require_once( "$IP/extensions/CSS/CSS.php" );
 		require_once( "$IP/extensions/CustomData/CustomData.php" );
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
-		#require_once( "$IP/extensions/Drafts/Drafts.php" );
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
@@ -119,9 +118,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/Math/Math.php" );
 		require_once( "$IP/extensions/MsLinks/MsLinks.php" );
-		#require_once( "$IP/extensions/MsCatSelect/MsCatSelect.php" );
-		#$wgMSCS_WarnNoCategories = false;
-		#$wgGroupPermissions['*']['apihighlimits'] = true;
 		require_once( "$IP/extensions/MsUpload/MsUpload.php" );
 		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
 		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php");
@@ -131,8 +127,13 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
 		require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
-		#require_once( "$IP/extensions/SideBarMenu/SideBarMenu.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
+		require_once("$IP/extensions/SocialProfile/SocialProfile.php");
+		$wgUserProfileDisplay['friends'] = true;
+		$wgUserProfileDisplay['foes'] = true;
+		$wgUserBoard = true;
+		$wgUserProfileDisplay['board'] = true;
+		$wgUserProfileThresholds = array( 'edits' => 5 );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
@@ -143,8 +144,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
 		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 		require_once( "$IP/extensions/RSS/RSS.php" );
-		require_once "$IP/extensions/SimpleMathJax/SimpleMathJax.php";
-		$wgSimpleMathJaxSize = 120;
 		require_once( "$IP/extensions/TocTree/TocTree.php" );
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
@@ -237,8 +236,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/Math/Math.php" );
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
-		require_once "$IP/extensions/SimpleMathJax/SimpleMathJax.php";
-		$wgSimpleMathJaxSize = 120;
 		break;
 	case 'testwiki':
 		require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
