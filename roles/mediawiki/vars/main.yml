@@ -478,7 +478,7 @@ extensions:
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SocialProfile.git',
     dest: 'extensions/SocialProfile',
-    version: 'REL1_24'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SideBarMenu.git',
