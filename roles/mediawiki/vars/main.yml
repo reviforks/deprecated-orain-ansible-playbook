@@ -410,6 +410,11 @@ extensions:
     dest: 'extensions/Quiz', 
     version: 'REL1_24'
     }
+  - {
+    repo: 'https://github.com/vedmaka/Mediawiki-reCaptcha.git',
+    dest: 'extensions/reCaptcha',
+    version: 'master'
+    }
   - { 
     repo: 'https://github.com/poke/mediawiki-RecentChangesLogFilter.git',
     dest: 'extensions/RecentChangesLogFilter', 
