@@ -18,7 +18,7 @@ require_once( "$IP/extensions/Cite/Cite.php" );
 require_once( "$IP/extensions/Cite/SpecialCite.php" );
 require_once( "$IP/extensions/CollapsibleVector/CollapsibleVector.php" );
 require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
-require_once( "$IP/extensions/ConfirmEdit/QuestyCaptcha.php" );
+require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
 require_once( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
 require_once( "$IP/extensions/intersection/DynamicPageList.php" );
 require_once( "$IP/extensions/EventLogging/EventLogging.php" );

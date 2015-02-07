@@ -164,7 +164,13 @@ $wgConf->settings = array(
 		'default' => 6,
 	),
 	'wgCaptchaClass' => array(
-		'default' => 'QuestyCaptcha',
+		'default' => 'ReCaptcha',
+	),
+	'wgReCaptchaPublicKey' => array(
+		'default' => '6LewqwETAAAAADZzJ7sUO3xmrad2eqDembTtvztK',
+	),
+	'wgReCaptchaPrivateKey' => array(
+		'default' => '{{recaptcha_private_key}}',
 	),
 	'wgSpamBlacklistFiles' => array(
 		'default' => array(
