@@ -9,4 +9,4 @@ roots:
 
 users:
   - { name: 'southparkfan', group: 'roots', groups: 'roots,operations', hosts: 'mediawikiservers', uid: '2004', state: 'present' }
-  - { name: 'zacharydubois', group: 'mediawiki-ops', groups: 'mediawiki-ops', uid: '2006', state: 'present' }
+  - { name: 'zacharydubois', group: 'mediawiki-ops', groups: 'mediawiki-ops', hosts: 'mediawikiservers', uid: '2006', state: 'present' }
