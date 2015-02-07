@@ -17,8 +17,7 @@ require_once( "$IP/extensions/CheckUser/CheckUser.php" );
 require_once( "$IP/extensions/Cite/Cite.php" );
 require_once( "$IP/extensions/Cite/SpecialCite.php" );
 require_once( "$IP/extensions/CollapsibleVector/CollapsibleVector.php" );
-require_once( "$IP/extensions/reCaptcha/reCaptcha.php");
-#require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
+require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 ## Hack for ReCaptcha mixed content loading. Don't know if it can be put in LocalSettings.php too, just to be sure I've put it here -- Southparkfan 7/2/2015
 $_SERVER['HTTPS'] = 'on';
 require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
