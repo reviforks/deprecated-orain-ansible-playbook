@@ -1806,6 +1806,9 @@ $wgUsePrivateIPs = true;
 require_once( "$IP/LocalExtensions.php" );
 
 // QuestyCaptcha
+// Note: we force a load here to avoid errors and ensure it is loaded everywhere -- Addshore (8-feb-15)
+require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
+require_once( "$IP/extensions/ConfirmEdit/QuestyCaptcha.php" );
 // Note: This must be after the loading of the QuestyCaptcha Extension -- Addshore (8-Feb-15)
 call_user_func( function() {
 	global $wgCaptchaQuestions;
