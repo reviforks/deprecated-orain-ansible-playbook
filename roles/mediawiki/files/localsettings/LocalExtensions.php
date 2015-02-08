@@ -152,6 +152,9 @@ switch( $wgDBname ) {
 		$wgWebChatChannel = '#orain';
 		$wgWebChatClient = 'freenodeChat';
 		require_once "$IP/extensions/WikiBanner/WikiBanner.php";
+		//Enabled 2 below for fixing & Testing
+		require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
+		require_once( "$IP/extensions/ConfirmEdit/QuestyCaptcha.php" );
 		break;
 	case 'goldcraftmcwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
