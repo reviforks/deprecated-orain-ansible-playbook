@@ -1798,21 +1798,28 @@ $wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
 // API
 $wgAPIModules['createaccount'] = 'ApiDisabled';
 
-// Sweet QuestyCaptcha
-$myChallengeString = substr(md5(uniqid(mt_rand(), true)), 0, 8);
-$myChallengeIndex = rand(0, 7) + 1;
-$myChallengePositions = array ('first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth');
-$myChallengePositionName = $myChallengePositions[$myChallengeIndex - 1];
-$wgCaptchaQuestions[] = array (
-	'question' => "Please provide the $myChallengePositionName character from the sequence <code>$myChallengeString</code>:",
-	'answer' => $myChallengeString[$myChallengeIndex - 1]
-);
-
 // Private IPs
 $wgUsePrivateIPs = true;
 
-# Load the split up files...
+
+# Load the 'localextensions' here
 require_once( "$IP/LocalExtensions.php" );
+
+// QuestyCaptcha
+// Note: This must be after the loading of the QuestyCaptcha Extension -- Addshore (8-Feb-15)
+call_user_func( function() {
+	global $wgCaptchaQuestions;
+	$myChallengeString = substr(md5(uniqid(mt_rand(), true)), 0, 8);
+	$myChallengeIndex = rand(0, 7) + 1;
+	$myChallengePositions = array ('first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth');
+	$myChallengePositionName = $myChallengePositions[$myChallengeIndex - 1];
+	$wgCaptchaQuestions[] = array (
+		'question' => "Please provide the $myChallengePositionName character from the sequence <code>$myChallengeString</code>:",
+		'answer' => $myChallengeString[$myChallengeIndex - 1]
+	);
+} );
+
+# Load the split up files...
 require_once( "$IP/LocalLogging.php" );
 require_once( "$IP/LocalDebugUsers.php" );
 require_once( "$IP/LocalPiwik.php" );
