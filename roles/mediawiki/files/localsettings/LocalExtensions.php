@@ -191,6 +191,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
 		#require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
 		#$wgGoogleAnalyticsAccount = "UA-58596506-1";
+		# Temp enabled the 2 below on extloadwiki and metawiki - Testing for breaks before adding to all wikis -- Addshore 9-feb-15
+		require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
+		require_once( "$IP/extensions/ConfirmEdit/QuestyCaptcha.php" );
 		break;
 	case 'netwiki':
 		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
