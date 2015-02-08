@@ -601,11 +601,6 @@ extensions:
     version: 'REL1_24'
     }
   - { 
-    repo: 'https://github.com/mediawiki4intranet/Wikilog.git',
-    dest: 'extensions/Wikilog', 
-    version: 'master'
-    }    
-  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiLove.git',
     dest: 'extensions/WikiLove', 
     version: 'REL1_24'
