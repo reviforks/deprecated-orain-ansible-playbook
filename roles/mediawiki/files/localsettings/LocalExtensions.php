@@ -133,6 +133,7 @@ switch( $wgDBname ) {
 		$wgUserProfileDisplay['foes'] = true;
 		$wgUserBoard = true;
 		$wgUserProfileDisplay['board'] = true;
+		$wgUserProfileThresholds = array( 'edits' => 5 );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
@@ -188,6 +189,12 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
+		require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
+		$wgUserProfileDisplay['friends'] = true;
+		$wgUserProfileDisplay['foes'] = true;
+		$wgUserBoard = true;
+		$wgUserProfileDisplay['board'] = true;
+		$wgUserProfileThresholds = array( 'edits' => 5 );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 		break;
 	case 'metawiki':
