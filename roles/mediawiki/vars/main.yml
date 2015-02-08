@@ -48,7 +48,7 @@ extensions:
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-BlogPage.git',
     dest: 'extensions/BlogPage',
-    version: 'REL1_24'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CSS.git',
@@ -296,11 +296,6 @@ extensions:
     version: 'REL1_24'
     }
   - { 
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-MsCatSelect',
-    dest: 'extensions/MsCatSelect', 
-    version: 'master'
-    }
-  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MsLinks',
     dest: 'extensions/MsLinks', 
     version: 'REL1_24'
@@ -478,12 +473,7 @@ extensions:
   - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SocialProfile.git',
     dest: 'extensions/SocialProfile',
-    version: 'REL1_24'
-    }
-  - { 
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-SideBarMenu.git',
-    dest: 'extensions/SideBarMenu', 
-    version: 'REL1_24'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/jmnote/SimpleMathJax.git',
@@ -610,6 +600,11 @@ extensions:
     dest: 'extensions/WikiEditor', 
     version: 'REL1_24'
     }
+  - { 
+    repo: 'https://github.com/mediawiki4intranet/Wikilog.git',
+    dest: 'extensions/Wikilog', 
+    version: 'master'
+    }    
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-WikiLove.git',
     dest: 'extensions/WikiLove', 

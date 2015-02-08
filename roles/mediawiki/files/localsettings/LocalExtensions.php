@@ -98,7 +98,6 @@ switch( $wgDBname ) {
 		#$wgAdManagerCode = $1;
 		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
 		require_once( "$IP/extensions/Arrays/Arrays.php" );
-		require_once( "$IP/extensions/BlogPage/BlogPage.php" );
 		require_once( "$IP/extensions/cldr/cldr.php" );
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/Comments/Comment.php" );
@@ -128,12 +127,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
-		require_once("$IP/extensions/SocialProfile/SocialProfile.php");
-		$wgUserProfileDisplay['friends'] = true;
-		$wgUserProfileDisplay['foes'] = true;
-		$wgUserBoard = true;
-		$wgUserProfileDisplay['board'] = true;
-		$wgUserProfileThresholds = array( 'edits' => 5 );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
