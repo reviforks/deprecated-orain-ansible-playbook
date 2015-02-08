@@ -48,9 +48,9 @@ function myErrorHandler($errno, $errstr, $errfile, $errline)
     return true;
 }
 
-if ( $_SERVER['X-Forwarded-For'] == "178.62.7.227" ) {
+/* if ( $_SERVER['X-Forwarded-For'] == "178.62.7.227" ) {
 	set_error_handler( "myErrorHandler" );
-}
+} */
 
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
