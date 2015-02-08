@@ -152,9 +152,6 @@ switch( $wgDBname ) {
 		$wgWebChatChannel = '#orain';
 		$wgWebChatClient = 'freenodeChat';
 		require_once "$IP/extensions/WikiBanner/WikiBanner.php";
-		//Enabled 2 below for fixing & Testing
-		require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
-		require_once( "$IP/extensions/ConfirmEdit/QuestyCaptcha.php" );
 		break;
 	case 'goldcraftmcwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
@@ -191,9 +188,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
 		#require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
 		#$wgGoogleAnalyticsAccount = "UA-58596506-1";
-		# Temp enabled the 2 below on extloadwiki and metawiki - Testing for breaks before adding to all wikis -- Addshore 9-feb-15
-		require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
-		require_once( "$IP/extensions/ConfirmEdit/QuestyCaptcha.php" );
 		break;
 	case 'netwiki':
 		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
