@@ -1821,6 +1821,12 @@ call_user_func( function() {
 		'answer' => $myChallengeString[$myChallengeIndex - 1]
 	);
 } );
+// Load reCaptcha on extloadwiki ONLY - Addshore (8-feb-2015)
+if( $wgDBname === 'extloadwiki' ) {
+	require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
+	$wgReCaptchaPublicKey = '6LcC5AATAAAAAFW3aPQLu-jiRdVct5P9rqiTUMEd';
+	$wgReCaptchaPrivateKey = '{{recaptcha_private_key}}';
+}
 
 # Load the split up files...
 require_once( "$IP/LocalLogging.php" );
