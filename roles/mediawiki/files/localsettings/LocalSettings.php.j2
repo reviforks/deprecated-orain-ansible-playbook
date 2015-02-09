@@ -100,10 +100,6 @@ define( 'NS_ESTUDIO', 514 );
 define( 'NS_ESTUDIO_TALK', 515 );
 // /wikinambaswiki
 
-# Set wgDbname global
-if ( defined( "MW_DB" ) ) {
-	$wgDBname = MW_DB;
-}
 
 # Load the 'globalextensions' here
 require_once( "$IP/GlobalExtensions.php" );
@@ -1612,7 +1608,8 @@ if ( ( basename( $_SERVER["SCRIPT_FILENAME"] ) == "thumb.php" ) && isset( $_REQU
 
 $wgConf->siteParamsCallback = 'efGetSiteParams';
 
-if ( isset( $wgDBname ) ) {
+if ( defined( "MW_DB" ) ) {
+	$wgDBname = MW_DB;
 	$subdomain = substr( $wgDBname, 0, -4 );
 	$server = & $wgConf->settings['wgServer'][$wgDBname];
 	$wmgHostname = isset( $server ) ? $server : "$subdomain.orain.org";
