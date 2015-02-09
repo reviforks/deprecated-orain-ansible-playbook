@@ -1809,11 +1809,9 @@ if( $wgDBname != 'spamwiki' ) {
 	
 # Load the split up files...
 require_once( "$IP/LocalLogging.php" );
-require_once( "$IP/LocalDebugUsers.php" );
-require_once( "$IP/LocalPiwik.php" );
 require_once( "$IP/Redis.php" );
 require_once( "$IP/Database.php" ); // Multi-master set up --John
-require_once( "$IP/LocalHHVMPowered.php" );
+require_once( "$IP/OrainHooks.php" );
 require_once( "$IP/Missing.php" );
 
 # Lock the database temp.
