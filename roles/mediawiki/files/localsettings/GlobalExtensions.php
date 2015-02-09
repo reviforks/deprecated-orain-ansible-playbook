@@ -54,6 +54,9 @@ require_once( "$IP/skins/Modern/Modern.php" );
 // Do not load Abuse Filter on spamwiki.  For hopefully obvious reasons.
 // Something something something "honeypot" something.
 // Requested by Dusti.  --FastLizard4 Mon Feb  9 10:47:09 UTC 2015
-if( $wgDBname != 'spamwiki' ) {
+
+if( /*$wgDBname != 'spamwiki'*/ !( defined( "MW_DB" ) && MW_DB === 'spamwiki' ) ) {
+	//Workaround for $wgDBname not being defined until after GlobalExtensions.php is include
+        //--FastLizard4 Mon Feb  9 11:23:05 UTC 2015
 	require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
 }
