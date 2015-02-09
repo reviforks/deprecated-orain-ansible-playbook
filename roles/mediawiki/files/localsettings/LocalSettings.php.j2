@@ -1805,29 +1805,35 @@ $wgUsePrivateIPs = true;
 # Load the 'localextensions' here
 require_once( "$IP/LocalExtensions.php" );
 
-// QuestyCaptcha
-// Note: we force a load here to avoid errors and ensure it is loaded everywhere -- Addshore (8-feb-15)
-require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
-require_once( "$IP/extensions/ConfirmEdit/QuestyCaptcha.php" );
-// Note: This must be after the loading of the QuestyCaptcha Extension -- Addshore (8-Feb-15)
-call_user_func( function() {
-	global $wgCaptchaQuestions;
-	$myChallengeString = substr(md5(uniqid(mt_rand(), true)), 0, 8);
-	$myChallengeIndex = rand(0, 7) + 1;
-	$myChallengePositions = array ('first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth');
-	$myChallengePositionName = $myChallengePositions[$myChallengeIndex - 1];
-	$wgCaptchaQuestions[] = array (
-		'question' => "Please provide the $myChallengePositionName character from the sequence <code>$myChallengeString</code>:",
-		'answer' => $myChallengeString[$myChallengeIndex - 1]
-	);
-} );
-// Load reCaptcha on extloadwiki ONLY - Addshore (8-feb-2015)
-if( $wgDBname === 'extloadwiki' ) {
-	require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
-	$wgReCaptchaPublicKey = '6LcC5AATAAAAAFW3aPQLu-jiRdVct5P9rqiTUMEd';
-	$wgReCaptchaPrivateKey = '{{recaptcha_private_key}}';
-}
+// Don't load anything CAPTCHA-related on spamwiki.
+// For hopefully obvious reasons.  Something something "honeypot".
+// Requested by Dusti.  --FastLizard4 Mon Feb  9 10:47:09 UTC 2015
+if( $wgDBname != 'spamwiki' ) {
 
+	// QuestyCaptcha
+	// Note: we force a load here to avoid errors and ensure it is loaded everywhere -- Addshore (8-feb-15)
+	require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
+	require_once( "$IP/extensions/ConfirmEdit/QuestyCaptcha.php" );
+	// Note: This must be after the loading of the QuestyCaptcha Extension -- Addshore (8-Feb-15)
+	call_user_func( function() {
+		global $wgCaptchaQuestions;
+		$myChallengeString = substr(md5(uniqid(mt_rand(), true)), 0, 8);
+		$myChallengeIndex = rand(0, 7) + 1;
+		$myChallengePositions = array ('first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth');
+		$myChallengePositionName = $myChallengePositions[$myChallengeIndex - 1];
+		$wgCaptchaQuestions[] = array (
+			'question' => "Please provide the $myChallengePositionName character from the sequence <code>$myChallengeString</code>:",
+			'answer' => $myChallengeString[$myChallengeIndex - 1]
+		);
+	} );
+	// Load reCaptcha on extloadwiki ONLY - Addshore (8-feb-2015)
+	if( $wgDBname === 'extloadwiki' ) {
+		require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
+		$wgReCaptchaPublicKey = '6LcC5AATAAAAAFW3aPQLu-jiRdVct5P9rqiTUMEd';
+		$wgReCaptchaPrivateKey = '{{recaptcha_private_key}}';
+	}
+}
+	
 # Load the split up files...
 require_once( "$IP/LocalLogging.php" );
 require_once( "$IP/LocalDebugUsers.php" );
