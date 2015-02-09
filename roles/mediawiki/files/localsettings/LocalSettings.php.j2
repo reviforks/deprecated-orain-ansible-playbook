@@ -19,38 +19,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit;
 }
 
-function tmpErrorHandler( $errno, $errstr, $errfile, $errline ) {
-
-    switch ( $errno ) {
-    case E_USER_ERROR:
-        $error = "<b>My ERROR</b> [$errno] $errstr<br />\n";
-        $error .= "  Fatal error on line $errline in file $errfile";
-        $error .= ", PHP " . PHP_VERSION . " (" . PHP_OS . ")<br />\n";
-        $error .= "Aborting...<br />\n";
-        exit(1);
-        break;
-
-   case E_USER_WARNING:
-        $error = "<b>My WARNING</b> [$errno] $errstr<br />\n";
-        break;
-
-    case E_USER_NOTICE:
-        $error = "<b>My NOTICE</b> [$errno] $errstr<br />\n";
-        break;
-
-    default:
-        $error = "Unknown error type: [$errno] $errstr<br />\n";
-        break;
-    }
-    error_log( $error, 3, "/tmp/mw-error.log" );
-    /* Don't execute PHP internal error handler */
-    return true;
-}
-
-
-set_error_handler( "tmpErrorHandler" );
-
-
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
 $wgConf->localVHosts = array( '{{mysql_address}}' );
