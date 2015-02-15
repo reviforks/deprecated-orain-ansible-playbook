@@ -21,4 +21,4 @@ $wgDebugLogGroups = array(
 	'torblock' => "$wmgLogDir/debuglogs/torblock.log",
 );
 
-$wgScribuntoEngineConf['luastandalone']['errorFile'] = "wmgLogDir/debuglogs/luastandalone.log";
+$wgScribuntoEngineConf['luastandalone']['errorFile'] = "$wmgLogDir/debuglogs/luastandalone.log";
