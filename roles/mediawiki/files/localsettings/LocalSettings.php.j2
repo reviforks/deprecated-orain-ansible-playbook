@@ -20,7 +20,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 // Force set $_SERVER['HTTPS'] if LB passes the HTTP_X_FORWARDED_PROTO header -- Addshore - 9 feb 2015
-if( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ){
+if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	$_SERVER['HTTPS'] = 'on';
 }
 
@@ -1783,7 +1783,7 @@ require_once( "$IP/LocalExtensions.php" );
 // Don't load anything CAPTCHA-related on spamwiki.
 // For hopefully obvious reasons.  Something something "honeypot".
 // Requested by Dusti.  --FastLizard4 Mon Feb  9 10:47:09 UTC 2015
-if( $wgDBname != 'spamwiki' ) {
+if ( $wgDBname != 'spamwiki' ) {
 
 	// QuestyCaptcha
 	// Note: we force a load here to avoid errors and ensure it is loaded everywhere -- Addshore (8-feb-15)
@@ -1802,7 +1802,7 @@ if( $wgDBname != 'spamwiki' ) {
 		);
 	} );
 	// Load reCaptcha on extloadwiki ONLY - Addshore (8-feb-2015)
-	if( $wgDBname === 'extloadwiki' ) {
+	if ( $wgDBname === 'extloadwiki' ) {
 		require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
 		$wgReCaptchaPublicKey = '6LcC5AATAAAAAFW3aPQLu-jiRdVct5P9rqiTUMEd';
 		$wgReCaptchaPrivateKey = '{{recaptcha_private_key}}';

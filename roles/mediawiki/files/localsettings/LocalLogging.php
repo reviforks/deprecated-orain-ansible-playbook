@@ -2,7 +2,11 @@
 
 $wmgLogDir = "/var/log/mediawiki";
 
-$wgDebugLogFile = "$wmgLogDir/$wmgHostname.log";
+// Avoid logs of a crazy size until Logroate is fixed --Southparkfan
+if ( $wgDBname != 'spamwiki' ) {
+	$wgDebugLogFile = "$wmgLogDir/$wmgHostname.log";
+}
+
 $wgDBerrorLog = "$wmgLogDir/debuglogs/database.log";
 $wgDebugLogGroups = array(
 	'404' => "$wmgLogDir/debuglogs/404.log",
