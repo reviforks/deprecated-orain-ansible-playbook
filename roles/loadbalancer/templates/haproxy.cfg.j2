@@ -41,9 +41,9 @@ backend mediawiki
 	mode http
 	option forwardfor
 	balance leastconn
-	server prod8 10.131.243.245:80 check
-	server prod9 10.131.243.244:80 check
-	server prod11 10.131.243.247:80 check
+{% for mwserver in groups['mediawikiservers'] %}
+        server {{ hostvars[mwserver]['ansible_hostname'] }} {{ hostvars[mwserver]['ansible_eth1']['ipv4']['address'] }}:80 check
+{% endfor %}
 
 backend misc
 	mode http
