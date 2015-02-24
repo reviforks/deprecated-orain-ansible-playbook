@@ -26,7 +26,6 @@
   vars_files:
     - ../private/vars.yml
   roles:
-    - apache2
     - nagios
 
 - hosts: staticservers
@@ -70,3 +69,10 @@
     - ../private/vars.yml
   roles:
     - loadbalancer
+
+- hosts: apacheservers
+  vars_files:
+    - ../private/vars.yml
+  roles:
+    - apache2
+    - php

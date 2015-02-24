@@ -28,3 +28,6 @@ prod6
 
 [loadbalancerservers]
 prod10
+
+[apacheservers]
+prod6
