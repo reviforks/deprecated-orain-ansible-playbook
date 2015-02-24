@@ -3,3 +3,9 @@
   with_fileglob:
     - ./sites-enabled/*
   notify: Reload apache2
+
+- name: Copy additional apache2 configuration files
+  copy: src={{item}} dest=/etc/apache2/conf-enabled
+  with_fileglob:
+    - ./conf-enabled/*
+  notify: Reload apache2

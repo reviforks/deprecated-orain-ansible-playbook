@@ -1,14 +1,16 @@
 - name: Install apache2
   apt: pkg=apache2
 
-- name: Install PHP modules for apache2
+- name: Install PHP packages for apache2
   apt: pkg={{item}}
   with_items:
-  - libapache2-mod-php5
+  - apache2-mpm-worker
+  - libapache2-mod-fastcgi
   - php5
   - php5-cli
   - php5-common
   - php5-curl
+  - php5-fpm
   - php5-gd
   - php5-geoip
   - php5-json
