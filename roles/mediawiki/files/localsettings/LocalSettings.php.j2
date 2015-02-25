@@ -466,7 +466,11 @@ $wgConf->settings = array(
 		),
 	),
 	'specificGroupOverrides' => array(
-		'default' => array(),
+		'default' => array(
+			'autoconfirmed' => array(
+				'skipcaptcha' => true,
+			),
+		),
 		'closed' => array(
 			'*' => array(
 				'edit' => false,
