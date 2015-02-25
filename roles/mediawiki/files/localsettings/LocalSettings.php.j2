@@ -237,7 +237,7 @@ $wgConf->settings = array(
 		'spiralwiki' => false, // This broke displaying of Collection portlets addshore 20-feb-2014 issue #173
 	),
 	'wgHitcounterUpdateFreq' => array(
-		'default' => 20,
+		'default' => 30,
 	),
 	'wgMiserMode' => array(
 		'allthetropeswiki' => true,
@@ -253,6 +253,18 @@ $wgConf->settings = array(
 	),
 	'wgUseLocalMessageCache' => array(
 		'default' => false,
+	),
+	'wgResourceLoaderMaxage' => array(
+		'default' => array(
+			'versioned' => array(
+				'server' => 30 * 24 * 60 * 60, // 30 days
+				'client' => 30 * 24 * 60 * 60, // 30 days
+			),
+			'unversioned' => array(
+				'server' => 15 * 60, // 15 minutes
+				'client' => 15 * 60, // 15 minutes
+			),
+		),
 	),
 	// /Cache
 
