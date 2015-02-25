@@ -14,8 +14,11 @@ location ~ \.php {
 	fastcgi_pass unix:/var/run/hhvm/sock;
 }
 
-location ^~ /w/languages { deny all; } location ^~ /w/maintenance { deny all; } location ^~ /w/serialized { deny all; } 
+location ^~ /w/languages { deny all; } 
+location ^~ /w/maintenance { deny all; } 
+location ^~ /w/serialized { deny all; } 
 location ~ /.git(/|$) { deny all; }
+
 location ~ ^/wk/(.*) {
 	return 301 /wiki/$1;
 }
@@ -28,6 +31,10 @@ location ^~ /wiki {
 	include fastcgi_params;
 	fastcgi_param SCRIPT_FILENAME $document_root/w/index.php;
 	fastcgi_pass unix:/var/run/hhvm/sock;
+}
+
+location ~ ^/skins/(.*) {
+	return 302 https://static.orain.org/common/skins/$1;
 }
 
 error_page 404 /404.html;
