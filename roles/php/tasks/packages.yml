@@ -14,4 +14,3 @@
     - php5-fpm
     - php5-geoip
     - php5-intl
-    - php5-mysqlnd
