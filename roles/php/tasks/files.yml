@@ -9,3 +9,9 @@
   with_fileglob:
     - ./conf.d/*.ini
   notify: Reload php-fpm
+
+- name: Copy mysqli settings
+  copy: src={{item}} dest=/etc/php5/mods-available/{{item|basename}} backup=yes
+  with_fileglob:
+    - ./mods-available/*.ini
+  notify: Reload php-fpm
