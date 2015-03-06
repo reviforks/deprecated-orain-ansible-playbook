@@ -37,6 +37,13 @@ location ~ ^/skins/(.*) {
 	return 302 https://static.orain.org/common/skins/$1;
 }
 
+
+location /server-status {
+	stub_status on;
+	allow 127.0.0.1;
+	deny all;
+}
+
 error_page 404 /404.html;
 location = /404.html {
 	ssi on;
