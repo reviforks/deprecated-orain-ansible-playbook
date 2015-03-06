@@ -9,7 +9,7 @@ HostKey /etc/ssh/ssh_host_dsa_key
 HostKey /etc/ssh/ssh_host_ecdsa_key
 HostKey /etc/ssh/ssh_host_ed25519_key
 
-#Privilege Separation is turned on for security
+# Privilege Separation is turned on for security
 UsePrivilegeSeparation yes
 
 
@@ -24,11 +24,11 @@ LogLevel INFO
 
 # Authentication:
 LoginGraceTime 120
-PermitRootLogin no
 StrictModes yes
 
 RSAAuthentication yes
 PubkeyAuthentication yes
+
 #AuthorizedKeysFile	%h/.ssh/authorized_keys
 
 IgnoreRhosts yes
@@ -51,3 +51,6 @@ AcceptEnv LANG LC_*
 Subsystem sftp /usr/lib/openssh/sftp-server
 
 UsePAM yes
+
+# Permit root login without password (ssh key only)
+PermitRootLogin without-password
