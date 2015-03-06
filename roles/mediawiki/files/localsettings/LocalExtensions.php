@@ -156,6 +156,10 @@ switch( $wgDBname ) {
 		$wgWebChatClient = 'freenodeChat';
 		require_once "$IP/extensions/WikiBanner/WikiBanner.php";
 		break;
+	case 'gamewiki':
+		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
+		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		break;
 	case 'goldcraftmcwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		break;
