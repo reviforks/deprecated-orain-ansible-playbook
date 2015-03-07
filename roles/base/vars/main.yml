@@ -5,7 +5,7 @@ roots:
   - { name: 'fastlizard4', group: 'roots', groups: 'roots,operations', uid: '2007', state: 'present' }
   - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002', state: 'absent' }
   - { name: 'kudu', group: 'roots', groups: 'roots,operations', uid: '2000', state: 'present' }
-  - { name: 'tanner', group: 'roots', groups: 'roots,operations', uid: '2005', state: 'present' }
+  - { name: 'tanner', group: 'roots', groups: 'roots,operations', uid: '2005', state: 'absent' }
   - { name: 'southparkfan', group: 'roots', groups: 'roots,operations', uid: '2004', state: 'present' }
 
 users:
