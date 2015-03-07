@@ -56,5 +56,5 @@
 
 - name: Upload {{item.name}}'s public key
   authorized_key: user={{item.name}} key="{{ lookup('file', './ssh/keys/' ~ item.name ~ '.pub') }}" state={{item.state}}
-  when: "'{{item.hosts}}' in group_names"  
+  when: "'{{item.hosts}}' in group_names and '{{item.state}}' == 'present'"  
   with_items: users
