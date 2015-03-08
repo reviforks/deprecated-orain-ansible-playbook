@@ -68,6 +68,10 @@ switch( $wgDBname ) {
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		break;
+	case 'cwsplanetwiki':
+		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
+		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		break;
 	case 'deguwiki':
 		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 		break;
