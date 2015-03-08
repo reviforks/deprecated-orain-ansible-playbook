@@ -94,6 +94,11 @@ define( 'NS_SERVER', 526);
 define( 'NS_SERVER_TALK', 527);
 // /Reviwiki
 
+// sawiki
+define( 'NS_PORTAL', 516);
+define( 'NS_PORTAL_TALK', 517);
+// /sawiki
+
 // wikinambaswiki
 define( 'NS_OFICINA', 508 );
 define( 'NS_OFICINA_TALK', 509 );
@@ -836,6 +841,10 @@ $wgConf->settings = array(
             		NS_SERVER => '서버',
             		NS_SERVER_TALK => '서버토론',
         	),
+        	'sawiki' => array(
+            		NS_PORTAL => 'Portal',
+            		NS_PORTAL_TALK => 'Portal_talk',
+        	),
 		'wikinambaswiki' => array(
 			NS_OFICINA => 'Oficina',
 			NS_OFICINA_TALK => 'Oficina_Discussão',
@@ -905,6 +914,10 @@ $wgConf->settings = array(
 		'+reviwiki' => array(
 			NS_MAIN => true,
 			NS_SERVER => true,
+		),
+		'+sawiki' => array(
+			NS_PORTAL => true,
+			NS_PORTAL_TALK => true,
 		),
 		'+techwiki' => array(
 			NS_MAIN => true,
