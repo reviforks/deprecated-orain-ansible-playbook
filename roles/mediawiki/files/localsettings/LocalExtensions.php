@@ -410,6 +410,11 @@ if ( $wmgUseTabber ) {
 	require_once( "$IP/extensions/Tabber/Tabber.php" );
 }
 
+if ( $wmgUseTimedMediaHandler ) {
+	require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
+	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
+}
+
 if ( $wmgUseTorBlock ) {
 	require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 	$wgTorLoadNodes = false;
