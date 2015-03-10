@@ -526,6 +526,11 @@ extensions:
     version: 'REL1_24'
     }
   - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-TimedMediaHandler.git',
+    dest: 'extensions/TimedMediaHandler',
+    version: 'REL1_24'
+    }
+  - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Timeline.git',
     dest: 'extensions/Timeline',
     version: 'REL1_24'
