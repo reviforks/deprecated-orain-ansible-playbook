@@ -4,11 +4,12 @@
 - name: Create a cronjob for getting private databases
   cron: name="Get private DB list" user="mediawiki" job="python3 ~/get_privatedb_list.py"
 
-- name: Create a cronjob for the MediaWiki job queue
-  cron: name="MediaWiki job queue"
-        user="mediawiki"
-        minute=0
-        job="/home/mediawiki/db_loop.sh /srv/mediawiki/w/maintenance/runJobs.php"
+# Disabled, see issue #555 for more information
+#- name: Create a cronjob for the MediaWiki job queue
+#  cron: name="MediaWiki job queue"
+#        user="mediawiki"
+#        minute=0
+#        job="/home/mediawiki/db_loop.sh /srv/mediawiki/w/maintenance/runJobs.php"
 
 - name: Create a cronjob for MediaWiki special page updating on All The Tropes
   cron: name="MediaWiki special page updating"
