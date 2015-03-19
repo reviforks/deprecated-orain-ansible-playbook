@@ -1876,6 +1876,12 @@ if ( $wgDBname != 'spamwiki' ) {
 		$wgReCaptchaPrivateKey = '{{recaptcha_private_key}}';
 	}
 }
+
+// Language settings for lovelivesiftwwiki
+if ( $wgDBname === 'lovelivesiftwwiki' ) {
+	$wgDefaultLanguageVariant = "zh-tw";
+	$wgDisabledVariants = array( 'zh-hans', 'zh-hant', 'zh-hk', 'zh-mo', 'zh-my', 'zh-sg' );
+}
 	
 # Load the split up files...
 require_once( "$IP/LocalLogging.php" );
