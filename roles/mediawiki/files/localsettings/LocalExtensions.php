@@ -195,6 +195,13 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 		break;
+	case 'memewiki':
+		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
+		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
+		require_once( "$IP/extensions/NoTitle/NoTitle.php" );
+		require_once( "$IP/extensions/Poem/Poem.php" );
+		break;
 	case 'metawiki':
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
 		#require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
