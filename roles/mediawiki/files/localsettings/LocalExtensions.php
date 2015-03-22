@@ -55,6 +55,9 @@ switch( $wgDBname ) {
 		$wgDisableTextSearch = true;
 		$wgSearchForwardUrl = "https://www.google.co.uk/search?q=$1&sitesearch=http://allthetropes.orain.org";
 		break;
+	case 'avanversewiki':
+		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
+		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
