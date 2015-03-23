@@ -31,6 +31,10 @@ location /w/thumb.php {
 }
 
 location @thumb {
+	# CORS
+	if ($http_origin ~* (https?://[^/]*\.orain\.org(:[0-9]+)?)) {
+		add_header 'Access-Control-Allow-Origin' "$http_origin";
+	}
 	# Rewrite for thumb.php to get the correct arguments
 	rewrite ^/(.*?)/images/thumb/[0-9a-f]/[0-9a-f][0-9a-f]/([^/]+)/([0-9]+)px-.*$ /w/thumb.php?sitex=$1&f=$2&width=$3;
 	rewrite ^/(.*?)/images/thumb/archive/[0-9a-f]/[0-9a-f][0-9a-f]/([^/]+)/([0-9]+)px-.*$ /w/thumb.php?sitex=$1&f=$2&width=$3&archived=1;
