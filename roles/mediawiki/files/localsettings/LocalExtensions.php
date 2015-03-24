@@ -360,6 +360,10 @@ if ( $wmgUseCharInsert ) {
 	//$wgDisableSearchUpdate = true;
 //}
 
+if ( $wmgUseDismissableSiteNotice ) {
+	require_once( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
+}
+
 if ( $wmgUseDPLforum ) {
 	require_once( "$IP/extensions/DPLforum/DPLforum.php" );
 }
