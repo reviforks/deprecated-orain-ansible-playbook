@@ -1011,6 +1011,11 @@ $wgConf->settings = array(
 				'member',
 			),
 		),
+		'+qumegalithwiki' => array(
+			'sysop' => array(
+				'member',
+			),
+		),
 	),
 	'wgAutoConfirmAge' => array(
 		'default' => 111600, // 31 h * 60 min/h * 60 s/min
@@ -1182,6 +1187,28 @@ $wgConf->settings = array(
 				'createtalk' => false,
 			),
 			'confirmed' => array(
+				'edit' => true,
+				'createpage' => true,
+				'createtalk' => true,
+			),
+		),
+		'+qumegalithwiki' => array(
+			'*' => array(
+				'edit' => false,
+				'createpage' => false,
+				'createtalk' => false,
+			),
+			'user' => array(
+				'edit' => false,
+				'createpage' => false,
+				'createtalk' => false,
+			),
+			'member' => array(
+				'edit' => true,
+				'createpage' => true,
+				'createtalk' => true,
+			),
+			'sysop' => array(
 				'edit' => true,
 				'createpage' => true,
 				'createtalk' => true,
@@ -1384,6 +1411,11 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'member',
 			),
+			'sysop' => array(
+				'member',
+			),
+		),
+		'+qumegalithwiki' => array(
 			'sysop' => array(
 				'member',
 			),
