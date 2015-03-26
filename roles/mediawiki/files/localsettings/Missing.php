@@ -12,7 +12,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
 <div style="text-align: center;">
 <h1> - 404 Not Found - </h1>
 <p><b>Wiki not found:</b> The requested wiki is not found. It is possible you have made a spelling mistake in the URL, or the wiki does not exist anymore.</p>
-<p>Host: {$_SERVER['SERVER_NAME']} Port: {$_SERVER['SERVER_PORT']}</p>
+<p>Host: {$wmgHostname} Port: {$_SERVER['SERVER_PORT']}</p>
 </div>
 <div id="footer">
 <ul id="footer-places">
