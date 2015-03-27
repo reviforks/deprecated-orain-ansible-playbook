@@ -39,8 +39,6 @@ set -x
 # Run the playbook
 /root/ans-run "$skiptags"
 
-set +x
-
 # If the last command was successful then touch the file used by nagios
 # It doesn't matter if this was the pull or the run!
 if [[ $? == 0 ]]; then
