@@ -7,7 +7,7 @@
     - extloadwiki
 
 - name: Install Validator dependencies using Composer
-  shell: "cd /srv/mediawiki/w/extensions/Validator && /usr/bin/composer.phar install"
+  shell: "cd /srv/mediawiki/w/extensions/Validator && /usr/local/bin/composer.phar install"
   sudo: yes
   sudo_user: mediawiki
 
