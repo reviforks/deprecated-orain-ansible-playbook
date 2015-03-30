@@ -1,7 +1,0 @@
-# Deleted since 30 August 2014 - This is now covered by a general access rule in common
-- name: Delete old 6379 specific rule
-  ufw: rule=allow port=6379 delete=yes
-
-# Deleted since 30 August 2014 - This is now covered by a general access rule in common
-- name: Delete old 6380 specific rule
-  ufw: rule=allow port=6380 delete=yes

@@ -57,13 +57,5 @@
 - name: Allow DNS port
   ufw: rule=allow port=53
 
-# Deleted since 30 August 2014 - https://github.com/Orain/ansible-playbook/issues/340
-- name: Delete allow access on old port range
-  ufw: rule=allow port=60000:61000 proto=udp delete=yes
-
-# Deleted since 30 August 2014 - nrpe port, no longer needed as all internal ips are open
-- name: Delete allow access on old random port - 5666
-  ufw: rule=allow delete=yes port=5666
-
 - name: Enable ufw
   ufw: state=enabled policy=deny

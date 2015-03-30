@@ -1,7 +1,0 @@
-# Deleted since 30 August 2014 - This is now covered by a general access rule in common
-- name: Delete old 111 specific rule
-  ufw: rule=allow port=111 delete=yes
-
-# Deleted since 30 August 2014 - This is now covered by a general access rule in common
-- name: Delete old 2049 specific rule
-  ufw: rule=allow port=2049 delete=yes

@@ -8,10 +8,6 @@
   command: rm {{item}} removes={{item}}
   with_items:
     - /root/notify_irc.sh
-    - /srv/mediawiki/w/LocalHHVMPowered.php
-    - /srv/mediawiki/w/LocalPiwik.php
-    - /srv/mediawiki/w/LocalDebugUsers.php
-    - /srv/mediawiki/w/LocalAdsRight.php
 
 - name: Copy {{item}}
   copy: src={{item}} dest=/home/mediawiki owner=mediawiki group=mediawiki mode=770
