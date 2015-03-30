@@ -46,16 +46,3 @@ Before making any changes to MediaWiki stuff, make sure the user requesting the 
 ### Deploying new MediaWiki LocalSettings.php
 
 After any change in LocalSettings.php, please make sure the syntax is correct!
-
-### Deploying new MediaWiki extensions
-
-Before attempting to include any new extensions, they must first be contained within [our fork of the MediaWiki repo](https://github.com/Orain/mediawiki-core).
-Once included in that repo, they will be available to the farm.
-
-Only deploy security-checked extensions. If you have any doubts, open an issue on GitHub!
-
- 1. Make sure the extension and all dependencies are included in our MediaWiki branch.
- 2. Deploy the extension to the extloadwiki and make sure it appears in Special:Version and nothing is broken.
- 3. Deploy to the wiki you actually want, leaving the extension loaded on extloadwiki.
-
-Note: Although the localisation cache update used to be run as a cronjob, it is now run automatically after pulling changes. When deploying a new extension to a wiki, there might be a period of about 60 seconds during which you see exceptions, which is due to the localisation cache update not having completed yet!
