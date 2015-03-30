@@ -4,9 +4,6 @@
 - name: Install Composer
   action: shell curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ creates=/usr/local/bin/composer.phar
 
-# Removed on 31 August 2014 - Addshore - Location changed
-- name: Remove old Composer install at /usr/bin/composer.phar
-  command: rm /usr/bin/composer.phar removes=/usr/bin/composer.phar
 
 - name: Update Composer
   action: shell /usr/local/bin/composer.phar self-update
