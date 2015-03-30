@@ -1914,11 +1914,11 @@ if ( $wgDBname != 'spamwiki' ) {
 			'answer' => $myChallengeString[$myChallengeIndex - 1]
 		);
 	} );
-	// Load reCaptcha on extloadwiki ONLY - Addshore (30-mar-2015)
+	// Load reCaptcha on extloadwiki ONLY - Addshore (8-feb-2015)
 	if ( $wgDBname === 'extloadwiki' ) {
-		require_once( "$IP/extensions/reCaptcha/reCaptcha.php" );
-		$wgReCaptchaKey = '6LcC5AATAAAAAFW3aPQLu-jiRdVct5P9rqiTUMEd';
-		$wgReCaptchaSecret = '{{recaptcha_private_key}}';
+		require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
+		$wgReCaptchaPublicKey = '6LcC5AATAAAAAFW3aPQLu-jiRdVct5P9rqiTUMEd';
+		$wgReCaptchaPrivateKey = '{{recaptcha_private_key}}';
 	}
 }
 
