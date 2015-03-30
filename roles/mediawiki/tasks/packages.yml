@@ -52,7 +52,6 @@
   shell: cd /srv/mediawiki/w/extensions/"{{item}}" && /usr/local/bin/composer.phar install
   with_items:
     - Validator
-    - reCaptcha
   tags:
     - mwext
 
