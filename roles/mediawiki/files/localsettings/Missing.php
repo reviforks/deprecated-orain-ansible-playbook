@@ -6,7 +6,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
 <html>
 <head>
 <title>404 Not Found</title>
-<link rel="stylesheet" href="//static.orain.org/meta.orain.org/load.php?modules=mediawiki.skinning.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<link rel="stylesheet" href="//static.orain.org/common/vector.css" />
 </head>
 <body>
 <div style="text-align: center;">
