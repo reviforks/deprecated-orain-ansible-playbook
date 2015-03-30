@@ -5,8 +5,14 @@
 - name: Copy pem files
   copy: src=/root/private/ssl/Orain_GlobalSign_2014.pem dest=/etc/ssl/private/Orain_GlobalSign_2014.pem
 
-- name: Create acl directory
-  file: path=/etc/haproxy/acl state=directory owner=haproxy group=haproxy mode=0755
+- name: Create HAProxy directories
+  file: path=/etc/haproxy/{{item}} state=directory owner=haproxy group=haproxy mode=0755
+  with_items:
+    - acl
+    - errorpages
 
 - name: Copy acl data
   copy: src="./acl/" dest=/etc/haproxy/acl/ owner=haproxy group=haproxy mode=0755
+
+- name: Copy errorpages
+  copy: src="./errorpages/" dest=/etc/haproxy/errorpages/ owner=haproxy group=haproxy mode=0755
