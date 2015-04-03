@@ -1,5 +1,5 @@
 - name: Install python-requests
-  apt: pkg=python3-requests
+  apt: pkg=python3-requests force=yes
 
 - name: Install Composer
   action: shell curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ creates=/usr/local/bin/composer.phar
