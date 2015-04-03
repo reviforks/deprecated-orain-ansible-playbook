@@ -177,7 +177,7 @@ $wgConf->settings = array(
 		'default' => 'ReCaptcha',
 	),
 	'wgReCaptchaPublicKey' => array(
-		'default' => '6LewqwETAAAAADZzJ7sUO3xmrad2eqDembTtvztK',
+		'default' => '6LcC5AATAAAAAFW3aPQLu-jiRdVct5P9rqiTUMEd',
 	),
 	'wgReCaptchaPrivateKey' => array(
 		'default' => '{{recaptcha_private_key}}',
@@ -1909,12 +1909,7 @@ call_user_func( function() {
 		'answer' => $myChallengeString[$myChallengeIndex - 1]
 	);
 } );
-// Load reCaptcha on extloadwiki ONLY - Addshore (8-feb-2015)
-if ( $wgDBname === 'extloadwiki' ) {
-	require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
-	$wgReCaptchaPublicKey = '6LcC5AATAAAAAFW3aPQLu-jiRdVct5P9rqiTUMEd';
-	$wgReCaptchaPrivateKey = '{{recaptcha_private_key}}';
-}
+require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
 
 // Language settings for lovelivesiftwwiki
 if ( $wgDBname === 'lovelivesiftwwiki' ) {
