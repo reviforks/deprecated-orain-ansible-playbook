@@ -11,10 +11,10 @@
   vars_files:
     - ../private/vars.yml
   roles:
-    - hhvm
-    - nginx
     - php
+    - hhvm
     - mediawiki
+    - nginx
 
 - hosts: dbservers
   vars_files:
