@@ -1768,6 +1768,17 @@ foreach ( $DBlist as $wiki ) {
 	}
 }
 
+// Addshore - 3 Apr 2015 - If we didn't get any dbs for some reason FORCE metawikis existance
+if( empty( $wgLocalDatabases ) ) {
+	list( $DBname, $siteName, $siteLang, $wikiTagList ) = array( 'metawiki', 'Orain Meta', 'en', 'upload' );
+	$wgLocalDatabases[] = $DBname;
+	$wgConf->settings['wgSitename'][$DBname] = $siteName;
+	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
+	if ( $DBname == $wgDBname ) {
+		$wikiTags = array_filter( explode( '|', $wikiTagList ) );
+	}
+}
+
 $wgConf->wikis = & $wgLocalDatabases;
 
 /**
