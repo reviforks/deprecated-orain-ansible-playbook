@@ -1,5 +1,5 @@
 - name: Install php and related libraries
-  apt: pkg={{item}}
+  apt: pkg={{item}} force=yes
   with_items:
     - graphicsmagick
     - graphicsmagick-imagemagick-compat
