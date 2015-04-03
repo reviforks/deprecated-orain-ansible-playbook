@@ -16,7 +16,17 @@
     - get_privatedb_list.py
     - db_loop.sh
 
-- name: Get initial version of dblist
+- name: Stat dblist
+  stat: path=/srv/mediawiki/w/all.dblist
+  register: dblist_file
+
+- name: Backup last dblist
+  copy: src=/srv/mediawiki/w/all.dblist dest=/srv/mediawiki/w/all.dblist.backup owner=mediawiki group=mediawiki mode=770 backup=yes
+
+  when: dblist_file.stat.exists
+  ignore_errors: True
+
+- name: Get new version of dblist
   command: python3 ~/get_db_list.py
   args:
     creates: /srv/mediawiki/w/all.dblist
