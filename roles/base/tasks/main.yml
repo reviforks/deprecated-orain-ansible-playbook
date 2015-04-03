@@ -1,5 +1,5 @@
-- include: sources.yml
 - include: packages.yml
+- include: sources.yml
 - include: users.yml
 - include: ufw.yml
 - include: nagios.yml
