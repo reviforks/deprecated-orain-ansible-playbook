@@ -1,5 +1,5 @@
 - name: Create directory for the protocol-agnostic parts of the nginx enabled sites configuration
-  file: path=/etc/nginx/sites-enabled-agnostic state=directory owner=mediawiki group=mediawiki mode=0770
+  file: path=/etc/nginx/sites-enabled-agnostic state=directory owner=mediawiki group=mediawiki mode=0775
 
 - name: Copy the protocol-agnostic parts of the nginx enabled sites configuration
   copy: src={{item}} dest=/etc/nginx/sites-enabled-agnostic
@@ -39,8 +39,11 @@
   with_fileglob:
     - ./errorpages/*.*
 
+- name: Create /usr/share/nginx/default
+  file: path=/usr/share/nginx/default state=directory owner=mediawiki group=mediawiki mode=0755
+  
 - name: Copy default robots.txt
-  copy: src=robots.txt dest=/usr/share/nginx/default owner=mediawiki group=mediawiki mode=0770
+  copy: src=robots.txt dest=/usr/share/nginx/default/robots.txt owner=mediawiki group=mediawiki mode=0770
 
 - name: Copy default index.html
   copy: src=default.index.html dest=/usr/share/nginx/default/index.html owner=mediawiki group=mediawiki mode=0770
