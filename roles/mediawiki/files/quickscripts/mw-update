@@ -15,7 +15,7 @@ if [ $# -eq 0 ]; then
    echo 1...
    sleep 1
    echo Running
-   /home/www-scripts/db_loop.sh /srv/mediawiki/w/maintenance/update.php --quick
+   /home/mediawiki/db_loop.sh /srv/mediawiki/w/maintenance/update.php --quick
    echo Update.php has run for ALL wikis
 else
    echo Running update.php for $1
