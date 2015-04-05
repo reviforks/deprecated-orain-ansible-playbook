@@ -6,6 +6,7 @@
  * @note If you are including a new extension you should ensure it is included in
  *  the mediawiki-core repo in the extensions directory
  */
+require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
 require_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
 require_once( "$IP/extensions/AntiSpoof/AntiSpoof.php" );
 require_once( "$IP/extensions/Babel/Babel.php" );
@@ -49,13 +50,3 @@ require_once( "$IP/skins/Vector/Vector.php" );
 require_once( "$IP/skins/MonoBook/MonoBook.php" );
 require_once( "$IP/skins/CologneBlue/CologneBlue.php" );
 require_once( "$IP/skins/Modern/Modern.php" );
-
-// Do not load Abuse Filter on spamwiki.  For hopefully obvious reasons.
-// Something something something "honeypot" something.
-// Requested by Dusti.  --FastLizard4 Mon Feb  9 10:47:09 UTC 2015
-
-if( /*$wgDBname != 'spamwiki'*/ !( defined( "MW_DB" ) && MW_DB === 'spamwiki' ) ) {
-	//Workaround for $wgDBname not being defined until after GlobalExtensions.php is include
-        //--FastLizard4 Mon Feb  9 11:23:05 UTC 2015
-	require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
-}
