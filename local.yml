@@ -7,6 +7,12 @@
     - base
     - dsh
 
+- hosts: adminbotservers
+  vars_files:
+    - ../private/vars.yml
+  roles:
+    - adminbot
+
 - hosts: mediawikiservers
   vars_files:
     - ../private/vars.yml

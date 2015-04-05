@@ -1,0 +1,4 @@
+---
+
+- name: Restart adminbot
+  service: name=adminbot state=restarted

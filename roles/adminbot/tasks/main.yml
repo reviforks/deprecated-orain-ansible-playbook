@@ -1,0 +1,10 @@
+---
+
+#TODO this should make sure we have the WM repo for apt!!
+
+- name: Install adminbot
+  apt: pkg=adminbot force=yes
+
+- name: Copy adminbot configuration
+  template: src=config.py.j2 dest=/etc/adminbot/config.py
+  notify: Restart adminbot
