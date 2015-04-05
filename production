@@ -31,3 +31,6 @@ prod10
 
 [apacheservers]
 prod6
+
+[adminbotservers]
+prod10
