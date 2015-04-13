@@ -2,7 +2,7 @@
   copy: src="hhvm" dest=/etc/init.d/hhvm owner=root group=root mode=770
 
 - name: Add hhvm to boot
-  shell: update-rc.d hhvm defaults 98
+  shell: /usr/sbin/update-rc.d hhvm defaults 98
   register: update_rc_hhvm
   changed_when: False # never report as "changed"
 
