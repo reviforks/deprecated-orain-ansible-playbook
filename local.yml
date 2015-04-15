@@ -82,3 +82,4 @@
   roles:
     - apache2
     - php
+    - hhvm
