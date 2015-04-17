@@ -24,9 +24,6 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 	$_SERVER['HTTPS'] = 'on';
 }
 
-ini_set( 'upload_max_filesize', '10M' );
-ini_set( 'post_max_filesize', '10M' );
-
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
 $wgConf->localVHosts = array( '{{mysql_address}}' );
@@ -268,6 +265,10 @@ $wgConf->settings = array(
 	'wgUseLocalMessageCache' => array(
 		'default' => false,
 	),
+	'wgUseFileCache' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wgResourceLoaderMaxage' => array(
 		'default' => array(
 			'versioned' => array(
@@ -275,8 +276,8 @@ $wgConf->settings = array(
 				'client' => 30 * 24 * 60 * 60, // 30 days
 			),
 			'unversioned' => array(
-				'server' => 120 * 60, // 2 hours
-				'client' => 120 * 60, // 2 hours
+				'server' => 2 * 60 * 60, // 2 hours
+				'client' => 2 * 60 * 60, // 2 hours
 			),
 		),
 	),
