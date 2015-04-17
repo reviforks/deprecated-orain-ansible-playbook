@@ -1952,7 +1952,19 @@ if ( $wgDBname === 'lovelivesiftwwiki' ) {
 	$wgDefaultLanguageVariant = "zh-tw";
 	$wgDisabledVariants = array( 'zh-hans', 'zh-hant', 'zh-hk', 'zh-mo', 'zh-my', 'zh-sg' );
 }
-	
+
+if ( $wgCommandLineMode ) {
+# TODO: use OrainHooks:ifUserCanDebug instead of this hack
+	//error_reporting( -1 ); // phpredis introduces a *lot* of array issues due to live hack within MediaWiki
+	error_reporting( E_ALL & ~E_NOTICE & ~E_STRICT ); //Here, try this.  Should limit the displayed errors to only the important ones.
+	ini_set( 'display_errors', 1 );
+	$wgShowExceptionDetails = true;
+	$wgDebugToolbar = true;
+	$wgDevelopmentWarnings = true;
+	$wgShowSQLErrors = true;
+	$wgShowDBErrorBacktrace = true;
+}
+
 # Load the split up files...
 require_once( "$IP/LocalLogging.php" );
 require_once( "$IP/Redis.php" );
