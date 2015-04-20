@@ -166,6 +166,10 @@ switch( $wgDBname ) {
 	case 'gamewiki':
 		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		require_once( "$IP/extensions/MsUpload/MsUpload.php" );
+		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
+		$wgMultiBoilerplateOptions = false;
+		$wgMultiBoilerplateDiplaySpecialPage = true;
 		break;
 	case 'goldcraftmcwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
@@ -213,6 +217,9 @@ switch( $wgDBname ) {
 	case 'netwiki':
 		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 		$wgMediaViewerIsInBeta = true;
+		break;
+	case 'permanentfuturelabwiki':
+		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		break;
 	case 'poserdazfreebieswiki':
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
