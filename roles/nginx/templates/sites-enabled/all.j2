@@ -6,7 +6,7 @@
 
 {% macro favicon_config() %}
 	location = /favicon.ico {
-		try_files /../favicons/$host.ico /../favicons/default.ico;
+		try_files /usr/share/nginx/favicons/$host.ico /usr/share/nginx/favicons/default.ico;
 	}
 {% endmacro %}
 
