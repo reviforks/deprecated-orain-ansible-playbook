@@ -6,7 +6,7 @@ expires 2w;
 
 location ~ ^/.*?/load.php$ {
 	root /srv/mediawiki/w;
-	expires 3d;
+	expires 7d;
 	include fastcgi_params;
 	fastcgi_param SCRIPT_FILENAME $document_root/load.php;
 	fastcgi_pass unix:/var/run/hhvm/sock;
