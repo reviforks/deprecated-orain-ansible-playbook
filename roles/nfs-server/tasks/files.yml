@@ -1,6 +1,7 @@
 - name: Ensure export directories exist
   command: mkdir -p {{item}}
   with_items:
+  - /var/mediawiki/filecache
   - /var/mediawiki/uploads
   - /var/mediawiki/private/uploads
   changed_when: False # never report as "changed"
