@@ -3,6 +3,8 @@
 
 - name: Update Apt Cache (on the hour)
   apt: update_cache=yes cache_valid_time=3600
+  tags:
+    - slow
 
 - name: Install ansible to a consistent version
   pip: name=ansible version=1.8.2 state=present
