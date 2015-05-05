@@ -22,9 +22,11 @@ while test $# -gt 0; do
         esac
 done
 
-HOST=$(hostname)
+HOST=$(hostname --fqdn)
 
 case $HOST in
+  (prod14-temp.orain.org) limit="prod14-temp";;
+  (prod13-temp.orain.org) limit="prod13-temp";;
   (prod12.orain.org) limit="prod12";;
   (prod11.orain.org) limit="prod11";;
   (prod10.orain.org) limit="prod10";;
