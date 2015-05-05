@@ -25,4 +25,4 @@ echo "Pulling ansible from github - $branch"
 
 set -x
 
-/usr/local/bin/ansible all -i "localhost," -c local -m git -a "name=https://github.com/Orain/ansible-playbook.git dest=/root/ansible-playbook version=$branch"
+ansible all -i "localhost," -c local -m git -a "name=https://github.com/Orain/ansible-playbook.git dest=/root/ansible-playbook version=$branch"

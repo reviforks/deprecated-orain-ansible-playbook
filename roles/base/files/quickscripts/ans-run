@@ -41,4 +41,4 @@ esac
 set -x
 
 echo "Updating $limit from ansible-playbook: $skiptags"
-/usr/local/bin/ansible-playbook -c local --limit $limit /root/ansible-playbook/local.yml -i "/root/ansible-playbook/production" $skiptags
+ansible-playbook -c local --limit $limit /root/ansible-playbook/local.yml -i "/root/ansible-playbook/production" $skiptags
