@@ -19,7 +19,7 @@ operations: sysadmin
 paypal: dusti,addshore
 
 # accounts for umbrella of other stuff
-accounts: dusti,addshore
+accounts: dusti,addshore,southparkfan223@hotmail.com
 
 # nagios
 nagios: sysadmin
