@@ -192,6 +192,9 @@ switch( $wgDBname ) {
 		$wgNamespaceProtection[NS_USER] = array( 'editinterface' );
 		$wgNamespaceProtection[NS_USER_TALK] = array( 'editinterface' );
 		break;
+	case 'lovelivesiftwwiki':
+		require_once( "$IP/extensions/Widgets/Widgets.php" );
+		break;
 	case 'mediawikitesterswiki':
 		$wgCategoryTreeMaxChildren = 2000;
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
