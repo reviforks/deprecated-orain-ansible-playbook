@@ -630,6 +630,7 @@ $wgConf->settings = array(
 		'spiralwiki' => "//$wmgUploadHostname/common/skins/common/images/cc-0.png",
 		'corruptionofchampionswiki' => "//$wmgUploadHostname/common/skins/common/images/cc-by-nc-sa.png",
 		'fallofedenthegamewiki' => "//$wmgUploadHostname/common/skins/common/images/cc-by-nc-sa.png",
+		'lovelivesiftwwiki' => "//$wmgUploadHostname/common/skins/common/images/cc-by-nc-sa.png",
 		'trialsintaintedspacewiki' => "//$wmgUploadHostname/common/skins/common/images/cc-by-nc-sa.png",
 	),
 	'wgRightsPage' => array(
@@ -640,6 +641,7 @@ $wgConf->settings = array(
 		'spiralwiki' => 'CC0 Public Domain',
 		'corruptionofchampionswiki' => 'Creative Commons Attribution NonCommerical Share Alike',
 		'fallofedenthegamewiki' => 'Creative Commons Attribution NonCommerical Share Alike',
+		'lovelivesiftwwiki' => '創作共用 Attribution-NonCommercial-ShareAlike',
 		'trialsintaintedspacewiki' => 'Creative Commons Attribution NonCommerical Share Alike',
 	),
 	'wgRightsUrl' => array(
@@ -647,6 +649,7 @@ $wgConf->settings = array(
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'corruptionofchampionswiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 		'fallofedenthegamewiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
+		'lovelivesiftwwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 		'trialsintaintedspacewiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 	),
 	// /License
@@ -1956,12 +1959,6 @@ call_user_func( function() {
 require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
 $wgReCaptchaPublicKey = '6LcC5AATAAAAAFW3aPQLu-jiRdVct5P9rqiTUMEd';
 $wgReCaptchaPrivateKey = '{{recaptcha_private_key}}';
-
-// Language settings for lovelivesiftwwiki
-if ( $wgDBname === 'lovelivesiftwwiki' ) {
-	$wgDefaultLanguageVariant = "zh-tw";
-	$wgDisabledVariants = array( 'zh-hans', 'zh-hant', 'zh-hk', 'zh-mo', 'zh-my', 'zh-sg' );
-}
 
 if ( $wgCommandLineMode ) {
 # TODO: use OrainHooks:ifUserCanDebug instead of this hack
