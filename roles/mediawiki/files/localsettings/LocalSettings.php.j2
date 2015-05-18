@@ -920,6 +920,12 @@ $wgConf->settings = array(
 			'Server' => NS_SERVER,
 			'Server_talk' => NS_SERVER_TALK,
 		),
+		'quantixhl2rpwiki' => array(
+			'QG' => NS_PROJECT,
+			'QG_Talk' => NS_PROJECT_TALK,
+			'Quantix' => NS_PROJECT,
+			'Quantix Talk' => NS_PROJECT_TALK,
+		),
 	),
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(
@@ -957,6 +963,10 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_FORUM_ORAIN => true, // NS_FORUM_ORAIN should === NS_FORUM
 			NS_TECH => true,
+		),
+		'+quantixhl2rpwiki' => array(
+			NS_MAIN => true,
+			NS_PROJECT => true,
 		),
 		'+reviwiki' => array(
 			NS_MAIN => true,
@@ -1242,6 +1252,18 @@ $wgConf->settings = array(
 				'createtalk' => true,
 			),
 		),
+		'+quantixhl2rpwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'protect' => true,
+			),
+		),
+		'+ironperfectionwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'protect' => true,
+			),
+		),
 		'+keionrailwiki' => array(
 			'user' => array(
 				'movefile' => false,
@@ -1505,6 +1527,12 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			'createwiki'
+		),
+		'+ironperfectionwiki' => array(
+			'bureaucrat'
+		),
+		'+quantixhl2rpwiki' => array(
+			'bureaucrat'
 		),
 	),
 	'+wgRestrictionTypes' => array(
