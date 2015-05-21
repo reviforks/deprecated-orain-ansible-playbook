@@ -104,6 +104,13 @@ define( 'NS_PORTAL', 516);
 define( 'NS_PORTAL_TALK', 517);
 // /sawiki
 
+// quantixhl2rpwiki
+define( 'NS_QUANTIX', 530);
+define( 'NS_QUANTIX_TALK', 531);
+define( 'NS_QG', 532);
+define( 'NS_QG_Talk', 533);
+// /quantixhl2rpwiki
+
 // wikinambaswiki
 define( 'NS_OFICINA', 508 );
 define( 'NS_OFICINA_TALK', 509 );
@@ -467,6 +474,7 @@ $wgConf->settings = array(
 		'fallofedenthegamewiki' => false,
 		'lovelivesiftwwiki' => false,
 		'trialsintaintedspacewiki' => false,
+		'ironperfectionwiki' => false,
 	),
 	// /Files
 
@@ -920,6 +928,12 @@ $wgConf->settings = array(
 			'Server' => NS_SERVER,
 			'Server_talk' => NS_SERVER_TALK,
 		),
+		'quantixhl2rpwiki' => array(
+			'QG' => NS_PROJECT,
+			'QG_Talk' => NS_PROJECT_TALK,
+			'Quantix' => NS_PROJECT,
+			'Quantix_Talk' => NS_PROJECT_TALK,
+		),
 	),
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(
@@ -957,6 +971,12 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_FORUM_ORAIN => true, // NS_FORUM_ORAIN should === NS_FORUM
 			NS_TECH => true,
+		),
+		'+quantixhl2rpwiki' => array(
+			NS_MAIN => true,
+			NS_PROJECT => true,
+			'QG' => true,
+			'Quantix' => true,
 		),
 		'+reviwiki' => array(
 			NS_MAIN => true,
@@ -1242,6 +1262,18 @@ $wgConf->settings = array(
 				'createtalk' => true,
 			),
 		),
+		'+quantixhl2rpwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'protect' => true,
+			),
+		),
+		'+ironperfectionwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'protect' => true,
+			),
+		),
 		'+keionrailwiki' => array(
 			'user' => array(
 				'movefile' => false,
@@ -1505,6 +1537,12 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			'createwiki'
+		),
+		'+ironperfectionwiki' => array(
+			'bureaucrat',
+		),
+		'+quantixhl2rpwiki' => array(
+			'bureaucrat',
 		),
 	),
 	'+wgRestrictionTypes' => array(
