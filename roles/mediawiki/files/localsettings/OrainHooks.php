@@ -5,7 +5,7 @@ $wgHooks['ParserFirstCallInit'][]       = 'OrainHooks::ifUserCanDebug';
 // When moving hooks to this file ifUserCanViewAds was not actually included anywhere
 // Thus it is commented out -- Addshore - 9 Feb 2015
 //$wgHooks['ParserFirstCallInit'][]       = 'OrainHooks::ifUserCanViewAds';
-$wgHooks['SkinAfterBottomScripts'][]    = 'OrainHooks::piwikScript';
+//$wgHooks['SkinAfterBottomScripts'][]    = 'OrainHooks::piwikScript';
 
 class OrainHooks {
 
