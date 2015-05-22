@@ -9,7 +9,7 @@
         user="mediawiki"
         minute=0
         job="/home/mediawiki/db_loop.sh /srv/mediawiki/w/maintenance/runJobs.php"
-  when: "'{{ansible_hostname}}' == 'prod11'"
+  when: "'{{ansible_hostname}}' == 'prod9'"
 
 - name: Create a cronjob for MediaWiki special page updating on All The Tropes
   cron: name="MediaWiki special page updating"
@@ -17,7 +17,7 @@
         minute="0"
         hour="*/3"
         job="/usr/bin/php5 /srv/mediawiki/w/maintenance/updateSpecialPages.php --wiki allthetropeswiki"
-  when: "'{{ansible_hostname}}' == 'prod11'"
+  when: "'{{ansible_hostname}}' == 'prod9'"
 
 - name: Create TorBlock node loader cron
   cron: name="Load TorBlockNodes"
@@ -32,7 +32,7 @@
         minute="0"
         hour="*/12"
         job="/home/mediawiki/db_loop.sh /srv/mediawiki/w/extensions/CheckUser/maintenance/purgeOldData.php"
-  when: "'{{ansible_hostname}}' == 'prod11'"
+  when: "'{{ansible_hostname}}' == 'prod9'"
 
 - name: Purge AbuseFilter IPs
   cron: name="Purge AbuseFilter"
@@ -40,7 +40,7 @@
         minute="0"
         hour="*/12"
         job="/home/mediawiki/db_loop.sh /srv/mediawiki/w/extensions/AbuseFilter/maintenance/purgeOldLogIPData.php"
-  when: "'{{ansible_hostname}}' == 'prod11'"
+  when: "'{{ansible_hostname}}' == 'prod9'"
   
 #- name: Rebuild File Cache
  # cron: name="Rebuild File Cache"
@@ -48,7 +48,7 @@
  #      minute="0"
  #  hour="*/3"
  #      job="/home/mediawiki/db_loop.sh /srv/mediawiki/w/maintenance/rebuildFileCache.php --overwrite"
- # when: "'{{ansible_hostname}}' == 'prod11'"
+ # when: "'{{ansible_hostname}}' == 'prod9'"
 
 - name: Add i18n.sh to boot
   command: /usr/sbin/update-rc.d i18n.sh defaults 99

@@ -5,7 +5,6 @@ prod12
 [mediawikiservers]
 prod8
 prod9
-prod11
 prod13-temp
 prod14-temp
 
@@ -30,6 +29,7 @@ prod6
 
 [loadbalancerservers]
 prod10
+prod11
 
 [apacheservers]
 prod6
