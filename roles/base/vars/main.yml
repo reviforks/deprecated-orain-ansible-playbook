@@ -3,7 +3,7 @@ roots:
   - { name: 'addshore', group: 'roots', groups: 'roots,operations', uid: '2001', state: 'present' }
   - { name: 'arcane', group: 'roots', groups: 'roots,operations', hosts: 'mediawikiservers', uid: '2003', state: 'present' }
   - { name: 'fastlizard4', group: 'roots', groups: 'roots,operations', uid: '2007', state: 'present' }
-  - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002', state: 'absent' }
+  - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002', state: 'present' }
   - { name: 'kudu', group: 'roots', groups: 'roots,operations', uid: '2000', state: 'present' }
   - { name: 'tanner', group: 'roots', groups: 'roots,operations', uid: '2005', state: 'absent' }
   - { name: 'southparkfan', group: 'roots', groups: 'roots,operations', uid: '2004', state: 'present' }
