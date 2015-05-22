@@ -26,6 +26,7 @@
   with_items:
     - bash
     - curl
+    - fail2ban
     - git
     - htop
     - mysql-client # Needed for testing mysql connectivity between instance - Addshore
@@ -41,6 +42,3 @@
     - vim
     - wget
     - zip
-
-- name: Remove fail2ban
-  apt: pkg=fail2ban state=absent
