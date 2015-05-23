@@ -1,5 +1,5 @@
 - name: Install ansible dependencies
-  raw: apt-get install -y python-apt python-simplejson
+  raw: apt-get install -y python-apt python-simplejson python-dev
 
 - name: Update Apt Cache (on the hour)
   apt: update_cache=yes cache_valid_time=3600
