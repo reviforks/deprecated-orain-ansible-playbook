@@ -1,2 +1,2 @@
 - name: Install hhvm
-  apt: pkg=hhvm=3.6.1+dfsg1-1+wm2 force=yes state=present
+  apt: pkg=hhvm=3.3.1+dfsg1-1+wm3.1 force=yes state=present
