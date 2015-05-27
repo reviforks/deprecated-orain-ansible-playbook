@@ -33,6 +33,13 @@
     - Update mediawiki
     - Mediawiki submodule fileMode false
 
+- name: Check out third party libraries for MediaWiki
+  git: repo=https://gerrit.wikimedia.org/r/p/mediawiki/vendor.git
+       dest=/srv/mediawiki/w/vendor
+       version=REL1_25
+  sudo: yes
+  sudo_user: mediawiki
+
 - name: Check out extensions for MediaWiki
   git: repo={{item.repo}}
        dest=/srv/mediawiki/w/{{item.dest}}
