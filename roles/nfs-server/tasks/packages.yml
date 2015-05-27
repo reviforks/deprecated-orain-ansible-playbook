@@ -1,5 +1,5 @@
 - name: Install NFS Server
   apt: pkg={{item}}
   with_items:
-  - nfs-kernel-server
-  - portmap
+  - nfs-kernel-server=1:1.2.8-6ubuntu1.1
+  - rpcbind=0.2.1-2ubuntu2.1
