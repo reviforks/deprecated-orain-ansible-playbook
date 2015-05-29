@@ -5,7 +5,7 @@ extensions:
     dest: 'extensions/AJAXPoll', 
     version: 'REL1_24'
     }
-  - { 
+
     repo: 'https://github.com/wikimedia/mediawiki-extensions-AbuseFilter.git',
     dest: 'extensions/AbuseFilter', 
     version: 'REL1_24'
@@ -133,6 +133,26 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CustomData.git',
     dest: 'extensions/CustomData', 
+    version: 'REL1_24'
+    }
+  - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-DeleteBatch', 
+    dest: 'extensions/DeleteBatch', 
+    version: 'REL1_24'
+    }
+  - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-ReplaceText', 
+    dest: 'extensions/ReplaceText', 
+    version: 'REL1_24'
+    }
+  - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-Editcount', 
+    dest: 'extensions/Editcount', 
+    version: 'REL1_24'
+    }
+  - { 
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-Josa', 
+    dest: 'extensions/Josa', 
     version: 'REL1_24'
     }
   - { 
