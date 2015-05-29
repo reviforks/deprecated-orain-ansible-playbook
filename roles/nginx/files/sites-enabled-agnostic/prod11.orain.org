@@ -1,4 +1,4 @@
-server_name prod11.orain.org 178.62.104.119;
+server_name prod11.orain.org prod11;
 
 root /usr/share/nginx/default;
 index index.html index.htm;
