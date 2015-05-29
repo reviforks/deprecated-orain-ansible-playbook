@@ -7,45 +7,25 @@
     - after.rules
     - before.rules
 
-- name: Allow access on all production IPs
+- name: Allow access on all internal production IPs
   ufw: rule=allow src={{ item }}
   with_items:
-  #prod5 extv4 extv6 intv4
-  - 178.62.7.228
-  - 2a03:b0c0:1:d0::b7:d001
+  # prod5 intv4
   - 10.131.243.246
-  #prod6 extv4 extv6 intv4
-  - 178.62.57.223
-  - 2a03:b0c0:1:d0::13d:a001
+  # prod6 intv4
   - 10.131.232.174
-  #prod7 extv4 extv6 intv4
-  - 178.62.12.13
-  - 2a03:b0c0:1:d0::140:3001
+  # prod7 intv4
   - 10.131.232.37
-  # prod8 extv4 extv6 intv4
-  - 178.62.7.227
-  - 2a03:b0c0:1:d0::b7:c001
+  # prod8 intv4
   - 10.131.243.245
-  # prod9 extv4 extv6 intv4
-  - 178.62.116.171
-  - 2a03:b0c0:1:d0::b7:b001
+  # prod9 intv4
   - 10.131.243.244
-  # prod10 extv4 extv6 intv4
-  - 178.62.5.12
-  - 2a03:b0c0:1:d0::bd:e001
+  # prod10 intv4
   - 10.131.243.49
-  # prod11 extv4 extv6 intv4
-  - 178.62.104.119
-  - 2a03:b0c0:1:d0::b7:f001
+  # prod11 intv4
   - 10.131.243.247
-  # prod12 extv4 extv6 intv4
-  - 178.62.82.169
-  - 2a03:b0c0:1:d0::251:6001
+  # prod12 intv4
   - 10.131.209.107
-  # prod13-temp extv4
-  - 83.167.247.31
-  # prod14-temp extv4
-  - 83.167.247.33
 
 - name: Remove old access rules
   ufw: rule=allow src={{ item }} delete=yes
