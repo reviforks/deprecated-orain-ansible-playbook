@@ -17,11 +17,11 @@ ff02::2 ip6-allrouters
 ff02::3 ip6-allhosts
 
 # Orain local ipv4 addresses
-10.131.243.246  prod5  prod5.orain.org
-10.131.232.174  prod6  prod6.orain.org
-10.131.232.37   prod7  prod7.orain.org
-10.131.243.245  prod8  prod8.orain.org
-10.131.243.244  prod9  prod9.orain.org
-10.131.243.49   prod10 prod10.orain.org
-10.131.243.247  prod11 prod11.orain.org
-10.131.209.107  prod12 prod12.orain.org
+10.131.158.213  prod5  prod5.orain.org
+10.131.158.212  prod6  prod6.orain.org
+10.131.158.211  prod7  prod7.orain.org
+10.131.158.214  prod8  prod8.orain.org
+10.131.158.215  prod9  prod9.orain.org
+10.131.243.243  prod10 prod10.orain.org
+10.131.158.210  prod11 prod11.orain.org
+10.131.158.209  prod12 prod12.orain.org

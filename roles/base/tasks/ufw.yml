@@ -11,21 +11,21 @@
   ufw: rule=allow src={{ item }}
   with_items:
   # prod5 intv4
-  - 10.131.243.246
+  - 10.131.158.213
   # prod6 intv4
-  - 10.131.232.174
+  - 10.131.158.212
   # prod7 intv4
-  - 10.131.232.37
+  - 10.131.158.211
   # prod8 intv4
-  - 10.131.243.245
+  - 10.131.158.214
   # prod9 intv4
-  - 10.131.243.244
+  - 10.131.158.215
   # prod10 intv4
-  - 10.131.243.49
+  - 10.131.243.243
   # prod11 intv4
-  - 10.131.243.247
+  - 10.131.158.210
   # prod12 intv4
-  - 10.131.209.107
+  - 10.131.158.209
 
 - name: Remove old access rules
   ufw: rule=allow src={{ item }} delete=yes

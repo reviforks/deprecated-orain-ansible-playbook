@@ -314,7 +314,7 @@ if ( $wmgUseATTImages ) {
 		'scriptDirUrl' => '//allthetropes.orain.org/w',
 		'fetchDescription' => false,
 		'dbType' => $wgDBtype,
-		'dbServer' => '10.131.243.246',
+		'dbServer' => '10.131.158.213',
 		'dbUser' => $wgDBuser,
 		'dbPassword' => $wgDBpassword,
 		'dbName' => 'allthetropeswiki',
@@ -365,7 +365,7 @@ if ( $wmgUseCharInsert ) {
 	//require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 	//require_once( "$IP/extensions/Elastica/Elastica.php" );
 	//$wgSearchType = 'CirrusSearch';
-	//$wgCirrusSearchServers = array( '10.131.243.49' );
+	//$wgCirrusSearchServers = array( '10.131.243.243' );
 	//$wgCirrusSearchShowNowUsing = true; // 'now using' notice on search
 	//$wgDisableSearchUpdate = true;
 //}
@@ -386,7 +386,7 @@ if ( $wmgUseEchoPack ) {
 if ( $wmgUseIRCRC ) {
 	$wgRCFeeds['Orain'] = array(
 		'formatter' => 'IRCColourfulRCFeedFormatter',
-		'uri' => 'udp://10.131.232.174:5070',
+		'uri' => 'udp://10.131.158.212:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	);
