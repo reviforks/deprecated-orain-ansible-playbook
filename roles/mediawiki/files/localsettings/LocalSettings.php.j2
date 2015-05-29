@@ -759,6 +759,7 @@ $wgConf->settings = array(
 		'mediawikitesterswiki' => true,
 		'memewiki' => true,
 		'metawiki' => true,
+		'quantixhl2rpwiki' => true,
 		'wh40kwiki' => true,
 	),
 	'wmgUseEchoPack' => array(
@@ -813,6 +814,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
+		'gamewiki' => true,
 		'mediawikitesterswiki' => true,
 		'poserdazfreebieswiki' => true,
 	),
@@ -1483,6 +1485,7 @@ $wgConf->settings = array(
 	),
 	'wmgDisableAnonEditing' => array(
 		'default' => false,
+		'aleeiouswiki' => true,
 		'allthetropeswiki' => true,
 		'encyclopediamuricanawiki' => true,
 		'granbluefantasywiki' => true,
@@ -1534,10 +1537,10 @@ $wgConf->settings = array(
 	'+wgRestrictionLevels' => array(
 		'default' => array(
 			'user',
-			'steward'
+			'steward',
 		),
 		'+metawiki' => array(
-			'createwiki'
+			'createwiki',
 		),
 		'+ironperfectionwiki' => array(
 			'bureaucrat',
@@ -1683,11 +1686,14 @@ $wgConf->settings = array(
 	'wgLocaltimezone' => array(
 		'default' => 'Europe/London',
 		'donjonwiki' => 'Europe/Paris',
+		'ironperfectionwiki' => 'America/Detroit',
 		'lovelivesiftwwiki' => 'Asia/Taipei',
 		'nsswiki' => 'Asia/Seoul',
+		'quantixhl2rpwiki' => 'America/Detroit',
 		'reviwiki' => 'Asia/Seoul',
 		'worldnewswiki' => 'Asia/Taipei',
 		'wikilistswiki' => 'Asia/Tokyo',
+		'wikimaenwiki' => 'UTC',
 	),
 	// /Time
 	// Disable $wgTorLoadNodes
