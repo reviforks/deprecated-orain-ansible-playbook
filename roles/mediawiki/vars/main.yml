@@ -5,7 +5,7 @@ extensions:
     dest: 'extensions/AJAXPoll', 
     version: 'REL1_24'
     }
-
+  - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-AbuseFilter.git',
     dest: 'extensions/AbuseFilter', 
     version: 'REL1_24'
