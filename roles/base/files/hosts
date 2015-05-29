@@ -1,0 +1,27 @@
+#
+# Your system has configured 'manage_etc_hosts' as True.
+# As a result, if you wish for changes to this file to persist
+# then you will need to either
+# a.) make changes to the master file in /etc/cloud/templates/hosts.tmpl
+# b.) change or remove the value of 'manage_etc_hosts' in
+#     /etc/cloud/cloud.cfg or cloud-config from user-data
+#
+127.0.0.1 localhost
+
+# The following lines are desirable for IPv6 capable hosts
+::1 ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+
+# Orain local ipv4 addresses
+10.131.243.246  prod5  prod5.orain.org
+10.131.232.174  prod6  prod6.orain.org
+10.131.232.37   prod7  prod7.orain.org
+10.131.243.245  prod8  prod8.orain.org
+10.131.243.244  prod9  prod9.orain.org
+10.131.243.49   prod10 prod10.orain.org
+10.131.243.247  prod11 prod11.orain.org
+10.131.209.107  prod12 prod12.orain.org

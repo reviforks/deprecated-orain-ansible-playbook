@@ -9,6 +9,9 @@
     - /var/log/cron/
   changed_when: False # never report as "changed"
 
+- name: Copy hosts file
+  copy: src="./hosts" dest=/etc/hosts
+
 - name: Copy ansible logrotate configuration
   copy: src="./logrotate.d/ansible" dest=/etc/logrotate.d
 
