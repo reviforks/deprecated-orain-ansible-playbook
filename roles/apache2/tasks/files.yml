@@ -9,9 +9,9 @@
   notify: Reload apache2
 
 - name: Copy apache2 modules configuration files
-  copy: src={{item}} dest=/etc/apache2/mods-enabled
+  copy: src={{item}} dest=/etc/apache2/mods-available
   with_fileglob:
-    - ./mods-enabled/*
+    - ./mods-available/*
   notify: Reload apache2
 
 - name: Copy additional apache2 configuration files
