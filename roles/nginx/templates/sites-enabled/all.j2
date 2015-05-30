@@ -23,7 +23,7 @@ server {
 	listen [::]:80 {{ listen_parameters() }};
 {{ favicon_config() }}
 
-	add_header Content-Security-Policy "default-src 'self' static.orain.org; script-src 'self' piwik.orain.org login.orain.org static.orain.org bits.wikimedia.org www.google.com tools.wmflabs.org *.gstatic.com pagead2.googlesyndication.com ajax.cloudflare.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' static.orain.org 'unsafe-inline' fonts.googleapis.com; font-src *.orain.org themes.googleusercontent.com *.gstatic.com; frame-src www.google.com *.youtube.com *.dailymotion.com *.freenode.net googleads.g.doubleclick.net; object-src *.youtube.com; img-src 'self' data: upload.wikimedia.org www.google.com s3.amazonaws.com static.orain.org bits.orain.org piwik.orain.org;";
+	add_header Content-Security-Policy "default-src 'self' static.orain.org; script-src 'self' *.cloudflare.com cloudflare.com piwik.orain.org login.orain.org static.orain.org bits.wikimedia.org www.google.com tools.wmflabs.org *.gstatic.com pagead2.googlesyndication.com ajax.cloudflare.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' static.orain.org 'unsafe-inline' fonts.googleapis.com; font-src *.orain.org themes.googleusercontent.com *.gstatic.com; frame-src www.google.com *.youtube.com *.dailymotion.com *.freenode.net googleads.g.doubleclick.net; object-src *.youtube.com; img-src 'self' data: upload.wikimedia.org www.google.com s3.amazonaws.com static.orain.org bits.orain.org piwik.orain.org;";
 }
 
 server {
