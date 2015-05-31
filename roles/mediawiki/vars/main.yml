@@ -141,11 +141,6 @@ extensions:
     version: 'REL1_24'
     }
   - { 
-    repo: 'https://github.com/wikimedia/mediawiki-extensions-ReplaceText', 
-    dest: 'extensions/ReplaceText', 
-    version: 'REL1_24'
-    }
-  - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Editcount', 
     dest: 'extensions/Editcount', 
     version: 'REL1_24'
