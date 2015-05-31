@@ -11,6 +11,7 @@ $wgDebugLogGroups = array(
 	'captcha' => "$wmgLogDir/debuglogs/captcha.log",
 	'CentralAuth' => "$wmgLogDir/debuglogs/CentralAuth.log",
 	'CirrusSearch' => "$wmgLogDir/debuglogs/CirrusSearch.log",
+	'CreateWiki' => "$wmgLogDir/debuglogs/CreateWiki.log",
 	'collection' => "$wmgLogDir/debuglogs/collection.log",
 	'DBPerformance' => "$wmgLogDir/debuglogs/dbperformance.log",
 	'exception' => "$wmgLogDir/debuglogs/exception.log",
