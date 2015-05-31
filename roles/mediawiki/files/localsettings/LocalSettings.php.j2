@@ -2013,6 +2013,10 @@ require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
 $wgReCaptchaPublicKey = '6LcC5AATAAAAAFW3aPQLu-jiRdVct5P9rqiTUMEd';
 $wgReCaptchaPrivateKey = '{{recaptcha_private_key}}';
 
+$wgCreateWikiUseCloudFlare = true;
+$wgCloudFlareUser = 'accounts' . '@' . 'orain.org';
+$wgCloudFlareKey = '{{cloudflare_api_key}}';
+
 if ( $wgCommandLineMode ) {
 # TODO: use OrainHooks:ifUserCanDebug instead of this hack
 	//error_reporting( -1 ); // phpredis introduces a *lot* of array issues due to live hack within MediaWiki
