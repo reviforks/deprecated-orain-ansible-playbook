@@ -4,7 +4,7 @@ root /usr/share/nginx/default;
 index index.html index.htm;
 
 location = / {
-	return 301 $scheme://spiral.wiki/wiki/;
+	return 301 $scheme://spiral.orain.org/wiki/;
 }
 
 error_page 404 /404.html; location = /404.html {
