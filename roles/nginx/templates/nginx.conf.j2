@@ -18,6 +18,8 @@ http {
 	add_header X-Frame-Options DENY;
 	server_tokens off;
 
+	# Add server header
+	add_header 'X-Served-By' '{{ ansible_hostname }}' always;
 	include /etc/nginx/mime.types;
 	default_type application/octet-stream;
 	charset UTF-8;
