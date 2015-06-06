@@ -528,7 +528,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Tabs.git',
     dest: 'extensions/Tabs', 
-    version: 'REL1_25'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TemplateSandbox.git',
