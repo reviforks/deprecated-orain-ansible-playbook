@@ -25,13 +25,20 @@
 - name: Check out latest stable WMF branch of MediaWiki
   git: repo=https://github.com/Orain/mediawiki-core.git
        dest=/srv/mediawiki/w
-       version=REL1_24
+       version=REL1_25
   sudo: yes
   sudo_user: mediawiki
   notify:
     - Rebuild localisation cache
     - Update mediawiki
     - Mediawiki submodule fileMode false
+
+- name: Check out third party libraries for MediaWiki
+  git: repo=https://gerrit.wikimedia.org/r/p/mediawiki/vendor.git
+       dest=/srv/mediawiki/w/vendor
+       version=REL1_25
+  sudo: yes
+  sudo_user: mediawiki
 
 - name: Check out extensions for MediaWiki
   git: repo={{item.repo}}

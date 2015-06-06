@@ -26,7 +26,7 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
-$wgConf->localVHosts = array( '{{mysql_address}}' );
+$wgLocalVirtualHosts = array( '{{mysql_address}}' );
 
 // @note TBLSRC_LOCALPAGE and TBLSRC_URL are defined automatically by the TitleBlacklist entry file.
 //       therefore we use the below ORAIN constants for referencing the values in LocalSettings.php
