@@ -10,4 +10,4 @@ roots:
 
 users:
   - { name: 'zacharydubois', group: 'mediawiki-ops', groups: 'mediawiki-ops', hosts: 'mediawikiservers', uid: '2006', state: 'absent' }
-  - { name: 'ndkilla', : group: 'mediawiki-ops', groups: 'mediawiki-ops', hosts: 'mediawikiservers', uid: '2008', state: 'present' }
+  - { name: 'ndkilla', group: 'mediawiki-ops', groups: 'mediawiki-ops', hosts: 'mediawikiservers', uid: '2008', state: 'present' }
