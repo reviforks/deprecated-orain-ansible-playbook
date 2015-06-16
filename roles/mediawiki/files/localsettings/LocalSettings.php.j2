@@ -1986,7 +1986,7 @@ $wgLoadScript = "//$wmgUploadHostname/$wmgHostname/load.php";
 // Don't care about LC cache in maintenance scripts, otherwise it
 // might throw errors (e.g. during a server setup where rebuildLocalisationCache.php
 // automatically runs, and it can't find a cache, so
-// it throws an exception and then dies.
+// it throws an exception and then dies).
 
 if ( !$wgCommandLineMode ) { 
 	$wgLocalisationCacheConf['manualRecache'] = true;
