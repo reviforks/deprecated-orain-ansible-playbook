@@ -1982,7 +1982,16 @@ $wgScribuntoEngineConf['luastandalone']['luaPath'] = "$IP/extensions/Scribunto/e
 $wgCacheDirectory = '/tmp/mw-cache';
 $wgFileCacheDirectory = "/mnt/mediawiki/filecache/$wmgHostname";
 $wgLoadScript = "//$wmgUploadHostname/$wmgHostname/load.php";
-$wgLocalisationCacheConf['manualRecache'] = true;
+
+// Don't care about LC cache in maintenance scripts, otherwise it
+// might throw errors (e.g. during a server setup where rebuildLocalisationCache.php
+// automatically runs, and it can't find a cache, so
+// it throws an exception and then dies.
+
+if ( !$wgCommandLineMode ) { 
+	$wgLocalisationCacheConf['manualRecache'] = true;
+}
+
 $wgUploadDirectory = "/mnt/mediawiki/uploads/$wmgHostname/images";
 $wgUploadPath = "//$wmgUploadHostname/$wmgHostname/images";
 
