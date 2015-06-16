@@ -9,4 +9,4 @@
 
 # This would perhaps be better named mediawiki-scripts?
 - name: Create user "www-scripts"
-  user: name=www-scripts group=www-data shell=/bin/zsh
+  user: name=www-scripts group=www-data shell=/bin/zsh uid='2020'
