@@ -3,6 +3,7 @@
   with_items:
   - { name: 'roots', gid: '2003' }
   - { name: 'operations', gid: '2004' }
+  - { name: 'mediawiki-ops', gid: '2005' }
 
 - name: Remove old user group "{{item}}"
   group: name={{item}} state=absent
