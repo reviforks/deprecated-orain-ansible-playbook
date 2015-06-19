@@ -42,11 +42,11 @@
               validate='visudo -cf %s'
 
 - name: Manage root user "{{item.name}}" in "{{item.groups}}"
-  user: name={{item.name}} group={{item.group}} groups={{item.groups}} uid={{item.uid}} shell=/bin/zsh state={{item.state}}
+  user: name={{item.name}} group={{item.group}} groups={{item.groups}} uid={{item.uid}} shell={{item.shell}} state={{item.state}}
   with_items: roots
 
 - name: Manage user "{{item.name}}" in "{{item.groups}}"
-  user: name={{item.name}} group={{item.group}} groups={{item.groups}} uid={{item.uid}} shell=/bin/zsh state={{item.state}}
+  user: name={{item.name}} group={{item.group}} groups={{item.groups}} uid={{item.uid}} shell={{item.shell}} state={{item.state}}
   when: "'{{item.hosts}}' in group_names"
   with_items: users
 

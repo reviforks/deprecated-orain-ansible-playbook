@@ -1,13 +1,13 @@
 ---
 roots:
-  - { name: 'addshore', group: 'roots', groups: 'roots,operations', uid: '2001', state: 'present' }
-  - { name: 'arcane', group: 'roots', groups: 'roots,operations', hosts: 'mediawikiservers', uid: '2003', state: 'present' }
-  - { name: 'fastlizard4', group: 'roots', groups: 'roots,operations', uid: '2007', state: 'present' }
-  - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002', state: 'absent' }
-  - { name: 'kudu', group: 'roots', groups: 'roots,operations', uid: '2000', state: 'present' }
-  - { name: 'tanner', group: 'roots', groups: 'roots,operations', uid: '2005', state: 'absent' }
-  - { name: 'southparkfan', group: 'roots', groups: 'roots,operations', uid: '2004', state: 'present' }
+  - { name: 'addshore', group: 'roots', groups: 'roots,operations', uid: '2001', shell: '/bin/zsh', state: 'present' }
+  - { name: 'arcane', group: 'roots', groups: 'roots,operations', hosts: 'mediawikiservers', uid: '2003', shell: '/bin/zsh', state: 'present' }
+  - { name: 'fastlizard4', group: 'roots', groups: 'roots,operations', uid: '2007', shell: '/bin/zsh', state: 'present' }
+  - { name: 'johnflewis', group: 'roots', groups: 'roots,operations', uid: '2002', shell: '/bin/zsh', state: 'absent' }
+  - { name: 'kudu', group: 'roots', groups: 'roots,operations', uid: '2000', shell: '/bin/zsh', state: 'present' }
+  - { name: 'tanner', group: 'roots', groups: 'roots,operations', uid: '2005', shell: '/bin/zsh', state: 'absent' }
+  - { name: 'southparkfan', group: 'roots', groups: 'roots,operations', uid: '2004', shell: '/bin/bash', state: 'present' }
 
 users:
-  - { name: 'zacharydubois', group: 'mediawiki-ops', groups: 'mediawiki-ops', hosts: 'mediawikiservers', uid: '2006', state: 'absent' }
-  - { name: 'ndkilla', group: 'mediawiki-ops', groups: 'mediawiki-ops', hosts: 'mediawikiservers', uid: '2008', state: 'present' }
+  - { name: 'zacharydubois', group: 'mediawiki-ops', groups: 'mediawiki-ops', hosts: 'mediawikiservers', uid: '2006', shell: '/bin/zsh', state: 'absent' }
+  - { name: 'ndkilla', group: 'mediawiki-ops', groups: 'mediawiki-ops', hosts: 'mediawikiservers', uid: '2008', shell: '/bin/zsh', state: 'present' }
