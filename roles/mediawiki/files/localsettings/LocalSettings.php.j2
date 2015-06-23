@@ -661,6 +661,7 @@ $wgConf->settings = array(
 	),
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
+		'anarchismwiki' => 'CC0 Public Domain',
 		'spiralwiki' => 'CC0 Public Domain',
 		'corruptionofchampionswiki' => 'Creative Commons Attribution NonCommerical Share Alike',
 		'fallofedenthegamewiki' => 'Creative Commons Attribution NonCommerical Share Alike',
@@ -669,6 +670,7 @@ $wgConf->settings = array(
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+		'anarchismwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'corruptionofchampionswiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 		'fallofedenthegamewiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
@@ -888,6 +890,26 @@ $wgConf->settings = array(
 			NS_OP => 'Op',
 			NS_OP_TALK => 'Op_talk',
 		),
+		'firstrobotixwiki' => array(
+			NS_FLL => 'FLL',
+			NS_FLL_TALK => 'FLL_talk',
+			NS_FTC => 'FTC',
+			NS_FTC_TALK => 'FTC_talk',
+			NS_FRC => 'FRC',
+			NS_FRC_TALK => 'FRC_talk',
+			NS_TEAM => 'Team',
+			NS_TEAM_TALK => 'Team_talk',
+			NS_MENTOR => 'Mentor',
+			NS_MENTOR_TALK => 'Mentor_talk',
+			NS_COACH => 'Coach',
+			NS_COACH_TALK => 'Coach_talk',
+			NS_PARTNER => 'Partner',
+			NS_PARTNER_TALK => 'Partner_talk',
+			NS_WIKIINTERNAL => 'WikiInternal',
+			NS_WIKIINTERNAL_TALK => 'WikiInternal_talk',
+			NS_EVENT => 'Event',
+			NS_EVENT_TALK => 'Event_talk',
+		),
 		'frmodamobwiki' => array(
 			NS_PORTAIL => 'Portail',
 			NS_PORTAIL_TALK => 'Discussion_Portail',
@@ -974,6 +996,17 @@ $wgConf->settings = array(
 		'+councilwiki' => array(
 			NS_RESOLUTION => true,
 			NS_WORKSPACE => true,
+		),
+		'+firstrobotixwiki' => array(
+			NS_FLL => true,
+			NS_FTC => true,
+			NS_FRC => true,
+			NS_TEAM => true,
+			NS_MENTOR => true,
+			NS_COACH => true,
+			NS_PARTNER => true,
+			NS_WIKIINTERNAL => true,
+			NS_EVENT => true,
 		),
 		'+frmodamobwiki' => array(
 			NS_PORTAIL => true,
@@ -1076,8 +1109,39 @@ $wgConf->settings = array(
 				'member',
 			),
 		),
+		'+firstrobotixwiki' => array(
+			'bureaucrat' => array(
+				'coach',
+				'official',
+				'teammember',
+				'mentor',
+			),
+			'sysop' => array(
+				'coach',
+				'official',
+				'teammember',
+				'mentor',
+			),
+		),
 		'+qumegalithwiki' => array(
 			'sysop' => array(
+				'member',
+			),
+		),
+		'+quantixdevwiki' => array(
+			'owner' => array(
+				'owner',
+				'bureaucrat',
+				'sysop',
+				'coder',
+				'member',
+			),
+			'bureaucrat' => array(
+				'coder',
+				'member',
+			),
+			'coder' => array(
+				'coder',
 				'member',
 			),
 		),
@@ -1211,6 +1275,20 @@ $wgConf->settings = array(
 				'edit' => true,
 				'createpage' => true,
 				'createtalk' => true,
+			),
+		),
+		'+firstrobotixwiki' => array(
+			'mentor' => array(
+				'read' => true,
+			),
+			'teammember' => array(
+				'read' => true,
+			),
+			'official' => array(
+				'read' => true,
+			),
+			'coach' => array(
+				'read' => true,
 			),
 		),
 		'+goldcraftmcwiki' => array(
@@ -1460,6 +1538,33 @@ $wgConf->settings = array(
 				'createtalk' => true,
 			),
 		),
+		'+quantixdevwiki' => array(
+			'owner' => array(
+				'owner' => true,
+				'read' => true,
+				'edit' => true,
+				'editprotected' => true,
+				'editsemiprotected' => true,
+				'protect' => true,
+				'block' => true,
+				'unblockself' => true,
+			),
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'read' => true,
+				'edit' => true,
+				'protect' => true,
+				'unblockself' => true,
+			),
+			'coder' => array(
+				'coder' => true,
+				'read' => true,
+				'protect' => true,
+				'edit' => true,
+				'editsemiprotected' => true,
+				'editprotected' => true,
+			),
+		),
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
@@ -1497,6 +1602,36 @@ $wgConf->settings = array(
 				'member',
 			),
 		),
+		'+firstrobotixwiki' => array(
+			'bureaucrat' => array(
+				'coach',
+				'official',
+				'teammember',
+				'mentor',
+			),
+			'sysop' => array(
+				'coach',
+				'official',
+				'teammember',
+				'mentor',
+			),
+		),
+		'+quantixdevwiki' => array(
+			'owner' => array(
+				'bureaucrat',
+				'sysop',
+				'coder',
+				'member',
+			),
+			'bureaucrat' => array(
+				'coder',
+				'member',
+			),
+			'coder' => array(
+				'coder',
+				'member',
+			),
+		),
 		'+qumegalithwiki' => array(
 			'sysop' => array(
 				'member',
@@ -1511,6 +1646,7 @@ $wgConf->settings = array(
 		'granbluefantasywiki' => true,
 		'nationalewiki' => true,
 		'hyperiondevwiki' => true,
+		'krswwiki' => true,
 		'loginwiki' => true,
 		'peachywiki' => true,
 		'perronwiki' => true,
@@ -1564,6 +1700,10 @@ $wgConf->settings = array(
 		),
 		'+ironperfectionwiki' => array(
 			'bureaucrat',
+		),
+		'+quantixdevwiki' => array(
+			'bureaucrat',
+			'owner',
 		),
 		'+quantixhl2rpwiki' => array(
 			'bureaucrat',
