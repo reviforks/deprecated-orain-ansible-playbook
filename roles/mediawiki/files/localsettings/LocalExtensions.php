@@ -162,6 +162,9 @@ switch( $wgDBname ) {
 		$wgWebChatChannel = '#orain';
 		$wgWebChatClient = 'freenodeChat';
 		require_once "$IP/extensions/WikiBanner/WikiBanner.php";
+		require_once( "$IP/extensions/DeleteBatch/DeleteBatch.php" );
+		require_once( "$IP/extensions/Editcount/Editcount.php" );
+		require_once( "$IP/extensions/Josa/Josa.php" );
 		break;
 	case 'gamewiki':
 		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
