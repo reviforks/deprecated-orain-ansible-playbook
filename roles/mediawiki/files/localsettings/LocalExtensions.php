@@ -58,6 +58,12 @@ switch( $wgDBname ) {
 	case 'avanversewiki':
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		break;
+	case 'bibbia2000wiki':
+		$wgCollectionFormats = array(
+			'rl' => 'PDF',
+			'odf' => 'ODT',
+		);
+		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
