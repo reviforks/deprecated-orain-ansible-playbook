@@ -355,8 +355,8 @@ if ( $wmgUseCollectionPDF ) {
 	require_once( "$IP/extensions/Collection/Collection.php" );
 	require_once( "$IP/extensions/PdfBook/PdfBook.php" );
 	// Rights
-	$wgGroupPermissions['user']['collectionsavecommunitypage'] = true;
-	$wgGroupPermissions['user']['collectionsaveuserpage'] = true;
+	$wgGroupPermissions['user']['collectionsaveascommunitypage'] = true;
+	$wgGroupPermissions['user']['collectionsaveasuserpage'] = true;
 }
 
 if ( $wmgUseCharInsert ) {
