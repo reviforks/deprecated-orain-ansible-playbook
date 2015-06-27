@@ -15,5 +15,5 @@
   - php5-geoip
   - php5-json
   - php5-mcrypt
-  - php5-mysql
+  - php5-mysqlnd
   - php5-readline
