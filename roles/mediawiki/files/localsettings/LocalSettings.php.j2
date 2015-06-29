@@ -1102,7 +1102,14 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	// /Performance
-
+	
+	// upload by url
+	'wgAllowCopyUploads' => array(
+		'default' => false,
+		'gologwiki' => true,
+	),
+	// /upload by url
+	
 	// Permissions
 	'wgAddGroups' => array(
 		'default' => array(
@@ -1330,6 +1337,11 @@ $wgConf->settings = array(
 				'edit' => true,
 				'createpage' => true,
 				'createtalk' => true,
+			),
+		),
+		'+gologwiki' => array(
+			'sysop' => array(
+				'upload_by_url' => true,
 			),
 		),
 		'+grepobotwiki' => array(
