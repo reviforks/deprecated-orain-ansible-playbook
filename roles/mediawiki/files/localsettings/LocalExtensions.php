@@ -6,10 +6,10 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 		require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
-		require_once( "$IP/extensions/CSS/CSS.php" );
+		#require_once( "$IP/extensions/CSS/CSS.php" ); // Exceptions --SPF
 		require_once( "$IP/extensions/CustomData/CustomData.php" );
-		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
-		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		#require_once( "$IP/extensions/Disambiguator/Disambiguator.php" ); // Exceptions --SPF
+		#require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" ); // Exceptions --SPF
 		require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
 		$wgGoogleAnalyticsAccount = "UA-58596506-3";
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
@@ -28,7 +28,7 @@ switch( $wgDBname ) {
 		$wgMediaViewerIsInBeta = true;
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/NoTitle/NoTitle.php" );
-		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
+		#require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" ); // Exceptions --SPF
 		require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/RecentChangesLogFilter/RecentChangesLogFilter.php" );
