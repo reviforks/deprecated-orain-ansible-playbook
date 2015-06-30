@@ -1107,6 +1107,14 @@ $wgConf->settings = array(
 	'wgAllowCopyUploads' => array(
 		'default' => false,
 		'gologwiki' => true,
+		'quantixwiki' => true,
+		'quantixdevwiki' => true,
+	),
+	'wgCopyUploadsFromSpecialUpload' => array(
+		'default' => false,
+		'gologwiki' => true,
+		'quantixwiki' => true,
+		'quantixdevwiki' => true,
 	),
 	// /upload by url
 	
@@ -1393,10 +1401,14 @@ $wgConf->settings = array(
 				'createtalk' => true,
 			),
 		),
-		'+quantixhl2rpwiki' => array(
+		'+quantixwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
 				'protect' => true,
+				'upload_by_url' => true,
+			),
+			'sysop' => array(
+				'upload_by_url' => true,
 			),
 		),
 		'+ironperfectionwiki' => array(
@@ -1585,6 +1597,7 @@ $wgConf->settings = array(
 				'protect' => true,
 				'block' => true,
 				'unblockself' => true,
+				'upload_by_url' => true,
 			),
 			'bureaucrat' => array(
 				'bureaucrat' => true,
@@ -1592,6 +1605,7 @@ $wgConf->settings = array(
 				'edit' => true,
 				'protect' => true,
 				'unblockself' => true,
+				'upload_by_url' => true,
 			),
 			'coder' => array(
 				'coder' => true,
@@ -1600,6 +1614,10 @@ $wgConf->settings = array(
 				'edit' => true,
 				'editsemiprotected' => true,
 				'editprotected' => true,
+				'upload_by_url' => true,
+			),
+			'sysop' => array(
+				'upload_by_url' => true,
 			),
 		),
 	),
