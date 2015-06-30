@@ -34,17 +34,17 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RecentChangesLogFilter/RecentChangesLogFilter.php" );
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
-		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
+		#require_once( "$IP/extensions/RegexFun/RegexFun.php" ); // Exceptions --SPF
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		// Configurations
 		$wgSectionHideShowtop = 1;
 		$wgRestrictDisplayTitle = false;
-		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
-		require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
+		#require_once( "$IP/extensions/SubpageFun/SubpageFun.php" ); // Exceptions --SPF
+		#require_once( "$IP/extensions/SubPageList3/SubPageList3.php" ); // Exceptions --SPF
 		require_once( "$IP/extensions/Tabs/Tabs.php" );
 		#require_once( "$IP/extensions/TocTree/TocTree.php" );
 		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
-		require_once( "$IP/extensions/VoteNY/Vote.php" );
+		#require_once( "$IP/extensions/VoteNY/Vote.php" ); // Exceptions --SPF
 		require_once( "$IP/extensions/WebChat/WebChat.php" );
 		$wgWebChatServer  = ''; // Not needed due to wgWebChatClient --SPF
 		$wgWebChatChannel = '#allthetropes';
@@ -116,20 +116,20 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Arrays/Arrays.php" );
 		require_once( "$IP/extensions/cldr/cldr.php" );
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
-		require_once( "$IP/extensions/Comments/Comment.php" );
+		#require_once( "$IP/extensions/Comments/Comment.php" );
 		$wgCommentsInRecentChanges = true;
 		require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
 		require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
-		require_once( "$IP/extensions/CSS/CSS.php" );
+		#require_once( "$IP/extensions/CSS/CSS.php" );
 		require_once( "$IP/extensions/CustomData/CustomData.php" );
-		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
-		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		#require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
+		#require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		#require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
 		#$wgGoogleAnalyticsAccount = "UA-58596506-2";
-		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
+		#require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/Math/Math.php" );
 		require_once( "$IP/extensions/MsLinks/MsLinks.php" );
