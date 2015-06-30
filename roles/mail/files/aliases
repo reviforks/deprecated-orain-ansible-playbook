@@ -11,7 +11,7 @@ noc: root
 security: root
 
 # sysadmin group
-sysadmin: southparkfan223@hotmail.com,addshore,fastlizard4
+sysadmin: addshore,fastlizard4
 root: sysadmin
 operations: sysadmin
 
@@ -19,7 +19,7 @@ operations: sysadmin
 paypal: dusti,addshore
 
 # accounts for umbrella of other stuff
-accounts: southparkfan223@hotmail.com,addshore,dusti
+accounts: addshore,dusti
 
 # nagios
 nagios: sysadmin
@@ -31,7 +31,7 @@ addshore: addshorewiki@gmail.com
 admin: accounts
 
 # staff
-staff: southparkfan223@hotmail.com,addshore,dusti,arcane@live.com,kudu.py@gmail.com,fastlizard4,ndkilla@orain.org,justin22622@gmail.com
+staff: addshore,dusti,arcane@live.com,kudu.py@gmail.com,fastlizard4,ndkilla@orain.org,justin22622@gmail.com
 
 # forward dusti@ to dusti's email temporarily
 dusti: dahowe@bsugmail.net
