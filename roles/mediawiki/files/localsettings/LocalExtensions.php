@@ -2,6 +2,9 @@
 
 // Switch case
 switch( $wgDBname ) {
+	case 'ndkillawiki':
+		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		break;
 	case 'allthetropeswiki':
 		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
 		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
