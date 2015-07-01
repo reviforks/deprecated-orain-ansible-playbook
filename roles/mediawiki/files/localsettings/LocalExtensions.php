@@ -79,7 +79,7 @@ switch( $wgDBname ) {
 		break;
 	case 'cwsplanetwiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
-		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		#require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		break;
 	case 'deguwiki':
 		require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
@@ -88,7 +88,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		break;
 	case 'donjonwiki':
-		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		#require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 		$wgMediaViewerIsInBeta = true;
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
@@ -174,7 +174,7 @@ switch( $wgDBname ) {
 		break;
 	case 'gamewiki':
 		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
-		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		#require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/MsUpload/MsUpload.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		$wgMultiBoilerplateOptions = false;
@@ -266,7 +266,7 @@ switch( $wgDBname ) {
 
 		break;
 	case 'rightwiki':
-		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		#require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		require_once( "$IP/extensions/Math/Math.php" );
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 		break;
