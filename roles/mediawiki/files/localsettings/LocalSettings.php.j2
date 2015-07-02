@@ -549,6 +549,25 @@ $wgConf->settings = array(
 				'block' => true,
 			),
 		),
+		'private' => array(
+			'*' => array(
+				'read' => false,
+				'edit' => false,
+			),
+			'user' => array(
+				'read' => false,
+				'edit' => false,
+			),
+			'member' => array(
+				'read' => true,
+			),
+			'sysop' => array(
+				'read' => true,
+			),
+			'bureaucrat' => array(
+				'read' => true,
+			),
+		),
 		'closed' => array(
 			'*' => array(
 				'edit' => false,
@@ -604,23 +623,6 @@ $wgConf->settings = array(
 				'reupload' => false,
 				'reupload-shared' => false,
 				'upload' => false,
-			),
-		),
-		'private' => array(
-			'*' => array(
-				'read' => false,
-			),
-			'user' => array(
-				'read' => false,
-			),
-			'member' => array(
-				'read' => true,
-			),
-			'sysop' => array(
-				'read' => true,
-			),
-			'bureaucrat' => array(
-				'read' => true,
 			),
 		),
 	),
