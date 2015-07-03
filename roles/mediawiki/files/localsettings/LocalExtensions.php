@@ -6,17 +6,17 @@ switch( $wgDBname ) {
 		#require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		break;
 	case 'allthetropeswiki':
-		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
+		#require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
 		#require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
-		require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
-		require_once( "$IP/extensions/CSS/CSS.php" ); // Exceptions --SPF
-		require_once( "$IP/extensions/CustomData/CustomData.php" );
-		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" ); // Exceptions --SPF
-		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" ); // Exceptions --SPF
+		#require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
+		#require_once( "$IP/extensions/CSS/CSS.php" ); // Exceptions --SPF
+		#require_once( "$IP/extensions/CustomData/CustomData.php" );
+		#require_once( "$IP/extensions/Disambiguator/Disambiguator.php" ); // Exceptions --SPF
+		#require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" ); // Exceptions --SPF
 		#require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
 		#$wgGoogleAnalyticsAccount = "UA-58596506-3";
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
-		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
+		#require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		#require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		#require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
 		#require_once( "$IP/extensions/MsLinks/MsLinks.php" );
@@ -25,14 +25,14 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		$wgMultiBoilerplateOptions = false;
 		$wgMultiBoilerplateDiplaySpecialPage = true;
-		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
-		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+		#require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
+		#require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 		#require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php");
 		#$wgMediaViewerIsInBeta = true;
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/NoTitle/NoTitle.php" );
 		#require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" ); // Exceptions --SPF
-		require_once( "$IP/extensions/PageTriage/PageTriage.php" );
+		#require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		#require_once( "$IP/extensions/RecentChangesLogFilter/RecentChangesLogFilter.php" );
 		#require_once( "$IP/extensions/PageTools/PageTools.php" );
@@ -43,16 +43,16 @@ switch( $wgDBname ) {
 		$wgSectionHideShowtop = 1;
 		$wgRestrictDisplayTitle = false;
 		#require_once( "$IP/extensions/SubpageFun/SubpageFun.php" ); // Exceptions --SPF
-		require_once( "$IP/extensions/SubPageList3/SubPageList3.php" ); // Exceptions --SPF
+		#require_once( "$IP/extensions/SubPageList3/SubPageList3.php" ); // Exceptions --SPF
 		require_once( "$IP/extensions/Tabs/Tabs.php" );
 		#require_once( "$IP/extensions/TocTree/TocTree.php" );
 		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
-		require_once( "$IP/extensions/VoteNY/Vote.php" ); // Exceptions --SPF
-		require_once( "$IP/extensions/WebChat/WebChat.php" );
-		$wgWebChatServer  = ''; // Not needed due to wgWebChatClient --SPF
-		$wgWebChatChannel = '#allthetropes';
-		$wgWebChatClient = 'freenodeChat';
-		require_once( "$IP/extensions/Widgets/Widgets.php" );
+		#require_once( "$IP/extensions/VoteNY/Vote.php" ); // Exceptions --SPF
+		#require_once( "$IP/extensions/WebChat/WebChat.php" );
+		#$wgWebChatServer  = ''; // Not needed due to wgWebChatClient --SPF
+		#$wgWebChatChannel = '#allthetropes';
+		#$wgWebChatClient = 'freenodeChat';
+		#require_once( "$IP/extensions/Widgets/Widgets.php" );
 
 		// Break this off - Do not modify
 		$wgDisableTextSearch = true;
