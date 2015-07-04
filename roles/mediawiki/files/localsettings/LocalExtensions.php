@@ -118,6 +118,7 @@ switch( $wgDBname ) {
 		#$wgAdManagerCode = $1;
 		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
 		require_once( "$IP/extensions/Arrays/Arrays.php" );
+		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 		require_once( "$IP/extensions/cldr/cldr.php" );
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
@@ -131,7 +132,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
 		$wgGoogleAnalyticsAccount = "UA-58596506-2";
-		#require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
+		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/Math/Math.php" );
 		require_once( "$IP/extensions/MsLinks/MsLinks.php" );
@@ -146,6 +147,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
+		require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
