@@ -2,9 +2,6 @@
 
 $wgHooks['MakeGlobalVariablesScript'][] = 'OrainHooks::onMakeGlobalVariablesScript';
 $wgHooks['ParserFirstCallInit'][]       = 'OrainHooks::ifUserCanDebug';
-// When moving hooks to this file ifUserCanViewAds was not actually included anywhere
-// Thus it is commented out -- Addshore - 9 Feb 2015
-//$wgHooks['ParserFirstCallInit'][]       = 'OrainHooks::ifUserCanViewAds';
 $wgHooks['SkinAfterBottomScripts'][]    = 'OrainHooks::piwikScript';
 
 class OrainHooks {
@@ -18,16 +15,6 @@ class OrainHooks {
 	static function onMakeGlobalVariablesScript( &$vars, OutputPage $out ) {
 		if ( defined( 'HHVM_VERSION' ) ) {
 			$vars['wgPoweredByHHVM'] = true;
-		}
-	}
-
-	/**
-	 * This allows users that are allowed to 'viewads' to view ads
-	 */
-	static function ifUserCanViewAds() {
-		global $wgUser, $wgGoogleAdSenseAnonOnly;
-		if ( $wgUser->isAllowed( 'viewads' ) ) {
-			$wgGoogleAdSenseAnonOnly = false; // poor-ish hack right now.
 		}
 	}
 
