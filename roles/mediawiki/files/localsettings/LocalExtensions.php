@@ -120,8 +120,6 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Arrays/Arrays.php" );
 		require_once( "$IP/extensions/cldr/cldr.php" );
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
-		#require_once( "$IP/extensions/Comments/Comment.php" );
-		$wgCommentsInRecentChanges = true;
 		require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
 		require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 		require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
@@ -212,7 +210,7 @@ switch( $wgDBname ) {
 		$wgCategoryTreeMaxChildren = 2000;
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
-		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
+		#require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" ); // This is not currently enabled on extload :/ - Addshore July 2015
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
