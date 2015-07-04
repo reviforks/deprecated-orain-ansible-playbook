@@ -373,16 +373,6 @@ if ( $wmgUseCharInsert ) {
 	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 }
 
-//if ( $wmgUseCirrus ) {
-	// Keep commented in case of emergency fall back -J
-	//require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
-	//require_once( "$IP/extensions/Elastica/Elastica.php" );
-	//$wgSearchType = 'CirrusSearch';
-	//$wgCirrusSearchServers = array( '10.131.243.243' );
-	//$wgCirrusSearchShowNowUsing = true; // 'now using' notice on search
-	//$wgDisableSearchUpdate = true;
-//}
-
 if ( $wmgUseDismissableSiteNotice ) {
 	require_once( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
 }
