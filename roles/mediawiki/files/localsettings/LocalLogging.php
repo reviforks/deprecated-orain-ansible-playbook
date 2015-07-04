@@ -17,6 +17,7 @@ $wgDebugLogGroups = array(
 	'DBPerformance' => "$wmgLogDir/debuglogs/dbperformance.log",
 	'exception' => "$wmgLogDir/debuglogs/exception.log",
 	'exec' => "$wmgLogDir/debuglogs/exec.log",
+	'magic' => "$wmgLogDir/debuglogs/magic.log",
 	'Math' => "$wmgLogDir/debuglogs/Math.log",
 	'OAuth' => "$wmgLogDir/debuglogs/OAuth.log",
 	'redis' => "$wmgLogDir/debuglogs/redis.log",
