@@ -1,2 +1,2 @@
 - name: Install HAProxy
-  apt: pkg=haproxy=1.5.11-1ppa1~trusty state=present
+  apt: pkg=haproxy state=present
