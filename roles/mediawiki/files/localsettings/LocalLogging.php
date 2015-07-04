@@ -7,6 +7,7 @@ $wgDebugLogFile = "$wmgLogDir/$wmgHostname.log";
 $wgDBerrorLog = "$wmgLogDir/debuglogs/database.log";
 $wgDebugLogGroups = array(
 	'404' => "$wmgLogDir/debuglogs/404.log",
+	'addshore' => "$wmgLogDir/debuglogs/addshore.log",
 	'api' => "$wmgLogDir/debuglogs/api.log",
 	'captcha' => "$wmgLogDir/debuglogs/captcha.log",
 	'CentralAuth' => "$wmgLogDir/debuglogs/CentralAuth.log",
