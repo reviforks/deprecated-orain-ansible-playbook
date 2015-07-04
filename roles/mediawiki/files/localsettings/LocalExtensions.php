@@ -7,7 +7,7 @@ switch( $wgDBname ) {
 		break;
 	case 'allthetropeswiki':
 		require_once( "$IP/extensions/AJAXPoll/AJAXPoll.php" );
-		#require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" ); // This IS NOT loaded on extload wiki - DO NOT ENABLE - Addshore July 2015
+		require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 		require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
 		require_once( "$IP/extensions/CSS/CSS.php" );
 		require_once( "$IP/extensions/CustomData/CustomData.php" );
@@ -43,7 +43,7 @@ switch( $wgDBname ) {
 		$wgSectionHideShowtop = 1;
 		$wgRestrictDisplayTitle = false;
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
-		#require_once( "$IP/extensions/SubPageList3/SubPageList3.php" ); // This IS NOT loaded on extload wiki - DO NOT ENABLE - Addshore July 2015
+		require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 		require_once( "$IP/extensions/Tabs/Tabs.php" );
 		require_once( "$IP/extensions/TocTree/TocTree.php" );
 		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
@@ -212,7 +212,7 @@ switch( $wgDBname ) {
 		$wgCategoryTreeMaxChildren = 2000;
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
-		#require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" ); // This is not currently enabled on extload :/ - Addshore July 2015
+		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
