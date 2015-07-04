@@ -103,12 +103,12 @@ switch( $wgDBname ) {
 		break;
 	case 'encyclopediumwiki' :
 		$wgForeignFileRepos[] = array(
-		   'class'                   => 'ForeignAPIRepo',
-		   'name'                    => 'WH40KLex',
-		   'apibase'                 => 'http://wh40k.lexicanum.com/mediawiki/api.php',
-		   'fetchDescription'        => true, // Optional
-		   'descriptionCacheExpiry'  => 43200, // 12 hours, optional (values are seconds)
-		   'apiThumbCacheExpiry'     => 43200, // 12 hours, optional, but required for local thumb caching
+			'class'                   => 'ForeignAPIRepo',
+			'name'                    => 'WH40KLex',
+			'apibase'                 => 'http://wh40k.lexicanum.com/mediawiki/api.php',
+			'fetchDescription'        => true, // Optional
+			//'descriptionCacheExpiry'  => 43200, // 12 hours, optional (values are seconds)
+			//'apiThumbCacheExpiry'     => 43200, // 12 hours, optional, but required for local thumb caching
 		);
 		break;
 	case 'extloadwiki':
