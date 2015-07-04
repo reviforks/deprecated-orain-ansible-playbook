@@ -6,11 +6,3 @@
   notify: Reload php-fpm
   # 20-mysqli.ini might not exist
   ignore_errors: yes
-
-- name: Adjust PHP file size limits
-  lineinfile: dest=/etc/php5/fpm/php.ini regexp='^upload_max_filesize \= 2M' line='upload_max_filesize \= 10M'
-  notify: Reload php-fpm
-  
-- name: Adjust PHP file size limits
-  lineinfile: dest=/etc/php5/fpm/php.ini regexp='^post_max_filesize \= 2M' line='post_max_filesize \= 10M'
-  notify: Reload php-fpm
