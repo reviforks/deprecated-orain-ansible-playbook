@@ -46,7 +46,7 @@ switch( $wgDBname ) {
 		#require_once( "$IP/extensions/SubPageList3/SubPageList3.php" ); // This IS NOT loaded on extload wiki - DO NOT ENABLE - Addshore July 2015
 		require_once( "$IP/extensions/Tabs/Tabs.php" );
 		require_once( "$IP/extensions/TocTree/TocTree.php" );
-		#require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" ); # Disabled to stop exceptions addshore (not installed correctly) July 2015
+		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
 		require_once( "$IP/extensions/WebChat/WebChat.php" );
 		$wgWebChatServer  = ''; // Not needed due to wgWebChatClient --SPF
