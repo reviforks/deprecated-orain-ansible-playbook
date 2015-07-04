@@ -40,11 +40,6 @@ class OrainHooks {
 		if ( !$wmgPiwikSiteID ) {
 			$wmgPiwikSiteID = 1;
 		}
-		// Disabled Piwik admin blacklisting below Kudu 12/11/13
-		/* if ( $wgUser->isAllowed('noanalytics') ) {
-			$text .= "<!-- Piwik code omitted -->\n";
-			return true;
-		} */
 		$id = strval( $wmgPiwikSiteID );
 		$title = $skin->getRelevantTitle();
 		$jstitle = Xml::encodeJsVar( $title->getPrefixedText() );
