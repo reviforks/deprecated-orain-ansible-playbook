@@ -10,7 +10,7 @@ switch( $wgDBname ) {
 		#require_once( "$IP/extensions/CategoryTagSorter/CategoryTagSorter.php" );
 		#require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
 		#require_once( "$IP/extensions/CSS/CSS.php" ); // Exceptions --SPF
-		#require_once( "$IP/extensions/CustomData/CustomData.php" );
+		require_once( "$IP/extensions/CustomData/CustomData.php" );
 		#require_once( "$IP/extensions/Disambiguator/Disambiguator.php" ); // Exceptions --SPF
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
 		#require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
