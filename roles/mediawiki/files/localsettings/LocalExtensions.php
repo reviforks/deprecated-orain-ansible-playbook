@@ -278,6 +278,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
 		$wgGoogleAnalyticsAccount = "UA-58596506-2";
 		break;
+	case 'tomegkozlekedowiki':
+		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		break;
 	case 'verkeerwiki':
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		break;
