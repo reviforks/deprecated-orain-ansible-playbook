@@ -280,6 +280,7 @@ switch( $wgDBname ) {
 		break;
 	case 'tomegkozlekedowiki':
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
+		require_once( "$IP/extensions/NoTitle/NoTitle.php" );
 		break;
 	case 'verkeerwiki':
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
