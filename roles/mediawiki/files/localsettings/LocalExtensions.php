@@ -17,8 +17,8 @@ switch( $wgDBname ) {
 		$wgGoogleAnalyticsAccount = "UA-58596506-3";
 		require_once( "$IP/extensions/HighlightLinksInCategory/HighlightLinksInCategory.php" );
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
-		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
-		require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
+		#require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
+		#require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
 		require_once( "$IP/extensions/MsLinks/MsLinks.php" );
 		require_once( "$IP/extensions/MsUpload/MsUpload.php" );
 		$wgAllowJavaUploads = true;
@@ -37,7 +37,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RecentChangesLogFilter/RecentChangesLogFilter.php" );
 		require_once( "$IP/extensions/PageTools/PageTools.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
-		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
+		#require_once( "$IP/extensions/RegexFun/RegexFun.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 		// Configurations
 		$wgSectionHideShowtop = 1;
