@@ -19,9 +19,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		#require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
 		#require_once( "$IP/extensions/LabeledSectionTransclusion/lsth.php" );
-		require_once( "$IP/extensions/MsLinks/MsLinks.php" );
-		require_once( "$IP/extensions/MsUpload/MsUpload.php" );
-		$wgAllowJavaUploads = true;
+		#require_once( "$IP/extensions/MsLinks/MsLinks.php" );
+		#require_once( "$IP/extensions/MsUpload/MsUpload.php" );
+		#$wgAllowJavaUploads = true;
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		$wgMultiBoilerplateOptions = false;
 		$wgMultiBoilerplateDiplaySpecialPage = true;
@@ -31,7 +31,7 @@ switch( $wgDBname ) {
 		$wgMediaViewerIsInBeta = true;
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/NoTitle/NoTitle.php" );
-		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
+		#require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
 		require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		require_once( "$IP/extensions/RecentChangesLogFilter/RecentChangesLogFilter.php" );
