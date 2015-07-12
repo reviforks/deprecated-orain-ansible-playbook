@@ -690,6 +690,7 @@ $wgConf->settings = array(
 		'corruptionofchampionswiki' => "//$wmgUploadHostname/common/skins/common/images/cc-by-nc-sa.png",
 		'fallofedenthegamewiki' => "//$wmgUploadHostname/common/skins/common/images/cc-by-nc-sa.png",
 		'lovelivesiftwwiki' => "//$wmgUploadHostname/common/skins/common/images/cc-by-nc-sa.png",
+		'tomegkozlekedowiki' => null,
 		'trialsintaintedspacewiki' => "//$wmgUploadHostname/common/skins/common/images/cc-by-nc-sa.png",
 	),
 	'wgRightsPage' => array(
@@ -703,6 +704,7 @@ $wgConf->settings = array(
 		'corruptionofchampionswiki' => 'Creative Commons Attribution NonCommerical Share Alike',
 		'fallofedenthegamewiki' => 'Creative Commons Attribution NonCommerical Share Alike',
 		'lovelivesiftwwiki' => '創作共用 Attribution-NonCommercial-ShareAlike',
+		'tomegkozlekedowiki' => null,
 		'trialsintaintedspacewiki' => 'Creative Commons Attribution NonCommerical Share Alike',
 	),
 	'wgRightsUrl' => array(
@@ -714,6 +716,7 @@ $wgConf->settings = array(
 		'fallofedenthegamewiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 		'firstrobotixwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'lovelivesiftwwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
+		'tomegkozlekedowiki' => null,
 		'trialsintaintedspacewiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 	),
 	// /License
@@ -830,6 +833,7 @@ $wgConf->settings = array(
 		'testwiki' => true,
 		'spiralwiki' => true,
 		'jossewiki' => true,
+		'tomegkozlekedowiki' => true,
 	),
 	'wmgUseLiquidThreads' => array(
 		'default' => false,
@@ -976,11 +980,13 @@ $wgConf->settings = array(
         	),
 		'tomegkozlekedowiki' => array(
 			NS_SZTORI => 'Sztori',
-			NS_SZTORI_TALK => 'Sztori_vita',
+			NS_SZTORI_TALK => 'Sztorivita',
 			NS_ARCHIVUM => 'Archívum',
-			NS_ARCHIVUM_TALK => 'Archívum_vita',
-			NS_ENGLISH => 'English',
-			NS_ENGLISH_TALK => 'English_vita',
+			NS_ARCHIVUM_TALK => 'Archívumvita',
+			NS_ENGLISH => 'ENG',
+			NS_ENGLISH_TALK => 'ENG-talk',
+			NS_PROJECT => 'TkWiki',
+			NS_PROJECT_TALK => 'TkWiki-vita',
 		),
 		'wikinambaswiki' => array(
 			NS_OFICINA => 'Oficina',
@@ -1020,6 +1026,10 @@ $wgConf->settings = array(
 			'QG_Talk' => NS_PROJECT_TALK,
 			'Quantix' => NS_PROJECT,
 			'Quantix_Talk' => NS_PROJECT_TALK,
+		),
+		'tomegkozlekedowiki' => array(
+			'TW' => NS_PROJECT,
+			'TW-vita' => NS_PROJECT_TALK,
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
