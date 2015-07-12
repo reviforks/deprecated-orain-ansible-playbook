@@ -34,8 +34,8 @@ switch( $wgDBname ) {
 		#require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
 		require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-		require_once( "$IP/extensions/RecentChangesLogFilter/RecentChangesLogFilter.php" );
-		require_once( "$IP/extensions/PageTools/PageTools.php" );
+		#require_once( "$IP/extensions/RecentChangesLogFilter/RecentChangesLogFilter.php" );
+		#require_once( "$IP/extensions/PageTools/PageTools.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		#require_once( "$IP/extensions/RegexFun/RegexFun.php" );
 		require_once( "$IP/extensions/SectionHide/SectionHide.php" );
