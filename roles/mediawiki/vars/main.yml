@@ -505,11 +505,6 @@ extensions:
     dest: 'extensions/SimpleMathJax', 
     version: 'master'
     }
-  - {
-    repo: 'https://github.com/Telshin/Spoilers.git',
-    dest: 'extensions/Spoilers',
-    version: 'master'
-    }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SubPageList3.git',
     dest: 'extensions/SubPageList3', 
