@@ -146,6 +146,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
+		require_once( "$IP/extensions/Spoilers/Spoilers.php" );
 		require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 		require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 		require_once( "$IP/extensions/VoteNY/Vote.php" );
