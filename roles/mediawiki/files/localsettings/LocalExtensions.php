@@ -184,6 +184,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/MultiBoilerplate/MultiBoilerplate.php" );
 		$wgMultiBoilerplateOptions = false;
 		$wgMultiBoilerplateDiplaySpecialPage = true;
+		require_once( "$IP/extensions/Spoilers/Spoilers.php" );
 		break;
 	case 'goldcraftmcwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
