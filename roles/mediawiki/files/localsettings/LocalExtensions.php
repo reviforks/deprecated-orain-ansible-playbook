@@ -201,6 +201,10 @@ switch( $wgDBname ) {
 		break;
 	case 'hmwiki':
 		break;
+	case 'linuxunixwiki':
+		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
+		require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
+		break;
 	case 'loginwiki':
 		// Blank comment to keep this in the statement per John's request
 		$wgNamespaceProtection[NS_MAIN] = array( 'editinterface' );
