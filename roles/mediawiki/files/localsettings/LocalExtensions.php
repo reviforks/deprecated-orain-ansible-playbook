@@ -201,7 +201,7 @@ switch( $wgDBname ) {
 		break;
 	case 'hmwiki':
 		break;
-	case 'linuxunixwiki'
+	case 'linuxunixwiki':
 		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 		require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 		break;
