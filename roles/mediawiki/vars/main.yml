@@ -535,6 +535,11 @@ extensions:
     dest: 'extensions/Tabs', 
     version: 'REL1_24'
     }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-TemplateData.git',
+    dest: 'extensions/TemplateData',
+    version: 'REL1_24'
+    }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-TemplateSandbox.git',
     dest: 'extensions/TemplateSandbox', 
