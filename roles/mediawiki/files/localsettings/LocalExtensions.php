@@ -158,6 +158,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RegexFun/RegexFun.php" );
 		require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 		require_once( "$IP/extensions/RSS/RSS.php" );
+		require_once( "$IP/extensions/TemplateData/TemplateData.php" );
 		require_once( "$IP/extensions/TocTree/TocTree.php" );
 		require_once( "$IP/extensions/TorBlock/TorBlock.php" );
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
