@@ -181,6 +181,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Editcount/Editcount.php" );
 		require_once( "$IP/extensions/Josa/Josa.php" );
 		break;
+	case 'farmingsimulatorwiki':
+	        require_once( "$IP/extensions/Thanks/Thanks.php" );
+	        break;
 	case 'gamewiki':
 		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 		require_once( "$IP/extensions/EmbedVideo/EmbedVideo.php" );
