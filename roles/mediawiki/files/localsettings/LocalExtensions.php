@@ -183,6 +183,7 @@ switch( $wgDBname ) {
 		break;
 	case 'farmingsimulatorwiki':
 	        require_once( "$IP/extensions/Thanks/Thanks.php" );
+	        require_once( "$IP/extensions/Echo/Echo.php" );
 	        break;
 	case 'gamewiki':
 		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
