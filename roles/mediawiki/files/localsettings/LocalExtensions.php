@@ -182,6 +182,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Josa/Josa.php" );
 		break;
 	case 'farmingsimulatorwiki':
+		require_once( "$IP/extensions/DeleteBatch/DeleteBatch.php" );
 	        require_once( "$IP/extensions/Thanks/Thanks.php" );
 	        require_once( "$IP/extensions/Echo/Echo.php" );
 	        break;
