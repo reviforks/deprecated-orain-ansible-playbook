@@ -72,13 +72,6 @@ define( 'NS_WORKSPACE', 524 );
 define( 'NS_WORKSPACE_TALK', 525 );
 // /councilwiki
 
-// frmodamobwiki
-define( 'NS_PORTAIL', 516 );
-define( 'NS_PORTAIL_TALK', 517 );
-define( 'NS_PROJET', 518 );
-define( 'NS_PROJET_TALK', 519 );
-// /frmodamobwiki
-
 // grepobot
 define( 'NS_OP', 526 );
 define( 'NS_OP_TALK', 527 );
@@ -815,7 +808,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true, // all extensions are loaded on this wiki
-		'frmodamobwiki' => true,
 		'mediawikitesterswiki' => true,
 		'memewiki' => true,
 		'metawiki' => true,
@@ -955,12 +947,6 @@ $wgConf->settings = array(
 			NS_EVENT => 'Event',
 			NS_EVENT_TALK => 'Event_talk',
 		),
-		'frmodamobwiki' => array(
-			NS_PORTAIL => 'Portail',
-			NS_PORTAIL_TALK => 'Discussion_Portail',
-			NS_PROJET => 'Projet',
-			NS_PROJET_TALK => 'Discussion_Projet',
-		),
 		'ircwiki' => array(
 			NS_BLOG => 'Blog',
 			NS_BLOG_TALK => 'Blog_talk',
@@ -1069,12 +1055,6 @@ $wgConf->settings = array(
 			NS_PARTNER => true,
 			NS_WIKIINTERNAL => true,
 			NS_EVENT => true,
-		),
-		'+frmodamobwiki' => array(
-			NS_PORTAIL => true,
-			NS_PORTAIL_TALK => true,
-			NS_PROJET => true,
-			NS_PROJET_TALK => true,
 		),
 		'+internalwiki' => array(
 			NS_MAIN => true,
@@ -1878,7 +1858,6 @@ $wgConf->settings = array(
 		'eotwiki' => "//$wmgUploadHostname/eot.orain.org/images/1/1b/Eotlogowiki.jpg",
 		'electrumwiki' => "//$wmgUploadHostname/electrum.orain.org/images/0/00/Logo_text_135.png",
 		'farmingsimulatorwiki' => "//$wmgUploadHostname/farmingsimulator.orain.org/images/0/04/Farming-Simulator-Wiki.png",
-		'frmodamobwiki' => "//$wmgUploadHostname/meta.orain.org/images/d/d6/Modamob-logo.png",
 		'gamewiki' => "//$wmgUploadHostname/game.orain.org/images/8/83/Gw_new_logo.png",
 		'goldcraftmcwiki' => "//$wmgUploadHostname/goldcraftmc.orain.org/images/c/c9/Logo.png",
 		'granbluefantasywiki' => "//$wmgUploadHostname/granbluefantasy.orain.org/images/c/ca/GBFW_Logo.png",
