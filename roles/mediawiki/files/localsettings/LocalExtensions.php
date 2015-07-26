@@ -26,9 +26,9 @@ switch( $wgDBname ) {
 		$wgMultiBoilerplateOptions = false;
 		$wgMultiBoilerplateDiplaySpecialPage = true;
 		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
-		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
-		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php");
-		$wgMediaViewerIsInBeta = true;
+		#require_once( "$IP/extensions/MultiUpload/MultiUpload.php" ); // broken for now
+		#require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php"); // broken for now
+		#$wgMediaViewerIsInBeta = true; // broken for now
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		require_once( "$IP/extensions/NoTitle/NoTitle.php" );
 		require_once( "$IP/extensions/OnlineStatus/OnlineStatus.php" );
