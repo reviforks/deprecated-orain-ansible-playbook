@@ -103,7 +103,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CollapsibleVector.git',
     dest: 'extensions/CollapsibleVector', 
-    version: 'master'
+    version: 'REL1_24'
     } 
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Collection.git',
