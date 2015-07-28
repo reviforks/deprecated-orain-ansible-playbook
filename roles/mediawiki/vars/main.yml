@@ -38,7 +38,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Babel.git',
     dest: 'extensions/Babel', 
-    version: 'master'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-BetaFeatures.git',
@@ -258,7 +258,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-LiquidThreads.git',
     dest: 'extensions/LiquidThreads', 
-    version: 'master'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/GeneralVolkoV/LiquidThreadsOverview.git',
@@ -268,7 +268,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-LocalisationUpdate.git',
     dest: 'extensions/LocalisationUpdate', 
-    version: 'master'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Lockdown.git',
@@ -663,7 +663,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-cldr.git',
     dest: 'extensions/cldr', 
-    version: 'master'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-googleAnalytics.git',
