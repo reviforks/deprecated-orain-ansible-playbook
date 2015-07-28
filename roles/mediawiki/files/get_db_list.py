@@ -5,6 +5,7 @@ import requests, sys
 def main():
     # Don't support Python 2.x
     if sys.version < '3':
+        print "Script needs python 3\n"
         return
 
     # Download the database list
@@ -12,6 +13,12 @@ def main():
 
     # Return if the download wasn't successful (e.g. site is broken)
     if r.status_code != 200:
+        return
+
+    # Return if the download list is missing something vital
+    if "metawiki" not in r.text:
+        return
+    if "extloadwiki" not in r.text:
         return
 
     # Remove the <pre> formatting tags and trailing newline
