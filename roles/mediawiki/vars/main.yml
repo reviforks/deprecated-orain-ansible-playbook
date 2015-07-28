@@ -473,7 +473,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Scribunto.git',
     dest: 'extensions/Scribunto', 
-    version: 'master'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SimpleAntiSpam.git',
@@ -588,12 +588,12 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Translate.git',
     dest: 'extensions/Translate', 
-    version: 'master'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-UniversalLanguageSelector.git',
     dest: 'extensions/UniversalLanguageSelector', 
-    version: 'master'
+    version: 'REL1_24'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-UrlShortener.git',
@@ -736,7 +736,7 @@ skins:
   - {
     repo: 'https://github.com/wikimedia/mediawiki-skins-Vector',
     dest: 'skins/Vector',
-    version: 'master'
+    version: 'REL1_24'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-skins-CologneBlue',
