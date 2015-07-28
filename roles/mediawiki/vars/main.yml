@@ -38,7 +38,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Babel.git',
     dest: 'extensions/Babel', 
-    version: 'REL1_24'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-BetaFeatures.git',
