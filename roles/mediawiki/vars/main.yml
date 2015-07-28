@@ -268,7 +268,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-LocalisationUpdate.git',
     dest: 'extensions/LocalisationUpdate', 
-    version: 'REL1_24'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Lockdown.git',
