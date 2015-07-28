@@ -12,6 +12,12 @@ def main():
     if r.status_code != 200:
         return
 
+    # Return if the download list is missing something vital
+    if "metawiki" not in r.text:
+        return
+    if "extloadwiki" not in r.text:
+        return
+
     # Remove the <pre> formatting tags and trailing newline
     text = r.text.replace('<pre>\n', '').replace('</pre>', '').rstrip('\n')
 
