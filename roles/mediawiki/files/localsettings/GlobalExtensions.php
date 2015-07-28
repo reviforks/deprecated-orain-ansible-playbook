@@ -16,6 +16,7 @@ require_once( "$IP/extensions/CentralNotice/CentralNotice.php" );
 require_once( "$IP/extensions/CheckUser/CheckUser.php" );
 require_once( "$IP/extensions/Cite/Cite.php" );
 require_once( "$IP/extensions/Cite/SpecialCite.php" );
+require_once( "$IP/extensions/cldr/cldr.php" );
 require_once( "$IP/extensions/CollapsibleVector/CollapsibleVector.php" );
 require_once( "$IP/extensions/intersection/DynamicPageList.php" );
 require_once( "$IP/extensions/EventLogging/EventLogging.php" );
