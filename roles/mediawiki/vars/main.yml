@@ -103,7 +103,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CollapsibleVector.git',
     dest: 'extensions/CollapsibleVector', 
-    version: 'REL1_24'
+    version: 'master'
     } 
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Collection.git',
@@ -258,7 +258,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-LiquidThreads.git',
     dest: 'extensions/LiquidThreads', 
-    version: 'REL1_24'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/GeneralVolkoV/LiquidThreadsOverview.git',
@@ -473,7 +473,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Scribunto.git',
     dest: 'extensions/Scribunto', 
-    version: 'REL1_24'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-SimpleAntiSpam.git',
@@ -528,7 +528,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Tabber.git',
     dest: 'extensions/Tabber', 
-    version: 'REL1_24'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Tabs.git',
@@ -588,12 +588,12 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-Translate.git',
     dest: 'extensions/Translate', 
-    version: 'REL1_24'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-UniversalLanguageSelector.git',
     dest: 'extensions/UniversalLanguageSelector', 
-    version: 'REL1_24'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-UrlShortener.git',
@@ -663,7 +663,7 @@ extensions:
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-cldr.git',
     dest: 'extensions/cldr', 
-    version: 'REL1_24'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-googleAnalytics.git',
@@ -736,7 +736,7 @@ skins:
   - {
     repo: 'https://github.com/wikimedia/mediawiki-skins-Vector',
     dest: 'skins/Vector',
-    version: 'REL1_24'
+    version: 'master'
     }
   - {
     repo: 'https://github.com/wikimedia/mediawiki-skins-CologneBlue',
