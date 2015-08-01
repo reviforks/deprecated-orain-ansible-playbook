@@ -118,12 +118,12 @@ define( 'NS_PORTAL', 516);
 define( 'NS_PORTAL_TALK', 517);
 // /sawiki
 
-// quantixhl2rpwiki
+// quantixwiki
 define( 'NS_QUANTIX', 530);
 define( 'NS_QUANTIX_TALK', 531);
 define( 'NS_QG', 532);
 define( 'NS_QG_Talk', 533);
-// /quantixhl2rpwiki
+// /quantixwiki
 
 // tomegkozlekedowiki
 define( 'NS_SZTORI', 552);
@@ -812,7 +812,7 @@ $wgConf->settings = array(
 		'memewiki' => true,
 		'metawiki' => true,
 +		'quantixdevwiki' => true,
-		'quantixhl2rpwiki' => true,
+		'quantixwiki' => true,
 		'wh40kwiki' => true,
 	),
 	'wmgUseEchoPack' => array(
@@ -1011,7 +1011,7 @@ $wgConf->settings = array(
 			'Server' => NS_SERVER,
 			'Server_talk' => NS_SERVER_TALK,
 		),
-		'quantixhl2rpwiki' => array(
+		'quantixwiki' => array(
 			'QG' => NS_PROJECT,
 			'QG_Talk' => NS_PROJECT_TALK,
 			'Quantix' => NS_PROJECT,
@@ -1067,7 +1067,7 @@ $wgConf->settings = array(
 			NS_FORUM_ORAIN => true, // NS_FORUM_ORAIN should === NS_FORUM
 			NS_TECH => true,
 		),
-		'+quantixhl2rpwiki' => array(
+		'+quantixwiki' => array(
 			NS_MAIN => true,
 			NS_PROJECT => true,
 			'QG' => true,
@@ -1127,7 +1127,22 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	// /Performance
-
+	
+	// upload by url
+	'wgAllowCopyUploads' => array(
+		'default' => false,
+		'gologwiki' => true,
+		'quantixwiki' => true,
+		'quantixdevwiki' => true,
+	),
+	'wgCopyUploadsFromSpecialUpload' => array(
+		'default' => false,
+		'gologwiki' => true,
+		'quantixwiki' => true,
+		'quantixdevwiki' => true,
+	),
+	// /upload by url
+	
 	// Permissions
 	'wgAddGroups' => array(
 		'default' => array(
@@ -1363,6 +1378,11 @@ $wgConf->settings = array(
 				'createtalk' => true,
 			),
 		),
+		'+gologwiki' => array(
+			'sysop' => array(
+				'upload_by_url' => true,
+			),
+		),
 		'+grepobotwiki' => array(
 			'botop' => array(
 				'read' => true,
@@ -1412,10 +1432,14 @@ $wgConf->settings = array(
 				'createtalk' => true,
 			),
 		),
-		'+quantixhl2rpwiki' => array(
+		'+quantixwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
 				'protect' => true,
+				'upload_by_url' => true,
+			),
+			'sysop' => array(
+				'upload_by_url' => true,
 			),
 		),
 		'+ironperfectionwiki' => array(
@@ -1607,6 +1631,7 @@ $wgConf->settings = array(
 				'protect' => true,
 				'block' => true,
 				'unblockself' => true,
+				'upload_by_url' => true,
 			),
 			'bureaucrat' => array(
 				'bureaucrat' => true,
@@ -1614,6 +1639,7 @@ $wgConf->settings = array(
 				'edit' => true,
 				'protect' => true,
 				'unblockself' => true,
+				'upload_by_url' => true,
 			),
 			'coder' => array(
 				'coder' => true,
@@ -1622,6 +1648,10 @@ $wgConf->settings = array(
 				'edit' => true,
 				'editsemiprotected' => true,
 				'editprotected' => true,
+				'upload_by_url' => true,
+			),
+			'sysop' => array(
+				'upload_by_url' => true,
 			),
 		),
 	),
@@ -1767,7 +1797,7 @@ $wgConf->settings = array(
 			'coder',
 			'owner',
 		),
-		'+quantixhl2rpwiki' => array(
+		'+quantixwiki' => array(
 			'bureaucrat',
 		),
 	),
@@ -1915,7 +1945,7 @@ $wgConf->settings = array(
 		'librewiki' => 'Asia/Seoul',
 		'lovelivesiftwwiki' => 'Asia/Taipei',
 		'nsswiki' => 'Asia/Seoul',
-		'quantixhl2rpwiki' => 'America/Detroit',
+		'quantixwiki' => 'America/Detroit',
 		'reviwiki' => 'Asia/Seoul',
 		'szkwiki' => 'Europe/Budapest',
 		'tomegkozlekedowiki' => 'Europe/Budapest',
