@@ -41,14 +41,6 @@
         hour="*/12"
         job="/home/mediawiki/db_loop.sh /srv/mediawiki/w/extensions/AbuseFilter/maintenance/purgeOldLogIPData.php"
   when: "'{{ansible_hostname}}' == 'prod11'"
-  
-#- name: Rebuild File Cache
- # cron: name="Rebuild File Cache"
- #        user="mediawiki"
- #      minute="0"
- #  hour="*/3"
- #      job="/home/mediawiki/db_loop.sh /srv/mediawiki/w/maintenance/rebuildFileCache.php --overwrite"
- # when: "'{{ansible_hostname}}' == 'prod11'"
 
 - name: Add i18n.sh to boot
   command: /usr/sbin/update-rc.d i18n.sh defaults 99
