@@ -20,20 +20,11 @@
   when: "'{{ansible_hostname}}' == 'prod11'"
   
 - name: Create a cronjob for forced localisation cache refresh
-  cron: name="forced localisation cache refresh"
+  cron: name="Forced localisation cache refresh"
         user="mediawiki"
         minute="0"
-        hour="*/1"
+        hour="*"
         job="/usr/bin/php5 /srv/mediawiki/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki"
-  when: "'{{ansible_hostname}}' == 'prod8'"
-  
-  - name: Create a cronjob for forced localisation cache refresh
-  cron: name="forced localisation cache refresh"
-        user="mediawiki"
-        minute="0"
-        hour="*/1"
-        job="/usr/bin/php5 /srv/mediawiki/w/maintenance/rebuildLocalisationCache.php --wiki extloadwiki"
-  when: "'{{ansible_hostname}}' == 'prod9'"
 
 - name: Create TorBlock node loader cron
   cron: name="Load TorBlockNodes"
