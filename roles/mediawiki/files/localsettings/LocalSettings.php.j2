@@ -473,6 +473,7 @@ $wgConf->settings = array(
 	),
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg' ),
+		'+checkwiki' => array( 'pdf', 'doc' ),
 		'+councilwiki' => array( 'pdf' ),
 		'+gologwiki' => array( 'pdf' ),
 		'+internalwiki' => array( 'pdf' ),
@@ -532,6 +533,25 @@ $wgConf->settings = array(
 		'default' => array(
 			'autoconfirmed' => array(
 				'skipcaptcha' => true,
+			),
+		),
+		'checkwiki' => array(
+			'*' => array(
+				'read' => true,
+				'edit' => false,
+			),
+			'user' => array(
+				'read' => true,
+				'edit' => true,
+			),
+			'trusted' => array(
+				'read' => true,
+				'edit' => true,
+				'editsemiprotected' => true,
+				'createpage' => true,
+				'createtalk' => true,
+				'upload' => true,
+				'reupload-own' => true,
 			),
 		),
 		'quantixdevwiki' => array(
@@ -1808,6 +1828,7 @@ $wgConf->settings = array(
 	),
 	'$wgRestrictDisplayTitle' => array(
 		'default' => true,
+		'checkwiki' => false,
 		'portalwiki' => false,
 	),
 	// /Restrictions
@@ -1865,6 +1886,7 @@ $wgConf->settings = array(
 		'default' => "//$wmgUploadHostname/common/default.ico",
 		'badpiggieswiki' => "//$wmgUploadHostname/badpiggies.orain.org/images/6/64/Favicon.ico",
 		'bgowiki' => "//$wmgUploadHostname/bgo.orain.org/images/6/64/Favicon.ico",
+		'checkwiki' => "//$wmgUploadHostname/check.orain.org/images/8/88/Check-logo.png",
 		'diavwiki' => "//$wmgUploadHostname/diav.orain.org/images/6/64/Favicon.ico",
 		'donjonwiki' => "//$wmgUploadHostname/donjon.orain.org/images/6/64/Favicon.ico",
 		'cwsplanetwiki' => "//$wmgUploadHostname/cwsplanet.orain.org/images/1/1a/Favicon-cwsp.png",

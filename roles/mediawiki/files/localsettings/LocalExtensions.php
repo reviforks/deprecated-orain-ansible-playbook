@@ -77,6 +77,11 @@ switch( $wgDBname ) {
 	case 'cannabiswiki':
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 		break;
+	case 'checkwiki':
+		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+		$wgMediaViewerIsInBeta = true;
+		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+		break;
 	case 'cpsinfowiki':
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
 		break;
