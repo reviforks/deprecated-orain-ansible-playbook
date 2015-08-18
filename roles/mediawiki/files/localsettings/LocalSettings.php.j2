@@ -2294,6 +2294,10 @@ require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
 $wgReCaptchaPublicKey = '6LcC5AATAAAAAFW3aPQLu-jiRdVct5P9rqiTUMEd';
 $wgReCaptchaPrivateKey = '{{recaptcha_private_key}}';
 
+// CreateWiki configuration
+$wgCreateWikiPublicDbListLocation = '/srv/mediawiki/w/all.dblist';
+$wgCreateWikiPrivateDbListLocation = '/srv/mediawiki/w/private.dblist';
+$wgCreateWikiBaseDomain = 'orain.org';
 $wgCreateWikiUseCloudFlare = true;
 $wgCloudFlareUser = 'accounts' . '@' . 'orain.org';
 $wgCloudFlareKey = '{{cloudflare_api_key}}';
