@@ -4,11 +4,6 @@
     - /var/log/mediawiki/
     - /var/log/mediawiki/debuglogs/
 
-- name: Delete old mediawiki files
-  command: rm {{item}} removes={{item}}
-  with_items:
-    - /root/notify_irc.sh
-
 - name: Copy {{item}}
   copy: src={{item}} dest=/home/mediawiki owner=mediawiki group=mediawiki mode=770
   with_items:

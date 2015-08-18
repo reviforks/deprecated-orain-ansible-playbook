@@ -27,13 +27,6 @@
   # prod12 intv4
   - 10.131.158.209
 
-- name: Remove old access rules
-  ufw: rule=allow src={{ item }} delete=yes
-  with_items:
-  - 178.62.7.226
-  - 178.62.7.230
-  - 2a03:b0c0:1:d0::b7:a001
-
 - name: Allow ssh access
   ufw: rule=allow port=22
 
