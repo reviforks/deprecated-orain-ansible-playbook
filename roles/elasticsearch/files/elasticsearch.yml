@@ -1,7 +1,0 @@
-cluster.name: mediawiki
-node.name: "Orain"
-
-node.master: true
-node.data: true
-
-bootstrap.mlockall: true

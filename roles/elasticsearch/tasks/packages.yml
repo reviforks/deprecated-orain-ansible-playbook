@@ -1,2 +1,0 @@
-- name: Install ElasticSearch
-  apt: pkg=elasticsearch force=yes

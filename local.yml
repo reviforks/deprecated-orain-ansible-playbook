@@ -64,12 +64,6 @@
   roles:
     - ganglia
 
-- hosts: elasticsearchservers
-  vars_files:
-    - ../private/vars.yml
-  roles:
-    - elasticsearch
-
 - hosts: loadbalancerservers
   vars_files:
     - ../private/vars.yml
