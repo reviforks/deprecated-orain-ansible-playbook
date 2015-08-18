@@ -2263,6 +2263,13 @@ $wgAPIModules['createaccount'] = 'ApiDisabled';
 // Private IPs
 $wgUsePrivateIPs = true;
 
+// CreateWiki configuration
+$wgCreateWikiPublicDbListLocation = '/srv/mediawiki/w/all.dblist';
+$wgCreateWikiPrivateDbListLocation = '/srv/mediawiki/w/private.dblist';
+$wgCreateWikiBaseDomain = 'orain.org';
+$wgCreateWikiUseCloudFlare = true;
+$wgCloudFlareUser = 'accounts' . '@' . 'orain.org';
+$wgCloudFlareKey = '{{cloudflare_api_key}}';
 
 # Load the 'localextensions' here
 require_once( "$IP/LocalExtensions.php" );
@@ -2286,14 +2293,6 @@ call_user_func( function() {
 require_once( "$IP/extensions/ConfirmEdit/ReCaptcha.php" );
 $wgReCaptchaPublicKey = '6LcC5AATAAAAAFW3aPQLu-jiRdVct5P9rqiTUMEd';
 $wgReCaptchaPrivateKey = '{{recaptcha_private_key}}';
-
-// CreateWiki configuration
-$wgCreateWikiPublicDbListLocation = '/srv/mediawiki/w/all.dblist';
-$wgCreateWikiPrivateDbListLocation = '/srv/mediawiki/w/private.dblist';
-$wgCreateWikiBaseDomain = 'orain.org';
-$wgCreateWikiUseCloudFlare = true;
-$wgCloudFlareUser = 'accounts' . '@' . 'orain.org';
-$wgCloudFlareKey = '{{cloudflare_api_key}}';
 
 if ( $wgCommandLineMode ) {
 # TODO: use OrainHooks:ifUserCanDebug instead of this hack
