@@ -220,6 +220,11 @@ extensions:
     dest: 'extensions/HighlightLinksInCategory', 
     version: 'master'
     }
+  - {
+    repo: 'https://github.com/wikimedia/mediawiki-extensions-HTMLets.git',
+    dest: 'extensions/HTMLets', 
+    version: 'master'
+    }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-ImageMap.git',
     dest: 'extensions/ImageMap', 
