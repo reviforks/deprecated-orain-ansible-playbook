@@ -128,7 +128,7 @@ extensions:
   - { 
     repo: 'https://github.com/Orain/CreateWiki.git',
     dest: 'extensions/CreateWiki', 
-    version: 'fork'
+    version: 'master'
     }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-CustomData.git',
