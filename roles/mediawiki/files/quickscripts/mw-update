@@ -15,10 +15,10 @@ if [ $# -eq 0 ]; then
    echo 1...
    sleep 1
    echo Running
-   /home/mediawiki/db_loop.sh /srv/mediawiki/w/maintenance/update.php --quick
+   sudo -u mediawiki /home/mediawiki/db_loop.sh /srv/mediawiki/w/maintenance/update.php --quick
    echo Update.php has run for ALL wikis
 else
    echo Running update.php for $1
-   /usr/bin/php5 /srv/mediawiki/w/maintenance/update.php --quick --wiki $1
+   sudo -u mediawiki /usr/bin/php5 /srv/mediawiki/w/maintenance/update.php --quick --wiki $1
    echo Update.php has run for $1
 fi
