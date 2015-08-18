@@ -410,16 +410,6 @@ if ( $wmgUseEchoPack ) {
 	require_once( "$IP/extensions/Thanks/Thanks.php" );
 }
 
-if ( $wmgUseIRCRC ) {
-	$wgRCFeeds['Orain'] = array(
-		'formatter' => 'IRCColourfulRCFeedFormatter',
-		'uri' => 'udp://10.131.158.212:5070',
-		'add_interwiki_prefix' => false,
-		'omit_bots' => true,
-	);
-	$wgAbuseFilterNotifications = "udp";
-}
-
 if ( $wmgUseLiquidThreads ) {
 	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
 }

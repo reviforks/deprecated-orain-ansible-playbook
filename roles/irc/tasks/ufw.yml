@@ -1,3 +1,0 @@
-#TODO this rule should be more specific than this! what host?
-- name: irc ufw ports
-  ufw: rule=allow port=7001
