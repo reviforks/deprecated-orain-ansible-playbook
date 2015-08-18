@@ -5,7 +5,7 @@ import requests, sys
 def main():
     # Don't support Python 2.x
     if sys.version < '3':
-        print "Script needs python 3\n"
+        print ("Script needs python 3\n")
         return
 
     # Download the database list
