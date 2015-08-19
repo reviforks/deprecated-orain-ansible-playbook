@@ -141,6 +141,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
 		$wgGoogleAnalyticsAccount = "UA-58596506-2";
 		require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
+		require_once( "$IP/extensions/HTMLets/HTMLets.php");
 		require_once( "$IP/extensions/ImageMap/ImageMap.php" );
 		require_once( "$IP/extensions/Math/Math.php" );
 		require_once( "$IP/extensions/MsLinks/MsLinks.php" );
