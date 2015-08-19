@@ -215,6 +215,10 @@ switch( $wgDBname ) {
 		break;
 	case 'hmwiki':
 		break;
+	case 'izanagiwiki':
+		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+		break;
 	case 'linuxunixwiki':
 		require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 		require_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
