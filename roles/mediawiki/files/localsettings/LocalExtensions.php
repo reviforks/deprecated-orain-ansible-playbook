@@ -214,6 +214,9 @@ switch( $wgDBname ) {
 		$wgUploadPath = "$wgScriptPath/img_auth.php";
 		$wgUploadDirectory = '/mnt/mediawiki/private/uploads/jasperinternal.orain.org/images'; // Directory inaccessible via web access
 		break;
+	case 'jicigagnonwiki'
+		require_once( "$IP/extensions/HTMLets/HTMLets.php");
+		break;
 	case 'hmwiki':
 		break;
 	case 'izanagiwiki':
