@@ -661,6 +661,11 @@ extensions:
     version: 'REL1_24'
     }
   - {
+    repo: 'https://github.com/tinymighty/wiki-seo.git',
+    dest: 'extensions/WikiSEO',
+    version: '1.2.1'
+    {
+  - {
     repo: 'https://github.com/wikimedia/mediawiki-extensions-GoogleAdSense.git',
     dest: 'extensions/GoogleAdSense',
     version: 'REL1_24'
