@@ -506,7 +506,7 @@ extensions:
     version: 'master'
     }
   - {
-    repo: 'https://github.com/Reception123/Ext-Sort2.git',
+    repo: 'https://github.com/Orain/Ext-Sort2.git',
     dest: 'extensions/Sort2',
     version: 'master'
     }
