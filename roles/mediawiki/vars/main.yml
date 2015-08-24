@@ -505,6 +505,11 @@ extensions:
     dest: 'extensions/SocialProfile',
     version: 'master'
     }
+  - {
+    repo: 'https://github.com/Reception123/Ext-Sort2.git',
+    dest: 'extensions/Sort2',
+    version: 'master'
+    }
   - { 
     repo: 'https://github.com/jmnote/SimpleMathJax.git',
     dest: 'extensions/SimpleMathJax', 
