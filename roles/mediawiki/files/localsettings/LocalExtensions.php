@@ -62,10 +62,14 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 		break;
 	case 'bibbia2000wiki':
+		require_once( "$IP/extensions/Poem/Poem.php" );
 		$wgCollectionFormats = array(
 			'rl' => 'PDF',
 			'odf' => 'ODT',
 		);
+		break;	
+	case 'bgowiki':
+		require_once( "$IP/extensions/Poem/Poem.php" );
 		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
