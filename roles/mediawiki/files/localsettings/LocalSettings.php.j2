@@ -572,6 +572,24 @@ $wgConf->settings = array(
 				'block' => true,
 			),
 		),
+		'studieveiledermedisinwiki' => array(
+			'*' => array(
+				'read' => true,
+				'edit' => false,
+			),
+			'user' => array(
+				'read' => true,
+				'edit' => false,
+			),
+			'editor' => array(
+				'read' => true,
+				'edit' => true,
+			),
+			'sysop' => array(
+				'read' => true,
+				'edit' => true,
+			),
+		),
 		'private' => array(
 			'*' => array(
 				'read' => false,
@@ -1230,6 +1248,11 @@ $wgConf->settings = array(
 				'member',
 			),
 		),
+		'+studieveiledermedisinwiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+		),
 		'+testwiki' => array(
 			'interwikitest' => array(
 				'sysop',
@@ -1745,6 +1768,11 @@ $wgConf->settings = array(
 		'+qumegalithwiki' => array(
 			'sysop' => array(
 				'member',
+			),
+		),
+		'+studieveiledermedisinwiki' => array(
+			'bureaucrat' => array(
+				'editor',
 			),
 		),
 	),
