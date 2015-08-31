@@ -70,6 +70,7 @@ switch( $wgDBname ) {
 	case 'bgowiki':
 		require_once( "$IP/extensions/Poem/Poem.php" );
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+		require_once( "$IP/extensions/MsUpload/MsUpload.php" );
 		break;
 	case 'botwiki':
 		require_once( "$IP/extensions/LabeledSectionTransclusion/lst.php" );
