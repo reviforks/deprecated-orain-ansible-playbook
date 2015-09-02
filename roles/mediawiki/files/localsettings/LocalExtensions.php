@@ -241,6 +241,10 @@ switch( $wgDBname ) {
 	case 'lovelivesiftwwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		break;
+	case 'maquetaschilewiki':
+		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+		require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+		break;
 	case 'mediawikitesterswiki':
 		$wgCategoryTreeMaxChildren = 2000;
 		require_once( "$IP/extensions/CreateBox/CreateBox.php" );
