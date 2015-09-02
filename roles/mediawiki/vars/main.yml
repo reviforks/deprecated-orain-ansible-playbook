@@ -300,11 +300,6 @@ extensions:
     dest: 'extensions/Math', 
     version: 'REL1_24'
     }
-  - {
-    repo: 'https://github.com/mementoweb/mediawiki.git',
-    dest: 'extensions/Memento',
-    version: 'master'
-    }
   - { 
     repo: 'https://github.com/wikimedia/mediawiki-extensions-MultimediaViewer.git',
     dest: 'extensions/MultimediaViewer', 
