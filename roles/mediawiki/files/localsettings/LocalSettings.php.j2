@@ -580,6 +580,20 @@ $wgConf->settings = array(
 				'block' => true,
 			),
 		),
+		'rachopediawiki' => array(
+			'*' => array(
+				'read' => true,
+				'edit' => false,
+			),
+			'user' => array(
+				'read' => true,
+				'edit' => false,
+			),
+			'editor' => array(
+				'read' => true,
+				'edit' => true,
+			),
+		),
 		'studieveiledermedisinwiki' => array(
 			'*' => array(
 				'read' => true,
@@ -1259,6 +1273,11 @@ $wgConf->settings = array(
 				'member',
 			),
 		),
+		'+rachopediawiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+		),
 		'+studieveiledermedisinwiki' => array(
 			'bureaucrat' => array(
 				'editor',
@@ -1779,6 +1798,11 @@ $wgConf->settings = array(
 		'+qumegalithwiki' => array(
 			'sysop' => array(
 				'member',
+			),
+		),
+		'+rachopediawiki' => array(
+			'bureaucrat' => array(
+				'editor',
 			),
 		),
 		'+studieveiledermedisinwiki' => array(
