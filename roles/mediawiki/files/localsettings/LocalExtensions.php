@@ -275,6 +275,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 		break;
 	case 'poserdazfreebieswiki':
+		require_once( "$IP/extensions/MultiCategorySearch/MultiCategorySearch.php" );
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 		break;
 	case 'spiralwiki':
