@@ -288,7 +288,7 @@ switch( $wgDBname ) {
 	case 'szkwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		break;
-	case 'rachopediawiki'
+	case 'rachopediawiki':
 		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 		break;
 	case 'religionwiki':
