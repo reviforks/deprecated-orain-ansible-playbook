@@ -288,6 +288,9 @@ switch( $wgDBname ) {
 	case 'szkwiki':
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		break;
+	case 'rachopediawiki'
+		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+		break;
 	case 'religionwiki':
 		$wgHooks['ResourceLoaderRegisterModules'][] = 'lfRemoveCollapsibleNav';
 		function lfRemoveCollapsibleNav( &$resourceLoader ) {
