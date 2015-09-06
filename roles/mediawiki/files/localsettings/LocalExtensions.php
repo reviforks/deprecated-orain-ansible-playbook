@@ -289,6 +289,7 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Widgets/Widgets.php" );
 		break;
 	case 'rachopediawiki':
+		require_once( "$IP/extensions/Mantle/Mantle.php" );
 		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 		break;
 	case 'religionwiki':
