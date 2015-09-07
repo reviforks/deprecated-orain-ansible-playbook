@@ -494,8 +494,20 @@ $wgConf->settings = array(
 		'+spiralwiki'=> array( 'pdf' ),
 		'+redsosteniblewiki' => array( 'pdf' ),
 	),
+	'wgAllowCopyUploads' => array(
+		'default' => false,
+		'gologwiki' => true,
+		'quantixwiki' => true,
+		'quantixdevwiki' => true,
+	),
 	'wgAllowTitlesInSVG' => array(
 		'default' => true,
+	),
+	'wgCopyUploadsFromSpecialUpload' => array(
+		'default' => false,
+		'gologwiki' => true,
+		'quantixwiki' => true,
+		'quantixdevwiki' => true,
 	),
 	'wgGenerateThumbnailOnParse' => array(
 		'default' => false,
@@ -1191,21 +1203,6 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	// /Performance
-	
-	// upload by url
-	'wgAllowCopyUploads' => array(
-		'default' => false,
-		'gologwiki' => true,
-		'quantixwiki' => true,
-		'quantixdevwiki' => true,
-	),
-	'wgCopyUploadsFromSpecialUpload' => array(
-		'default' => false,
-		'gologwiki' => true,
-		'quantixwiki' => true,
-		'quantixdevwiki' => true,
-	),
-	// /upload by url
 	
 	// Permissions
 	'wgAddGroups' => array(
