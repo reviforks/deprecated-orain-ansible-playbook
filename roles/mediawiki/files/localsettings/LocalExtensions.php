@@ -291,6 +291,7 @@ switch( $wgDBname ) {
 	case 'rachopediawiki':
 		require_once( "$IP/extensions/Mantle/Mantle.php" );
 		require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+		$wgMFAutodetectMobileView = true;
 		break;
 	case 'religionwiki':
 		$wgHooks['ResourceLoaderRegisterModules'][] = 'lfRemoveCollapsibleNav';
