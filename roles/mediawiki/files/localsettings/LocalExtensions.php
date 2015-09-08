@@ -317,6 +317,9 @@ switch( $wgDBname ) {
 		require_once( "$IP/extensions/Math/Math.php" );
 		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 		break;
+	case 'serietvwiki':
+		require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+		break;
 	case 'testwiki':
 		require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
 		$wgGoogleAnalyticsAccount = "UA-58596506-2";
