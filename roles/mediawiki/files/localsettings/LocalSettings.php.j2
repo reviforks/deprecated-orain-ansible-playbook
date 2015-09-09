@@ -491,14 +491,16 @@ $wgConf->settings = array(
 		'+namuhwiki' => array( 'pdf' ),
 		'+nationalewiki' => array( 'pdf' ),
 		'+qumegalithwiki' => array( 'pdf' ),
-		'+spiralwiki'=> array( 'pdf' ),
 		'+redsosteniblewiki' => array( 'pdf' ),
+		'+spiralwiki'=> array( 'pdf' ),
+		'+tomegkozlekedowiki' => array( 'bmp', 'tif', 'tiff', 'pdf', 'zip', 'rar' ),
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
 		'gologwiki' => true,
 		'quantixwiki' => true,
 		'quantixdevwiki' => true,
+		'tomegkozlekedowiki' => true,
 	),
 	'wgAllowTitlesInSVG' => array(
 		'default' => true,
@@ -508,6 +510,7 @@ $wgConf->settings = array(
 		'gologwiki' => true,
 		'quantixwiki' => true,
 		'quantixdevwiki' => true,
+		'tomegkozlekedowiki' => true,
 	),
 	'wgGenerateThumbnailOnParse' => array(
 		'default' => false,
@@ -1116,8 +1119,8 @@ $wgConf->settings = array(
 			'Quantix_Talk' => NS_PROJECT_TALK,
 		),
 		'tomegkozlekedowiki' => array(
-			'TW' => NS_PROJECT,
-			'TW-vita' => NS_PROJECT_TALK,
+			'TkWiki' => NS_PROJECT,
+			'TkWiki_talk' => NS_PROJECT_TALK,
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
