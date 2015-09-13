@@ -615,11 +615,12 @@ $wgConf->settings = array(
 				'edit' => false,
 			),
 			'user' => array(
-				'read' => true,
 				'edit' => false,
 			),
 			'editor' => array(
-				'read' => true,
+				'edit' => true,
+			),
+			'bureaucrat' => array(
 				'edit' => true,
 			),
 		),
@@ -1300,6 +1301,11 @@ $wgConf->settings = array(
 				'editor',
 			),
 		),
+		'+serietvwiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+		),
 		'+studieveiledermedisinwiki' => array(
 			'bureaucrat' => array(
 				'editor',
@@ -1824,6 +1830,11 @@ $wgConf->settings = array(
 			),
 		),
 		'+rachopediawiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+		),
+		'+serietvwiki' => array(
 			'bureaucrat' => array(
 				'editor',
 			),
